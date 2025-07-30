@@ -1,0 +1,375 @@
+/* --- About Page Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.about-bg {
+  background: #F8F6F3;
+  min-height: 100vh;
+  font-family: 'Bricolage Grotesque', sans-serif;
+} 
+.about-divider {
+    position: absolute;
+    top: 145px;
+    left: 51px;
+    width: 1450px;
+    height: 0;
+    border-top: 0.5px solid #D4D4D4;
+    opacity: 1;
+    z-index: 2;
+  }
+  .about-breadcrumb-row {
+    position: absolute;
+    top: 160px;
+    left: 65px;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .about-breadcrumb-home,
+  .about-breadcrumb-current {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #969696;
+    line-height: 100%;
+    letter-spacing: 0;
+    height: 19px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-breadcrumb-home {
+    width: 45px;
+  }
+  
+  .about-breadcrumb-arrow {
+    width: 17px;
+    height: 17px;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-breadcrumb-current {
+    width: 46px;
+  }
+  .about-story-title {
+    position: absolute;
+    top: 200px;
+    left: 75px;
+    width: 384px;
+    height: 58px;
+    font-family: 'Saxo Grammaticus', serif; /* fallback to serif if not available */
+    font-weight: 100;
+    font-size: 45px;
+    color: #9B7C38;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  .about-story-subtitle {
+    position: absolute;
+    top: 260px;
+    left: 75px;
+    width: 400px;
+    height: 114px;
+    font-family: 'Saxo Grammaticus', serif; /* fallback to serif if not available */
+    font-weight: 100;
+    font-size: 30px;
+    color: #9B7C38;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  .about-bg-blur {
+    position: absolute;
+    top: 171px;
+    left: 452px;
+    width: 787px;
+    height: 787px;
+    background: #f6dbe05e;
+    backdrop-filter: blur(700px); /* Increased blur for stronger effect */
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+  }
+.about-slider-img {
+  position: absolute;
+  left: 20px;
+  width: 243px;
+  height: 235px;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 2;
+}
+.about-image-symbol-container {
+    position: absolute;
+    top: 431px; /* same as your image */
+    left: 52px;
+    width: 243px;
+    height: 235px;
+    z-index: 2;
+  }
+  
+  .about-slider-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-symbol-amp {
+    position: absolute;
+    top: 83px; /* Adjust so the symbol overlays the image as in your screenshot */
+    left: 210px;
+    width: 122px;
+    height: 177px;
+    font-size: 170px;
+    font-family: 'Saxo Grammaticus', 'Josefin Sans', Arial, sans-serif;
+    font-weight: 300;
+    line-height: 100%;
+    color: transparent;
+    background: linear-gradient(180deg, #F6DBE0 0%, #F6DBE0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    z-index: 3;
+    opacity: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+.about-orange-img {
+  position: absolute;
+  top: 179px;
+  left: 420px;
+  width: 551px;
+  height: 532px;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 2;
+}
+.about-description-box {
+  position: absolute;
+  top: 179px;
+  left: 990px;
+  width: 434px;
+  height: 404px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6F6F6F;
+  line-height: 170%;
+  letter-spacing: 0;
+  background: none;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 2;
+  padding: 0 18px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.about-explore-btn {
+  position: absolute;
+  top: 618px;
+  left: 990px;
+  width: 200px;
+  height: 62px;
+  background: #F6DBE0;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #441E14;
+  line-height: 158%;
+  letter-spacing: 0;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+}
+.about-testimonials-title {
+  position: absolute;
+  top: 779px;
+  left: 593px;
+  width: 255px;
+  height: 58px;
+  font-family: 'Saxo Grammaticus', serif;
+  font-weight: 100;
+  font-size: 45px;
+  color: #9B7C38;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-testimonials-bg {
+  position: absolute;
+  top: 910px;
+  left: 350px;
+  width: 840px;
+  height: 419px;
+  background: #F6DBE0;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.about-quote-img {
+  position: absolute;
+  top: 817px;
+  left: 374px;
+  width: 190px;
+  height: 190px;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 2;
+}
+
+.about-testimonial-heading {
+  position: absolute;
+  top: 1030px;
+  left: 620px;
+  width: 250px;
+  height: 31px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #2A110A;
+  line-height: 31px;
+  letter-spacing: 0;
+  opacity: 1;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-testimonial-text {
+  position: absolute;
+  top: 1100px;
+  left: 435px;
+  width: 678px;
+  height: 111px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6F6F6F;
+  line-height: 170%;
+  letter-spacing: 0;
+  opacity: 1;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-company-img {
+  position: absolute;
+  top: 920px;
+  left: 690px;
+  width: 94px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 2;
+}
+
+.about-testimonial-arrows {
+  position: absolute;
+  top: 1342px;
+  left: 688px;
+  width: 123px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.about-arrow-line {
+  width: 29px; /* 123 - 47*2 = 29 */
+  height: 47px;
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+  border-left: none;
+  border-right: none;
+  background: none;
+  margin: 0 0;
+}
+
+.about-arrow-circle {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  border: 1px solid #DEDEDE;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-arrow-left {
+  transform: rotate(360deg);
+}
+
+.about-arrow-circle svg {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.about-corporate-title {
+  position: absolute;
+  top: 1455px;
+  left: 460px;
+  width: 550px;
+  height: 58px;
+  font-family: 'Saxo Grammaticus', serif;
+  font-weight: 100;
+  font-size: 45px;
+  color: #9B7C38;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-brand-img {
+  position: absolute;
+  top: 1535px;
+  left: 270px;
+  width: 1016px;
+  height: 110px;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 2;
+}

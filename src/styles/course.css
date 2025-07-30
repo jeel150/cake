@@ -1,0 +1,276 @@
+/* General page styling */
+.course-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #2A110A;
+}
+
+/* Breadcrumb */
+.rb-breadcrumb {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #969696;
+  padding: 24px 0 0 80px;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rb-breadcrumb a {
+  color: #969696;
+  text-decoration: underline;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.rb-breadcrumb-separator {
+  font-size: 17px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+/* Header text */
+.rb-header-section {
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.rb-heading {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 100;
+  font-size: 45px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #9B7C38;
+  margin-bottom: 20px;
+}
+
+.rb-desc {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: #6F6F6F;
+  text-align: center;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* Main layout with sidebar + grid */
+.rb-courses-section {
+  display: flex;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  gap: 30px;
+}
+
+/* Sidebar */
+.rb-sidebar {
+  width: 280px;
+  background: #fff8f7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar Title */
+.rb-sidebar h2 {
+  width: 254px;
+  height: 23px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+  background: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Sidebar Items */
+.rb-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rb-sidebar li {
+  font-family: 'Saxo Grammaticus', sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #9B7C38;
+  background: none;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+.rb-sidebar li hr {
+  height: 1px;
+  background-color: #E6E6E6;
+  border: none;
+  margin: 0;
+}
+
+.rb-sidebar li span {
+  display: block;
+  padding-top: 10px;
+  font-family: 'Saxo Grammaticus', sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #9B7C38;
+  letter-spacing: 0;
+}
+
+.rb-sidebar-hr {
+  width: 333px;
+  height: 0;
+  border: none;
+  border-top: 1px solid #E6E6E6;
+  margin: 16px 0;
+}
+
+/* Course grid */
+.rb-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  flex: 1;
+}
+
+/* Course Card */
+.rb-course-card {
+  border: 1px solid #f3e4e2;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fffafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.rb-course-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Badge styling */
+.rb-course-badge {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+  justify-content: flex-end;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 2;
+}
+.rb-course-badge span {
+  display: inline-block;
+  background: #FFFFFF;
+  border-radius: 50px;
+  border: 1px solid #F6DBE0;
+  backdrop-filter: blur(9.4px);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #2A110A;
+  padding: 4px 14px;
+  margin: 0;
+}
+
+/* Image */
+.rb-course-img {
+  width: 301px;
+  height: 191px;
+  object-fit: cover;
+  border-radius: 5px;
+  top: 374px;
+  left:412px;
+}
+
+/* Title inside card */
+.rb-course-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2A110A;
+}
+
+/* Description styling */
+.rb-course-card p {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 174%;
+  color: #6F6F6F;
+  background: none;
+  padding: 10px 0;
+  border-radius: 0;
+  width: 100%;
+}
+
+/* View Course button */
+.rb-btn-view {
+  width: 283px;
+  height: 58px;
+  background: #9B7C38;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  transform: rotate(0deg);
+  text-transform: uppercase;
+  transition: background 0.2s, box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+.rb-btn-view:hover, .rb-btn-view:focus {
+  box-shadow: 0 8px 32px rgba(241, 168, 182, 0.18);
+  transform: scale(1.04);
+}
+.custom-hr-1 {
+  width: 1345px;
+  height: 0;
+  border: none;
+  border-top: 1px solid #E6E6E6;
+  margin: 24px auto;
+  opacity: 1;
+}
+
+.custom-hr-2 {
+  width: 1345px;
+  height: 0;
+  border: none;
+  border-top: 0.5px solid #D4D4D4;
+  margin: 24px auto;
+  opacity: 1;
+}
+
+.rb-course-count {
+  display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #969696;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 20px 5px 5px 400px;
+}

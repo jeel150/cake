@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap'); /* closest web font */
+.viewcourse-container {
+  background: #fff;
+  min-height: 100vh;
+}
+@media (max-width: 1200px) {
+  .viewcourse-container {
+    background: #fff;
+    min-height: 100vh;
+  }
+}
+.viewcourse-divider {
+  width: 1450px;
+  height: 0px;
+  opacity: 1;
+  position: absolute;
+  top: 138px;
+  left: 51px;
+  border-width: 0.5px;
+  border: 0.5px solid #D4D4D4;
+  transform: rotate(0deg);
+  background: none;
+  margin: 0;
+  padding: 0;
+} 
+.viewcourse-breadcrumb {
+    position: absolute;
+    top: 153px;
+    left: 51px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+    z-index: 2;
+  }
+  .viewcourse-breadcrumb-link {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 100%;
+    color: #969696;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .viewcourse-breadcrumb-separator {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #969696;
+    font-size: 17px;
+    opacity: 1;
+  }
+.viewcourse-title-saxo {
+  width: 701px;
+  height: 106px;
+  position: absolute;
+  top: 192px;
+  left: 51px;
+  opacity: 1;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-weight: 50;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #9B7C38;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  z-index: 11;
+}
+.viewcourse-rect-box {
+    width: 536px;
+    height: 777px;
+    border-radius: 8px;
+    position: absolute;
+    top: 192px;
+    left: 853px;
+    background: #F6F6F6;
+    opacity: 1;
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    gap: 7px;
+  }
+  
+  .viewcourse-form-title {
+    width: 234px;
+    height: 44px;
+    position: static;
+    font-family: 'Josefin Sans', 'Bricolage Grotesque', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #441E14;
+    background: none;
+    margin:0 auto 2px 40px;
+    padding: 0;
+    z-index: 11;
+    text-align: left;
+  }
+  
+  .viewcourse-form-input,
+  .viewcourse-form-textarea,
+  .viewcourse-form-button {
+    position: static;
+    left: unset;
+    top: unset;
+  }
+  
+  .viewcourse-form-input {
+    width: 459px;
+    height: 62px;
+    border-radius: 4px;
+    border: 1px solid #C5C5C5;
+    background: #fff;
+    font-size: 18px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  
+  .viewcourse-form-input.first::placeholder {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 158%;
+    letter-spacing: 0;
+    color: #B9B9B9;
+  }
+  
+  .viewcourse-form-input:not(.first)::placeholder {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 158%;
+    letter-spacing: 0;
+    color: #441E14;
+  }
+  
+  .viewcourse-form-textarea {
+    width: 459px;
+    height: 122px;
+    border-radius: 4px;
+    border: 1px solid #C5C5C5;
+    background: #fff;
+    font-size: 18px;
+    padding: 16px;
+    box-sizing: border-box;
+    resize: none;
+  }
+  
+  .viewcourse-form-textarea::placeholder {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 158%;
+    letter-spacing: 0;
+    color: #441E14;
+  }
+  
+  .viewcourse-form-button {
+    width: 459px;
+    height: 62px;
+    border-radius: 4px;
+    background: #441E14;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Josefin Sans', 'Bricolage Grotesque', Arial, sans-serif;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    transition: background 0.2s, box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  }
+.viewcourse-form-button:hover, .viewcourse-form-button:focus {
+  box-shadow: 0 8px 32px rgba(241, 168, 182, 0.18);
+  transform: scale(1.04);
+}
+
+.viewcourse-image-box {
+  width: 773px;
+  height: 396px;
+  border-radius: 8px;
+  position: absolute;
+  top: 324px;
+  left: 51px;
+  background: #D9D9D9;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.viewcourse-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.viewcourse-desc-box {
+  width: 771px;
+  height: 559px;
+  position: absolute;
+  top: 754px;
+  left: 51px;
+  opacity: 1;
+  background: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 174%;
+  letter-spacing: 0;
+  color: #6F6F6F;
+  z-index: 5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 0 24px 0 0;
+}
+
+.viewcourse-desc-list {
+  margin: 0 0 18px 0;
+  padding-left: 18px;
+  color: #6F6F6F;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.viewcourse-desc-list li {
+  margin-bottom: 6px;
+}
+
+.viewcourse-small-image-box {
+  width: 248px;
+  height: 286px;
+  border-radius: 8px;
+  position: absolute;
+  top: 1361px;
+  left: 51px;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.viewcourse-small-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.viewcourse-small-image-box2 {
+  width: 249px;
+  height: 286px;
+  border-radius: 8px;
+  position: absolute;
+  top: 1361px;
+  left: 313px;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.viewcourse-small-image2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.viewcourse-small-image-box3 {
+  width: 248px;
+  height: 286px;
+  border-radius: 8px;
+  position: absolute;
+  top: 1361px;
+  left: 576px;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.viewcourse-small-image3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.viewcourse-wide-image-box {
+  width: 511px;
+  height: 286px;
+  border-radius: 8px;
+  position: absolute;
+  top: 1664px;
+  left: 51px;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.viewcourse-wide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.viewcourse-small-image-box4 {
+  width: 248px;
+  height: 286px;
+  border-radius: 8px;
+  position: absolute;
+  top: 1664px;
+  left: 576px;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.viewcourse-small-image4 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}

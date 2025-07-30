@@ -1,0 +1,890 @@
+/* --- Checkout Page Styles --- */
+.checkout-content {
+  flex: 1 0 auto;
+  position: relative;
+  padding-bottom: 710px;
+  z-index: 1;
+}
+.checkout-divider {
+  width: 1339px;
+  border-top: 0.5px solid #D4D4D4;
+  margin-top: 30px; /* Reduced gap from navbar */
+  margin-left: 51px;
+  opacity: 1;
+}
+.checkout-divider-secondary {
+  width: 1339px;
+  border-top: 1px solid #E6E6E6;
+  margin-top: 10px; /* 245px - 109px = 136px after the first divider */
+  margin-left: 51px;
+  opacity: 1;
+}
+.checkout-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #969696;
+  margin-left: 51px;
+  margin-top: 10px; /* Reduced spacing */
+  height: 19px;
+  opacity: 1;
+}
+
+.breadcrumb-link {
+  color: #969696;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.breadcrumb-separator {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  line-height: 17px;
+  font-size: 17px;
+  color: #969696;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+.checkout-title {
+  font-family: 'Bricolage Grotesque';
+  font-weight: 100;
+  font-style: Light; /* Use 'normal' unless you have a 'Light' variant */
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #9B7C38;
+  width: 413px;
+  height: 58px;
+  margin-top: 20px;   /* Reduced spacing */
+  margin-left: 50px;  /* Aligns with your design's left position */
+  opacity: 1;
+}
+
+.checkout-banner {
+  width: 769px;
+  height: 46px;
+  border-radius: 4px;
+  background: #FFEDF0;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000;
+  margin-top: 30px;
+  margin-left: 51px;
+}
+
+.checkout-banner-link {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000;
+  margin-left: 8px;
+  text-decoration: underline;
+}
+.checkout-order-title {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #000000;
+  width: 186px;
+  height: 23px;
+  position: absolute;
+  top: 170px;
+  left: 880px;
+  opacity: 1;
+}
+
+.checkout-section-title {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #000000;
+  width: 83px;
+  height: 23px;
+  position: absolute;
+  top: 256px;
+  left: 55px;
+  opacity: 1;
+}
+
+.checkout-addon-box {
+  width: 769px;
+  height: 384px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  opacity: 1;
+  position: absolute;
+  top: 300px;
+  left: 51px;
+  box-sizing: border-box;
+}
+.checkout-addon-item-box {
+  width: 236px;
+  height: 109px;
+  background: #FFFFFF;
+  border: 1px solid #F6DBE0;
+  border-radius: 8px;
+  position: absolute;
+}
+
+/* Top Row – Flowers */
+.addon-box-small-flowers { top: 40px; left: 22px; }
+.addon-box-medium-flowers { top: 40px; left: 273px; }
+.addon-box-large-flowers { top: 40px; left: 522px; }
+
+/* Bottom Row – Toppers */
+.addon-box-happy-birthday { top: 210px; left: 22px; }
+.addon-box-anniversary { top: 210px; left: 273px; }
+
+
+/* === Add-on Item Content Layout === */
+
+.addon-inner {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.addon-img-inside {
+  width: 85px;
+  height: 99px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.addon-info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.addon-title-inside {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  color: #2A110A;
+  margin-bottom: 4px;
+}
+
+.addon-price-inside {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+/* === Quantity Box === */
+.addon-qty-box-inside {
+  width: 96px;
+  height: 35px;
+  border: 1px solid #F6DBE0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.addon-qty-btn {
+  background: none;
+  border: none;
+  font-family: 'Avenir', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.addon-qty-count {
+  font-family: 'Avenir', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  width: 20px;
+  text-align: center;
+}
+
+/* === "Add" Button === */
+.addon-add-btn {
+  background: #9B7C38;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 8px;
+  width: fit-content;
+}
+
+
+.checkout-page {
+  background: #FAF9F7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.checkout-addon-label {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #441E14;
+  width: 151px;
+  height: 19px;
+  position: absolute;
+  top: 390px;
+  left: 75px;
+  opacity: 1;
+}
+.checkout-addon-label2{
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #441E14;
+  width: 151px;
+  height: 19px;
+  position: absolute;
+  top: 550px;
+  left: 75px;
+  opacity: 1;
+
+}
+
+.checkout-addon-item-box {
+  width: 236px;
+  height: 109px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid #F6DBE0;
+  opacity: 1;
+  position: absolute;
+  /* top and left will be set inline for each box */
+}
+
+.checkout-summary-box {
+  width: 534px;
+  height: 679px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  opacity: 1;
+  position: absolute;
+  top: 300px;
+  left: 884px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+.checkout-shipping-title {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #000000;
+  width: 83px;
+  height: 23px;
+  position: absolute;
+  top: 740px;
+  left: 51px;
+  opacity: 1;
+}
+.checkout-shipping-box {
+  width: 769px;
+  height: 143px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  opacity: 1;
+  position: absolute;
+  top: 770px;
+  left: 51px;
+  box-sizing: border-box;
+}
+.checkout-datetime-title {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #000000;
+  width: 301px;
+  height: 23px;
+  position: absolute;
+  top: 960px;
+  left: 52px;
+  opacity: 1;
+}
+.checkout-datetime-box {
+  width: 769px;
+  height: 123px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  opacity: 1;
+  position: absolute;
+  top: 1000px;
+  left: 51px;
+  box-sizing: border-box;
+}
+.checkout-payment-title {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #000000;
+  width: 170px;
+  height: 23px;
+  position: absolute;
+  top: 1151px;
+  left: 51px;
+  opacity: 1;
+}
+.checkout-payment-box {
+  width: 769px;
+  height: 86px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  opacity: 1;
+  position: absolute;
+  top: 965px;
+  left: 55px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative; /* <-- ensure this is present */
+}
+
+.checkout-pay-box {
+  width: 769px;
+  height: 62px;
+  border-radius: 4px;
+  background: #9B7C38;
+  opacity: 1;
+  position: absolute;
+  top: 1310px;
+  left: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-pay-btn {
+  width: 117px;
+  height: 25px;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.58;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  opacity: 1;
+  /* Optional: for a button look, add border-radius and hover effect */
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.checkout-pay-btn:hover {
+  background: #7a612b;
+}
+
+.checkout-radio-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout-radio-label {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.58;
+  letter-spacing: 0;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkout-radio-input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 5px solid #F1A8B6;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 8px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.checkout-radio-input:checked {
+  background: #F1A8B6;
+  border: 5px solid #F1A8B6;
+}
+
+.checkout-radio-absolute {
+  position: absolute;
+  top: 1262px;
+  left: 85px;
+  z-index: 2;
+}
+
+.checkout-radio-cc {
+  position: absolute;
+  top: 900px;
+  left: 368px;
+  z-index: 2;
+}
+
+.checkout-radio-input-cc {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #A7A7A7;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 8px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.checkout-radio-input-cc:checked {
+  background: #A7A7A7;
+  border: 1px solid #A7A7A7;
+}
+
+.checkout-radio-label-cc {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.58;
+  letter-spacing: 0;
+  color: #A7A7A7;
+  position: absolute;
+  top: 1258px;
+  left: 394px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.checkout-shipping-description {
+  position: absolute;
+  top: 778px;
+  left: 81px;
+  width: 705px;
+  height: 27px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000000;
+  opacity: 1;
+}
+
+.checkout-shipping-input {
+  position: absolute;
+  top: 840px;
+  left: 81px;
+  width: 351px;
+  height: 52px;
+  border-radius: 4px;
+  border: 1px solid #F6DBE0;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.checkout-shipping-label {
+  position: absolute;
+  top: 855px;
+  left: 220px;
+  width: 62px;
+  height: 25px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 158%;
+  color: #000000;
+  opacity: 1;
+}
+.checkout-shipping-input-pickup {
+  position: absolute;
+  top: 840px;
+  left: 443px;
+  width: 351px;
+  height: 52px;
+  border-radius: 4px;
+  border: 1px solid #F6DBE0;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.checkout-shipping-label-pickup {
+  position: absolute;
+  top: 855px;
+  left: 589px;
+  width: 51px;
+  height: 25px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 158%;
+  color: #000000;
+  opacity: 1;
+}
+.checkout-datetime-input {
+  position: absolute;
+  top: 1020px;
+  left: 81px;
+  width: 351px;
+  height: 62px;
+  border-radius: 4px;
+  border: 1px solid #F6DBE0;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+}
+
+.checkout-datetime-label {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 158%;
+  color: #441E14;
+  opacity: 1;
+}
+
+.checkout-datetime-icon {
+  font-size: 20px;
+  color: #f9bac6;
+  margin-left: auto;
+}
+.checkout-datetime-input-time {
+  position: absolute;
+  top: 1020px;
+  left: 443px;
+  width: 351px;
+  height: 62px;
+  border-radius: 4px;
+  border: 1px solid #F6DBE0;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+}
+
+.checkout-datetime-label-time {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 158%;
+  color: #441E14;
+  opacity: 1;
+}
+
+.checkout-datetime-icon-time {
+  font-size: 20px;
+  color: #f9bac6;
+  margin-left: auto;
+}
+.checkout-radio-group-cc {
+  position: absolute;
+  top: 30px;
+  left: 368px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkout-radio-input-cc {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #A7A7A7;
+  border-radius: 50%;
+  appearance: none;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkout-radio-input-cc:checked {
+  background-color: #A7A7A7;
+  border: 1px solid #A7A7A7;
+}
+
+.checkout-radio-label-cc {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  width: 100px;
+  font-size: 16px;
+  line-height: 158%;
+  color: #A7A7A7;
+  opacity: 1;
+  top: 1px;
+  left: 40px;
+  position: absolute;
+}
+  
+.coupon-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  position: absolute;
+  top: 510px;
+  left: 900px;
+   z-index: 20;
+}
+
+.coupon-input {
+  width: 330px;
+  height: 62px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.coupon-apply-btn {
+  width: 133px;
+  height: 62px;
+  background: #F6DBE0;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.coupon-apply-btn:hover {
+  background: #eac6d1;
+}
+.checkout-order-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 488px;
+  position: absolute;
+  top: 210px;
+  left: 890px;
+  box-shadow: 0px 0px 10px rgba(200, 200, 200, 0.2);
+  z-index: 15;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.order-item-img {
+  width: 127px;
+  height: 103px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.order-item-details {
+  flex-grow: 1;
+}
+
+.order-item-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.order-item-subtitle {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2A110A;
+  line-height: 100%;
+}
+
+.order-item-price {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  left: 145px;
+  margin-top: -85px;
+  text-align: center;
+  width: 100px;
+  position: relative;
+}
+
+.order-item-qty-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #F6DBE0;
+  border-radius: 8px;
+  width: 146px;
+  height: 51px;
+  margin-left: 10px;
+  padding: 0 10px;
+}
+
+.order-qty-btn {
+  background: none;
+  border: none;
+  font-family: 'Avenir', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
+
+.order-qty-count {
+  font-family: 'Avenir', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.order-divider {
+  border: 1px solid rgba(220, 202, 220, 0.42);
+  margin-top: 30px;
+}
+.order-summary {
+  position: absolute;
+  top: 610px;
+  left: 888px;
+  width: 490px;
+  background: #fff;
+  padding: 20px;
+  z-index: 20;
+  border-radius: 8px;
+}
+
+.order-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.summary-label {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2A110A;
+}
+
+.summary-value {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  text-align: right;
+}
+
+.summary-divider {
+  border: 1px solid rgba(199, 202, 205, 0.42);
+  margin: 10px 0;
+}
+
+.order-summary-row.total {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.total-label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+
+.total-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.vat {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+
+.proceed-pay-btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 52px;
+  background: #A3833A;
+  color: #fff;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.proceed-pay-btn:hover {
+  background: #8c6e2f;
+}

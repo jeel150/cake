@@ -1,0 +1,1113 @@
+.custom-line {
+    width: 1400px;
+    height: 0px;
+    opacity: 1;
+    position: absolute;
+    top: 140px;
+    left: 51px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #D4D4D4;
+    transform: rotate(0deg);
+  }
+  .breadcrumb-home {
+    position: absolute;
+    width: 45px;
+    height: 19px;
+    top: 155px;
+    left: 51px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #969696;
+    opacity: 1;
+  }
+  .breadcrumb-divider {
+    position: absolute;
+    width: 17.34px;
+    height: 17.34px;
+    top: 155px;
+    left: 106px;
+    opacity: 1;
+    /* Add SVG or background-image as needed */
+  }
+  .breadcrumb-corporate {
+    position: absolute;
+    width: 147px;
+    height: 19px;
+    top: 155px;
+    left: 134px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #969696;
+    opacity: 1;
+  }
+  .corporate-heading {
+    position: absolute;
+    width: 534px;
+    height: 58px;
+    top: 185px;
+    left: 450px;
+    font-family: 'Saxo Grammaticus', serif; /* Use a fallback if Saxo Grammaticus is not available */
+    font-weight: 400;
+    font-style: normal; /* 'Light' is usually font-weight: 300, but you specified 400 */
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #9B7C38;
+    opacity: 1;
+  }
+  .corporate-description {
+    position: absolute;
+    width: 1255px;
+    height: 83px;
+    top: 253px;
+    left: 150px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 174%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #6F6F6F;
+    opacity: 1;
+  }
+  .corporate-divider {
+    position: absolute;
+    width: 520px;
+    height: 0px;
+    top: 410px;
+    left: 51px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    opacity: 1;
+  }
+  .personalized-gifts-heading {
+    position: absolute;
+    width: 422px;
+    height: 58px;
+    top: 425px;
+    left: 51px;
+    font-family: 'Saxo Grammaticus'; /* Use a fallback if Saxo Grammaticus is not available */
+    font-weight: 200; /* 'Light' is usually 300, but you specified 400 */
+    font-style: normal;
+    font-size: 35px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #441E14;
+    opacity: 1;
+  }
+  .circle-bg {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 424px;
+    left: 473px;
+    border-radius: 50%;
+    background: #fff; /* or any background you want */
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .circle-icon {
+    position: absolute;
+    width: 18.08px;
+    height: 18.08px;
+    top: 430.46px;
+    left: 479.46px;
+    color: #441E14;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .personalized-divider {
+    position: absolute;
+    width: 520px;
+    height: 0px;
+    top: 475px;
+    left: 51px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    opacity: 1;
+  }
+  .events-catering-heading {
+    position: absolute;
+    width: 422px;
+    height: 58px;
+    top: 499px;
+    left: 51px;
+    font-family: 'Saxo Grammaticus', serif; /* Fallback if Saxo Grammaticus is not available */
+    font-weight: 400; /* 'Light' is usually 300, but you specified 400 */
+    font-style: normal;
+    font-size: 35px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #9B7C38;
+    opacity: 1;
+  }
+  .events-catering-divider {
+    position: absolute;
+    width: 520px;
+    height: 0px;
+    top: 565px;
+    left: 51px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    opacity: 1;
+  }
+  .team-building-heading {
+    position: absolute;
+    width: 800px;
+    height: 58px;
+    top: 580px;
+    left: 51px;
+    font-family: 'Saxo Grammaticus', serif;
+    font-weight: 400; /* 'Light' is usually 300, but you specified 400 */
+    font-style: normal;
+    font-size: 34px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #9B7C38;
+    opacity: 1;
+  }
+  .team-building-divider {
+    position: absolute;
+    width: 520px;
+    height: 0px;
+    top: 640px;
+    left: 51px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    opacity: 1;
+  }
+  .weddings-heading {
+    position: absolute;
+    width: 600px;
+    height: 35px;
+    top: 660px;
+    left: 51px;
+    font-family: 'Saxo Grammaticus', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #9B7C38;
+    opacity: 1;
+  }
+  .weddings-divider {
+    position: absolute;
+    width: 520px;
+    height: 0px;
+    top: 720px;
+    left: 51px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    opacity: 1;
+  }
+  .gift1-image-container {
+    position: absolute;
+    width: 847px;
+    height: 474px;
+    top: 391px;
+    left: 620px;
+    border-radius: 8px;
+    background: #D9D9D9;
+    opacity: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gift1-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .corporate-large-description {
+    position: absolute;
+    width: 807px;
+    height: 244px;
+    top: 921px;
+    left: 620px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 174%;
+    letter-spacing: 0;
+    color: #6F6F6F;
+    opacity: 1;
+    overflow: hidden;
+  }
+  .lorem-heading {
+    position: absolute;
+    width: 186px;
+    height: 23px;
+    top: 1199px;
+    left: 620px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+  }
+  .lorem-description {
+    position: absolute;
+    width: 431px;
+    height: 155px;
+    top: 1234px;
+    left: 640px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 242%;
+    letter-spacing: 0;
+    color: #6F6F6F;
+    opacity: 1;
+  }
+  .lorem-dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #F1A8B6;
+    opacity: 1;
+  }
+  .lorem-dot.dot1 { top: 1250px; left: 620px; }
+  .lorem-dot.dot2 { top: 1289px; left: 620px; }
+  .lorem-dot.dot3 { top: 1328px; left: 620px; }
+  .lorem-dot.dot4 { top: 1367px; left: 620px; }
+
+  .corporate-image-box {
+    position: absolute;
+    width: 412px;
+    height: 312px;
+    border-radius: 8px;
+    background: #D9D9D9;
+    opacity: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .corporate-image-box.img1 {
+    top: 1423px;
+    left: 620px;
+  }
+  .corporate-image-box.img2 {
+    top: 1423px;
+    left: 1060px;
+  }
+  .corporate-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .corporate-bottom-divider {
+    position: absolute;
+    width: 847px;
+    height: 0px;
+    top: 1774px;
+    left: 620px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    opacity: 1;
+  }
+  .enquire-now-heading {
+    position: absolute;
+    width: 350px;
+    height: 58px;
+    top: 1810px;
+    left: 620px;
+    font-family: 'Saxo Grammaticus', serif; /* Use a fallback if Saxo Grammaticus is not available */
+    font-weight: 200; /* 'Light' is usually 300, but you specified 400 */
+    font-style: normal;
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #9B7C38;
+    opacity: 1;
+  }
+  .enquire-form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  
+  .enquire-form-label {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 158%;
+    color: #441E14;
+    margin-bottom: 6px;
+  }
+  
+  .enquire-form-input,
+  .enquire-form-select,
+  .enquire-form-textarea {
+    width: 416px;
+    height: 62px;
+    border-radius: 4px;
+    border: 1px solid #D5B1B8;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    color: #441E14;
+    padding: 12px 16px;
+    background: #fff;
+    opacity: 1;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+  }
+  
+  .enquire-form-select {
+    color: #D1D1D1;
+  }
+  
+  .enquire-form-textarea {
+    width: 845px;
+    height: 129px;
+    resize: none;
+  }
+  
+  .enquire-form-submit {
+    width: 459px;
+    height: 62px;
+    border-radius: 4px;
+    background:#441E14;
+    color: #F6DBE0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 158%;
+    border: none;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-left: 240px; /* Center the button under the form */
+    transition: background 0.2s;
+  }
+  
+  .enquire-form-submit:hover {
+    background:#34130b;    ;
+  }
+
+.enquire-form-input::placeholder,
+.enquire-form-select::placeholder,
+.enquire-form-textarea::placeholder {
+  color: #441E14;
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+  .custom-line {
+    width: 1400px;
+    left: 80px;
+  }
+  
+  .breadcrumb-home {
+    left: 80px;
+  }
+  
+  .breadcrumb-divider {
+    left: 135px;
+  }
+  
+  .breadcrumb-corporate {
+    left: 163px;
+  }
+  
+  .corporate-heading {
+    left: 550px;
+    font-size: 48px;
+  }
+  
+  .corporate-description {
+    width: 1300px;
+    left: 200px;
+    font-size: 17px;
+  }
+  
+  .corporate-divider {
+    width: 600px;
+    left: 80px;
+  }
+  
+  .personalized-gifts-heading {
+    left: 80px;
+    font-size: 38px;
+  }
+  
+  .circle-bg {
+    left: 502px;
+  }
+  
+  .circle-icon {
+    left: 508px;
+  }
+  
+  .personalized-divider {
+    width: 600px;
+    left: 80px;
+  }
+  
+  .events-catering-heading {
+    left: 80px;
+    font-size: 38px;
+  }
+  
+  .events-catering-divider {
+    width: 600px;
+    left: 80px;
+  }
+  
+  .team-building-heading {
+    left: 80px;
+    font-size: 36px;
+  }
+  
+  .team-building-divider {
+    width: 600px;
+    left: 80px;
+  }
+  
+  .weddings-heading {
+    left: 80px;
+    font-size: 38px;
+  }
+  
+  .weddings-divider {
+    width: 600px;
+    left: 80px;
+  }
+  
+  .gift1-image-container {
+    width: 900px;
+    height: 500px;
+    left: 680px;
+  }
+  
+  .corporate-large-description {
+    width: 900px;
+    left: 680px;
+    font-size: 17px;
+  }
+  
+  .lorem-heading {
+    left: 680px;
+    font-size: 22px;
+  }
+  
+  .lorem-description {
+    width: 500px;
+    left: 700px;
+    font-size: 17px;
+  }
+  
+  .lorem-dot.dot1 { left: 680px; }
+  .lorem-dot.dot2 { left: 680px; }
+  .lorem-dot.dot3 { left: 680px; }
+  .lorem-dot.dot4 { left: 680px; }
+  
+  .corporate-image-box.img1 {
+    left: 680px;
+  }
+  
+  .corporate-image-box.img2 {
+    left: 1120px;
+  }
+  
+  .corporate-bottom-divider {
+    width: 900px;
+    left: 680px;
+  }
+  
+  .enquire-now-heading {
+    left: 680px;
+    font-size: 48px;
+  }
+  
+  form {
+    left: 680px;
+    width: 900px;
+  }
+  
+  .enquire-form-input,
+  .enquire-form-select {
+    width: 440px;
+  }
+  
+  .enquire-form-textarea {
+    width: 900px;
+  }
+  
+  .enquire-form-submit {
+    width: 500px;
+    margin-left: 200px;
+  }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .custom-line {
+    width: 1200px;
+    left: 60px;
+  }
+  
+  .breadcrumb-home {
+    left: 60px;
+  }
+  
+  .breadcrumb-divider {
+    left: 115px;
+  }
+  
+  .breadcrumb-corporate {
+    left: 143px;
+  }
+  
+  .corporate-heading {
+    left: 400px;
+    font-size: 42px;
+  }
+  
+  .corporate-description {
+    width: 1100px;
+    left: 150px;
+  }
+  
+  .corporate-divider {
+    width: 500px;
+    left: 60px;
+  }
+  
+  .personalized-gifts-heading {
+    left: 60px;
+    font-size: 32px;
+  }
+  
+  .circle-bg {
+    left: 482px;
+  }
+  
+  .circle-icon {
+    left: 488px;
+  }
+  
+  .personalized-divider {
+    width: 500px;
+    left: 60px;
+  }
+  
+  .events-catering-heading {
+    left: 60px;
+    font-size: 32px;
+  }
+  
+  .events-catering-divider {
+    width: 500px;
+    left: 60px;
+  }
+  
+  .team-building-heading {
+    left: 60px;
+    font-size: 30px;
+  }
+  
+  .team-building-divider {
+    width: 500px;
+    left: 60px;
+  }
+  
+  .weddings-heading {
+    left: 60px;
+    font-size: 32px;
+  }
+  
+  .weddings-divider {
+    width: 500px;
+    left: 60px;
+  }
+  
+  .gift1-image-container {
+    width: 700px;
+    height: 400px;
+    left: 580px;
+  }
+  
+  .corporate-large-description {
+    width: 700px;
+    left: 580px;
+  }
+  
+  .lorem-heading {
+    left: 580px;
+  }
+  
+  .lorem-description {
+    width: 400px;
+    left: 600px;
+  }
+  
+  .lorem-dot.dot1 { left: 580px; }
+  .lorem-dot.dot2 { left: 580px; }
+  .lorem-dot.dot3 { left: 580px; }
+  .lorem-dot.dot4 { left: 580px; }
+  
+  .corporate-image-box.img1 {
+    left: 580px;
+  }
+  
+  .corporate-image-box.img2 {
+    left: 1020px;
+  }
+  
+  .corporate-bottom-divider {
+    width: 700px;
+    left: 580px;
+  }
+  
+  .enquire-now-heading {
+    left: 580px;
+    font-size: 42px;
+  }
+  
+  form {
+    left: 580px;
+    width: 700px;
+  }
+  
+  .enquire-form-input,
+  .enquire-form-select {
+    width: 340px;
+  }
+  
+  .enquire-form-textarea {
+    width: 700px;
+  }
+  
+  .enquire-form-submit {
+    width: 400px;
+    margin-left: 150px;
+  }
+}
+
+/* Small Desktop (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .custom-line {
+    width: 1000px;
+    left: 50px;
+  }
+  
+  .breadcrumb-home {
+    left: 50px;
+  }
+  
+  .breadcrumb-divider {
+    left: 105px;
+  }
+  
+  .breadcrumb-corporate {
+    left: 133px;
+  }
+  
+  .corporate-heading {
+    left: 300px;
+    font-size: 38px;
+  }
+  
+  .corporate-description {
+    width: 900px;
+    left: 100px;
+  }
+  
+  .corporate-divider {
+    width: 450px;
+    left: 50px;
+  }
+  
+  .personalized-gifts-heading {
+    left: 50px;
+    font-size: 28px;
+  }
+  
+  .circle-bg {
+    left: 472px;
+  }
+  
+  .circle-icon {
+    left: 478px;
+  }
+  
+  .personalized-divider {
+    width: 450px;
+    left: 50px;
+  }
+  
+  .events-catering-heading {
+    left: 50px;
+    font-size: 28px;
+  }
+  
+  .events-catering-divider {
+    width: 450px;
+    left: 50px;
+  }
+  
+  .team-building-heading {
+    left: 50px;
+    font-size: 26px;
+  }
+  
+  .team-building-divider {
+    width: 450px;
+    left: 50px;
+  }
+  
+  .weddings-heading {
+    left: 50px;
+    font-size: 28px;
+  }
+  
+  .weddings-divider {
+    width: 450px;
+    left: 50px;
+  }
+  
+  .gift1-image-container {
+    width: 600px;
+    height: 350px;
+    left: 480px;
+  }
+  
+  .corporate-large-description {
+    width: 600px;
+    left: 480px;
+  }
+  
+  .lorem-heading {
+    left: 480px;
+  }
+  
+  .lorem-description {
+    width: 350px;
+    left: 500px;
+  }
+  
+  .lorem-dot.dot1 { left: 480px; }
+  .lorem-dot.dot2 { left: 480px; }
+  .lorem-dot.dot3 { left: 480px; }
+  .lorem-dot.dot4 { left: 480px; }
+  
+  .corporate-image-box.img1 {
+    left: 480px;
+  }
+  
+  .corporate-image-box.img2 {
+    left: 920px;
+  }
+  
+  .corporate-bottom-divider {
+    width: 600px;
+    left: 480px;
+  }
+  
+  .enquire-now-heading {
+    left: 480px;
+    font-size: 38px;
+  }
+  
+  form {
+    left: 480px;
+    width: 600px;
+  }
+  
+  .enquire-form-input,
+  .enquire-form-select {
+    width: 290px;
+  }
+  
+  .enquire-form-textarea {
+    width: 600px;
+  }
+  
+  .enquire-form-submit {
+    width: 350px;
+    margin-left: 125px;
+  }
+}
+
+/* ===== TABLET DEVICES ===== */
+
+/* iPad Pro 12.9" (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .custom-line {
+    width: 900px;
+    left: 40px;
+  }
+  
+  .breadcrumb-home {
+    left: 40px;
+  }
+  
+  .breadcrumb-divider {
+    left: 95px;
+  }
+  
+  .breadcrumb-corporate {
+    left: 123px;
+  }
+  
+  .corporate-heading {
+    left: 250px;
+    font-size: 32px;
+  }
+  
+  .corporate-description {
+    width: 800px;
+    left: 80px;
+    font-size: 15px;
+  }
+  
+  .corporate-divider {
+    width: 400px;
+    left: 40px;
+  }
+  
+  .personalized-gifts-heading {
+    left: 40px;
+    font-size: 24px;
+  }
+  
+  .circle-bg {
+    left: 462px;
+  }
+  
+  .circle-icon {
+    left: 468px;
+  }
+  
+  .personalized-divider {
+    width: 400px;
+    left: 40px;
+  }
+  
+  .events-catering-heading {
+    left: 40px;
+    font-size: 24px;
+  }
+  
+  .events-catering-divider {
+    width: 400px;
+    left: 40px;
+  }
+  
+  .team-building-heading {
+    left: 40px;
+    font-size: 22px;
+  }
+  
+  .team-building-divider {
+    width: 400px;
+    left: 40px;
+  }
+  
+  .weddings-heading {
+    left: 40px;
+    font-size: 24px;
+  }
+  
+  .weddings-divider {
+    width: 400px;
+    left: 40px;
+  }
+  
+  .gift1-image-container {
+    width: 500px;
+    height: 300px;
+    left: 400px;
+  }
+  
+  .corporate-large-description {
+    width: 500px;
+    left: 400px;
+    font-size: 15px;
+  }
+  
+  .lorem-heading {
+    left: 400px;
+    font-size: 18px;
+  }
+  
+  .lorem-description {
+    width: 300px;
+    left: 420px;
+    font-size: 15px;
+  }
+  
+  .lorem-dot.dot1 { left: 400px; }
+  .lorem-dot.dot2 { left: 400px; }
+  .lorem-dot.dot3 { left: 400px; }
+  .lorem-dot.dot4 { left: 400px; }
+  
+  .corporate-image-box.img1 {
+    left: 400px;
+  }
+  
+  .corporate-image-box.img2 {
+    left: 840px;
+  }
+  
+  .corporate-bottom-divider {
+    width: 500px;
+    left: 400px;
+  }
+  
+  .enquire-now-heading {
+    left: 400px;
+    font-size: 32px;
+  }
+  
+  form {
+    left: 400px;
+    width: 500px;
+  }
+  
+  .enquire-form-input,
+  .enquire-form-select {
+    width: 240px;
+  }
+  
+  .enquire-form-textarea {
+    width: 500px;
+  }
+  
+  .enquire-form-submit {
+    width: 300px;
+    margin-left: 100px;
+  }
+}
+
+/* ===== MOBILE DEVICES ===== */
+@media (max-width: 767px) {
+  .custom-line,
+  .corporate-divider,
+  .personalized-divider,
+  .events-catering-divider,
+  .team-building-divider,
+  .weddings-divider,
+  .corporate-bottom-divider {
+    width: 90vw;
+    left: 5vw;
+    min-width: 0;
+  }
+  .breadcrumb-home,
+  .breadcrumb-divider,
+  .breadcrumb-corporate {
+    position: static;
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 14px;
+  }
+  .corporate-heading,
+  .personalized-gifts-heading,
+  .events-catering-heading,
+  .team-building-heading,
+  .weddings-heading,
+  .enquire-now-heading {
+    position: static;
+    width: 100vw;
+    left: 0;
+    font-size: 20px;
+    text-align: center;
+    margin: 16px 0 8px 0;
+  }
+  .corporate-description,
+  .corporate-large-description,
+  .lorem-description {
+    position: static;
+    width: 90vw;
+    left: 0;
+    font-size: 14px;
+    margin: 0 auto 12px auto;
+    text-align: center;
+  }
+  .gift1-image-container,
+  .corporate-image-box.img1,
+  .corporate-image-box.img2 {
+    position: static;
+    width: 90vw;
+    height: auto;
+    left: 0;
+    margin: 12px auto;
+    max-width: 350px;
+  }
+  .gift1-image-container img,
+  .corporate-image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .lorem-heading {
+    position: static;
+    left: 0;
+    font-size: 16px;
+    text-align: center;
+    margin: 8px 0;
+  }
+  .lorem-dot {
+    display: none;
+  }
+  form {
+    position: static;
+    left: 0;
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .enquire-form-input,
+  .enquire-form-select,
+  .enquire-form-textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .enquire-form-submit {
+    width: 100%;
+    margin-left: 0;
+    font-size: 15px;
+  }
+}
+  

@@ -1,0 +1,883 @@
+/* --- JustinSection.css --- */
+
+.justin-section {
+  position: absolute;
+  top: 610px;
+  left: 50px;
+  width: calc(100vw - 106px);
+  z-index: 5;
+  height: 300px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.justin-section::-webkit-scrollbar {
+  display: none;
+}
+
+.justin-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 170%;
+  text-transform: uppercase;
+  color: #302100;
+  margin-bottom: 12px;
+}
+
+.justin-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent;
+}
+.justin-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.justin-card {
+  min-width: 338px;
+  height: 118px;
+  background: #fff;
+  border-radius: 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+  padding: 12px 18px;
+  gap: 16px;
+  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+.justin-card:hover {
+  box-shadow: 0 8px 32px rgba(241, 168, 182, 0.18);
+  transform: scale(1.04);
+}
+
+.justin-img {
+  width: 104px;
+  height: 98px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.justin-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.justin-flavor {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 170%;
+  text-decoration: underline;
+  color: #302100;
+  margin-bottom: 2px;
+}
+
+.justin-name {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 158%;
+  color: #302100;
+  margin-bottom: 4px;
+}
+
+.justin-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.justin-price {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 158%;
+  color: #302100;
+}
+
+.justin-cart {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #441E14;
+  background: none;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+.justin-cart:hover, .justin-cart:focus {
+  box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
+  transform: scale(1.08);
+}
+.justin-arrow {
+  display: inline-block;
+  transition: transform 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+.justin-cart:hover .justin-arrow {
+  transform: translateX(6px) scale(1.18);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+  .justin-section {
+    top: 535px;
+    left: 80px;
+    width: calc(100vw - 160px);
+    height: 320px;
+  }
+  
+  .justin-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  
+  .justin-scroll {
+    gap: 28px;
+  }
+  
+  .justin-card {
+    min-width: 380px;
+    height: 130px;
+    padding: 14px 20px;
+    gap: 18px;
+  }
+  
+  .justin-img {
+    width: 115px;
+    height: 108px;
+  }
+  
+  .justin-flavor {
+    font-size: 13px;
+  }
+  
+  .justin-name {
+    font-size: 18px;
+  }
+  
+  .justin-price {
+    font-size: 18px;
+  }
+  
+  .justin-cart {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .justin-section {
+    top: 620px;
+    left: 60px;
+    width: calc(100vw - 120px);
+    height: 310px;
+  }
+  
+  .justin-title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+  
+  .justin-scroll {
+    gap: 26px;
+  }
+  
+  .justin-card {
+    min-width: 360px;
+    height: 125px;
+    padding: 13px 19px;
+    gap: 17px;
+  }
+  
+  .justin-img {
+    width: 110px;
+    height: 103px;
+  }
+  
+  .justin-name {
+    font-size: 17px;
+  }
+  
+  .justin-price {
+    font-size: 17px;
+  }
+  
+  .justin-cart {
+    font-size: 17px;
+    padding: 9px 19px;
+  }
+}
+
+/* Small Desktop (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .justin-section {
+    top: 620px;
+    left: 50px;
+    width: calc(100vw - 100px);
+    height: 300px;
+  }
+  
+  .justin-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .justin-scroll {
+    gap: 24px;
+  }
+  
+  .justin-card {
+    min-width: 338px;
+    height: 118px;
+    padding: 12px 18px;
+    gap: 16px;
+  }
+  
+  .justin-img {
+    width: 104px;
+    height: 98px;
+  }
+}
+
+/* ===== TABLET DEVICES ===== */
+
+/* iPad Pro 12.9" (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .justin-section {
+    top: 620px;
+    left: 60px;
+    width: calc(100vw - 120px);
+    height: 310px;
+  }
+  
+  .justin-title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+  
+  .justin-scroll {
+    gap: 26px;
+  }
+  
+  .justin-card {
+    min-width: 360px;
+    height: 125px;
+    padding: 13px 19px;
+    gap: 17px;
+  }
+  
+  .justin-img {
+    width: 110px;
+    height: 103px;
+  }
+  
+  .justin-flavor {
+    font-size: 12px;
+  }
+  
+  .justin-name {
+    font-size: 17px;
+  }
+  
+  .justin-price {
+    font-size: 17px;
+  }
+  
+  .justin-cart {
+    font-size: 17px;
+    padding: 9px 19px;
+  }
+}
+
+/* iPad Pro 11" (834px - 1194px) */
+@media (min-width: 834px) and (max-width: 1194px) and (orientation: landscape) {
+  .justin-section {
+    top: 590px;
+    left: 50px;
+    width: calc(100vw - 100px);
+    height: 300px;
+  }
+  
+  .justin-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .justin-scroll {
+    gap: 24px;
+  }
+  
+  .justin-card {
+    min-width: 338px;
+    height: 118px;
+    padding: 12px 18px;
+    gap: 16px;
+  }
+  
+  .justin-img {
+    width: 104px;
+    height: 98px;
+  }
+  
+  .justin-flavor {
+    font-size: 12px;
+  }
+  
+  .justin-name {
+    font-size: 16px;
+  }
+  
+  .justin-price {
+    font-size: 16px;
+  }
+  
+  .justin-cart {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+}
+
+/* iPad Air 10.9" (820px - 1180px) */
+@media (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+  .justin-section {
+    top: 560px;
+    left: 45px;
+    width: calc(100vw - 90px);
+    height: 280px;
+  }
+  
+  .justin-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .justin-scroll {
+    gap: 20px;
+  }
+  
+  .justin-card {
+    min-width: 300px;
+    height: 110px;
+    padding: 10px 16px;
+    gap: 14px;
+  }
+  
+  .justin-img {
+    width: 90px;
+    height: 85px;
+  }
+  
+  .justin-flavor {
+    font-size: 11px;
+  }
+  
+  .justin-name {
+    font-size: 15px;
+  }
+  
+  .justin-price {
+    font-size: 15px;
+  }
+  
+  .justin-cart {
+    font-size: 15px;
+    padding: 7px 16px;
+  }
+}
+
+/* iPad Portrait (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .justin-section {
+    top: 600px;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: 240px;
+  }
+  
+  .justin-title {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  
+  .justin-scroll {
+    gap: 15px;
+  }
+  
+  .justin-card {
+    min-width: 240px;
+    height: 95px;
+    padding: 7px 13px;
+    gap: 11px;
+  }
+  
+  .justin-img {
+    width: 75px;
+    height: 70px;
+  }
+  
+  .justin-flavor {
+    font-size: 9px;
+  }
+  
+  .justin-name {
+    font-size: 12px;
+  }
+  
+  .justin-price {
+    font-size: 12px;
+  }
+  
+  .justin-cart {
+    font-size: 12px;
+    padding: 5px 13px;
+  }
+}
+
+/* iPad Mini (768px - 810px) */
+@media (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
+  .justin-section {
+    top: 840px;
+    left: 20px;
+    width: calc(100vw - 40px);
+    height: 230px;
+  }
+  
+  .justin-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .justin-scroll {
+    gap: 14px;
+  }
+  
+  .justin-card {
+    min-width: 220px;
+    height: 90px;
+    padding: 6px 12px;
+    gap: 10px;
+  }
+  
+  .justin-img {
+    width: 70px;
+    height: 65px;
+  }
+  
+  .justin-flavor {
+    font-size: 8px;
+  }
+  
+  .justin-name {
+    font-size: 11px;
+  }
+  
+  .justin-price {
+    font-size: 11px;
+  }
+  
+  .justin-cart {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+}
+
+/* ===== MOBILE DEVICES ===== */
+
+/* Large Mobile (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .justin-section {
+    top: 550px;
+    left: 20px;
+    width: calc(100vw - 40px);
+    height: 220px;
+  }
+  
+  .justin-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .justin-scroll {
+    gap: 12px;
+  }
+  
+  .justin-card {
+    min-width: 200px;
+    height: 85px;
+    padding: 6px 10px;
+    gap: 8px;
+    border-radius: 16px;
+  }
+  
+  .justin-img {
+    width: 65px;
+    height: 60px;
+    border-radius: 6px;
+  }
+  
+  .justin-flavor {
+    font-size: 8px;
+  }
+  
+  .justin-name {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  
+  .justin-price {
+    font-size: 10px;
+  }
+  
+  .justin-cart {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 16px;
+  }
+  
+  .justin-arrow {
+    font-size: 10px;
+  }
+}
+
+/* Medium Mobile (375px - 480px) */
+@media (min-width: 375px) and (max-width: 410px) {
+  .justin-section {
+    top: 540px;
+    left: 15px;
+    width: calc(100vw - 30px);
+    height: 200px;
+  }
+  
+  .justin-title {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  
+  .justin-scroll {
+    gap: 10px;
+  }
+  
+  .justin-card {
+    min-width: 180px;
+    height: 80px;
+    padding: 5px 8px;
+    gap: 7px;
+    border-radius: 14px;
+  }
+  
+  .justin-img {
+    width: 60px;
+    height: 55px;
+    border-radius: 5px;
+  }
+  
+  .justin-flavor {
+    font-size: 7px;
+  }
+  
+  .justin-name {
+    font-size: 9px;
+    margin-bottom: 2px;
+  }
+  
+  .justin-price {
+    font-size: 9px;
+  }
+  
+  .justin-cart {
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: 14px;
+  }
+  
+  .justin-arrow {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 480px) {
+  .justin-section {
+    top: 700px;
+    left: 15px;
+    width: calc(100vw - 30px);
+    height: 200px;
+  }
+}
+
+/* Small Mobile (320px - 374px) */
+@media (min-width: 320px) and (max-width: 374px) {
+  .justin-section {
+    top: 480px;
+    left: 10px;
+    width: calc(100vw - 20px);
+    height: 180px;
+  }
+  
+  .justin-title {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .justin-scroll {
+    gap: 8px;
+  }
+  
+  .justin-card {
+    min-width: 160px;
+    height: 75px;
+    padding: 4px 7px;
+    gap: 6px;
+    border-radius: 12px;
+  }
+  
+  .justin-img {
+    width: 55px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  
+  .justin-flavor {
+    font-size: 6px;
+  }
+  
+  .justin-name {
+    font-size: 8px;
+    margin-bottom: 2px;
+  }
+  
+  .justin-price {
+    font-size: 8px;
+  }
+  
+  .justin-cart {
+    font-size: 8px;
+    padding: 2px 7px;
+    border-radius: 12px;
+  }
+  
+  .justin-arrow {
+    font-size: 8px;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media (max-width: 319px) {
+  .justin-section {
+    top: 450px;
+    left: 8px;
+    width: calc(100vw - 16px);
+    height: 160px;
+  }
+  
+  .justin-title {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+  
+  .justin-scroll {
+    gap: 6px;
+  }
+  
+  .justin-card {
+    min-width: 140px;
+    height: 70px;
+    padding: 3px 6px;
+    gap: 5px;
+    border-radius: 10px;
+  }
+  
+  .justin-img {
+    width: 50px;
+    height: 45px;
+    border-radius: 3px;
+  }
+  
+  .justin-flavor {
+    font-size: 5px;
+  }
+  
+  .justin-name {
+    font-size: 7px;
+    margin-bottom: 1px;
+  }
+  
+  .justin-price {
+    font-size: 7px;
+  }
+  
+  .justin-cart {
+    font-size: 7px;
+    padding: 2px 6px;
+    border-radius: 10px;
+  }
+  
+  .justin-arrow {
+    font-size: 7px;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ADJUSTMENTS ===== */
+
+/* Mobile Landscape (max-height: 500px) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .justin-section {
+    top: 400px;
+    left: 20px;
+    width: calc(100vw - 40px);
+    height: 140px;
+  }
+  
+  .justin-title {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .justin-scroll {
+    gap: 8px;
+  }
+  
+  .justin-card {
+    min-width: 160px;
+    height: 65px;
+    padding: 4px 8px;
+    gap: 6px;
+    border-radius: 12px;
+  }
+  
+  .justin-img {
+    width: 50px;
+    height: 45px;
+    border-radius: 4px;
+  }
+  
+  .justin-flavor {
+    font-size: 6px;
+  }
+  
+  .justin-name {
+    font-size: 8px;
+    margin-bottom: 2px;
+  }
+  
+  .justin-price {
+    font-size: 8px;
+  }
+  
+  .justin-cart {
+    font-size: 8px;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+  
+  .justin-arrow {
+    font-size: 8px;
+  }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .justin-title {
+    color: #000000;
+  }
+  
+  .justin-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
+  
+  .justin-flavor,
+  .justin-name,
+  .justin-price {
+    color: #000000;
+  }
+  
+  .justin-cart {
+    color: #000000;
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .justin-card {
+    transition: none;
+  }
+  
+  .justin-card:hover {
+    transform: none;
+  }
+  
+  .justin-cart {
+    transition: none;
+  }
+  
+  .justin-cart:hover {
+    transform: none;
+  }
+  
+  .justin-arrow {
+    transition: none;
+  }
+  
+  .justin-cart:hover .justin-arrow {
+    transform: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .justin-section {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .justin-title {
+    color: #000000;
+    font-size: 14px;
+  }
+  
+  .justin-card {
+    background: #ffffff;
+    border: 1px solid #000000;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+  
+  .justin-flavor,
+  .justin-name,
+  .justin-price {
+    color: #000000;
+  }
+  
+  .justin-cart {
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+} 

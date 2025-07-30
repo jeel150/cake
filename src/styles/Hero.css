@@ -1,0 +1,584 @@
+/* --- Hero.css --- */
+
+.hero-rb {
+  position: absolute;
+  top: 230px;
+  left: 53px;
+  width: 413px;
+  height: 250px;
+  z-index: 5;
+}
+
+.hero-title {
+  width: 413px;
+  height: 107px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #302100;
+  background: none;
+  opacity: 1;
+  margin: 0 0 10px 0;
+  padding: 0;
+  display: block;
+}
+
+.hero-desc {
+  width: 336px;
+  height: 50px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: #2A110A;
+  opacity: 1;
+  margin: 0 0 20px 0;
+}
+
+.hero-btn {
+  display: inline-block;
+  width: auto;
+  min-width: 150px;
+  height: 48px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #F6DBE0 0%, #F6DBE0 50%, transparent 50%, transparent 100%);
+  border: none;
+  cursor: pointer;
+  padding: 0 24px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 158%;
+  color: #441E14;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.02);
+  margin-top: 12px;
+  text-align: left;
+  transition: background 0.2s, box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+}
+.hero-btn:hover, .hero-btn:focus {
+  box-shadow: 0 8px 32px rgba(241, 168, 182, 0.18);
+  transform: scale(1.04);
+}
+
+.hero-btn-arrow {
+  margin-left: 12px;
+  font-size: 18px;
+  color: #441E14;
+  font-weight: 500;
+  position: relative;
+  top: 1px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+  .hero-rb {
+    top: 250px;
+    left: 80px;
+    width: 500px;
+    height: 280px;
+  }
+  
+  .hero-title {
+    width: 500px;
+    height: auto;
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-desc {
+    width: 420px;
+    height: auto;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .hero-btn {
+    min-width: 180px;
+    height: 52px;
+    font-size: 18px;
+    padding: 0 28px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 20px;
+  }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .hero-rb {
+    top: 240px;
+    left: 60px;
+    width: 450px;
+    height: 260px;
+  }
+  
+  .hero-title {
+    width: 450px;
+    height: auto;
+    font-size: 44px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-desc {
+    width: 380px;
+    height: auto;
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+  
+  .hero-btn {
+    min-width: 165px;
+    height: 50px;
+    font-size: 17px;
+    padding: 0 26px;
+  }
+}
+
+/* Small Desktop (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .hero-rb {
+    top: 220px;
+    left: 50px;
+    width: 400px;
+    height: 240px;
+  }
+  
+  .hero-title {
+    width: 400px;
+    height: auto;
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-desc {
+    width: 320px;
+    height: auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-btn {
+    min-width: 150px;
+    height: 48px;
+    font-size: 16px;
+    padding: 0 24px;
+  }
+}
+
+/* ===== TABLET DEVICES ===== */
+
+/* iPad Pro 12.9" (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .hero-rb {
+    top: 240px;
+    left: 60px;
+    width: 450px;
+    height: 260px;
+  }
+  
+  .hero-title {
+    width: 450px;
+    height: auto;
+    font-size: 44px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-desc {
+    width: 380px;
+    height: auto;
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+  
+  .hero-btn {
+    min-width: 165px;
+    height: 50px;
+    font-size: 17px;
+    padding: 0 26px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 19px;
+  }
+}
+
+/* iPad Pro 11" (834px - 1194px) */
+@media (min-width: 834px) and (max-width: 1194px) and (orientation: landscape) {
+  .hero-rb {
+    top: 220px;
+    left: 50px;
+    width: 400px;
+    height: 240px;
+  }
+  
+  .hero-title {
+    width: 400px;
+    height: auto;
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-desc {
+    width: 320px;
+    height: auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-btn {
+    min-width: 150px;
+    height: 48px;
+    font-size: 16px;
+    padding: 0 24px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 18px;
+  }
+}
+
+/* iPad Air 10.9" (820px - 1180px) */
+@media (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+  .hero-rb {
+    top: 210px;
+    left: 45px;
+    width: 380px;
+    height: 220px;
+  }
+  
+  .hero-title {
+    width: 380px;
+    height: auto;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-desc {
+    width: 300px;
+    height: auto;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  
+  .hero-btn {
+    min-width: 140px;
+    height: 46px;
+    font-size: 15px;
+    padding: 0 22px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 17px;
+  }
+}
+
+/* iPad Portrait (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-rb {
+    top: 160px;
+    left: 25px;
+    width: 300px;
+    height: 180px;
+  }
+  
+  .hero-title {
+    width: 300px;
+    height: auto;
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .hero-desc {
+    width: 240px;
+    height: auto;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-btn {
+    min-width: 120px;
+    height: 40px;
+    font-size: 13px;
+    padding: 0 16px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 15px;
+  }
+}
+
+/* iPad Mini (768px - 810px) */
+@media (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
+  .hero-rb {
+    top: 150px;
+    left: 20px;
+    width: 280px;
+    height: 170px;
+  }
+  
+  .hero-title {
+    width: 280px;
+    height: auto;
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+  
+  .hero-desc {
+    width: 220px;
+    height: auto;
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+  
+  .hero-btn {
+    min-width: 110px;
+    height: 38px;
+    font-size: 12px;
+    padding: 0 14px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 14px;
+  }
+}
+
+/* ===== MOBILE DEVICES ===== */
+
+/* Large Mobile (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-rb {
+    top: 140px;
+    left: 20px;
+    width: calc(100vw - 40px);
+    height: auto;
+    max-width: 400px;
+  }
+  
+  .hero-title {
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .hero-desc {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .hero-btn {
+    min-width: 140px;
+    height: 44px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 16px;
+  }
+}
+
+/* Medium Mobile (375px - 480px) */
+@media (min-width: 375px) and (max-width: 480px) {
+  .hero-rb {
+    top: 120px;
+    left: 15px;
+    width: calc(100vw - 30px);
+    height: auto;
+    max-width: 350px;
+  }
+  
+  .hero-title {
+    width: 100%;
+    height: auto;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .hero-desc {
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-btn {
+    min-width: 130px;
+    height: 42px;
+    font-size: 13px;
+    padding: 0 18px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile (320px - 374px) */
+@media (min-width: 320px) and (max-width: 374px) {
+  .hero-rb {
+    top: 100px;
+    left: 10px;
+    width: calc(100vw - 20px);
+    height: auto;
+    max-width: 300px;
+  }
+  
+  .hero-title {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .hero-desc {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-btn {
+    min-width: 120px;
+    height: 40px;
+    font-size: 12px;
+    padding: 0 16px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media (max-width: 319px) {
+  .hero-rb {
+    top: 90px;
+    left: 8px;
+    width: calc(100vw - 16px);
+    height: auto;
+    max-width: 280px;
+  }
+  
+  .hero-title {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .hero-desc {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-btn {
+    min-width: 110px;
+    height: 38px;
+    font-size: 11px;
+    padding: 0 14px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 13px;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ADJUSTMENTS ===== */
+
+/* Mobile Landscape (max-height: 500px) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-rb {
+    top: 80px;
+    left: 20px;
+    width: 300px;
+    height: auto;
+  }
+  
+  .hero-title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .hero-desc {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-btn {
+    min-width: 110px;
+    height: 36px;
+    font-size: 12px;
+    padding: 0 14px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 14px;
+  }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .hero-title {
+    color: #000000;
+  }
+  
+  .hero-desc {
+    color: #000000;
+  }
+  
+  .hero-btn {
+    background: #000000;
+    color: #ffffff;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-btn {
+    transition: none;
+  }
+  
+  .hero-btn:hover, .hero-btn:focus {
+    transform: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .hero-rb {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .hero-title {
+    color: #000000;
+    font-size: 24px;
+  }
+  
+  .hero-desc {
+    color: #000000;
+    font-size: 14px;
+  }
+  
+  .hero-btn {
+    display: none;
+  }
+} 

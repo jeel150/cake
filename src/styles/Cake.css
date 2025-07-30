@@ -1,0 +1,1656 @@
+/* --- Cake.css --- */
+
+.cake-page-wrapper {
+  background: #fff;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.cake-main-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.cake-content-bg {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(42, 17, 10, 0.07);
+  padding: 32px 24px;
+  margin-bottom: 32px;
+  width: 100%;
+}
+.cake-content-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+}
+.cake-content-row > .container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(42, 17, 10, 0.07);
+  padding: 0;
+  margin: 0;
+}
+.cake-filter-sidebar {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  min-width: 250px;
+  min-height: 80vh;
+  padding: 32px 24px;
+  flex: 0 0 250px;
+}
+.cake-filter-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #2a110a;
+}
+.cake-filter-section {
+  margin-bottom: 24px;
+}
+.cake-filter-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #b89b5e;
+}
+.cake-filter-checkbox-group div {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #2a110a;
+}
+.cake-filter-range-labels span {
+  font-size: 0.9rem;
+  color: #b89b5e;
+}
+.cake-grid-section {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.cake-grid-header {
+  margin-bottom: 32px;
+}
+.cake-grid-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b89b5e;
+  letter-spacing: 1px;
+}
+.cake-grid-results {
+  font-size: 1rem;
+  color: #b89b5e;
+}
+.cake-grid-sort span {
+  font-size: 1rem;
+  color: #2a110a;
+}
+.cake-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 314px);
+  gap: 28px;
+  justify-content: start;
+  align-items: flex-start;
+  margin-top: 132px;
+  margin-left:80px;
+  margin-right: 0;
+}
+.cake-card-grid-item {
+  width: 314px;
+  height: 380px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(42, 17, 10, 0.07);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: box-shadow 0.2s;
+}
+.cake-card-grid-item:hover {
+  box-shadow: 0 4px 24px rgba(42, 17, 10, 0.13);
+}
+.cake-card-heart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(42, 17, 10, 0.07);
+  z-index: 2;
+  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+.cake-card-heart:hover {
+  /* No color change, just effect */
+  box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
+  transform: scale(1.13);
+}
+.cake-card-heart.liked svg path {
+  fill: #F1A8B6;
+  stroke: #F1A8B6;
+}
+.cake-card-heart.animate {
+  animation: heart-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes heart-pop {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cake-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+.cake-card-title,
+.cake-card-price {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 158%;
+  letter-spacing: 0;
+  color: #000000;
+}
+.cake-card-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.cake-card-bag {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  opacity: 1;
+  background: #F6DBE0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(42, 17, 10, 0.07);
+  cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+.cake-card-bag:hover {
+  /* No background color change */
+  box-shadow: 0 8px 24px rgba(42, 17, 10, 0.18);
+  transform: scale(1.08);
+}
+.cake-card-bag:active, .cake-card-bag.bag-animate {
+  transform: scale(0.93);
+  transition: transform 0.09s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes bag-pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.18);
+  }
+  70% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cake-card-bag svg {
+  width: 28px;
+  height: 28px;
+}
+.cake-card-body {
+  position: relative;
+  padding: 16px 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+}
+.cake-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a110a;
+  margin-bottom: 8px;
+}
+.cake-pagination {
+  font-size: 1rem;
+  color: #b89b5e;
+  margin-top: 24px;
+}
+.cake-pagination-dot {
+  font-size: 1.5rem;
+  color: #f1a8b6;
+  margin: 0 2px;
+}
+.cake-content-container {
+  flex: 1 1 0%;
+  margin-left: 0;
+  padding: 32px 24px 24px 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(42, 17, 10, 0.07);
+  background: #fff;
+}
+.cake-breadcrumb-bar {
+  background: transparent;
+  margin-bottom: 0;
+}
+.cake-breadcrumb {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #969696;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  height: 19px;
+}
+.cake-breadcrumb-home,
+.cake-breadcrumb-arrow,
+.cake-breadcrumb-current {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #969696;
+  opacity: 1;
+  height: 19px;
+}
+.cake-breadcrumb-arrow {
+  margin: 0 8px;
+}
+.breadcrumb-arrow {
+  width: 17.34px;
+  height: 17.34px;
+  position: absolute;
+  top: 140px;
+  left: 130px;
+  transform: rotate(0deg);
+  opacity: 1;
+  color: #969696;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cake-toolbar-left {
+  position: relative;
+  top: 0;
+  left: 1000;
+  width: 46px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+}
+.cake-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cake-sort-label {
+  font-size: 1rem;
+  color: #2a110a;
+  margin-right: 4px;
+}
+.cake-sort-menu {
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid #b89b5e;
+  background: #fff;
+  color: #2a110a;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.cake-sort-menu:focus {
+  border: 1.5px solid #f1a8b6;
+}
+.cakes-title {
+  width: 131px;
+  height: 58px;
+  position: absolute;
+  top: 143px;
+  left: 51px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: 'Saxo Grammaticus', serif;
+  font-weight: 2;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #9B7C38;
+}
+.showing-results {
+  width: 148px;
+  height: 21px;
+  position: absolute;
+  top: 186px;
+  left: 240px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: right;
+  color: #441E14;
+  white-space: nowrap;
+  /* overflow: hidden; */
+}
+.sort-by-label {
+  width: 64px;
+  height: 25px;
+  position: absolute;
+  top: 189px;
+  left: 1328px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 158%;
+  letter-spacing: 0;
+  color: #441E14;
+}
+.sort-dropdown {
+  position: absolute;
+  top: 190px;
+  left: 1400px;
+  width: 120px;
+}
+.sort-dropdown-btn {
+  width: 100%;
+  height: 25px;
+  background: transparent;
+  border: none;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 158%;
+  color: #441E14;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 8px 0 0;
+}
+.sort-dropdown-arrow {
+  margin-right: 40px;
+  font-size: 16px;
+  color: #ec6bb8;
+}
+.sort-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(42, 17, 10, 0.07);
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  color: #441E14;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobile-friendly dropdown */
+@media (max-width: 768px) {
+  .sort-dropdown-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 300px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sort-dropdown-menu li {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+  }
+  
+  .sort-dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+}
+.sort-dropdown:hover .sort-dropdown-menu,
+.sort-dropdown:focus-within .sort-dropdown-menu {
+  display: block;
+}
+.sort-dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sort-dropdown-menu li:hover {
+  background: #F6DBE0;
+}
+.latest-label, .latest-icon { display: none; }
+.home-breadcrumb {
+  width: 45px;
+  height: 19px;
+  position: absolute;
+  top: 140px;
+  left: 80px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #969696;
+}
+.breadcrumb-current {
+  width: 46px;
+  height: 19px;
+  position: absolute;
+  top: 140px;
+  left: 150px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #969696;
+}
+.cake-divider {
+  width: 1450px;
+  height: 0px;
+  position: absolute;
+  top: 235px;
+  left: 51px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #D4D4D4;
+}
+.cake-divider-top {
+  width: 1444px;
+  height: 0px;
+  position: absolute;
+  top: 132px;
+  left: 51px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #D4D4D4;
+}
+.cake-card-custom {
+  width: 314px;
+  height: 380px;
+  position: absolute;
+  top: 270px;
+  border-radius: 8px;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.cake-card-custom.left {
+  left: 393px;
+}
+.cake-card-custom.right {
+  left: 1076px;
+}
+.cake-main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 900px;
+}
+.cake-sidebar {
+  width: 260px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 24px 20px 24px 24px;
+  margin-left: 32px;
+  margin-top: 130px;
+  margin-right: 16px;
+  min-height: 700px;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+}
+.cake-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.cake-sidebar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a110a;
+}
+.cake-sidebar-clear {
+  cursor: pointer;
+  color: #969696;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 18px;
+  transition: text-decoration 0.15s, color 0.15s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  outline: none;
+  border: none;
+  background: none;
+  display: inline-block;
+}
+.cake-sidebar-clear:hover, .cake-sidebar-clear:focus {
+  text-decoration: underline;
+  color: #9B7C38;
+  transform: scale(1.08);
+}
+.cake-sidebar-section {
+  margin-bottom: 28px;
+}
+.cake-sidebar-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2a110a;
+  margin-bottom: 12px;
+}
+.cake-sidebar-label.categories-label {
+  border-bottom: 1px solid #969696;
+  width: 100%;
+  display: block;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.cake-sidebar-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.cake-sidebar-slider-min,
+.cake-sidebar-slider-max {
+  font-size: 1rem;
+  color: #181818;
+}
+.cake-sidebar-slider {
+  flex: 1;
+  accent-color: #b89b5e;
+  height: 2px;
+}
+.cake-sidebar-subsection {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2a110a;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.cake-sidebar-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 8px;
+}
+.cake-sidebar-checkboxes label {
+  font-size: 1.1rem;
+  color: #2a110a;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cake-sidebar-checkboxes input[type="checkbox"] {
+  accent-color: #ec6bb8;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cc6e80;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+.cake-sidebar-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #181818;
+  padding: 18px 0 18px 0;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.cake-sidebar-option:hover {
+  background: #faf7f8;
+}
+.cake-sidebar-option:last-child {
+  border-bottom: 1px solid #f2f2f2;
+}
+cake-sidebar-plus {
+  color: #ec6bb8;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-left: 8px;
+  user-select: none;
+}
+.filter-header-with-line {
+  border-bottom: 1px solid #969696;
+  width: 100%;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+@media (max-width: 991px) {
+  .cake-content-bg {
+    padding: 16px 8px;
+    border-radius: 12px;
+  }
+  .cake-content-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .cake-content-row > .container {
+    border-radius: 12px;
+    margin-bottom: 0;
+  }
+  .cake-filter-sidebar {
+    min-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    margin-right: 0;
+    box-shadow: 0 2px 12px rgba(42, 17, 10, 0.07);
+    flex: unset;
+  }
+  .cake-grid-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cake-content-container {
+    margin-left: 0;
+    padding: 16px 8px;
+    border-radius: 12px;
+  }
+  .cake-card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .cake-main-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cake-sidebar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+    min-height: unset;
+  }
+}
+/* Mobile Devices (320px - 480px) */
+@media (max-width: 480px) {
+  .cake-page-wrapper {
+    padding: 0 8px;
+  }
+  
+  /* Mobile sidebar improvements */
+  .cake-sidebar {
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(42, 17, 10, 0.1);
+    margin: 5px 0 !important;
+    margin-left: 10px !important;
+    margin-top: -160px !important;
+    transform: translateY(70px) !important;
+    width: 90%;
+    max-width: 280px;
+    padding: 12px;
+  }
+  
+  .cake-sidebar-section {
+    margin-bottom: 30px;
+    margin-left: -10px;
+  }
+  
+  .cake-sidebar-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .cake-sidebar-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .cake-sidebar-checkboxes label {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+  
+  .cake-sidebar-option {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  
+  .cake-sidebar-section {
+    margin-bottom: 20px;
+  }
+  
+  .cake-sidebar-checkboxes label {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+  
+  .cake-sidebar-slider {
+    margin: 10px 0;
+  }
+  
+  .cake-sidebar-slider-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  
+  .cake-sidebar-slider-min,
+  .cake-sidebar-slider-max {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .cakes-title {
+    position: relative;
+    top: -40px;
+    left: -5px;
+    font-size: 32px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+  }
+  
+  .showing-results {
+    position: relative;
+    top: -100px;
+    left: 200px;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: right;
+  }
+  
+  .sort-by-label {
+    position: relative;
+    top: -60px;
+    left: 220px;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .sort-dropdown {
+    position: relative;
+    top: -96px;
+    left: 280px;
+    margin: 10px 0;
+  }
+  
+  .home-breadcrumb {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 14px;
+    margin: 15px 0 5px 0;
+  }
+  
+  .breadcrumb-arrow {
+    position: relative;
+    top: -20px;
+    left: 50px;
+    margin: 0 5px;
+  }
+  
+  .breadcrumb-current {
+    position: relative;
+    top:-35px;
+    left:80px;
+    font-size: 14px;
+  }
+  
+  .cake-divider,
+  .cake-divider-top {
+    position: relative;
+    top: -80px;
+    left: auto;
+    width: 100%;
+    margin: 15px 0;
+  }
+  
+  .cake-main-content {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 8px;
+  }
+  
+  .cake-sidebar {
+    width: 100%;
+    margin: 20px 0;
+    padding: 16px;
+    min-height: auto;
+  }
+  
+  .cake-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 20px 0 !important;
+    margin-top: 70px !important;
+    transform: translateY(70px) !important;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 8px;
+  }
+  
+  .cake-card-grid-item {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    min-height: 320px;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item:hover {
+    transform: rotateY(5deg);
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .cake-card-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cake-card-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .cake-card-img {
+    height: 180px;
+  }
+  
+  .cake-card-title {
+    font-size: 14px;
+  }
+  
+  .cake-card-bag {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .cake-card-bag svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Small Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .cake-page-wrapper {
+    padding: 0 16px;
+  }
+  
+  /* Tablet sidebar improvements */
+  .cake-sidebar {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(42, 17, 10, 0.08);
+    margin: 20px 0 !important;
+    margin-left: 0px !important;
+    margin-top: -160px !important;
+    transform: translateY(70px) !important;
+    width: 85%;
+    max-width: 320px;
+    padding: 16px;
+  }
+  
+  .cake-sidebar-section {
+    margin-left: -10px;
+    margin-bottom: 18px;
+  }
+  
+  .cake-sidebar-title {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  
+  .cake-sidebar-label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .cake-sidebar-checkboxes label {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+  
+  .cake-sidebar-option {
+    font-size: 17px;
+    padding: 14px 0;
+  }
+  
+  .cake-sidebar-checkboxes label {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  
+  .cake-sidebar-slider-row {
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .cake-sidebar-slider-min,
+  .cake-sidebar-slider-max {
+    font-size: 15px;
+    min-width: 60px;
+  }
+  
+  /* Footer positioning for tablet */
+  .footer-cake {
+    margin-top: -200px;
+  }
+  
+  .cakes-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 36px;
+    margin: 25px 0 15px 0;
+    text-align: center;
+  }
+  
+  .showing-results {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  .sort-by-label {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  .sort-dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 15px 0;
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  .home-breadcrumb {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 15px;
+    margin: 20px 0 10px 0;
+  }
+  
+  .breadcrumb-arrow {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 8px;
+  }
+  
+  .breadcrumb-current {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 15px;
+  }
+  
+  .cake-divider,
+  .cake-divider-top {
+    position: relative;
+    top: -80px;
+    left: auto;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .cake-main-content {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 16px;
+  }
+  
+  .cake-sidebar {
+    width: 100%;
+    margin: 25px 0;
+    padding: 20px;
+    min-height: auto;
+  }
+  
+  .cake-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 25px 0;
+    margin-top: -40px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 12px;
+  }
+  
+  .cake-card-grid-item {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 340px;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item:hover {
+    transform: rotateY(5deg);
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .cake-card-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cake-card-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .cake-card-img {
+    height: 200px;
+  }
+  
+  .cake-card-title {
+    font-size: 15px;
+  }
+}
+
+/* iPad Mini (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cake-page-wrapper {
+    padding: 0 24px;
+  }
+  
+  .cake-sidebar {
+    margin-left: 0px !important;
+    margin-top: -160px !important;
+    transform: translateY(70px) !important;
+    width: 220px;
+    padding: 18px;
+  }
+  
+  .cake-sidebar-section {
+    margin-left: -10px;
+    margin-bottom: 20px;
+  }
+  
+  .cake-sidebar-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .cake-sidebar-label {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .cake-sidebar-checkboxes label {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  
+  .cake-sidebar-option {
+    font-size: 18px;
+    padding: 16px 0;
+  }
+  
+  /* Footer positioning for iPad Mini */
+  .footer-cake {
+    margin-top: -120px;
+  }
+  
+  .cakes-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 40px;
+    margin: 30px 0 20px 0;
+    text-align: center;
+  }
+  
+  .showing-results {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    margin: 20px 0;
+    text-align: right;
+    margin-right: 30px;
+  }
+  
+  .sort-by-label {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    margin: 20px 0;
+    text-align: right;
+    margin-right: 30px;
+  }
+  
+  .sort-dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 20px 0;
+    text-align: right;
+    margin-right: 30px;
+  }
+  
+  .home-breadcrumb {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    margin: 25px 0 15px 0;
+  }
+  
+  .breadcrumb-arrow {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 10px;
+  }
+  
+  .breadcrumb-current {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+  }
+  
+  .cake-divider,
+  .cake-divider-top {
+    position: relative;
+    top: -80px;
+    left: auto;
+    width: 100%;
+    margin: 25px 0;
+  }
+  
+  .cake-main-content {
+    flex-direction: row;
+    margin: 0;
+    padding: 0 24px;
+    gap: 20px;
+  }
+  
+  .cake-sidebar {
+    width: 220px;
+    margin: 30px 0;
+    padding: 20px;
+    min-height: auto;
+    flex-shrink: 0;
+  }
+  
+  .cake-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 30px 0;
+    margin-top: -40px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 16px;
+  }
+  
+  .cake-card-grid-item {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    min-height: 360px;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item:hover {
+    transform: rotateY(5deg);
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .cake-card-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cake-card-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .cake-card-img {
+    height: 220px;
+  }
+  
+  .cake-card-title {
+    font-size: 16px;
+  }
+}
+
+/* iPad Pro (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .cake-page-wrapper {
+    padding: 0 32px;
+  }
+  
+  .cake-sidebar {
+    margin-left: -30px;
+    margin-top: -120px;
+    width: 240px;
+    padding: 20px;
+  }
+  
+  .cake-sidebar-section {
+    margin-left: -10px;
+    margin-bottom: 22px;
+  }
+  
+  .cake-sidebar-title {
+    font-size: 19px;
+    margin-bottom: 22px;
+  }
+  
+  .cake-sidebar-label {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+  
+  .cake-sidebar-checkboxes label {
+    font-size: 17px;
+    padding: 12px 0;
+  }
+  
+  .cake-sidebar-option {
+    font-size: 19px;
+    padding: 18px 0;
+  }
+  
+  /* Footer positioning for iPad Pro */
+  .footer-cake {
+    margin-top: -120px;
+  }
+  
+  .cakes-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 42px;
+    margin: 35px 0 25px 0;
+    text-align: center;
+  }
+  
+  .showing-results {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    margin: 25px 0;
+    text-align: right;
+    margin-right: 40px;
+  }
+  
+  .sort-by-label {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    margin: 25px 0;
+    text-align: right;
+    margin-right: 40px;
+  }
+  
+  .sort-dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 25px 0;
+    text-align: right;
+    margin-right: 40px;
+  }
+  
+  .home-breadcrumb {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    margin: 30px 0 20px 0;
+  }
+  
+  .breadcrumb-arrow {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 12px;
+  }
+  
+  .breadcrumb-current {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+  }
+  
+  .cake-divider,
+  .cake-divider-top {
+    position: relative;
+    top: -80px;
+    left: auto;
+    width: 100%;
+    margin: 30px 0;
+  }
+  
+  .cake-main-content {
+    flex-direction: row;
+    margin: 0;
+    padding: 0 32px;
+    gap: 24px;
+  }
+  
+  .cake-sidebar {
+    width: 240px;
+    margin: 35px 0;
+    padding: 24px;
+    min-height: auto;
+    flex-shrink: 0;
+  }
+  
+  .cake-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    margin: 35px 0;
+    margin-top: -40px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 20px;
+  }
+  
+  .cake-card-grid-item {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 380px;
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cake-card-grid-item:hover {
+    transform: rotateY(5deg);
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .cake-card-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cake-card-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .cake-card-img {
+    height: 240px;
+  }
+  
+  .cake-card-title {
+    font-size: 16px;
+  }
+}
+
+/* Large Tablets and Small Laptops (1367px - 1600px) */
+@media (min-width: 1367px) and (max-width: 1600px) {
+  .cake-main-content {
+    max-width: 1400px;
+    gap: 28px;
+  }
+  
+  .cake-sidebar {
+    width: 250px;
+    padding: 24px;
+    margin-left: -15px;
+  }
+  
+  .cake-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    margin-left: 80px;
+  }
+  
+  .cake-card-grid-item {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Additional responsive adjustments for better mobile experience */
+@media (max-width: 767px) {
+  .cake-main-section {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  .cake-content-bg {
+    padding: 8px 2px;
+    border-radius: 8px;
+  }
+  
+  .cake-content-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .cake-content-row > .container {
+    border-radius: 8px;
+  }
+  
+  .cake-filter-sidebar {
+    padding: 16px 8px;
+    border-radius: 8px;
+    min-width: 100%;
+    min-height: unset;
+    margin-bottom: 12px;
+    flex: unset;
+  }
+  
+  .cake-grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .cake-card-img {
+    height: 160px;
+  }
+  
+  .cake-content-container {
+    padding: 8px 2px;
+    border-radius: 8px;
+  }
+  
+  /* Improve touch targets on mobile */
+  .cake-card-bag {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .cake-sidebar-checkboxes input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .cake-sidebar-option {
+    padding: 16px 0;
+  }
+  
+  .cake-sidebar-slider {
+    margin: 8px 0;
+  }
+  
+  .cake-sidebar-slider-row {
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+  }
+  
+  .cake-sidebar-slider-min,
+  .cake-sidebar-slider-max {
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  /* Footer positioning for mobile */
+  .footer-cake {
+    margin-top: -200px !important;
+    transform: translateY(150px) !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+  
+  /* Better touch interactions */
+  .cake-card-bag:active {
+    transform: scale(0.9);
+  }
+  
+  .cake-sidebar-clear:active {
+    transform: scale(0.95);
+  }
+  
+  /* Enhanced horizontal scrolling experience */
+  .cake-card-grid {
+    scroll-behavior: smooth;
+  }
+  
+  .cake-card-grid-item {
+    cursor: grab;
+  }
+  
+  .cake-card-grid-item:active {
+    cursor: grabbing;
+  }
+  
+  /* Add subtle shadow to indicate scrollable content */
+  .cake-card-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.8));
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Improve accessibility */
+  .cake-sidebar-checkboxes input[type="checkbox"]:focus {
+    outline: 2px solid #ec6bb8;
+    outline-offset: 2px;
+  }
+  
+  .cake-sidebar-slider:focus {
+    outline: 2px solid #ec6bb8;
+    outline-offset: 2px;
+  }
+  
+  /* Prevent text selection on interactive elements */
+  .cake-card-bag,
+  .cake-sidebar-clear,
+  .cake-sidebar-option {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+} 

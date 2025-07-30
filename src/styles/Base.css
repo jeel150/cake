@@ -1,0 +1,84 @@
+/* --- Base.css --- */
+
+html, body {
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scroll-behavior: smooth;
+}
+
+/* Responsive Background Styles */
+.main-container,
+div.main-container,
+div[class*="main-container"] {
+  position: relative !important;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  background-image: var(--bg-image) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  opacity: 1 !important;
+}
+
+/* Mobile devices (portrait and landscape) */
+@media (max-width: 768px) {
+  .main-container,
+  div.main-container,
+  div[class*="main-container"] {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .main-container,
+  div.main-container,
+  div[class*="main-container"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-container,
+  div.main-container,
+  div[class*="main-container"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* Large tablets and small desktops */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .main-container,
+  div.main-container,
+  div[class*="main-container"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1367px) {
+  .main-container,
+  div.main-container,
+  div[class*="main-container"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+} 
