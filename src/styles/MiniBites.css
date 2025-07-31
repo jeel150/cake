@@ -1,4 +1,4 @@
-/* --- Occasions.css --- */
+/* --- minibites.css --- */
 
 .minibites-section {
     width: 100vw;
@@ -6,6 +6,7 @@
     margin-bottom: 32px;
     padding-left: 51px;
     padding-right: 51px;
+    max-width: none;
   }
   
   .minibites-title {
@@ -221,133 +222,16 @@
   fill: none;
 }
 
-/* ===== RESPONSIVE DESIGN FOR MOBILE AND TABLET ===== */
 
-/* Tablet Devices (768px - 1023px) */
-@media (max-width: 1023px) {
-  .minibites-section {
-    margin-top: 120px !important;
-    padding-left: 60px !important;
-    padding-right: 60px !important;
-    width: calc(100% - 40px) !important;
-  }
-
-  .minibites-title {
-    font-size: 28px !important;
-    margin-bottom: 18px !important;
-  }
-
-  .minibites-tabs {
-    gap: 25px !important;
-    margin-bottom: 25px !important;
-    overflow-x: auto !important;
-    padding-bottom: 5px !important;
-  }
-
-  .minibites-tab {
-    font-size: 14px !important;
-    padding: 6px 20px !important;
-    height: 32px !important;
-    white-space: nowrap !important;
-  }
-
-  .minibites-viewall {
-    margin-left: auto !important;
-    font-size: 14px !important;
-  }
-
-  .minibites-section .minibites-cards {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 20px !important;
-    overflow-x: auto !important;
-    overflow-y: visible !important;
-    scrollbar-width: thin !important;
-    -ms-overflow-style: auto !important;
-    padding-bottom: 20px !important;
-    margin-right: 60px !important;
-    scroll-behavior: smooth !important;
-    flex-wrap: nowrap !important;
-  }
-
-  .minibites-section .minibites-cards::-webkit-scrollbar {
-    display: block !important;
-    height: 8px !important;
-  }
-
-  .minibites-section .minibites-cards::-webkit-scrollbar-track {
-    background: #f1f1f1 !important;
-    border-radius: 4px !important;
-  }
-
-  .minibites-section .minibites-cards::-webkit-scrollbar-thumb {
-    background: #F6DBE0 !important;
-    border-radius: 4px !important;
-  }
-
-  .minibites-section .minibites-cards::-webkit-scrollbar-thumb:hover {
-    background: #F1A8B6 !important;
-  }
-
-  .minibites-section .minibites-card {
-    min-width: 280px !important;
-    width: 280px !important;
-    height: 350px !important;
-    flex-shrink: 0 !important;
-    flex: 0 0 280px !important;
-  }
-
-  .minibites-section .minibites-card-img {
-    height: 220px !important;
-  }
-
-  .minibites-section .minibites-card-content {
-    padding: 12px !important;
-  }
-
-  .minibites-section .minibites-card-title {
-    font-size: 14px !important;
-  }
-
-  .minibites-section .minibites-card-price {
-    font-size: 16px !important;
-  }
-
-  /* Responsive styles for heart and bag symbols */
-  .minibites-section .minibites-card-heart {
-    width: 32px !important;
-    height: 32px !important;
-    top: 16px !important;
-    left: 16px !important;
-  }
-
-  .minibites-section .minibites-card-heart svg {
-    width: 22px !important;
-    height: 20px !important;
-    top: 4px !important;
-  }
-
-  .minibites-section .minibites-card-bag {
-    width: 44px !important;
-    height: 44px !important;
-    top: 235px !important;
-    left: 220px !important;
-  }
-
-  .minibites-section .minibites-card-bag svg {
-    width: 20px !important;
-    height: 20px !important;
-    top: 10px !important;
-  }
-}
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
   .minibites-section {
-    margin-top: 100px !important;
+    margin-top: 60px !important;
     padding-left: 35px !important;
     padding-right: 35px !important;
-    width: calc(100% - 30px) !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
   }
 
   .minibites-title {
@@ -462,10 +346,11 @@
 /* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .minibites-section {
-    margin-top: 80px !important;
+    margin-top: 40px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
-    width: calc(100% - 20px) !important;
+    width: calc(100vw - 40px) !important;
+    max-width: none !important;
   }
 
   .minibites-title {
@@ -580,7 +465,7 @@
 /* Landscape orientation for mobile */
 @media (max-width: 767px) and (orientation: landscape) {
   .minibites-section {
-    margin-top: 60px !important;
+    margin-top: 20px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
     width: calc(100% - 20px) !important;

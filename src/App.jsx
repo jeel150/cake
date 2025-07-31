@@ -239,12 +239,23 @@ function App() {
         </div>
       )}
 
-      <div 
-        className="position-relative w-100 main-container" 
-        style={{
-          '--bg-image': `url(${cakeBg})`
-        }}
-      >
+      <div className="position-relative w-100 main-container">
+        {/* Background Image Div */}
+        <div 
+          className="background-image-container"
+          style={{
+            backgroundImage: `url(${cakeBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100vh',
+            zIndex: -1
+          }}
+        ></div>
         <Navbar />
       {/* Hero Section */}
       <div className="hero-rb">
@@ -494,17 +505,19 @@ function App() {
                 <img src={idx === 0 ? cakeImg : idx === 1 ? biscoffImg : idx === 2 ? hazulnutImg : idx === 3 ? cupCakeImg : idx === 4 ? darkChocoImg : idx === 5 ? statementSetImg : idx === 6 ? ladyImg : cookieImg} alt={`Cake ${idx+1}`} className="statement-cake-img w-100" />
                 <div className="statement-cake-content d-flex flex-column flex-grow-1">
                 <div className="statement-cake-title">Lorem Ipsum is sim...</div>
-                <div className="statement-cake-price"><span className="currency">৳ 300.00</span></div>
-              </div>
-              <div
-                  className={`statement-card-bag position-absolute d-flex align-items-center justify-content-center${statementBagAnimate[idx] ? ' bag-animate' : ''}`}
-                onClick={() => handleStatementBagClick(idx)}
-                style={{ cursor: 'pointer' }}
-              >
-                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="8" width="13" height="10" rx="2" stroke="#2A110A" strokeWidth="1.5" fill="none"/>
-                  <path d="M8 8V6a3 3 0 0 1 6 0v2" stroke="#2A110A" strokeWidth="1.5" fill="none"/>
-                </svg>
+                <div className="statement-cake-price">
+                  <span className="currency">৳ 300.00</span>
+                  <div
+                    className={`statement-card-bag d-flex align-items-center justify-content-center${statementBagAnimate[idx] ? ' bag-animate' : ''}`}
+                    onClick={() => handleStatementBagClick(idx)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="5" y="8" width="13" height="10" rx="2" stroke="#2A110A" strokeWidth="1.5" fill="none"/>
+                      <path d="M8 8V6a3 3 0 0 1 6 0v2" stroke="#2A110A" strokeWidth="1.5" fill="none"/>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

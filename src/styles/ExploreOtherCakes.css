@@ -6,6 +6,8 @@
   max-width: 1200px;
   margin: 48px auto 0 auto;
   padding-bottom: 48px;
+  width: 100%;
+  max-width: none;
 }
 .explore-title-row {
   display: flex;
@@ -745,185 +747,18 @@
 
 /* ===== RESPONSIVE DESIGN FOR EXPLORE CARDS ===== */
 
-/* iPad Pro (1024px - 1366px) */
-@media (max-width: 1366px) and (min-width: 1024px) {
-  .explore-other-cakes-section {
-    max-width: 1000px !important;
-    margin: 40px auto 0 auto !important;
-    padding-bottom: 40px !important;
-  }
 
-  .explore-title {
-    width: 500px !important;
-    height: 50px !important;
-    font-size: 32px !important;
-    top: 900px !important;
-    left: 40px !important;
-  }
 
-  .explore-view-all {
-    width: 50px !important;
-    height: 16px !important;
-    font-size: 14px !important;
-    top: 910px !important;
-    left: 1000px !important;
-  }
 
-  .explore-cake-card-row {
-    gap: 24px !important;
-    margin-top: 32px !important;
-  }
-
-  .explore-cake-card {
-    width: 280px !important;
-    height: 350px !important;
-  }
-
-  .explore-cake-img {
-    height: 200px !important;
-  }
-
-  .explore-cake-title {
-    font-size: 14px !important;
-    margin: 12px 0 2px 0 !important;
-  }
-
-  .explore-cake-price {
-    font-size: 14px !important;
-    margin-top: 60px !important;
-  }
-
-  .explore-cake-heart {
-    top: 25px !important;
-    right: 25px !important;
-    width: 36px !important;
-    height: 36px !important;
-  }
-
-  .explore-cake-bag {
-    bottom: 70px !important;
-    right: 20px !important;
-    width: 48px !important;
-    height: 48px !important;
-  }
-}
-
-/* iPad Air (768px - 1023px) */
-@media (max-width: 1023px) and (min-width: 768px) {
-  .explore-other-cakes-section {
-    max-width: 900px !important;
-    margin: 32px auto 0 auto !important;
-    padding-bottom: 32px !important;
-    overflow: hidden !important;
-  }
-
-  .explore-title {
-    width: 450px !important;
-    height: 45px !important;
-    font-size: 28px !important;
-    top: 800px !important;
-    left: 30px !important;
-  }
-
-  .explore-view-all {
-    width: 45px !important;
-    height: 15px !important;
-    font-size: 13px !important;
-    top: 805px !important;
-    left: 850px !important;
-  }
-
-  .explore-cake-card-row {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 20px !important;
-    margin-top: 28px !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
-    padding-bottom: 15px !important;
-  }
-
-  .explore-cake-card-row::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .explore-cake-card {
-    min-width: 300px !important;
-    width: 300px !important;
-    height: 350px !important;
-    flex-shrink: 0 !important;
-    scroll-snap-align: start !important;
-    margin-right: 20px !important;
-  }
-
-  .explore-cake-img {
-    height: 200px !important;
-    width: 100% !important;
-  }
-
-  .explore-cake-title {
-    font-size: 14px !important;
-    margin: 12px 0 4px 0 !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    position: absolute !important;
-    bottom: 90px !important;
-    left: 0 !important;
-    width: 100% !important;
-  }
-
-  .explore-cake-price {
-    font-size: 14px !important;
-    margin-top: 0 !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    position: absolute !important;
-    bottom: 55px !important;
-    left: 0 !important;
-    width: 100% !important;
-  }
-
-  .explore-cake-card-row .explore-cake-card .explore-cake-heart {
-    top: 25px !important;
-    right: 25px !important;
-    width: 40px !important;
-    height: 40px !important;
-    position: absolute !important;
-    z-index: 10 !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  .explore-cake-card-row .explore-cake-card .explore-cake-bag {
-    bottom: 65px !important;
-    right: 20px !important;
-    width: 52px !important;
-    height: 52px !important;
-    position: absolute !important;
-    z-index: 10 !important;
-    background: #F6DBE0 !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  }
-}
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
   .explore-other-cakes-section {
-    max-width: 100% !important;
+    max-width: none !important;
     margin: 24px 20px 0 20px !important;
     padding-bottom: 24px !important;
     overflow: hidden !important;
+    width: calc(100vw - 40px) !important;
   }
 
   .explore-title-row {
@@ -1046,6 +881,8 @@
     margin: 20px 16px 0 16px !important;
     padding-bottom: 20px !important;
     overflow: hidden !important;
+    width: calc(100vw - 32px) !important;
+    max-width: none !important;
   }
 
   .explore-title {

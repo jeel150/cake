@@ -4,8 +4,10 @@
   position: absolute;
   top: 1490px;
   left: 52px;
-  width: 384px;
+  right: 52px;
+  width: calc(100vw - 104px);
   z-index: 10;
+  max-width: none;
 }
 
 .imagination-title {
@@ -28,6 +30,7 @@
   color: #6F6F6F;
   line-height: 170%;
   margin-bottom: 32px;
+  max-width: none;
 }
 
 .imagination-btn-container {
@@ -165,7 +168,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   min-width: 24px;
-  margin-right: 14px;
+  margin-right: 5px;
   font-family: 'Saxo Grammaticus', 'Josefin Sans', Arial, sans-serif;
   font-weight: 400;
   font-size: 38px;
@@ -178,6 +181,17 @@
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
+
+/* Web screens only - shift lady image and features 20px left */
+@media (min-width: 1024px) {
+  .imagination-image-wrapper {
+    left: 482px !important; /* Shift 20px left from original 490px */
+  }
+  
+  .imagination-features-wrapper {
+    left: 992px !important; /* Shift 20px left from original 980px */
+  }
+}
 
 /* Large Desktop (1400px and above) */
 @media (min-width: 1400px) {
@@ -206,7 +220,7 @@
   
   .imagination-image-wrapper {
     top: 1390px;
-    left: 540px;
+    left: 530px; /* Shift 20px left from original 540px */
     width: 500px;
     height: 670px;
   }
@@ -224,7 +238,7 @@
   
   .imagination-features-wrapper {
     top: 1410px;
-    left: 1080px;
+    left: 1070px; /* Shift 20px left from original 1080px */
     width: 520px;
     gap: 32px;
   }
@@ -277,7 +291,7 @@
   
   .imagination-image-wrapper {
     top: 1440px;
-    left: 480px;
+    left: 470px; /* Shift 20px left from original 480px */
     width: 480px;
     height: 640px;
   }
@@ -295,7 +309,7 @@
   
   .imagination-features-wrapper {
     top: 1460px;
-    left: 1000px;
+    left: 990px; /* Shift 20px left from original 1000px */
     width: 500px;
     gap: 30px;
   }
@@ -348,7 +362,7 @@
   
   .imagination-image-wrapper {
     top: 1410px;
-    left: 460px;
+    left: 450px; /* Shift 20px left from original 460px */
     width: 440px;
     height: 590px;
   }
@@ -366,7 +380,7 @@
   
   .imagination-features-wrapper {
     top: 1430px;
-    left: 920px;
+    left: 910px; /* Shift 20px left from original 920px */
     width: 460px;
     gap: 28px;
   }
@@ -392,375 +406,7 @@
   }
 }
 
-/* ===== TABLET DEVICES ===== */
 
-/* iPad Pro 12.9" (1024px - 1366px) */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-  .imagination-section {
-    top: 1600px;
-    left: 60px;
-    width: 350px;
-  }
-  
-  .imagination-title {
-    font-size: 34px;
-    margin-bottom: 20px;
-  }
-  
-  .imagination-desc {
-    width: 280px;
-    height: auto;
-    font-size: 15px;
-    margin-bottom: 28px;
-  }
-  
-  .imagination-btn {
-    width: 150px;
-    font-size: 13px;
-    padding: 16px 0;
-  }
-  
-  .imagination-image-wrapper {
-    top: 1590px;
-    left: 430px;
-    width: 400px;
-    height: 540px;
-  }
-  
-  .imagination-image {
-    width: 400px;
-    height: 540px;
-  }
-  
-  .imagination-symbol {
-    left: -140px;
-    top: 280px;
-    font-size: 220px;
-  }
-  
-  .imagination-features-wrapper {
-    top: 1610px;
-    left: 860px;
-    width: 400px;
-    gap: 24px;
-  }
-  
-  .imagination-features-row {
-    gap: 16px;
-    min-height: 90px;
-  }
-  
-  .imagination-feature-title {
-    font-size: 16px;
-  }
-  
-  .imagination-feature-desc {
-    font-size: 14px;
-  }
-  
-  .imagination-number-1,
-  .imagination-number-2,
-  .imagination-number-3,
-  .imagination-number-4 {
-    font-size: 34px;
-  }
-}
-
-/* iPad Pro 11" (834px - 1194px) */
-@media (min-width: 834px) and (max-width: 1194px) and (orientation: landscape) {
-  .imagination-section {
-    top: 1550px;
-    left: 50px;
-    width: 320px;
-  }
-  
-  .imagination-title {
-    font-size: 30px;
-    margin-bottom: 18px;
-  }
-  
-  .imagination-desc {
-    width: 260px;
-    height: auto;
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-  
-  .imagination-btn {
-    width: 140px;
-    font-size: 12px;
-    padding: 14px 0;
-  }
-  
-  .imagination-image-wrapper {
-    top: 1540px;
-    left: 390px;
-    width: 360px;
-    height: 480px;
-  }
-  
-  .imagination-image {
-    width: 360px;
-    height: 480px;
-  }
-  
-  .imagination-symbol {
-    left: -130px;
-    top: 250px;
-    font-size: 200px;
-  }
-  
-  .imagination-features-wrapper {
-    top: 1560px;
-    left: 780px;
-    width: 360px;
-    gap: 20px;
-  }
-  
-  .imagination-features-row {
-    gap: 14px;
-    min-height: 80px;
-  }
-  
-  .imagination-feature-title {
-    font-size: 15px;
-  }
-  
-  .imagination-feature-desc {
-    font-size: 13px;
-  }
-  
-  .imagination-number-1,
-  .imagination-number-2,
-  .imagination-number-3,
-  .imagination-number-4 {
-    font-size: 30px;
-  }
-}
-
-/* iPad Air 10.9" (820px - 1180px) */
-@media (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
-  .imagination-section {
-    top: 1500px;
-    left: 45px;
-    width: 300px;
-  }
-  
-  .imagination-title {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-  
-  .imagination-desc {
-    width: 240px;
-    height: auto;
-    font-size: 13px;
-    margin-bottom: 22px;
-  }
-  
-  .imagination-btn {
-    width: 130px;
-    font-size: 11px;
-    padding: 12px 0;
-  }
-  
-  .imagination-image-wrapper {
-    top: 1490px;
-    left: 360px;
-    width: 320px;
-    height: 430px;
-  }
-  
-  .imagination-image {
-    width: 320px;
-    height: 430px;
-  }
-  
-  .imagination-symbol {
-    left: -120px;
-    top: 220px;
-    font-size: 180px;
-  }
-  
-  .imagination-features-wrapper {
-    top: 1510px;
-    left: 700px;
-    width: 320px;
-    gap: 18px;
-  }
-  
-  .imagination-features-row {
-    gap: 12px;
-    min-height: 70px;
-  }
-  
-  .imagination-feature-title {
-    font-size: 14px;
-  }
-  
-  .imagination-feature-desc {
-    font-size: 12px;
-  }
-  
-  .imagination-number-1,
-  .imagination-number-2,
-  .imagination-number-3,
-  .imagination-number-4 {
-    font-size: 28px;
-  }
-}
-
-/* iPad Portrait (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .imagination-section {
-    top: 1800px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    max-width: 400px;
-  }
-  
-  .imagination-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .imagination-desc {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    font-size: 15px;
-    margin-bottom: 28px;
-  }
-  
-  .imagination-btn {
-    width: 160px;
-    font-size: 14px;
-    padding: 16px 0;
-  }
-  
-  .imagination-image-wrapper {
-    top: 1790px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    height: 540px;
-  }
-  
-  .imagination-image {
-    width: 400px;
-    height: 540px;
-  }
-  
-  .imagination-symbol {
-    left: -140px;
-    top: 280px;
-    font-size: 220px;
-  }
-  
-  .imagination-features-wrapper {
-    top: 2400px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    max-width: 600px;
-    gap: 24px;
-  }
-  
-  .imagination-features-row {
-    gap: 16px;
-    min-height: 90px;
-  }
-  
-  .imagination-feature-title {
-    font-size: 16px;
-  }
-  
-  .imagination-feature-desc {
-    font-size: 14px;
-  }
-  
-  .imagination-number-1,
-  .imagination-number-2,
-  .imagination-number-3,
-  .imagination-number-4 {
-    font-size: 32px;
-  }
-}
-
-/* iPad Mini (768px - 810px) */
-@media (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
-  .imagination-section {
-    top: 1900px;
-    left: 20px;
-    width: calc(100vw - 40px);
-    max-width: 350px;
-  }
-  
-  .imagination-title {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-  
-  .imagination-desc {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-  
-  .imagination-btn {
-    width: 140px;
-    font-size: 13px;
-    padding: 14px 0;
-  }
-  
-  .imagination-image-wrapper {
-    top: 1890px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 350px;
-    height: 470px;
-  }
-  
-  .imagination-image {
-    width: 350px;
-    height: 470px;
-  }
-  
-  .imagination-symbol {
-    left: -120px;
-    top: 240px;
-    font-size: 190px;
-  }
-  
-  .imagination-features-wrapper {
-    top: 2500px;
-    left: 20px;
-    width: calc(100vw - 40px);
-    max-width: 500px;
-    gap: 20px;
-  }
-  
-  .imagination-features-row {
-    gap: 14px;
-    min-height: 80px;
-  }
-  
-  .imagination-feature-title {
-    font-size: 15px;
-  }
-  
-  .imagination-feature-desc {
-    font-size: 13px;
-  }
-  
-  .imagination-number-1,
-  .imagination-number-2,
-  .imagination-number-3,
-  .imagination-number-4 {
-    font-size: 28px;
-  }
-}
 
 /* ===== MOBILE DEVICES ===== */
 
@@ -769,8 +415,9 @@
   .imagination-section {
     top: 1000px;
     left: 20px;
+    right: 20px;
     width: calc(100vw - 40px);
-    max-width: 300px;
+    max-width: none;
   }
   
   .imagination-title {
@@ -1156,6 +803,83 @@
   .imagination-number-3,
   .imagination-number-4 {
     font-size: 18px;
+  }
+}
+
+/* 360px Specific Responsive Design */
+@media (max-width: 360px) {
+  .imagination-section {
+    top: 1100px;
+    left: 12px;
+    width: calc(100vw - 24px);
+    max-width: 240px;
+  }
+  
+  .imagination-title {
+    font-size: 19px;
+    margin-bottom: 7px;
+  }
+  
+  .imagination-desc {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+  
+  .imagination-btn {
+    width: 95px;
+    font-size: 10px;
+    padding: 7px 0;
+  }
+  
+  .imagination-image-wrapper {
+    top: 1750px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 320px;
+  }
+  
+  .imagination-image {
+    width: 240px;
+    height: 320px;
+  }
+  
+  .imagination-symbol {
+    left: -75px;
+    top: 160px;
+    font-size: 110px;
+  }
+  
+  .imagination-features-wrapper {
+    top: 1300px;
+    left: 12px;
+    width: calc(100vw - 24px);
+    max-width: 280px;
+    gap: 14px;
+  }
+  
+  .imagination-features-row {
+    gap: 7px;
+    min-height: 45px;
+    margin-top: 10px;
+  }
+  
+  .imagination-feature-title {
+    font-size: 12px;
+  }
+  
+  .imagination-feature-desc {
+    font-size: 10px;
+  }
+  
+  .imagination-number-1,
+  .imagination-number-2,
+  .imagination-number-3,
+  .imagination-number-4 {
+    font-size: 19px;
   }
 }
 

@@ -10,6 +10,7 @@
   width: 100%;
   min-height: 565px;
   background: none;
+  max-width: none;
 }
 
 .jar-feature-img {
@@ -93,98 +94,7 @@
   background: #eecad6;
 }
 
-/* ===== RESPONSIVE DESIGN FOR MOBILE AND TABLET ===== */
 
-/* Tablet Devices (768px - 1023px) */
-@media (max-width: 1023px) {
-  .jar-feature-section {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    margin: 40px 0 0 0 !important;
-    padding: 0 60px !important;
-    width: calc(100% - 40px) !important;
-    min-height: auto !important;
-  }
-
-  .jar-feature-img {
-    width: 100% !important;
-    height: 400px !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06) !important;
-    margin: 0 0 0 0 !important;
-    opacity: 1 !important;
-  }
-
-  .jar-feature-content {
-    width: calc(100% - 80px) !important;
-    height: auto !important;
-    min-height: 300px !important;
-    background: #f3f3f3bc !important;
-    border-radius: 8px !important;
-    backdrop-filter: blur(7px) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding: 32px 32px 32px 32px !important;
-    box-sizing: border-box !important;
-    opacity: 1 !important;
-    margin: -60px 40px 0 40px !important;
-    z-index: 2 !important;
-  }
-
-  .jar-feature-title {
-    width: 100% !important;
-    height: auto !important;
-    font-family: 'Bricolage Grotesque', sans-serif !important;
-    font-weight: 50 !important;
-    font-size: 28px !important;
-    line-height: 120% !important;
-    letter-spacing: 0 !important;
-    text-transform: uppercase !important;
-    color: #B89B5E !important;
-    margin-bottom: 12px !important;
-    opacity: 1 !important;
-  }
-
-  .jar-feature-desc {
-    width: 100% !important;
-    height: auto !important;
-    font-family: 'Bricolage Grotesque', sans-serif !important;
-    font-weight: 400 !important;
-    font-size: 15px !important;
-    line-height: 160% !important;
-    letter-spacing: 0 !important;
-    color: #2A110A !important;
-    margin-bottom: 32px !important;
-    opacity: 1 !important;
-  }
-
-  .jar-feature-btn {
-    width: 170px !important;
-    height: 56px !important;
-    border-radius: 4px !important;
-    background: #F6DBE0 !important;
-    color: #441E14 !important;
-    font-family: 'Bricolage Grotesque', sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    border: none !important;
-    cursor: pointer !important;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.02) !important;
-    transition: background 0.2s !important;
-    opacity: 1 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    white-space: nowrap !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
@@ -194,10 +104,11 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    margin: 30px 0 0 0 !important;
+    margin: -10px 0 0 0 !important;
     padding: 0 35px !important;
-    width: calc(100% - 30px) !important;
+    width: calc(100vw - 70px) !important;
     min-height: auto !important;
+    max-width: none !important;
   }
 
   .jar-feature-img {
@@ -285,10 +196,12 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    margin: 20px 0 0 0 !important;
+    margin: -20px 0 0 0 !important;
     padding: 0 20px !important;
-    width: calc(100% - 20px) !important;
+    width: calc(100vw - 40px) !important;
     min-height: auto !important;
+    max-width: none !important;
+    margin-top: 70px !important;
   }
 
   .jar-feature-img {
@@ -376,7 +289,7 @@
     flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 20px 0 0 0 !important;
+    margin: -20px 0 0 0 !important;
     padding: 0 20px !important;
     width: calc(100% - 20px) !important;
     min-height: auto !important;
