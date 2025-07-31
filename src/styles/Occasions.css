@@ -6,6 +6,7 @@
   margin-bottom: 32px;
   padding-left: 51px;
   padding-right: 51px;
+  max-width: none;
 }
 
 .occasions-title {
@@ -140,133 +141,16 @@
   color: #2A110A;
 }
 
-/* ===== RESPONSIVE DESIGN FOR MOBILE AND TABLET ===== */
 
-/* Tablet Devices (768px - 1023px) */
-@media (max-width: 1023px) {
-  .occasions-section {
-    margin-top: 3100px !important;
-    padding-left: 60px !important;
-    padding-right: 60px !important;
-    width: calc(100% - 40px) !important;
-  }
-
-  .occasions-title {
-    font-size: 28px !important;
-    margin-bottom: 18px !important;
-  }
-
-  .occasions-tabs {
-    gap: 25px !important;
-    margin-bottom: 25px !important;
-    overflow-x: auto !important;
-    padding-bottom: 5px !important;
-  }
-
-  .occasions-tab {
-    font-size: 14px !important;
-    padding: 6px 20px !important;
-    height: 32px !important;
-    white-space: nowrap !important;
-  }
-
-  .occasions-viewall {
-    margin-left: auto !important;
-    font-size: 14px !important;
-  }
-
-  .occasions-cards {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 20px !important;
-    overflow-x: auto !important;
-    overflow-y: visible !important;
-    scrollbar-width: thin !important;
-    -ms-overflow-style: auto !important;
-    padding-bottom: 20px !important;
-    margin-right: 60px !important;
-    scroll-behavior: smooth !important;
-    flex-wrap: nowrap !important;
-  }
-
-  .occasions-cards::-webkit-scrollbar {
-    display: block !important;
-    height: 8px !important;
-  }
-
-  .occasions-cards::-webkit-scrollbar-track {
-    background: #f1f1f1 !important;
-    border-radius: 4px !important;
-  }
-
-  .occasions-cards::-webkit-scrollbar-thumb {
-    background: #F6DBE0 !important;
-    border-radius: 4px !important;
-  }
-
-  .occasions-cards::-webkit-scrollbar-thumb:hover {
-    background: #F1A8B6 !important;
-  }
-
-  .occasions-card {
-    min-width: 280px !important;
-    width: 280px !important;
-    height: 350px !important;
-    flex-shrink: 0 !important;
-    flex: 0 0 280px !important;
-  }
-
-  .occasions-card-img {
-    height: 220px !important;
-  }
-
-  .occasions-card-content {
-    padding: 12px !important;
-  }
-
-  .occasions-card-title {
-    font-size: 14px !important;
-  }
-
-  .occasions-card-price {
-    font-size: 16px !important;
-  }
-
-  /* Responsive styles for heart and bag symbols */
-  .occasion-card-heart {
-    width: 32px !important;
-    height: 32px !important;
-    top: 16px !important;
-    left: 16px !important;
-  }
-
-  .occasion-card-heart svg {
-    width: 22px !important;
-    height: 20px !important;
-    top: 4px !important;
-  }
-
-  .occasion-card-bag {
-    width: 44px !important;
-    height: 44px !important;
-    top: 235px !important;
-    left: 220px !important;
-  }
-
-  .occasion-card-bag svg {
-    width: 20px !important;
-    height: 20px !important;
-    top: 10px !important;
-  }
-}
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
   .occasions-section {
-    margin-top: 3100px !important;
+    margin-top: 3060px !important;
     padding-left: 35px !important;
     padding-right: 35px !important;
-    width: calc(100% - 30px) !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
   }
 
   .occasions-title {
@@ -381,10 +265,11 @@
 /* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .occasions-section {
-    margin-top: 3100px !important;
+    margin-top: 3200px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
-    width: calc(100% - 20px) !important;
+    width: calc(100vw - 40px) !important;
+    max-width: none !important;
   }
 
   .occasions-title {
@@ -499,7 +384,7 @@
 /* Landscape orientation for mobile */
 @media (max-width: 767px) and (orientation: landscape) {
   .occasions-section {
-    margin-top: 3100px !important;
+    margin-top: 3060px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
     width: calc(100% - 20px) !important;

@@ -4,6 +4,9 @@
   background: #fff;
   min-height: 100vh;
   font-family: 'Inter', Arial, sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .cake-main-section {
   padding-top: 32px;
@@ -93,6 +96,8 @@
   margin-top: 132px;
   margin-left:80px;
   margin-right: 0;
+  width: 100%;
+  max-width: 100%;
 }
 .cake-card-grid-item {
   width: 314px;
@@ -724,6 +729,41 @@ cake-sidebar-plus {
 @media (max-width: 480px) {
   .cake-page-wrapper {
     padding: 0 8px;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  .cake-main-content {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .cake-card-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  
+  .cake-card-grid-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .cake-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
   }
   
   /* Mobile sidebar improvements */
@@ -933,6 +973,41 @@ cake-sidebar-plus {
 @media (min-width: 481px) and (max-width: 768px) {
   .cake-page-wrapper {
     padding: 0 16px;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  .cake-main-content {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .cake-card-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  
+  .cake-card-grid-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .cake-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
   }
   
   /* Tablet sidebar improvements */
@@ -1128,364 +1203,9 @@ cake-sidebar-plus {
   }
 }
 
-/* iPad Mini (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .cake-page-wrapper {
-    padding: 0 24px;
-  }
-  
-  .cake-sidebar {
-    margin-left: 0px !important;
-    margin-top: -160px !important;
-    transform: translateY(70px) !important;
-    width: 220px;
-    padding: 18px;
-  }
-  
-  .cake-sidebar-section {
-    margin-left: -10px;
-    margin-bottom: 20px;
-  }
-  
-  .cake-sidebar-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .cake-sidebar-label {
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-  
-  .cake-sidebar-checkboxes label {
-    font-size: 16px;
-    padding: 10px 0;
-  }
-  
-  .cake-sidebar-option {
-    font-size: 18px;
-    padding: 16px 0;
-  }
-  
-  /* Footer positioning for iPad Mini */
-  .footer-cake {
-    margin-top: -120px;
-  }
-  
-  .cakes-title {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 40px;
-    margin: 30px 0 20px 0;
-    text-align: center;
-  }
-  
-  .showing-results {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-    margin: 20px 0;
-    text-align: right;
-    margin-right: 30px;
-  }
-  
-  .sort-by-label {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-    margin: 20px 0;
-    text-align: right;
-    margin-right: 30px;
-  }
-  
-  .sort-dropdown {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 20px 0;
-    text-align: right;
-    margin-right: 30px;
-  }
-  
-  .home-breadcrumb {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-    margin: 25px 0 15px 0;
-  }
-  
-  .breadcrumb-arrow {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 0 10px;
-  }
-  
-  .breadcrumb-current {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-  }
-  
-  .cake-divider,
-  .cake-divider-top {
-    position: relative;
-    top: -80px;
-    left: auto;
-    width: 100%;
-    margin: 25px 0;
-  }
-  
-  .cake-main-content {
-    flex-direction: row;
-    margin: 0;
-    padding: 0 24px;
-    gap: 20px;
-  }
-  
-  .cake-sidebar {
-    width: 220px;
-    margin: 30px 0;
-    padding: 20px;
-    min-height: auto;
-    flex-shrink: 0;
-  }
-  
-  .cake-card-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    margin: 30px 0;
-    margin-top: -40px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 16px;
-  }
-  
-  .cake-card-grid-item {
-    flex: 0 0 280px;
-    scroll-snap-align: start;
-    transform: rotateY(0deg);
-    transition: transform 0.3s ease;
-  }
-  
-  .cake-card-grid-item {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    min-height: 360px;
-    transform: rotateY(0deg);
-    transition: transform 0.3s ease;
-  }
-  
-  .cake-card-grid-item:hover {
-    transform: rotateY(5deg);
-  }
-  
-  /* Hide scrollbar but keep functionality */
-  .cake-card-grid::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .cake-card-grid {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .cake-card-img {
-    height: 220px;
-  }
-  
-  .cake-card-title {
-    font-size: 16px;
-  }
-}
 
-/* iPad Pro (1025px - 1366px) */
-@media (min-width: 1025px) and (max-width: 1366px) {
-  .cake-page-wrapper {
-    padding: 0 32px;
-  }
-  
-  .cake-sidebar {
-    margin-left: -30px;
-    margin-top: -120px;
-    width: 240px;
-    padding: 20px;
-  }
-  
-  .cake-sidebar-section {
-    margin-left: -10px;
-    margin-bottom: 22px;
-  }
-  
-  .cake-sidebar-title {
-    font-size: 19px;
-    margin-bottom: 22px;
-  }
-  
-  .cake-sidebar-label {
-    font-size: 17px;
-    margin-bottom: 14px;
-  }
-  
-  .cake-sidebar-checkboxes label {
-    font-size: 17px;
-    padding: 12px 0;
-  }
-  
-  .cake-sidebar-option {
-    font-size: 19px;
-    padding: 18px 0;
-  }
-  
-  /* Footer positioning for iPad Pro */
-  .footer-cake {
-    margin-top: -120px;
-  }
-  
-  .cakes-title {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 42px;
-    margin: 35px 0 25px 0;
-    text-align: center;
-  }
-  
-  .showing-results {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-    margin: 25px 0;
-    text-align: right;
-    margin-right: 40px;
-  }
-  
-  .sort-by-label {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-    margin: 25px 0;
-    text-align: right;
-    margin-right: 40px;
-  }
-  
-  .sort-dropdown {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 25px 0;
-    text-align: right;
-    margin-right: 40px;
-  }
-  
-  .home-breadcrumb {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-    margin: 30px 0 20px 0;
-  }
-  
-  .breadcrumb-arrow {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 0 12px;
-  }
-  
-  .breadcrumb-current {
-    position: relative;
-    top: auto;
-    left: auto;
-    font-size: 16px;
-  }
-  
-  .cake-divider,
-  .cake-divider-top {
-    position: relative;
-    top: -80px;
-    left: auto;
-    width: 100%;
-    margin: 30px 0;
-  }
-  
-  .cake-main-content {
-    flex-direction: row;
-    margin: 0;
-    padding: 0 32px;
-    gap: 24px;
-  }
-  
-  .cake-sidebar {
-    width: 240px;
-    margin: 35px 0;
-    padding: 24px;
-    min-height: auto;
-    flex-shrink: 0;
-  }
-  
-  .cake-card-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 28px;
-    margin: 35px 0;
-    margin-top: -40px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 20px;
-  }
-  
-  .cake-card-grid-item {
-    flex: 0 0 300px;
-    scroll-snap-align: start;
-    transform: rotateY(0deg);
-    transition: transform 0.3s ease;
-  }
-  
-  .cake-card-grid-item {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    min-height: 380px;
-    transform: rotateY(0deg);
-    transition: transform 0.3s ease;
-  }
-  
-  .cake-card-grid-item:hover {
-    transform: rotateY(5deg);
-  }
-  
-  /* Hide scrollbar but keep functionality */
-  .cake-card-grid::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .cake-card-grid {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .cake-card-img {
-    height: 240px;
-  }
-  
-  .cake-card-title {
-    font-size: 16px;
-  }
-}
+
+
 
 /* Large Tablets and Small Laptops (1367px - 1600px) */
 @media (min-width: 1367px) and (max-width: 1600px) {

@@ -184,6 +184,7 @@
     height: 62px;
     border-radius: 4px;
     background: #441E14;
+    margin-left:220px;
     color: #fff;
     font-size: 20px;
     font-family: 'Josefin Sans', 'Bricolage Grotesque', Arial, sans-serif;
@@ -353,4 +354,278 @@
   object-fit: cover;
   border-radius: 8px;
   display: block;
+}
+
+/* Responsive Styles for iPad Pro (1024px and below) */
+@media (max-width: 1024px) {
+  .viewcourse-divider {
+    width: 90%;
+    left: 5%;
+  }
+  
+  .viewcourse-breadcrumb {
+    top: 153px;
+    left: 5%;
+    flex-wrap: wrap;
+  }
+  
+  .viewcourse-title-saxo {
+    width: 60%;
+    font-size: 36px;
+    top: 192px;
+    left: 5%;
+  }
+  
+  .viewcourse-rect-box {
+    width: 35%;
+    left: 60%;
+    top: 192px;
+  }
+  
+  .viewcourse-form-input,
+  .viewcourse-form-textarea,
+  .viewcourse-form-button {
+    width: 90%;
+  }
+  
+  .viewcourse-form-button {
+    margin-left: 5%;
+  }
+  
+  .viewcourse-image-box {
+    width: 55%;
+    left: 5%;
+    top: 324px;
+  }
+  
+  .viewcourse-desc-box {
+    width: 55%;
+    left: 5%;
+    top: 754px;
+  }
+  
+  .viewcourse-small-image-box,
+  .viewcourse-small-image-box2,
+  .viewcourse-small-image-box3 {
+    width: 30%;
+    left: 5%;
+    top: 1361px;
+  }
+  
+  .viewcourse-small-image-box2 {
+    left: 37.5%;
+  }
+  
+  .viewcourse-small-image-box3 {
+    left: 70%;
+  }
+  
+  .viewcourse-wide-image-box {
+    width: 65%;
+    left: 5%;
+    top: 1664px;
+  }
+  
+  .viewcourse-small-image-box4 {
+    width: 30%;
+    left: 70%;
+    top: 1664px;
+  }
+}
+
+/* Responsive Styles for iPad (768px and below) */
+@media (max-width: 768px) {
+  .viewcourse-container {
+    padding: 0 20px;
+  }
+  
+  .viewcourse-divider {
+    width: 100%;
+    left: 0;
+  }
+  
+  .viewcourse-breadcrumb {
+    top: 120px;
+    left: 20px;
+    font-size: 14px;
+  }
+  
+  .viewcourse-title-saxo {
+    width: 100%;
+    font-size: 28px;
+    top: 160px;
+    left: 20px;
+    height: auto;
+  }
+  
+  .viewcourse-rect-box {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 200px;
+    margin-bottom: 40px;
+  }
+  
+  .viewcourse-form-title {
+    width: 100%;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  
+  .viewcourse-form-input,
+  .viewcourse-form-textarea,
+  .viewcourse-form-button {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .viewcourse-form-button {
+    margin-left: 0;
+  }
+  
+  .viewcourse-image-box {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 40px 0;
+  }
+  
+  .viewcourse-desc-box {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 40px 0;
+    height: auto;
+  }
+  
+  .viewcourse-small-image-box,
+  .viewcourse-small-image-box2,
+  .viewcourse-small-image-box3,
+  .viewcourse-wide-image-box,
+  .viewcourse-small-image-box4 {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 20px 0;
+    height: 250px;
+  }
+}
+
+/* Responsive Styles for Mobile (480px and below) */
+@media (max-width: 480px) {
+  .viewcourse-container {
+    padding: 0 15px;
+  }
+  
+  .viewcourse-breadcrumb {
+    top: 100px;
+    left: 15px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  
+  .viewcourse-breadcrumb-separator {
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    margin-top: -10px;
+  }
+  
+  .viewcourse-title-saxo {
+    font-size: 24px;
+    top: 180px;
+    left: 15px;
+    line-height: 120%;
+  }
+  
+  .viewcourse-rect-box {
+    top: 20px;
+    margin-left: 15px;
+    padding: 20px 15px;
+  }
+  
+  .viewcourse-form-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .viewcourse-form-input {
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .viewcourse-form-textarea {
+    height: 100px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .viewcourse-form-button {
+    height: 50px;
+    font-size: 18px;
+    margin-left: -15px;
+  }
+  
+  .viewcourse-image-box {
+    height: 250px;
+    margin: 180px 0;
+  }
+  
+  .viewcourse-desc-box {
+    font-size: 14px;
+    line-height: 160%;
+    margin: 30px 0;
+    margin-top: -170px;
+  }
+  
+  .viewcourse-small-image-box,
+  .viewcourse-small-image-box2,
+  .viewcourse-small-image-box3,
+  .viewcourse-wide-image-box,
+  .viewcourse-small-image-box4 {
+    height: 200px;
+    margin: 15px 0;
+  }
+}
+
+/* Responsive Styles for Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .viewcourse-container {
+    padding: 0 10px;
+  }
+  
+  .viewcourse-breadcrumb {
+    left: 10px;
+    font-size: 11px;
+  }
+  
+  .viewcourse-title-saxo {
+    font-size: 20px;
+    left: 10px;
+  }
+  
+  .viewcourse-rect-box {
+    padding: 15px 10px;
+  }
+  
+  .viewcourse-form-title {
+    font-size: 20px;
+  }
+  
+  .viewcourse-form-input,
+  .viewcourse-form-textarea {
+    font-size: 14px;
+  }
+  
+  .viewcourse-form-button {
+    font-size: 16px;
+  }
+  
+  .viewcourse-desc-box {
+    font-size: 13px;
+  }
 }

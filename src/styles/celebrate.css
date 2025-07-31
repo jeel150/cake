@@ -1,14 +1,16 @@
 .custom-line {
-    width: 1400px;
+    width: calc(100vw - 102px);
     height: 0px;
     opacity: 1;
     position: absolute;
     top: 140px;
     left: 51px;
+    right: 51px;
     border-width: 0.5px;
     border-style: solid;
     border-color: #D4D4D4;
     transform: rotate(0deg);
+    max-width: none;
   }
   .breadcrumb-home {
     position: absolute;
@@ -869,156 +871,7 @@
   }
 }
 
-/* ===== TABLET DEVICES ===== */
 
-/* iPad Pro 12.9" (1024px - 1366px) */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-  .custom-line {
-    width: 900px;
-    left: 40px;
-  }
-  
-  .breadcrumb-home {
-    left: 40px;
-  }
-  
-  .breadcrumb-divider {
-    left: 95px;
-  }
-  
-  .breadcrumb-corporate {
-    left: 123px;
-  }
-  
-  .corporate-heading {
-    left: 250px;
-    font-size: 32px;
-  }
-  
-  .corporate-description {
-    width: 800px;
-    left: 80px;
-    font-size: 15px;
-  }
-  
-  .corporate-divider {
-    width: 400px;
-    left: 40px;
-  }
-  
-  .personalized-gifts-heading {
-    left: 40px;
-    font-size: 24px;
-  }
-  
-  .circle-bg {
-    left: 462px;
-  }
-  
-  .circle-icon {
-    left: 468px;
-  }
-  
-  .personalized-divider {
-    width: 400px;
-    left: 40px;
-  }
-  
-  .events-catering-heading {
-    left: 40px;
-    font-size: 24px;
-  }
-  
-  .events-catering-divider {
-    width: 400px;
-    left: 40px;
-  }
-  
-  .team-building-heading {
-    left: 40px;
-    font-size: 22px;
-  }
-  
-  .team-building-divider {
-    width: 400px;
-    left: 40px;
-  }
-  
-  .weddings-heading {
-    left: 40px;
-    font-size: 24px;
-  }
-  
-  .weddings-divider {
-    width: 400px;
-    left: 40px;
-  }
-  
-  .gift1-image-container {
-    width: 500px;
-    height: 300px;
-    left: 400px;
-  }
-  
-  .corporate-large-description {
-    width: 500px;
-    left: 400px;
-    font-size: 15px;
-  }
-  
-  .lorem-heading {
-    left: 400px;
-    font-size: 18px;
-  }
-  
-  .lorem-description {
-    width: 300px;
-    left: 420px;
-    font-size: 15px;
-  }
-  
-  .lorem-dot.dot1 { left: 400px; }
-  .lorem-dot.dot2 { left: 400px; }
-  .lorem-dot.dot3 { left: 400px; }
-  .lorem-dot.dot4 { left: 400px; }
-  
-  .corporate-image-box.img1 {
-    left: 400px;
-  }
-  
-  .corporate-image-box.img2 {
-    left: 840px;
-  }
-  
-  .corporate-bottom-divider {
-    width: 500px;
-    left: 400px;
-  }
-  
-  .enquire-now-heading {
-    left: 400px;
-    font-size: 32px;
-  }
-  
-  form {
-    left: 400px;
-    width: 500px;
-  }
-  
-  .enquire-form-input,
-  .enquire-form-select {
-    width: 240px;
-  }
-  
-  .enquire-form-textarea {
-    width: 500px;
-  }
-  
-  .enquire-form-submit {
-    width: 300px;
-    margin-left: 100px;
-  }
-}
 
 /* ===== MOBILE DEVICES ===== */
 @media (max-width: 767px) {
@@ -1029,9 +882,11 @@
   .team-building-divider,
   .weddings-divider,
   .corporate-bottom-divider {
-    width: 90vw;
-    left: 5vw;
+    width: calc(100vw - 40px);
+    left: 20px;
+    right: 20px;
     min-width: 0;
+    max-width: none;
   }
   .breadcrumb-home,
   .breadcrumb-divider,
@@ -1050,29 +905,34 @@
     position: static;
     width: 100vw;
     left: 0;
+    right: 0;
     font-size: 20px;
     text-align: center;
     margin: 16px 0 8px 0;
+    max-width: none;
   }
   .corporate-description,
   .corporate-large-description,
   .lorem-description {
     position: static;
-    width: 90vw;
-    left: 0;
+    width: calc(100vw - 40px);
+    left: 20px;
+    right: 20px;
     font-size: 14px;
     margin: 0 auto 12px auto;
     text-align: center;
+    max-width: none;
   }
   .gift1-image-container,
   .corporate-image-box.img1,
   .corporate-image-box.img2 {
     position: static;
-    width: 90vw;
+    width: calc(100vw - 40px);
     height: auto;
-    left: 0;
+    left: 20px;
+    right: 20px;
     margin: 12px auto;
-    max-width: 350px;
+    max-width: none;
   }
   .gift1-image-container img,
   .corporate-image-box img {
@@ -1092,9 +952,11 @@
   }
   form {
     position: static;
-    left: 0;
-    width: 90vw;
+    left: 20px;
+    right: 20px;
+    width: calc(100vw - 40px);
     margin: 0 auto;
+    max-width: none;
   }
   .enquire-form-input,
   .enquire-form-select,

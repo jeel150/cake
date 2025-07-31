@@ -7,9 +7,10 @@
   font-family: 'Bricolage Grotesque', sans-serif;
   color: #2A110A;
   margin-top: 10px;
+  max-width: none;
 }
 .footer-home {
-  margin-top: 40px !important;
+  margin-top: 0 !important;
 }
 .footer-product {
   margin-top: 400px !important;
@@ -30,7 +31,7 @@
   margin-top: 900px !important;
 }
 .footer-cake {
-  margin-top: 40px !important;
+  margin-top: 0 !important;
 }
 .rb-footer-top {
   display: flex;
@@ -418,6 +419,8 @@
     font-family: 'Bricolage Grotesque', sans-serif !important;
     color: #2A110A !important;
     margin-top: 10px !important;
+    max-width: none !important;
+    overflow-x: hidden !important;
   }
 
   .rb-footer-top {
@@ -577,6 +580,8 @@
     font-family: 'Bricolage Grotesque', sans-serif !important;
     color: #2A110A !important;
     margin-top: 10px !important;
+    max-width: none !important;
+    overflow-x: hidden !important;
   }
   
   .footer-cake {
