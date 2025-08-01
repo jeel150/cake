@@ -259,3 +259,336 @@
 .contact-enquire-submit:hover {
   background: #2a110a;
 } 
+
+/* ===== RESPONSIVE STYLES FOR CONTACT PAGE ===== */
+
+/* Mini Laptop (1024px - 1366px) */
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+  .contact-divider {
+    width: calc(100vw - 102px);
+  }
+  
+  .contact-image-container {
+    width: calc(50vw - 51px);
+  }
+  
+  .contact-questions-box {
+    width: calc(50vw - 51px);
+  }
+  
+  .contact-side-box {
+    width: calc(50vw - 51px);
+    left: calc(50vw + 1px);
+  }
+  
+  .contact-enquire-field {
+    width: calc(100% - 80px);
+  }
+  
+  .contact-enquire-message {
+    width: calc(100% - 80px);
+  }
+  
+  .contact-enquire-submit {
+    width: calc(100% - 80px);
+  }
+}
+
+/* iPad Pro (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .contact-divider {
+    width: calc(100vw - 102px);
+  }
+  
+  .contact-breadcrumb-row {
+    left: 51px;
+  }
+  
+  .contact-image-container {
+    position: static;
+    width: calc(100vw - 102px);
+    height: 300px;
+    margin: 20px 51px;
+  }
+  
+  .contact-questions-box {
+    position: static;
+    width: calc(100vw - 102px);
+    height: auto;
+    margin: 0 51px 20px 51px;
+    padding: 30px;
+  }
+  
+  .contact-questions-title {
+    font-size: 36px;
+  }
+  
+  .contact-questions-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-questions-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .contact-questions-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  
+  .contact-questions-label i {
+    margin-right: 8px;
+    margin-top: 0;
+  }
+  
+  .contact-questions-value {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .contact-side-box {
+    position: static;
+    width: calc(100vw - 102px);
+    height: auto;
+    margin: 0 51px 20px 51px;
+    padding: 30px;
+  }
+  
+  .contact-enquire-title {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+  }
+  
+  .contact-enquire-field {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .contact-enquire-message {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .contact-enquire-submit {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* iPad & iPad Mini (768px and below) */
+@media screen and (max-width: 768px) {
+  .contact-divider {
+    width: calc(100vw - 40px);
+    left: 20px;
+  }
+  
+  .contact-breadcrumb-row {
+    left: 20px;
+    top: 140px;
+  }
+  
+  .contact-breadcrumb-home,
+  .contact-breadcrumb-current {
+    font-size: 14px;
+  }
+  
+  .contact-image-container {
+    position: static;
+    width: calc(100vw - 40px);
+    height: 250px;
+    margin: 20px 20px;
+  }
+  
+  .contact-questions-box {
+    position: static;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 20px 20px 20px;
+    padding: 25px;
+  }
+  
+  .contact-questions-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-questions-subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-questions-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+  }
+  
+  .contact-questions-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-questions-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  
+  .contact-questions-label i {
+    margin-right: 8px;
+    margin-top: 0;
+  }
+  
+  .contact-questions-value {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .contact-side-box {
+    position: static;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 20px 20px 20px;
+    padding: 25px;
+  }
+  
+  .contact-enquire-title {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+  }
+  
+  .contact-enquire-field {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .contact-enquire-message {
+    width: 100%;
+    margin: 10px 0;
+    height: 180px;
+  }
+  
+  .contact-enquire-submit {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .contact-divider {
+    width: calc(100vw - 20px);
+    left: 10px;
+    margin-top:-5px;
+  }
+  
+  .contact-breadcrumb-row {
+    left: 10px;
+    top: 100px;
+  }
+  
+  .contact-breadcrumb-home,
+  .contact-breadcrumb-current {
+    font-size: 12px;
+  }
+  
+  .contact-image-container {
+    width: calc(90vw - 15px);
+    height: 200px;
+    margin: 80px 15px;
+  }
+  
+  .contact-questions-box {
+    width: calc(90vw - 15px);
+    margin: 0 0 15px 10px;
+    padding: 20px;
+    margin-top: -20px;
+  }
+  
+  .contact-questions-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-questions-subtitle {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-questions-row {
+    gap: 10px;
+  }
+  
+  .contact-questions-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-questions-label {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  
+  .contact-questions-label i {
+    margin-right: 6px;
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .contact-questions-value {
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .contact-side-box {
+    width: calc(100vw - 20px);
+    margin: 0 10px 15px 10px;
+    padding: 20px;
+  }
+  
+  .contact-enquire-title {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+  }
+  
+  .contact-enquire-field {
+    height: 50px;
+    margin: 8px 0;
+    margin-left: -10px;
+    width:85vw;
+  }
+  
+  .contact-enquire-input {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  
+  .contact-enquire-message {
+    height: 150px;
+    margin: 8px 0;
+    font-size: 14px;
+    padding: 15px;
+    margin-left: -10px;
+    width:85vw;
+  }
+  
+  .contact-enquire-submit {
+    height: 50px;
+    margin: 8px 0;
+    font-size: 14px;
+    margin-left: -10px;
+    width:85vw;
+  }
+} 

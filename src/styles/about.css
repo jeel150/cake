@@ -373,3 +373,459 @@
   opacity: 1;
   z-index: 2;
 }
+
+/* ===== RESPONSIVE STYLES FOR ABOUT PAGE ===== */
+
+/* Mini Laptop (1024px - 1366px) */
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+  .about-divider {
+    width: calc(100vw - 102px);
+  }
+  
+  .about-story-title {
+    width: calc(30vw - 75px);
+  }
+  
+  .about-story-subtitle {
+    width: calc(30vw - 75px);
+  }
+  
+  .about-bg-blur {
+    width: 60vw;
+    height: 60vw;
+    left: 35vw;
+  }
+  
+  .about-orange-img {
+    width: 40vw;
+    height: auto;
+    left: 35vw;
+  }
+  
+  .about-description-box {
+    width: calc(30vw - 75px);
+    left: calc(70vw + 15px);
+  }
+  
+  .about-explore-btn {
+    left: calc(70vw + 15px);
+  }
+  
+  .about-testimonials-title {
+    width: calc(50vw - 100px);
+    left: calc(25vw + 50px);
+  }
+  
+  .about-testimonials-bg {
+    width: 70vw;
+    left: 15vw;
+  }
+  
+  .about-quote-img {
+    left: calc(15vw + 24px);
+  }
+  
+  .about-testimonial-heading {
+    width: calc(40vw - 100px);
+    left: calc(30vw + 50px);
+  }
+  
+  .about-testimonial-text {
+    width: 60vw;
+    left: 20vw;
+  }
+  
+  .about-company-img {
+    left: calc(50vw + 50px);
+  }
+  
+  .about-testimonial-arrows {
+    left: calc(50vw + 50px);
+  }
+  
+  .about-corporate-title {
+    width: 50vw;
+    left: 25vw;
+  }
+  
+  .about-brand-img {
+    width: 80vw;
+    left: 10vw;
+  }
+}
+
+/* iPad Pro (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .about-divider {
+    width: calc(100vw - 102px);
+  }
+  
+  .about-breadcrumb-row {
+    left: 51px;
+  }
+  
+  .about-story-title {
+    position: static;
+    width: calc(100vw - 102px);
+    margin: 20px 51px 10px 51px;
+    font-size: 36px;
+  }
+  
+  .about-story-subtitle {
+    position: static;
+    width: calc(100vw - 102px);
+    margin: 0 51px 20px 51px;
+    font-size: 24px;
+  }
+  
+  .about-bg-blur {
+    display: none;
+  }
+  
+  .about-image-symbol-container {
+    position: static;
+    width: calc(50vw - 51px);
+    height: auto;
+    margin: 0 51px 20px 51px;
+    display: inline-block;
+  }
+  
+  .about-orange-img {
+    position: static;
+    width: calc(50vw - 51px);
+    height: auto;
+    margin: 0 0 20px 51px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .about-description-box {
+    position: static;
+    width: calc(100vw - 102px);
+    height: auto;
+    margin: 0 51px 20px 51px;
+    padding: 0;
+  }
+  
+  .about-explore-btn {
+    position: static;
+    width: 200px;
+    margin: 0 51px 20px 51px;
+  }
+  
+  .about-testimonials-title {
+    position: static;
+    width: calc(100vw - 102px);
+    margin: 20px 51px 10px 51px;
+    font-size: 36px;
+  }
+  
+  .about-testimonials-bg {
+    display: none; /* Hide pink background on responsive screens */
+  }
+  
+  .about-quote-img {
+    position: static;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+  
+  .about-testimonial-heading {
+    position: static;
+    width: calc(100vw - 102px);
+    margin: 0 51px 10px 51px;
+    text-align: center;
+  }
+  
+  .about-testimonial-text {
+    position: static;
+    width: calc(100vw - 102px);
+    height: auto;
+    margin: 0 51px 20px 51px;
+    text-align: center;
+  }
+  
+  .about-company-img {
+    position: static;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+  
+  .about-testimonial-arrows {
+    position: static;
+    margin: 0 auto 20px auto;
+    display: flex;
+  }
+  
+  .about-corporate-title {
+    position: static;
+    width: calc(100vw - 102px);
+    margin: 20px 51px 10px 51px;
+    font-size: 36px;
+  }
+  
+  .about-brand-img {
+    position: static;
+    width: calc(100vw - 102px);
+    height: auto;
+    margin: 0 51px 20px 51px;
+  }
+}
+
+/* iPad & iPad Mini (768px and below) */
+@media screen and (max-width: 768px) {
+  .about-divider {
+    width: calc(100vw - 40px);
+    left: 20px;
+  }
+  
+  .about-breadcrumb-row {
+    left: 20px;
+    top: 140px;
+  }
+  
+  .about-breadcrumb-home,
+  .about-breadcrumb-current {
+    font-size: 14px;
+  }
+  
+  .about-story-title {
+    position: static;
+    width: calc(100vw - 40px);
+    margin: 20px 20px 10px 20px;
+    font-size: 28px;
+  }
+  
+  .about-story-subtitle {
+    position: static;
+    width: calc(100vw - 40px);
+    margin: 0 20px 20px 20px;
+    font-size: 20px;
+  }
+  
+  .about-bg-blur {
+    display: none;
+  }
+  
+  .about-image-symbol-container {
+    position: static;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 20px 20px 20px;
+  }
+  
+  .about-slider-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .about-symbol-amp {
+    display: none;
+  }
+  
+  .about-orange-img {
+    position: static;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 20px 20px 20px;
+  }
+  
+  .about-description-box {
+    position: static;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 20px 20px 20px;
+    padding: 0;
+  }
+  
+  .about-explore-btn {
+    position: static;
+    width: 200px;
+    margin: 0 20px 20px 20px;
+  }
+  
+  .about-testimonials-title {
+    position: static;
+    width: calc(100vw - 40px);
+    margin: 20px 20px 10px 20px;
+    font-size: 28px;
+  }
+  
+  .about-testimonials-bg {
+    display: none; /* Hide pink background on responsive screens */
+  }
+  
+  .about-quote-img {
+    position: static;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    display: block;
+  }
+  
+  .about-testimonial-heading {
+    position: static;
+    width: calc(100vw - 40px);
+    margin: 0 20px 10px 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .about-testimonial-text {
+    position: static;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 20px 15px 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .about-company-img {
+    position: static;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px auto;
+    display: block;
+  }
+  
+  .about-testimonial-arrows {
+    position: static;
+    margin: 0 auto 15px auto;
+    display: flex;
+  }
+  
+  .about-corporate-title {
+    position: static;
+    width: calc(100vw - 40px);
+    margin: 20px 20px 10px 20px;
+    font-size: 28px;
+  }
+  
+  .about-brand-img {
+    position: static;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 20px 20px 20px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .about-divider {
+    width: calc(100vw - 20px);
+    left: 10px;
+  }
+  
+  .about-breadcrumb-row {
+    left: 10px;
+    top: 120px;
+  }
+  
+  .about-breadcrumb-home,
+  .about-breadcrumb-current {
+    font-size: 12px;
+  }
+  
+  .about-story-title {
+    width: calc(100vw - 20px);
+    margin: 85px 10px 10px 10px;
+    font-size: 24px;
+  }
+  
+  .about-story-subtitle {
+    width: calc(100vw - 20px);
+    margin: 0 10px 15px 10px;
+    font-size: 18px;
+
+  }
+  
+  .about-image-symbol-container {
+    width: calc(100vw - 20px);
+    margin: 0 10px 15px 10px;
+  }
+  
+  .about-slider-img {
+    width: 150px;
+    height: 150px;
+    margin-left: 185px;
+    margin-top: -200px;
+  }
+  
+  .about-orange-img {
+    width: calc(90vw - 15px);
+    margin: 0 10px 15px 10px;
+  }
+  
+  .about-description-box {
+    width: calc(90vw - 15px);
+    margin: 0 10px 15px 10px;
+    font-size: 14px;
+  }
+  
+  .about-explore-btn {
+    width: 180px;
+    margin: 0 10px 15px 10px;
+    height: 50px;
+    font-size: 14px;
+  }
+  
+  .about-testimonials-title {
+    width: calc(100vw - 20px);
+    margin: 15px 10px 10px 10px;
+    font-size: 24px;
+  }
+  
+  .about-testimonials-bg {
+    display: none; /* Hide pink background on responsive screens */
+  }
+  
+  .about-quote-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+  }
+  
+  .about-testimonial-heading {
+    width: calc(100vw - 20px);
+    margin: 0 10px 10px 10px;
+    font-size: 16px;
+  }
+  
+  .about-testimonial-text {
+    width: calc(90vw - 15px);
+    margin: 0 10px 10px 10px;
+    font-size: 12px;
+  }
+  
+  .about-company-img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px auto;
+  }
+  
+  .about-testimonial-arrows {
+    margin: 0 auto 10px auto;
+  }
+  
+  .about-arrow-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .about-corporate-title {
+    width: calc(100vw - 20px);
+    margin: 15px 10px 10px 10px;
+    font-size: 24px;
+  }
+  
+  .about-brand-img {
+    width: calc(100vw - 20px);
+    margin: 0 10px 15px 10px;
+  }
+}
