@@ -11,6 +11,24 @@ export default function Checkout() {
   const [orderQuantities, setOrderQuantities] = useState([1, 1]);
   // State for addon items (assuming 3 for demo: small, large, happy birthday)
   const [addonQuantities, setAddonQuantities] = useState([1, 2, 1]);
+  
+  // Shipping state
+  const [shippingMethod, setShippingMethod] = useState('pickup'); // 'delivery' or 'pickup'
+  const [userDetails, setUserDetails] = useState({
+    name: '',
+    phone: '',
+    email: ''
+  });
+  const [deliveryAddress, setDeliveryAddress] = useState({
+    city: '',
+    landmark: '',
+    address: ''
+  });
+  const [selectedLocation, setSelectedLocation] = useState('');
+  
+  // Delivery date and time state
+  const [deliveryDate, setDeliveryDate] = useState('');
+  const [deliveryTime, setDeliveryTime] = useState('');
 
   // Handlers for main order items
   const handleOrderQtyChange = (idx, delta) => {
@@ -32,6 +50,70 @@ export default function Checkout() {
   const handleProceedToPay = () => {
     // Proceed to payment logic here
   };
+
+  // Shipping handlers
+  const handleUserDetailsChange = (field, value) => {
+    setUserDetails(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleDeliveryAddressChange = (field, value) => {
+    setDeliveryAddress(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleLocationSelect = (location) => {
+    setSelectedLocation(location);
+  };
+
+  // Date and time handlers
+  const handleDateSelect = (e) => {
+    const selectedDate = e.target.value;
+    setDeliveryDate(selectedDate);
+  };
+
+  const handleTimeSelect = (e) => {
+    const selectedTime = e.target.value;
+    setDeliveryTime(selectedTime);
+  };
+
+  const formatDateForDisplay = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: '2-digit',
+      year: '2-digit'
+    });
+  };
+
+  const formatTimeForDisplay = (timeString) => {
+    if (!timeString) return '';
+    return timeString;
+  };
+
+  // Pickup locations data
+  const pickupLocations = [
+    {
+      name: 'Oud Metha',
+      address: 'shop no. 5, 8th St - Oud Metha - Dubai',
+      phone: '+971 52 889 9029'
+    },
+    {
+      name: 'Studio City',
+      address: 'Studio City - Dubai',
+      phone: '+971 52 489 8141'
+    },
+    {
+      name: 'Al Qusais',
+      address: 'Inside royal medcare hospital, 16 18th St - Al Qusais - Al Qusais 2 - Dubai',
+      phone: '+971 52 848 3368'
+    },
+    {
+      name: 'Barsha Heights',
+      address: 'inside grosvenor business tower Dubai',
+      phone: '+971 58 823 8753'
+    }
+  ];
+
   return (
     <div className="checkout-page">
       <Navbar />
@@ -212,26 +294,141 @@ export default function Checkout() {
 
         <div className="checkout-summary-box"></div>
         <div className="checkout-shipping-title">Shipping</div>
-        <div className="checkout-shipping-box"></div>
+        <div className="checkout-shipping-box">
+          <p className="checkout-shipping-description">
+            Add your delivery location or select pickup if you wish to pick up from one of our stores.
+          </p>
 
-        <p className="checkout-shipping-description">
-          Add your delivery location or select pickup if you wish to pick up from one of our stores.
-        </p>
+          {/* Shipping Method Selection */}
+          <div className="shipping-method-buttons">
+            <button 
+              className={`shipping-method-btn ${shippingMethod === 'delivery' ? 'active' : ''}`}
+              onClick={() => setShippingMethod('delivery')}
+            >
+              Delivery
+            </button>
+            <button 
+              className={`shipping-method-btn ${shippingMethod === 'pickup' ? 'active' : ''}`}
+              onClick={() => setShippingMethod('pickup')}
+            >
+              Pickup
+            </button>
+          </div>
 
-        <div className="checkout-shipping-input"></div>
-        <span className="checkout-shipping-label">Delivery</span>
-        <div className="checkout-shipping-input-pickup"></div>
-        <span className="checkout-shipping-label-pickup">Pickup</span>
+          {/* User Details Section */}
+          <div className="user-details-section">
+            <h3 className="section-title">Your Details</h3>
+            <div className="form-row">
+              <input
+                type="text"
+                placeholder="Name"
+                value={userDetails.name}
+                onChange={(e) => handleUserDetailsChange('name', e.target.value)}
+                className="form-input"
+              />
+              <input
+                type="tel"
+                placeholder="Phone"
+                value={userDetails.phone}
+                onChange={(e) => handleUserDetailsChange('phone', e.target.value)}
+                className="form-input"
+              />
+            </div>
+            <div className="form-row">
+              <input
+                type="email"
+                placeholder="Email"
+                value={userDetails.email}
+                onChange={(e) => handleUserDetailsChange('email', e.target.value)}
+                className="form-input full-width"
+              />
+            </div>
+          </div>
+
+          {/* Conditional Content based on shipping method */}
+          {shippingMethod === 'delivery' ? (
+            <div className="delivery-address-section">
+              <h3 className="section-title">Your Address</h3>
+              <div className="form-row">
+                <select
+                  value={deliveryAddress.city}
+                  onChange={(e) => handleDeliveryAddressChange('city', e.target.value)}
+                  className="form-input"
+                >
+                  <option value="">City</option>
+                  <option value="dubai">Dubai</option>
+                  <option value="abu-dhabi">Abu Dhabi</option>
+                  <option value="sharjah">Sharjah</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Landmark"
+                  value={deliveryAddress.landmark}
+                  onChange={(e) => handleDeliveryAddressChange('landmark', e.target.value)}
+                  className="form-input"
+                />
+              </div>
+              <div className="form-row">
+                <input
+                  type="text"
+                  placeholder="Address"
+                  value={deliveryAddress.address}
+                  onChange={(e) => handleDeliveryAddressChange('address', e.target.value)}
+                  className="form-input full-width"
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="pickup-locations-section">
+              <h3 className="section-title">Choose Location</h3>
+              <div className="locations-grid">
+                {pickupLocations.map((location, index) => (
+                  <div 
+                    key={index}
+                    className={`location-card ${selectedLocation === location.name ? 'selected' : ''}`}
+                    onClick={() => handleLocationSelect(location.name)}
+                  >
+                    <h4 className="location-name">{location.name}</h4>
+                    <p className="location-address">{location.address}</p>
+                    <p className="location-phone">{location.phone}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
         <div className="checkout-datetime-title">Choose Delivery Date & Time</div>
-        <div className="checkout-datetime-box"></div>
+        <div className="checkout-datetime-box">
           <div className="checkout-datetime-input">
-            <span className="checkout-datetime-label">Delivery Date</span>
-            <i className="fas fa-calendar-alt checkout-datetime-icon"></i>
+            <span className="checkout-datetime-label">Delivery Date :</span>
+            <div className="datetime-button-container">
+              <div className="picker-wrapper">
+                <input
+                  type="date"
+                  className="inline-date-picker"
+                  value={deliveryDate}
+                  onChange={handleDateSelect}
+                />
+              </div>
+              <i className="fas fa-calendar-alt checkout-datetime-icon"></i>
+            </div>
           </div>
           <div className="checkout-datetime-input-time">
-            <span className="checkout-datetime-label-time">Delivery Time</span>
-            <i className="fas fa-clock checkout-datetime-icon-time"></i>
+            <span className="checkout-datetime-label-time">Delivery Time :</span>
+            <div className="datetime-button-container">
+              <div className="picker-wrapper">
+                <input
+                  type="time"
+                  className="inline-time-picker"
+                  value={deliveryTime}
+                  onChange={handleTimeSelect}
+                />
+              </div>
+              <i className="fas fa-clock checkout-datetime-icon-time"></i>
+            </div>
           </div>
+        </div>
 
         <div className="checkout-payment-title">Payment Method</div>
         <div className="checkout-payment-box">
@@ -246,15 +443,16 @@ export default function Checkout() {
               Cash on Delivery
             </label>
           </div>
-          <div className="checkout-radio-group-cc">
-  <input
-    type="radio"
-    name="payment"
-    className="checkout-radio-input-cc"
-  />
-  <label className="checkout-radio-label-cc">Credit Card</label>
-</div>
-
+          <div className="checkout-radio-group">
+            <label className="checkout-radio-label">
+              <input
+                type="radio"
+                name="payment"
+                className="checkout-radio-input-cc"
+              />
+              Credit Card
+            </label>
+          </div>
         </div>
         <div className="checkout-pay-box">
         <button className="checkout-pay-btn">Proceed To Pay</button>
