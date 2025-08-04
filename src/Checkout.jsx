@@ -210,85 +210,165 @@ export default function Checkout() {
 </div>
 
         <div className="checkout-section-title">Add On</div>
-        <div className="checkout-addon-box"></div>
-        <div className="checkout-addon-label">Flowers</div>
         <div className="checkout-addon-box">
-  {/* Small Flowers */}
-  <div className="checkout-addon-item-box addon-box-small-flowers">
-    <div className="addon-inner">
-      <img src={biscoffImg} alt="Small Flowers" className="addon-img-inside" />
-      <div className="addon-info">
-        <div className="addon-title-inside">Small Flowers</div>
-        <div className="addon-price-inside">₿ 80</div>
-        <div className="addon-qty-box-inside">
-          <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(0, -1)}>-</button>
-          <span className="addon-qty-count">{addonQuantities[0]}</span>
-          <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(0, 1)}>+</button>
+          {/* Mobile Layout */}
+          <div className="checkout-addon-label">Flowers</div>
+          <div className="addon-items-container">
+            {/* Small Flowers */}
+            <div className="checkout-addon-item-box addon-box-small-flowers">
+              <div className="addon-inner">
+                <img src={biscoffImg} alt="Small Flowers" className="addon-img-inside" />
+                <div className="addon-info">
+                  <div className="addon-title-inside">Small Flowers</div>
+                  <div className="addon-price-inside">₿ 80</div>
+                  <div className="addon-qty-box-inside">
+                    <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(0, -1)}>-</button>
+                    <span className="addon-qty-count">{addonQuantities[0]}</span>
+                    <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(0, 1)}>+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Medium Flowers */}
+            <div className="checkout-addon-item-box addon-box-medium-flowers">
+              <div className="addon-inner">
+                <img src={biscoffImg} alt="Medium Flowers" className="addon-img-inside" />
+                <div className="addon-info">
+                  <div className="addon-title-inside">Medium Flowers</div>
+                  <div className="addon-price-inside">₿ 100</div>
+                  <button className="addon-add-btn" onClick={handleAddonAdd}>Add</button>
+                </div>
+              </div>
+            </div>
+
+            {/* Large Flowers */}
+            <div className="checkout-addon-item-box addon-box-large-flowers">
+              <div className="addon-inner">
+                <img src={biscoffImg} alt="Large Flowers" className="addon-img-inside" />
+                <div className="addon-info">
+                  <div className="addon-title-inside">Large Flowers</div>
+                  <div className="addon-price-inside">₿ 150</div>
+                  <div className="addon-qty-box-inside">
+                    <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(1, -1)}>-</button>
+                    <span className="addon-qty-count">{addonQuantities[1]}</span>
+                    <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(1, 1)}>+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="checkout-addon-label2">Flowers</div>
+          <div className="addon-items-container">
+            {/* Happy Birthday Topper */}
+            <div className="checkout-addon-item-box addon-box-happy-birthday">
+              <div className="addon-inner">
+                <img src={biscoffImg} alt="Happy Birthday" className="addon-img-inside" />
+                <div className="addon-info">
+                  <div className="addon-title-inside">Happy Birthday</div>
+                  <div className="addon-price-inside">₿ 20</div>
+                  <div className="addon-qty-box-inside">
+                    <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(2, -1)}>-</button>
+                    <span className="addon-qty-count">{addonQuantities[2]}</span>
+                    <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(2, 1)}>+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Anniversary Topper */}
+            <div className="checkout-addon-item-box addon-box-anniversary">
+              <div className="addon-inner">
+                <img src={biscoffImg} alt="Happy anniversary" className="addon-img-inside" />
+                <div className="addon-info">
+                  <div className="addon-title-inside">Anniversary</div>
+                  <div className="addon-price-inside">₿ 80</div>
+                  <button className="addon-add-btn" onClick={handleAddonAdd}>Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout - Direct children for absolute positioning */}
+          {/* Desktop Flowers Label */}
+          <div className="checkout-addon-label desktop-only">Flowers</div>
+          
+          {/* Small Flowers */}
+          <div className="checkout-addon-item-box addon-box-small-flowers desktop-only">
+            <div className="addon-inner">
+              <img src={biscoffImg} alt="Small Flowers" className="addon-img-inside" />
+              <div className="addon-info">
+                <div className="addon-title-inside">Small Flowers</div>
+                <div className="addon-price-inside">₿ 80</div>
+                <div className="addon-qty-box-inside">
+                  <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(0, -1)}>-</button>
+                  <span className="addon-qty-count">{addonQuantities[0]}</span>
+                  <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(0, 1)}>+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Medium Flowers */}
+          <div className="checkout-addon-item-box addon-box-medium-flowers desktop-only">
+            <div className="addon-inner">
+              <img src={biscoffImg} alt="Medium Flowers" className="addon-img-inside" />
+              <div className="addon-info">
+                <div className="addon-title-inside">Medium Flowers</div>
+                <div className="addon-price-inside">₿ 100</div>
+                <button className="addon-add-btn" onClick={handleAddonAdd}>Add</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Large Flowers */}
+          <div className="checkout-addon-item-box addon-box-large-flowers desktop-only">
+            <div className="addon-inner">
+              <img src={biscoffImg} alt="Large Flowers" className="addon-img-inside" />
+              <div className="addon-info">
+                <div className="addon-title-inside">Large Flowers</div>
+                <div className="addon-price-inside">₿ 150</div>
+                <div className="addon-qty-box-inside">
+                  <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(1, -1)}>-</button>
+                  <span className="addon-qty-count">{addonQuantities[1]}</span>
+                  <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(1, 1)}>+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Second Flowers Label */}
+          <div className="checkout-addon-label2 desktop-only">Flowers</div>
+
+          {/* Happy Birthday Topper */}
+          <div className="checkout-addon-item-box addon-box-happy-birthday desktop-only">
+            <div className="addon-inner">
+              <img src={biscoffImg} alt="Happy Birthday" className="addon-img-inside" />
+              <div className="addon-info">
+                <div className="addon-title-inside">Happy Birthday</div>
+                <div className="addon-price-inside">₿ 20</div>
+                <div className="addon-qty-box-inside">
+                  <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(2, -1)}>-</button>
+                  <span className="addon-qty-count">{addonQuantities[2]}</span>
+                  <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(2, 1)}>+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Anniversary Topper */}
+          <div className="checkout-addon-item-box addon-box-anniversary desktop-only">
+            <div className="addon-inner">
+              <img src={biscoffImg} alt="Happy anniversary" className="addon-img-inside" />
+              <div className="addon-info">
+                <div className="addon-title-inside">Anniversary</div>
+                <div className="addon-price-inside">₿ 80</div>
+                <button className="addon-add-btn" onClick={handleAddonAdd}>Add</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Medium Flowers */}
-  <div className="checkout-addon-item-box addon-box-medium-flowers">
-    <div className="addon-inner">
-    <img src={biscoffImg} alt="Medium Flowers" className="addon-img-inside" />
-      <div className="addon-info">
-        <div className="addon-title-inside">Medium Flowers</div>
-        <div className="addon-price-inside">₿ 100</div>
-        <button className="addon-add-btn" onClick={handleAddonAdd}>Add</button>
-      </div>
-    </div>
-  </div>
-
-  {/* Large Flowers */}
-  <div className="checkout-addon-item-box addon-box-large-flowers">
-    <div className="addon-inner">
-       <img src={biscoffImg} alt="Large Flowers" className="addon-img-inside" />
-      <div className="addon-info">
-        <div className="addon-title-inside">Large Flowers</div>
-        <div className="addon-price-inside">₿ 150</div>
-        <div className="addon-qty-box-inside">
-          <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(1, -1)}>-</button>
-          <span className="addon-qty-count">{addonQuantities[1]}</span>
-          <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(1, 1)}>+</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-     
-        <div className="checkout-addon-label2">Flowers</div>
-        
-  {/* Happy Birthday Topper */}
-  <div className="checkout-addon-item-box addon-box-happy-birthday">
-    <div className="addon-inner">
-      <img src={biscoffImg} alt="Happy Birthday" className="addon-img-inside" />
-      <div className="addon-info">
-        <div className="addon-title-inside">Happy Birthday</div>
-        <div className="addon-price-inside">₿ 20</div>
-        <div className="addon-qty-box-inside">
-          <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(2, -1)}>-</button>
-          <span className="addon-qty-count">{addonQuantities[2]}</span>
-          <button className="addon-qty-btn" onClick={() => handleAddonQtyChange(2, 1)}>+</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Anniversary Topper */}
-  <div className="checkout-addon-item-box addon-box-anniversary">
-    <div className="addon-inner">
-     <img src={biscoffImg} alt="Happy anniversary" className="addon-img-inside" />
-      <div className="addon-info">
-        <div className="addon-title-inside">Anniversary</div>
-        <div className="addon-price-inside">₿ 80</div>
-        <button className="addon-add-btn" onClick={handleAddonAdd}>Add</button>
-      </div>
-    </div>
-  </div>
-</div>
      
 
 

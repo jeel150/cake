@@ -2,7 +2,7 @@
 
 .imagination-section {
   position: absolute;
-  top: 1490px;
+  top: 1530px;
   left: 52px;
   right: 52px;
   width: calc(100vw - 104px);
@@ -107,7 +107,7 @@
 
 .imagination-features-wrapper {
   position: absolute;
-  top: 1500px;
+  top: 1540px;
   left: 980px;
   width: 480px;
   display: flex;
@@ -196,7 +196,7 @@
 /* Large Desktop (1400px and above) */
 @media (min-width: 1400px) {
   .imagination-section {
-    top: 1400px;
+    top: 1440px;
     left: 80px;
     width: 420px;
   }
@@ -237,7 +237,7 @@
   }
   
   .imagination-features-wrapper {
-    top: 1410px;
+    top: 1450px;
     left: 1070px; /* Shift 20px left from original 1080px */
     width: 520px;
     gap: 32px;
@@ -267,7 +267,7 @@
 /* Desktop (1200px - 1399px) */
 @media (min-width: 1200px) and (max-width: 1399px) {
   .imagination-section {
-    top: 1450px;
+    top: 1490px;
     left: 60px;
     width: 400px;
   }
@@ -308,7 +308,7 @@
   }
   
   .imagination-features-wrapper {
-    top: 1460px;
+    top: 1500px;
     left: 990px; /* Shift 20px left from original 1000px */
     width: 500px;
     gap: 30px;
@@ -338,7 +338,7 @@
 /* Small Desktop (1024px - 1199px) */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .imagination-section {
-    top: 1420px;
+    top: 1460px;
     left: 50px;
     width: 380px;
   }
@@ -379,7 +379,7 @@
   }
   
   .imagination-features-wrapper {
-    top: 1430px;
+    top: 1470px;
     left: 910px; /* Shift 20px left from original 920px */
     width: 460px;
     gap: 28px;
@@ -413,7 +413,7 @@
 /* Large Mobile (481px - 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
   .imagination-section {
-    top: 1000px;
+    top: 1040px;
     left: 20px;
     right: 20px;
     width: calc(100vw - 40px);
@@ -490,7 +490,7 @@
 /* iPhone XR and similar devices (414px) */
 @media (min-width: 412px) and (max-width: 596px) {
   .imagination-section {
-    top: 1400px;
+    top: 1440px;
     left: 20px;
     width: calc(100vw - 40px);
     max-width: 300px;
@@ -564,7 +564,7 @@
 }
 
 /* Force override for iPhone XR Imagination */
-@media (min-width: 412px) and (max-width: 596px) {
+@media (min-width: 412px) and (max-width: 480px) {
   body .imagination-section {
     top: 1300px !important;
   }
@@ -581,7 +581,7 @@
 /* Medium Mobile (375px - 480px) */
 @media (min-width: 375px) and (max-width: 480px) {
   .imagination-section {
-    top: 1050px;
+    top: 1150px;
     left: 15px;
     width: calc(100vw - 30px);
     max-width: 280px;
@@ -607,7 +607,7 @@
   }
   
   .imagination-image-wrapper {
-    top: 1280px;
+    top: 1360px;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
@@ -626,7 +626,7 @@
   }
   
   .imagination-features-wrapper {
-    top: 1710px;
+    top: 1790px;
     left: 10px;
     width: calc(100vw - 30px);
     max-width: 350px;
@@ -657,7 +657,7 @@
 /* Small Mobile (320px - 374px) */
 @media (min-width: 320px) and (max-width: 374px) {
   .imagination-section {
-    top: 1000px;
+    top: 1040px;
     left: 10px;
     width: calc(100vw - 20px);
     max-width: 250px;
@@ -733,7 +733,7 @@
 /* Extra Small Mobile (below 320px) */
 @media (max-width: 319px) {
   .imagination-section {
-    top: 1000px;
+    top: 1040px;
     left: 8px;
     width: calc(100vw - 16px);
     max-width: 220px;
@@ -809,7 +809,7 @@
 /* 360px Specific Responsive Design */
 @media (max-width: 360px) {
   .imagination-section {
-    top: 1100px;
+    top: 1140px;
     left: 12px;
     width: calc(100vw - 24px);
     max-width: 240px;
@@ -888,7 +888,7 @@
 /* Mobile Landscape (max-height: 500px) */
 @media (max-height: 500px) and (orientation: landscape) {
   .imagination-section {
-    top: 1200px;
+    top: 1240px;
     left: 20px;
     width: 200px;
   }
