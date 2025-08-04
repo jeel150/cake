@@ -137,8 +137,8 @@
   z-index: 10;
 }
 .checkout-addon-label {
-  top: 310px;
-  left: 75px;
+  top: 10px;
+  left: 30px;
   width: 151px;
 }
 .checkout-addon-label2 {
@@ -173,6 +173,44 @@
 /* Bottom Row – Toppers */
 .addon-box-happy-birthday { top: 210px; left: 22px; }
 .addon-box-anniversary { top: 210px; left: 273px; }
+
+/* Desktop styles for addon containers */
+.addon-items-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* Ensure desktop layout remains unchanged */
+@media screen and (min-width: 769px) {
+  .addon-items-container {
+    display: block;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+  
+  .checkout-addon-item-box {
+    position: absolute;
+  }
+  
+  /* Show desktop-only elements */
+  .desktop-only {
+    display: block !important;
+  }
+  
+  /* Hide mobile layout elements on desktop */
+  .addon-items-container {
+    display: none !important;
+  }
+  
+  /* Show desktop labels */
+  .checkout-addon-label.desktop-only,
+  .checkout-addon-label2.desktop-only {
+    display: block !important;
+  }
+}
 
 .addon-inner {
   display: flex;
@@ -1094,6 +1132,11 @@
     height: 109px;
   }
   
+  /* Hide addon containers on desktop to preserve original layout */
+  .addon-items-container {
+    display: none;
+  }
+  
   /* Restore original positioning for desktop */
   .addon-box-small-flowers { top: 40px; left: 22px; }
   .addon-box-medium-flowers { top: 40px; left: 273px; }
@@ -1526,16 +1569,143 @@
     margin-bottom: 0;
   }
   
+  /* Move Flowers content inside Add On container for mobile */
+  .checkout-addon-label {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+  }
+  
+  /* Style the second label on mobile */
+  .checkout-addon-label2 {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 10px !important;
+    margin-top: 20px !important;
+    text-align: left !important;
+  }
+  
+  /* Add visual separation between sections */
+  .addon-items-container:first-of-type {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+  }
+  
+  .addon-items-container:last-of-type {
+    padding-top: 5px;
+  }
+  
   .checkout-addon-box {
-    padding: 8px;
-    gap: 8px;
+    padding: 15px;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
   
   .checkout-addon-item-box {
     min-height: 100px;
     width: 220px;
     min-width: 220px;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+  }
+  
+  /* Hide desktop-only elements on mobile */
+  .desktop-only {
+    display: none !important;
+  }
+  
+  /* Create separate scrollable containers for each section */
+  .checkout-addon-box {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Container for horizontal scrolling addon items */
+  .addon-items-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    scrollbar-width: thin;
+    width: 100%;
+    min-height: 120px;
+  }
+  
+  /* Flowers section scrollbar */
+  .addon-items-container:first-of-type {
+    scrollbar-color: #F6DBE0 #f1f1f1;
+  }
+  
+  .addon-items-container:first-of-type::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .addon-items-container:first-of-type::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  .addon-items-container:first-of-type::-webkit-scrollbar-thumb {
+    background: #F6DBE0;
+    border-radius: 3px;
+  }
+  
+  .addon-items-container:first-of-type::-webkit-scrollbar-thumb:hover {
+    background: #F1A8B6;
+  }
+  
+  /* Toppers section scrollbar */
+  .addon-items-container:last-of-type {
+    scrollbar-color: #A3833A #f1f1f1;
+  }
+  
+  .addon-items-container:last-of-type::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .addon-items-container:last-of-type::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  .addon-items-container:last-of-type::-webkit-scrollbar-thumb {
+    background: #A3833A;
+    border-radius: 3px;
+  }
+  
+  .addon-items-container:last-of-type::-webkit-scrollbar-thumb:hover {
+    background: #8c6e2f;
+  }
+  
+  .checkout-addon-box::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .checkout-addon-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+  }
+  
+  .checkout-addon-box::-webkit-scrollbar-thumb {
+    background: #F6DBE0;
+    border-radius: 2px;
+  }
+  
+  .checkout-addon-box::-webkit-scrollbar-thumb:hover {
+    background: #F1A8B6;
   }
    */
   /* Ensure all addon items are in a single row for mobile */
@@ -1545,7 +1715,7 @@
   .addon-box-happy-birthday,
   .addon-box-anniversary {
     position: static !important;
-    top: auto !important;
+    top: auto!important;
     left: auto !important;
   }
   
@@ -1591,11 +1761,6 @@
   .addon-add-btn {
     font-size: 12px;
     padding: 4px 12px;
-  }
-  
-  /* Hide the white container below addon on mobile */
-  .checkout-summary-box {
-    display: none;
   }
   
   .checkout-shipping-box {
