@@ -262,37 +262,7 @@
 
 /* ===== RESPONSIVE STYLES FOR CONTACT PAGE ===== */
 
-/* Mini Laptop (1024px - 1366px) */
-@media screen and (max-width: 1366px) and (min-width: 1024px) {
-  .contact-divider {
-    width: calc(100vw - 102px);
-  }
-  
-  .contact-image-container {
-    width: calc(50vw - 51px);
-  }
-  
-  .contact-questions-box {
-    width: calc(50vw - 51px);
-  }
-  
-  .contact-side-box {
-    width: calc(50vw - 51px);
-    left: calc(50vw + 1px);
-  }
-  
-  .contact-enquire-field {
-    width: calc(100% - 80px);
-  }
-  
-  .contact-enquire-message {
-    width: calc(100% - 80px);
-  }
-  
-  .contact-enquire-submit {
-    width: calc(100% - 80px);
-  }
-}
+
 
 /* iPad Pro (768px - 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 768px) {

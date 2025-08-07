@@ -4,7 +4,7 @@
   position: absolute;
   width: 476px;
   height: 58px;
-  top: 900px;
+  top: 880px !important;
   left: 51px;
   opacity: 1;
   font-family: 'Josefin Sans', 'Saxo Grammaticus', Arial, sans-serif;
@@ -23,7 +23,7 @@
 
 .sweet-story-section {
   position: absolute;
-  top: 900px;
+  top: 800px;
   left: 52px;
   width: calc(100vw - 104px);
   z-index: 10;
@@ -44,7 +44,7 @@
 .sweet-story-tabs {
   display: flex;
   align-items: center;
-  gap: 49px;
+  gap: 33px;
   margin-bottom: 33px;
   margin-top: 13px;
   margin-left: 10px;
@@ -65,7 +65,7 @@
   color: #969696;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
-  padding: 10px 8px;
+  padding: 10px 16px;
   min-width: unset;
   height: 40px;
   position: relative;
@@ -76,7 +76,7 @@
   background: #F6DBE0;
   color: #2A110A;
   font-weight: 500;
-  box-shadow: 0 2px 8px 0 rgba(246,219,224,0.15);
+  box-shadow: 0 8px 8px 0 rgba(246,219,224,0.15);
 }
 
 .sweet-tab-custom { width: 125px; }
@@ -97,73 +97,6 @@
   margin-left: auto;
   cursor: pointer;
 }
-
-.occasion-card-heart {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  top: 19px;
-  left: 20px;
-  opacity: 1;
-  transform: rotate(0deg);
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
-}
-.occasion-card-heart:hover {
-  box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
-  transform: scale(1.13);
-}
-.occasion-card-heart.liked svg path {
-  fill: #F1A8B6;
-  stroke: #F1A8B6;
-}
-.occasion-card-heart.animate {
-  animation: heart-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-@keyframes heart-pop {
-  0% { transform: scale(1); }
-  30% { transform: scale(1.3); }
-  60% { transform: scale(0.95); }
-  100% { transform: scale(1); }
-}
-.occasion-card-bag {
-  position: absolute;
-  width: 49px;
-  height: 49px;
-  top: 275px;
-  left: 260px;
-  opacity: 1;
-  transform: rotate(0deg);
-  background:#f5d5db;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
-}
-.occasion-card-bag:hover {
-  box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
-  transform: scale(1.08);
-}
-.occasion-card-bag.bag-animate {
-  transform: scale(0.93);
-  transition: transform 0.09s cubic-bezier(0.4,0,0.2,1);
-}
-.occasion-card-heart svg {
-  width: 25px;
-  height: 23px;
-  position: absolute;
-  top: 5px;
-  opacity: 1;
-  transform: rotate(0deg);
-  stroke: #F1A8B6;
-  fill: none;
-}
-
 .statement-card-heart {
   position: absolute;
   width: 36px;
@@ -324,12 +257,12 @@
 }
 .sweetstory-card1-heart {
   position: absolute;
-  top: 14px;
-  right: 16px;
+ width: 45px !important;
+    height: 45px !important;                                                                    
+    top: 15px !important;
+    left: 270px !important;
   background: #fff;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -337,8 +270,14 @@
   z-index: 2;
 }
 .sweetstory-card1-heart svg {
-  width: 30px;
-  height: 30px;
+  width: 35px !important;
+    height: 35px !important;
+   justify-content: center !important;
+    align-items: center !important;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+
   stroke: #F1A8B6;
   fill: none;
 }
@@ -411,12 +350,13 @@
 }
 .sweetstory-card2-heart {
   position: absolute;
-  top: 14px;
-  right: 16px;
+   position: absolute;
+ width: 45px !important;
+    height: 45px !important;                                                                    
+    top: 15px !important;
+    left: 270px !important;
   background: #fff;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,8 +364,13 @@
   z-index: 2;
 }
 .sweetstory-card2-heart svg {
-  width: 30px;
-  height: 30px;
+  width: 35px !important;
+    height: 35px !important;
+   justify-content: center !important;
+    align-items: center !important;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
   stroke: #F1A8B6;
   fill: none;
 }
@@ -498,12 +443,12 @@
 }
 .sweetstory-card3-heart {
   position: absolute;
-  top: 14px;
-  right: 16px;
+ width: 45px !important;
+    height: 45px !important;                                                                    
+    top: 15px !important;
+    left: 270px !important;
   background: #fff;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,8 +456,13 @@
   z-index: 2;
 }
 .sweetstory-card3-heart svg {
-  width: 30px;
-  height: 30px;
+   width: 35px !important;
+    height: 35px !important;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+   justify-content: center !important;
+    align-items: center !important;
   stroke: #F1A8B6;
   fill: none;
 }
@@ -585,12 +535,12 @@
 }
 .sweetstory-card4-heart {
   position: absolute;
-  top: 14px;
-  right: 16px;
+    width: 45px !important;
+    height: 45px !important;                                                                    
+    top: 15px !important;
+    left: 270px !important;
   background: #fff;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -598,8 +548,13 @@
   z-index: 2;
 }
 .sweetstory-card4-heart svg {
-  width: 30px;
-  height: 30px;
+  width: 35px !important;
+    height: 35px !important;
+   justify-content: center !important;
+    align-items: center !important;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
   stroke: #F1A8B6;
   fill: none;
 }
@@ -649,8 +604,10 @@
   cursor: pointer;
 }
 .sweetstory-card4-bag svg {
-  width: 28px;
-  height: 28px;
+  width: 28px !important;
+    height: 28px !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 .sweetstory-card1-title,
 .sweetstory-card2-title,
@@ -733,76 +690,152 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 
+
+
 /* Large Desktop (1400px and above) */
-@media (min-width: 1400px) {
+@media (min-width:2560px) {
   .sweet-story-section {
-    top: 790px;
+    top: 1190px !important;
     left: 80px;
     width: calc(100vw - 160px);
+    max-width: none;
+    overflow: hidden;
   }
   
   .sweet-story-title {
-    font-size: 40px;
-    margin-bottom: 30px;
+   font-size: 78px;
+    margin-bottom: 56px;
+    width: 1200px;
   }
   
   .sweet-story-tabs {
-    gap: 60px;
-    margin-bottom: 40px;
+     gap: 74px;
+    margin-bottom: 30px;
+    
   }
   
   .sweet-tab {
-    font-size: 20px;
-    padding: 12px 10px;
-    height: 45px;
+      font-size: 34px;
+    padding: 6px 30px;
+    height: 52px;
+
   }
   
   .sweet-viewall {
-    font-size: 18px;
+   font-size: 30px;
   }
   
   .sweetstory-card-grid {
     grid-template-columns: repeat(4, 320px);
-    gap: 60px;
+    gap: 260px
   }
   
   .sweetstory-card1-grid-item,
   .sweetstory-card2-grid-item,
   .sweetstory-card3-grid-item,
   .sweetstory-card4-grid-item {
-    width: 320px;
-    height: 400px;
+    width: 530px;
+    height: 500px;
   }
   
   .sweetstory-card1-img,
   .sweetstory-card2-img,
+  .sweetstory-card3-img,
   .sweetstory-card4-img {
-    width: 320px;
-    height: 330px;
-  }
-  
-  .sweetstory-card3-img {
-    width: 320px;
-    height: 300px;
+    height: 350px;
+    width: auto;
   }
   
   .sweetstory-card1-title,
   .sweetstory-card2-title,
   .sweetstory-card3-title,
   .sweetstory-card4-title {
-    font-size: 16px;
+    font-size: 24px;
   }
   
   .sweetstory-card1-price,
   .sweetstory-card2-price,
   .sweetstory-card3-price,
   .sweetstory-card4-price {
-    font-size: 17px;
+    font-size: 26px;
   }
+  .sweetstory-card1-bag,
+  .sweetstory-card2-bag, 
+  .sweetstory-card3-bag, 
+  .sweetstory-card4-bag
+  {
+    width: 62px !important;
+    height: 62px !important;
+    top: -30px !important;
+    left: 400px !important;
+  } 
+  .sweetstory-card1-bag svg,
+  .sweetstory-card2-bag svg,
+  .sweetstory-card3-bag svg,
+  .sweetstory-card4-bag svg
+   {
+    width: 34px !important;
+    height: 34px !important;
+    justify-content: center !important;
+    align-items: center !important;
+   }
+   .sweetstory-card1-heart svg,
+   .sweetstory-card2-heart svg ,
+   .sweetstory-card3-heart svg ,
+   .sweetstory-card4-heart svg
+    {
+     width: 38px !important;
+     height: 39px !important;
+     justify-content: center !important;
+     align-items: center !important;
+
+   }
+   .sweetstory-card1-heart,
+   .sweetstory-card2-heart,
+   .sweetstory-card3-heart,
+   .sweetstory-card4-heart
+   {
+     width: 46px !important;
+     height: 47px !important;
+     top: 20px !important;
+     left: 20px !important;
+
+   }
+
+
+}
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .sweet-story-section {
+    top: 900px;
+    left: 60px;
+    width: calc(100vw - 120px);
+  }
+  
+  .sweet-story-title {
+    font-size: 38px;
+    margin-bottom: 28px;
+  }
+  
+  .sweet-story-tabs {
+    gap: 55px;
+    margin-bottom: 35px;
+  }
+  
+  .sweet-tab {
+    font-size: 19px;
+    padding: 11px 9px;
+    height: 42px;
+  }
+  
+  .sweetstory-card-grid {
+    grid-template-columns: repeat(4, 300px);
+    gap: 50px;
+  }
+  
 }
 
 /* Desktop (1200px - 1399px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
+@media (min-width: 1200px) and (max-width: 1279px) {
   .sweet-story-section {
     top: 900px;
     left: 60px;
@@ -858,7 +891,7 @@
 /* Small Desktop (1024px - 1199px) */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .sweet-story-section {
-    top: 910px;
+    top: 1400px !important;
     left: 50px;
     width: calc(100vw - 100px);
   }
@@ -883,53 +916,179 @@
     grid-template-columns: repeat(4, 280px);
     gap: 45px;
   }
+   
+  .sweetstory-card1-grid-item,
+  .sweetstory-card2-grid-item,
+  .sweetstory-card3-grid-item,
+  .sweetstory-card4-grid-item {
+    width: 300px;
+    height: 380px;
+  }
+  
+  .sweetstory-card1-img,
+  .sweetstory-card2-img,
+  .sweetstory-card4-img {
+    width: 300px;
+    height: 310px;
+  }
+  
+  .sweetstory-card3-img {
+    width: 300px;
+    height: 280px;
+  }
 }
 
+@media (min-width: 853px) and (max-width: 1023px) {
+  .sweet-story-section {
+    top: 1380px !important;
+    left: 40px;
+    width: calc(100vw - 80px);
+  }
+  
+  .sweet-story-title {
+    font-size: 36px;
+    margin-bottom: 26px;
+  }
+  
+  .sweet-story-tabs {
+    gap: 50px;
+    margin-bottom: 34px;
+  }
+  
+  .sweet-tab {
+    font-size: 19px;
+    padding: 11px 9px;
+    height: 42px;
+  }
+  
+  .sweetstory-card-grid {
+    grid-template-columns: repeat(4, 290px);
+    gap: 48px;
+  }
+   
+  .sweetstory-card1-grid-item,
+  .sweetstory-card2-grid-item,
+  .sweetstory-card3-grid-item,
+  .sweetstory-card4-grid-item {
+    width: 300px;
+    height: 380px;
+  }
+  
+  .sweetstory-card1-img,
+  .sweetstory-card2-img,
+  .sweetstory-card4-img {
+    width: 300px;
+    height: 310px;
+  }
+  
+  .sweetstory-card3-img {
+    width: 300px;
+    height: 280px;
+  }
+  
+}
 
+@media (min-width: 820px) and (max-width:852px) {
+  .sweet-story-section {
+    top: 1250px !important;
+    left: 40px;
+    width: calc(100vw - 80px);
+  }
+  
+  .sweet-story-title {
+    font-size: 34px;
+    margin-bottom: 24px;
+  }
+  
+  .sweet-story-tabs {
+    gap: 45px;
+    margin-bottom: 32px;
+  }
+  
+  .sweet-tab {
+    font-size: 18px;
+    padding: 10px 8px;
+    height: 40px;
+  }
+  
+  .sweetstory-card-grid {
+    grid-template-columns: repeat(4, 270px);
+    gap: 42px;
+  }
+   
+  .sweetstory-card1-grid-item,
+  .sweetstory-card2-grid-item,
+  .sweetstory-card3-grid-item,
+  .sweetstory-card4-grid-item {
+    width: 300px;
+    height: 380px;
+  }
+  
+  .sweetstory-card1-img,
+  .sweetstory-card2-img,
+  .sweetstory-card4-img {
+    width: 300px;
+    height: 310px;
+  }
+  
+  .sweetstory-card3-img {
+    width: 300px;
+    height: 280px;
+  }
+  
+}
 
-/* ===== MOBILE DEVICES ===== */
-
-/* iPhone XR and similar devices (414px) */
-@media (min-width: 412px) and (max-width: 596px) {
+@media (min-width: 768px) and (max-width: 819px) {
   .sweet-story-section {
     top: 1050px !important;
-    left: 20px;
-    width: calc(100vw - 40px);
-    height: 280px;
-    overflow-y: visible;
+    left: 40px;
+    width: calc(100vw - 80px);
   }
   
-  .sweet-story {
-    top: 920px !important;
+  .sweet-story-title {
+    font-size: 32px;
+    margin-bottom: 22px;
   }
-}
+  
+  .sweet-story-tabs {
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .sweet-tab {
+    font-size: 17px;
+    padding: 9px 7px;
+    height: 38px;
+  }
+  
+  .sweetstory-card-grid {
+    grid-template-columns: repeat(4, 260px);
+    gap: 40px;
+  }
+   
+  .sweetstory-card1-grid-item,
+  .sweetstory-card2-grid-item,
+  .sweetstory-card3-grid-item,
+  .sweetstory-card4-grid-item {
+    width: 270px;
+    height: 380px;
+  }
+  
+  .sweetstory-card1-img,
+  .sweetstory-card2-img,
+  .sweetstory-card3-img,
+  .sweetstory-card4-img {
+    width: 270px;
+    height: 310px;
+  }
 
-/* iPhone XR specific targeting */
-@media screen and (device-width: 414px) {
-  .sweet-story-section {
-    top: 920px !important;
-  }
-  
-  .sweet-story {
-    top: 920px !important;
-  }
 }
-
-/* Force override for iPhone XR */
-@media (min-width: 412px) and (max-width: 596px) {
-  body .sweet-story-section {
-    top: 920px !important;
-  }
-  
-  body .sweet-story {
-    top: 920px !important;
-  }
-}
+/* ===== MOBILE DEVICES ===== */
 
 /* Large Mobile (481px - 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
   .sweet-story-section {
-    top: 700px !important;
+    top: 730px !important;
     left: 20px;
     right: 20px;
     width: calc(100vw - 40px);
@@ -1078,11 +1237,343 @@
     height: 20px;
   }
 }
+@media (min-width:430px) and (max-width: 480px) 
+{
+  .sweet-story-section {
+    top: 960px !important;
+    left: 15px;
+    right: 15px;
+    width: calc(100vw - 30px);
+    height: 280px;
+    overflow-y: visible;
+    max-width: none;
+  }
+  
+  .sweet-story-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .sweet-story-tabs {
+    gap: 16px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    margin-left: 5px;
+  }
+  
+  .sweet-tab {
+    font-size: 12px;
+    padding: 4px 3px;
+    height: 26px;
+    white-space: nowrap;
+    border-radius: 60px;
+  }
+  
+  .sweet-viewall {
+    font-size: 11px;
+  }
+  
+  .sweetstory-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 15px;
+    scroll-behavior: smooth;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-thumb {
+    background: #F6DBE0;
+    border-radius: 3px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-thumb:hover {
+    background: #F1A8B6;
+  }
+  
+  .sweetstory-card1-grid-item,
+  .sweetstory-card2-grid-item,
+  .sweetstory-card3-grid-item,
+  .sweetstory-card4-grid-item {
+    min-width: 170px;
+    width: 170px;
+    height: 230px;
+    border-radius: 6px;
+    flex-shrink: 0; 
+     }
+  
+  .sweetstory-card1-img,
+  .sweetstory-card2-img,
+  .sweetstory-card4-img {
+    width: 160px;
+    height: 150px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .sweetstory-card3-img {
+    width: 160px;
+    height: 120px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .sweetstory-card1-title,
+  .sweetstory-card2-title,
+  .sweetstory-card3-title,
+  .sweetstory-card4-title {
+    font-size: 9px;
+  }
+  
+  .sweetstory-card1-price,
+  .sweetstory-card2-price,
+  .sweetstory-card3-price,
+  .sweetstory-card4-price {
+    font-size: 10px;
+  }
+  
+  .sweetstory-card1-body,
+  .sweetstory-card2-body,
+  .sweetstory-card3-body,
+  .sweetstory-card4-body {
+    padding: 8px 8px 12px 8px;
+  }
+  
+  .sweetstory-card1-heart,
+  .sweetstory-card2-heart,
+  .sweetstory-card3-heart,
+  .sweetstory-card4-heart {
+    width: 28px;
+    height: 28px;
+    top: 6px;
+    right: 16px;
+  }
+  
+  .sweetstory-card1-heart svg,
+  .sweetstory-card2-heart svg,
+  .sweetstory-card3-heart svg,
+  .sweetstory-card4-heart svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .sweetstory-card1-bag,
+  .sweetstory-card2-bag,
+  .sweetstory-card3-bag,
+  .sweetstory-card4-bag {
+    width: 36px;
+    height: 36px;
+    bottom: 6px;
+    right: 6px;
+  }
+  
+  .sweetstory-card1-bag svg,
+  .sweetstory-card2-bag svg,
+  .sweetstory-card3-bag svg,
+  .sweetstory-card4-bag svg {
+    width: 18px;
+    height: 18px;
+  }  
+  
+}
+@media (min-width: 390px) and (max-width: 428px) {
+  .sweet-story-section {
+    top: 850px !important;
+    left: 15px;
+    right: 15px;
+    width: calc(100vw - 30px);
+    height: 270px;
+    overflow-y: visible;
+    max-width: none;
+  }
+  
+  .sweet-story-title {
+    font-size: 21px;
+    margin-bottom: 9px;
+  }
+  
+  .sweet-story-tabs {
+    gap: 14px;
+    margin-bottom: 14px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    margin-left: 4px;
+  }
+  
+  .sweet-tab {
+    font-size: 11px;
+    padding: 3px 2px;
+    height: 24px;
+    white-space: nowrap;
+    border-radius: 60px;
+  }
+  
+  .sweet-viewall {
+    font-size: 10px;
+  }
+  
+  .sweetstory-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+    padding-bottom: 20px;
+    margin-left: 4px;
+    margin-right: 15px;
+    scroll-behavior: smooth;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-thumb {
+    background: #F6DBE0;
+    border-radius: 3px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-thumb:hover {
+    background: #F1A8B6;
+  }
+  .sweetstory-card1-grid-item,
+  .sweetstory-card2-grid-item,
+  .sweetstory-card3-grid-item,
+  .sweetstory-card4-grid-item {
+    min-width: 170px;
+    width: 170px;
+    height: 230px;
+    border-radius: 6px;
+    flex-shrink: 0; 
+     }
+  
+  .sweetstory-card1-img,
+  .sweetstory-card2-img,
+  .sweetstory-card4-img {
+    width: 160px;
+    height: 150px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .sweetstory-card3-img {
+    width: 160px;
+    height: 120px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .sweetstory-card1-title,
+  .sweetstory-card2-title,
+  .sweetstory-card3-title,
+  .sweetstory-card4-title {
+    font-size: 9px;
+  }
+  
+  .sweetstory-card1-price,
+  .sweetstory-card2-price,
+  .sweetstory-card3-price,
+  .sweetstory-card4-price {
+    font-size: 10px;
+  }
+  
+  .sweetstory-card1-body,
+  .sweetstory-card2-body,
+  .sweetstory-card3-body,
+  .sweetstory-card4-body {
+    padding: 8px 8px 12px 8px;
+  }
+  
+  .sweetstory-card1-heart,
+  .sweetstory-card2-heart,
+  .sweetstory-card3-heart,
+  .sweetstory-card4-heart {
+    width: 28px;
+    height: 28px;
+    top: 6px;
+    right: 16px;
+  }
+  
+  .sweetstory-card1-heart svg,
+  .sweetstory-card2-heart svg,
+  .sweetstory-card3-heart svg,
+  .sweetstory-card4-heart svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .sweetstory-card1-bag,
+  .sweetstory-card2-bag,
+  .sweetstory-card3-bag,
+  .sweetstory-card4-bag {
+    width: 36px;
+    height: 36px;
+    bottom: 6px;
+    right: 6px;
+  }
+  
+  .sweetstory-card1-bag svg,
+  .sweetstory-card2-bag svg,
+  .sweetstory-card3-bag svg,
+  .sweetstory-card4-bag svg {
+    width: 18px;
+    height: 18px;
+  }  
+  
+}
+
+
+/* iPhone XR and similar devices (414px) */
+@media (min-width: 412px) and (max-width: 429px) {
+  .sweet-story-section {
+    top: 950px !important;
+    left: 20px;
+    width: calc(100vw - 40px);
+    height: 280px;
+    overflow-y: visible;
+  }
+  
+  .sweet-story {
+    top: 920px !important;
+  }
+}
+
+/* iPhone XR specific targeting */
+@media screen and (device-width: 414px)  {
+  .sweet-story-section {
+    top: 920px !important;
+  }
+  
+  .sweet-story {
+    top: 920px !important;
+  }
+}
+
 
 /* Medium Mobile (375px - 480px) */
-@media (min-width: 375px) and (max-width: 480px) {
+@media (min-width: 370px) and (max-width: 389px) {
   .sweet-story-section {
-    top: 800px !important;
+    top: 730px !important;
     left: 15px;
     right: 15px;
     width: calc(100vw - 30px);
@@ -1233,9 +1724,9 @@
 }
 
 /* Small Mobile (320px - 374px) */
-@media (min-width: 320px) and (max-width: 374px) {
+@media (min-width: 345px) and (max-width: 369px) {
   .sweet-story-section {
-    top: 640px;
+    top: 750px !important;
     left: 10px;
     right: 10px;
     width: calc(100vw - 20px);
@@ -1383,6 +1874,76 @@
     width: 16px;
     height: 16px;
   }
+}
+@media (min-width: 320px) and (max-width: 344px) {
+  .sweet-story-section {
+    top: 900px !important;
+    left: 8px;
+    right: 8px;
+    width: calc(100vw - 16px);
+    height: 220px;
+    overflow-y: visible;
+    max-width: none;
+  }
+  
+  .sweet-story-title {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+  
+  .sweet-story-tabs {
+    gap: 8px;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    margin-left: 1px;
+  }
+  
+  .sweet-tab {
+    font-size: 8px;
+    padding: 1px 1px;
+    height: 18px;
+    white-space: nowrap;
+    border-radius: 30px;
+  }
+  
+  .sweet-viewall {
+    font-size: 7px;
+  }
+  
+  .sweetstory-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+    padding-bottom: 20px;
+    margin-left: 1px;
+    margin-right: 8px;
+    scroll-behavior: smooth;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-thumb {
+    background: #F6DBE0;
+    border-radius: 3px;
+  }
+  
+  .sweetstory-card-grid::-webkit-scrollbar-thumb:hover {
+    background: #F1A8B6;
+  }
+  
 }
 
 /* Extra Small Mobile (below 320px) */

@@ -93,7 +93,186 @@
 .jar-feature-btn:hover {
   background: #eecad6;
 }
+@media (min-width:2560px)
+{
+  .jar-feature-section {
+    top: 100px !important;
+    left: 80px;
+    width: 1020px !important;
+  }
 
+  .jar-feature-img {
+    width: 997px !important;
+    height: 565px;
+    margin-left: 500px !important;
+  }
+
+  .jar-feature-content {
+    width: 833px !important;
+    height: 461px;
+    margin-left: -80px !important;
+    margin-top: 70px;
+  }
+  
+}
+@media (min-width: 1024px) and (max-width: 1279px)
+{
+  .jar-feature-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 100px !important;
+  }
+
+  .jar-feature-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .jar-feature-content {
+    width: calc(100% - 40px);
+    padding: 24px;
+    margin-top: -30px;
+  }
+
+  .jar-feature-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .jar-feature-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .jar-feature-btn {
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 853px) and (max-width: 1023px)
+{
+  .jar-feature-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 100px !important;
+  }
+
+  .jar-feature-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .jar-feature-content {
+    width: calc(100% - 40px);
+    padding: 24px;
+    margin-top: -30px;
+  }
+
+  .jar-feature-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .jar-feature-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .jar-feature-btn {
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 820px) and (max-width:852px)
+{
+  .jar-feature-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 100px !important;
+  }
+
+  .jar-feature-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .jar-feature-content {
+    width: calc(100% - 40px);
+    padding: 24px;
+    margin-top: -30px;
+  }
+
+  .jar-feature-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .jar-feature-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .jar-feature-btn {
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 819px) 
+{
+  .jar-feature-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 220px !important;
+  }
+
+  .jar-feature-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .jar-feature-content {
+    width: calc(100% - 40px);
+    padding: 24px;
+    margin-top: -30px;
+  }
+
+  .jar-feature-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .jar-feature-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .jar-feature-btn {
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
 
 
 /* Mobile Devices (max-width: 767px) */
