@@ -227,30 +227,158 @@
 }
 .rb-footer-bottom-row {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 18px;
+  align-items: baseline; /* Align text baselines */
+  border-top: 1px solid rgba(229, 229, 229, 0.8); /* Subtle border */
+  padding-top: 1.25rem; /* 20px */
+  padding-bottom: 0.5rem; /* 8px */
+  margin-top: 1.5rem; /* 24px */
 }
+
 .rb-footer-payment {
-  font-size: 15px;
-  color: #2A110A;
   display: flex;
   align-items: center;
+  gap: 0.5rem; /* 8px - replaces margin-left */
+  font: 500 0.9375rem/1.5 'Bricolage Grotesque', sans-serif; /* 15px */
+  color: #2A110A;
 }
+
 .rb-footer-payment-icons {
-  margin-left: 8px;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   color: #B89B5E;
+  display: flex;
+  gap: 0.25rem; /* 4px between icons if multiple */
 }
+
 .rb-footer-copyright {
-  font-size: 14px;
+  font: 400 0.875rem/1.5 'Bricolage Grotesque', sans-serif; /* 14px */
   color: #6F6F6F;
+  letter-spacing: 0.02em;
 }
-
 /* ===== RESPONSIVE DESIGN FOR MOBILE AND TABLET ===== */
-
+@media (min-width: 2560px) {
+  .rb-footer {
+    padding: 60px 0 0 0;
+  }
+  
+  .rb-footer-top {
+    padding: 0 120px;
+    padding-bottom: 30px;
+  }
+  
+  .rb-footer-brand {
+    min-width: 300px;
+    margin-right: 60px;
+  }
+  
+  .rb-footer-logo {
+    font-size: 36px;
+    margin-bottom: 28px;
+  }
+  
+  .rb-footer-logo span {
+    font-size: 36px;
+  }
+  
+  .rb-footer-follow {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+  
+  .rb-footer-follow svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .rb-footer-links {
+    gap: 80px !important;
+  }
+  
+  .rb-footer-col {
+    min-width: 220px;
+    max-width: 260px;
+  }
+  
+  .rb-footer-col-title {
+    font-size: 28px !important;
+    margin-bottom: 22px;
+  }
+  
+  .rb-footer-col ul li {
+    font-size: 20px !important;
+    margin-bottom: 14px;
+  }
+  
+  .rb-footer-subscribe-desc {
+    font-size: 22px !important;
+    margin-bottom: 16px;
+  }
+  
+  .rb-footer-subscribe-form input[type="email"] {
+    height: 50px;
+    width: 220px;
+    font-size: 18px;
+  }
+  
+  .rb-footer-subscribe-form button {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+  }
+  
+  .rb-footer-bottom {
+    padding: 40px 120px 0 120px;
+  }
+  
+  .rb-footer-addresses {
+    gap: 180px !important;
+    margin-bottom: 40px;
+  }
+  
+  .rb-footer-address {
+    padding: 30px 35px;
+    min-width: 280px;
+    max-width: 320px;
+  }
+  
+  .rb-footer-address-title {
+    font-size: 30px !important;
+    margin-bottom: 12px;
+  }
+  
+  .rb-footer-address-desc {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  
+  .rb-footer-map {
+    font-size: 18px;
+    padding: 10px 28px 10px 20px;
+  }
+  
+  .rb-footer-map svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .rb-footer-bottom-row {
+    padding-top: 24px;
+  }
+  
+  .rb-footer-payment {
+    font-size: 20px !important;
+  }
+  
+  .rb-footer-payment-icons {
+    margin-left: 12px;
+    font-size: 25px !important;
+  }
+  
+  .rb-footer-copyright {
+    font-size: 22px !important;
+  }
+}
 /* Tablet Devices (768px - 1023px) */
 @media (max-width: 1023px) {
   .rb-footer {

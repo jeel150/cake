@@ -1,140 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;800&display=swap');
 
-/* --- ExploreOtherCakes.css --- */
-
-.explore-other-cakes-section {
-  max-width: 1200px;
-  margin: 48px auto 0 auto;
-  padding-bottom: 48px;
-  width: 100%;
-  max-width: none;
-}
-
-.explore-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-
-.explore-title {
-    width: 600px;
-    height: 58px;
-    font-family: 'Bricolage Grotesque',sans-serif;
-    font-weight: 50;
-    font-style: normal;
-    font-size: 40px;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: #9B7C38;
-    position: absolute;
-    top: 1099px;
-    left: 51px;
-    opacity: 1;
-    letter-spacing: 0;
-}
-
-.explore-view-all {
-  width: 59px;
-  height: 19px;
-  font-family: 'Bricolage Grotesque', Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #000000;
-  position: absolute;
-  top: 1120px;
-  left: 1330px;
-  text-decoration: underline solid;
-  opacity: 1;
-  letter-spacing: 0;
-}
-
-.explore-cakes-list {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  gap: 28px;
-  overflow-x: auto;
-  margin-top: 480px;
-  margin-left: -110px;
-}
-
-/* Main explore cake card styles */
-.explore-cake-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  width: 260px;
-  padding: 16px 16px 24px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.explore-cake-img-wrapper {
-  width: 200px;
-  height: 160px;
-  background: #faf7f4;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  position: relative;
-}
-
-.explore-cake-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.explore-cake-fav-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #F6DBE0;
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: #B89B5E;
-  cursor: pointer;
-}
-
-.explore-cake-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #2A110A;
-  margin-bottom: 4px;
-  text-align: center;
-}
-
-.explore-cake-price {
-  font-size: 1rem;
-  color: #2A110A;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.explore-cake-cart-btn {
-  background: #fff;
-  border: 1.5px solid #B89B5E;
-  color: #B89B5E;
-  border-radius: 8px;
-  padding: 6px 16px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
 /* Product details page specific styles */
 .product-details-page .explore-other-cakes-section {
   max-width: none;
@@ -162,7 +27,7 @@
   text-transform: uppercase;
   color: #9B7C38;
   position: absolute;
-  top: 399px;
+  top: 430px;
   left: 51px;
   opacity: 1;
   letter-spacing: 0;
@@ -177,7 +42,7 @@
   line-height: 100%;
   color: #000000;
   position: absolute;
-  top: 450px;
+  top: 440px;
   left: 1330px;
   text-decoration: underline solid;
   opacity: 1;
@@ -188,8 +53,9 @@
 .product-details-page .explore-cake-card-row {
   display: flex;
   flex-direction: row;
-  gap: 28px;
-  margin-top: 500px;
+  gap: 35px;
+  margin-top: 510px;
+  margin-left: 50px;
   justify-content: flex-start;
   position: relative;
 }
@@ -223,8 +89,8 @@
 }
 
 .product-details-page .explore-cake-img {
-  width: 100%;
-  height: 220px;
+  width: 310px;
+  height: 250px;
   object-fit: cover;
   border-radius: 16px 16px 0 0;
 }
@@ -266,7 +132,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 80px;
+  bottom: 30px;
   right: 22px;
   box-shadow: 0 2px 8px rgba(42, 17, 10, 0.07);
   cursor: pointer;
@@ -317,6 +183,33 @@
   background: none;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width:2560px) {
+  .product-details-page .explore-other-cakes-section {
+    max-width: 100%;
+    margin: 48px auto 0 auto;
+    padding-bottom: 48px;
+    width: 100%;
+  }
+
+  .product-details-page .explore-title-row {
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .product-details-page .explore-title {
+    width: 600px;
+    height: 58px;
+    font-size: 40px;
+    top: 430px;
+    left: 51px;
+  }
+
+  .product-details-page .explore-view-all {
+    top: 440px;
+    left: 1330px;
+  }
 }
 
 /* Responsive design for product details page */
@@ -833,5 +726,326 @@
   .product-details-page .product-buy-btn {
     height: 40px !important;
     font-size: 12px !important;
+  }
+}
+@media (min-width: 2560px) {
+  /* Product Details Page - 2560px Scaling */
+  .product-details-page {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  /* Breadcrumbs */
+  .product-breadcrumbs-row {
+    padding-left: 120px;
+    margin-top: 60px;
+  }
+  
+  .rb-breadcrumbs {
+    max-width: 1400px;
+    padding: 48px 0 0 0;
+    font-size: 18px;
+    gap: 12px;
+  }
+
+  /* Explore Other Cakes Section */
+  .product-details-page .explore-other-cakes-section {
+    max-width: 1400px;
+    margin: 72px auto 0 auto;
+    padding-bottom: 72px;
+  }
+
+  .product-details-page .explore-title-row {
+    margin-bottom: 36px;
+  }
+
+  .product-details-page .explore-title {
+    width: 720px;
+    height: 70px;
+    font-size: 48px;
+    top: 540px;
+    left: 60px;
+  }
+
+  .product-details-page .explore-view-all {
+    width: 71px;
+    height: 23px;
+    font-size: 19px;
+    top: 555px;
+    left: 1590px;
+  }
+
+  /* Cake Cards */
+  .product-details-page .explore-cake-card-row {
+    gap: 42px;
+    margin-top: 640px;
+    margin-left: 60px;
+  }
+
+  .product-details-page .explore-cake-card {
+    width: 377px;
+    height: 456px;
+  }
+
+  .product-details-page .explore-cake-img {
+    width: 372px;
+    height: 300px;
+  }
+
+  .product-details-page .explore-cake-heart {
+    top: 36px;
+    right: 34px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .product-details-page .explore-cake-title {
+    font-size: 19px;
+    margin: 19px 0 5px 0;
+    bottom: 96px;
+    padding-left: 19px;
+  }
+
+  .product-details-page .explore-cake-price {
+    font-size: 19px;
+    bottom: 60px;
+    padding-left: 19px;
+  }
+
+  .product-details-page .explore-cake-bag {
+    width: 62px;
+    height: 62px;
+    bottom: 36px;
+    right: 26px;
+  }
+
+  /* Product Divider */
+  .product-divider {
+    width: 709px;
+    top: 364px;
+    left: 946px;
+  }
+
+  /* Maintain all hover effects */
+  .product-details-page .explore-cake-heart:hover,
+  .product-details-page .explore-cake-bag:hover {
+    transform: scale(1.15);
+  }
+
+  /* Ensure all absolute positioned elements scale proportionally */
+  .product-main-image-wrapper {
+    width: 800px;
+    height: 800px;
+    margin-top: -228px;
+    margin-left: -444px;
+  }
+
+  .product-main-image {
+    width: 800px;
+    height: 800px;
+    top: 220px;
+    left: 60px;
+  }
+
+  .product-thumbnails {
+    width: 310px;
+    height: 76px;
+    top: 1070px;
+    left: 289px;
+    margin-top: -200px;
+    gap: 19px;
+  }
+
+  .product-thumbnail {
+    width: 77px;
+    height: 77px;
+  }
+
+  /* Product Info Section */
+  .product-title {
+    width: 573px;
+    height: 42px;
+    font-size: 48px;
+    top: 215px;
+    left: 946px;
+  }
+
+  .product-fav-btn {
+    width: 53px;
+    height: 53px;
+    top: 286px;
+    left: 1606px;
+    font-size: 1.8rem;
+  }
+
+  .product-price-range {
+    width: 458px;
+    height: 42px;
+    font-size: 48px;
+    top: 286px;
+    left: 946px;
+  }
+
+  .product-desc {
+    width: 660px;
+    height: 64px;
+    font-size: 19px;
+    top: 382px;
+    left: 946px;
+  }
+
+  /* Product Options */
+  .product-option-btn.with-egg,
+  .product-option-btn.eggless {
+    width: 181px;
+    height: 68px;
+    top: 474px;
+    left: 946px;
+    font-size: 19px;
+  }
+
+  .product-option-btn.eggless {
+    left: 1137px;
+  }
+
+  /* Weight Selection */
+  .product-weight-label {
+    width: 361px;
+    height: 28px;
+    font-size: 19px;
+    top: 568px;
+    left: 946px;
+  }
+
+  .product-weight-btn {
+    padding: 8px 19px;
+    font-size: 18px;
+  }
+
+  .product-weight-btn.w1 {
+    width: 202px;
+    height: 68px;
+    top: 605px;
+    left: 946px;
+  }
+
+  .product-weight-desc {
+    width: 144px;
+    height: 23px;
+    font-size: 19px;
+    top: 625px;
+    left: 981px;
+  }
+
+  .product-weight-btn.w2 {
+    width: 234px;
+    height: 68px;
+    top: 605px;
+    left: 1158px;
+  }
+
+  .product-weight-desc.w2 {
+    left: 1195px;
+  }
+
+  .product-weight-btn.w3 {
+    width: 234px;
+    height: 68px;
+    top: 605px;
+    left: 1402px;
+  }
+
+  .product-weight-desc.w3 {
+    left: 1439px;
+  }
+
+  .product-weight-btn.w4 {
+    width: 234px;
+    height: 68px;
+    top: 688px;
+    left: 946px;
+  }
+
+  .product-weight-desc.w4 {
+    left: 981px;
+  }
+
+  /* Price */
+  .product-price {
+    width: 458px;
+    height: 46px;
+    font-size: 48px;
+    top: 793px;
+    left: 971px;
+  }
+
+  /* Quantity */
+  .product-quantity-label {
+    width: 88px;
+    height: 23px;
+    font-size: 19px;
+    top: 875px;
+    left: 946px;
+  }
+
+  .product-quantity-box {
+    width: 175px;
+    height: 68px;
+    top: 920px;
+    left: 946px;
+  }
+
+  .product-qty-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 29px;
+  }
+
+  .product-qty-value {
+    width: 72px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  /* Order Note */
+  .product-order-note-label {
+    width: 192px;
+    height: 23px;
+    font-size: 19px;
+    top: 1020px;
+    left: 946px;
+  }
+
+  .product-order-note-input {
+    width: 709px;
+    min-height: 103px;
+    padding: 19px;
+    font-size: 18px;
+    top: 1060px;
+    left: 946px;
+  }
+
+  /* Buttons */
+  .product-add-cart-btn,
+  .product-buy-btn {
+    width: 345px;
+    height: 74px;
+    font-size: 19px;
+    top: 1190px;
+  }
+
+  .product-add-cart-btn {
+    left: 946px;
+  }
+
+  .product-buy-btn {
+    left: 1311px;
+  }
+
+  /* Divider */
+  .explore-divider {
+    width: 709px;
+    top: 1286px;
+    left: 946px;
   }
 }

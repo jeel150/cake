@@ -61,21 +61,45 @@
   width: 255px;
   word-break: break-word;
 }
-
 .statement-cakes-btn {
   font-family: 'Bricolage Grotesque', Arial, sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #441E14;
-  background: #F6DBE0;
+  background: 
+    linear-gradient(90deg, #F6DBE0 0%, #F6DBE0 50%, transparent 50%, transparent 100%);
   border: none;
   border-radius: 4px;
   padding: 12px 28px;
   cursor: pointer;
   margin-top: 8px;
-  transition: background 0.2s, box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  z-index: 1;
 }
-.statement-cakes-btn:hover, .statement-cakes-btn:focus {
+
+/* Pink overlay that will animate */
+.statement-cakes-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #F6DBE0;
+  z-index: -1;
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Hover/focus states */
+.statement-cakes-btn:hover::before,
+.statement-cakes-btn:focus::before {
+  width: 100%;
+}
+
+.statement-cakes-btn:hover,
+.statement-cakes-btn:focus {
   box-shadow: 0 8px 32px rgba(241, 168, 182, 0.18);
   transform: scale(1.04);
 }
@@ -191,7 +215,7 @@
   justify-content: center !important;
   box-shadow: 0 2px 8px rgba(241, 168, 182, 0.3) !important;
   margin-left: auto !important;
-  margin-right: 52px !important;
+  margin-right: 12px !important;
   margin-top: -15px !important;
 }
 .statement-card-bag:hover {
@@ -212,6 +236,651 @@
   }
 }
 
+
+@media (min-width:2560px) {
+  .statement-cakes-section {
+    top: 3500px !important;
+    left: 50px !important;
+    right: 50px !important;
+    width: calc(100vw - 100px) !important;
+    flex-direction: column !important;
+  }
+
+.statement-cakes-left {
+  width: 1000px;
+  height: 940px;
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  top:-700px !important;
+}
+
+.statement-cakes-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0;
+}
+
+.statement-cakes-title {
+  font-family: 'Josefin Sans', 'Saxo Grammaticus', Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 200;
+  color: #9B7C38;
+  margin-bottom: 15px;
+  margin-top: -298px;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  width: 411px;
+  height: 104px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 25px;
+}
+
+.statement-cakes-desc {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 16px;
+  color: #6F6F6F;
+  margin-bottom: 28px;
+  line-height: 170%;
+  margin-left: 25px;
+  width: 255px;
+  word-break: break-word;
+}
+
+.statement-cakes-btn {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #441E14;
+  background: #F6DBE0;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 28px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+.statement-cakes-right {
+  display: grid;
+  grid-template-columns: 20px 20px;
+  grid-auto-rows: 320px;
+  gap: 228px 600px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute !important;
+  top:-700px !important ;
+  left: 1200px !important;
+}
+
+.statement-cake-card:nth-child(2n) {
+  margin-top: 60px;
+}
+
+.statement-cake-card {
+     width: 536px;
+     height: 500px;
+     background: #fff;
+     border-radius: 8px;
+     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     position: relative;
+     overflow: hidden;
+     flex-shrink: 0;
+   }
+.statement-cake-img {
+  height: 350px !important;
+  width: 536px !important;
+}
+
+.statement-cake-content {
+   padding: 15px;
+   width: auto;
+}
+
+.statement-cake-title {
+  font-size: 24px;
+}
+
+.statement-cake-price {
+ font-size: 24px;;
+}
+
+.statement-card-heart {
+    width: 45px !important;
+    height: 45px !important;
+    top: 20px !important;
+    left: 20px !important;
+}
+.statement-card-heart svg {
+    width: 35px !important;
+    height: 35px !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.statement-card-bag {
+    width: 62px !important;
+    height: 62px !important;
+    top: 300px !important;
+    margin-left: 280px !important;
+}
+.statement-card-bag svg{
+   width: 34px !important;
+    height: 34px !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+}
+
+@media (min-width: 1024px) and (max-width: 1279px)
+{
+  .statement-cakes-section {
+    top: 3300px !important;
+    left: 50px !important;
+    right: 50px !important;
+    width: calc(100vw - 100px) !important;
+    flex-direction: column !important;
+  }
+
+  .statement-cakes-left {
+    min-height: 400px !important;
+    width: 100% !important;
+    margin-right: 50px !important;
+  }
+
+  .statement-cakes-img {
+    height: 300px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .statement-cakes-title {
+    font-size: 24px !important;
+    margin-top: -250px !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-desc {
+    font-size: 14px !important;
+    width: calc(50% - 20px) !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    margin-top: -60px !important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-btn {
+    margin-left: 20px !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    margin-top: 6px !important;
+    z-index: 2 !important;
+  }
+  .statement-cakes-right {
+    display: grid;
+    grid-template-columns: 336px 336px;
+    grid-auto-rows: 407px;
+    gap: 36px 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute !important;
+    top: 450px !important ;
+    left: 120px !important;
+  }
+  .statement-cakes-right::-webkit-scrollbar {
+    display: none !important; /* Hide scrollbar for WebKit browsers */
+  }
+  .statement-cake-card {
+    min-height: 300px !important;
+    min-width: 336px !important;
+    width: 336px !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    scroll-snap-align: center !important;
+    margin-right: 24px !important; /* Adjusted for spacing */
+  }
+  .statement-cake-card:last-child {
+    margin-right: 0 !important; /* No margin for the last card */
+  }
+  .statement-card-heart {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 10 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .statement-card-bag {
+    position: static !important;
+    background: #F6DBE0 !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(241, 168, 182, 0.3) !important;
+    margin-left: auto !important;
+    margin-right: 60px !important; /* Adjusted for spacing */
+    margin-top: -5px !important; /* Adjusted for alignment */
+    z-index: 10 !important;
+  }
+  .statement-cake-img {
+    height: 240px !important;
+    width: 100% !important;
+  }
+  .statement-cake-content {
+    padding: 16px !important;
+  }
+  .statement-cake-title {
+    font-size: 13px !important;
+  }
+  .statement-cake-price {
+    font-size: 15px !important;
+  }
+  .statement-cake-price .currency {
+    font-weight: 700;
+    color: #2A110A;
+  }
+  .statement-card-heart {
+    transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  }
+  .statement-card-heart:hover {
+    box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
+    transform: scale(1.13);
+  }
+  .statement-card-heart.liked svg path {
+    fill: #F1A8B6;
+    stroke: #F1A8B6;
+  }
+  .statement-card-heart.animate {
+    animation: heart-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes heart-pop {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.3); }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+  }
+}
+@media (min-width: 853px) and (max-width: 1023px)
+{
+  .statement-cakes-section {
+    top: 3100px !important;
+    left: 50px !important;
+    right: 50px !important;
+    width: calc(100vw - 80px) !important;
+    flex-direction: column !important;
+  }
+
+  .statement-cakes-left {
+    min-height: 400px !important;
+    width: 100% !important;
+    margin-right: 70px !important;
+  }
+
+  .statement-cakes-img {
+    height: 300px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .statement-cakes-title {
+    font-size: 24px !important;
+    margin-top: -250px !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-desc {
+    font-size: 14px !important;
+    width: calc(50% - 20px) !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    margin-top: -60px !important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-btn {
+    margin-left: 20px !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    margin-top: 6px !important;
+    z-index: 2 !important;
+  }
+   
+  .statement-cakes-right {
+    display: grid;
+    grid-template-columns: 336px 336px;
+    grid-auto-rows: 407px;
+    gap: 36px 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute !important;
+    top: 450px !important ;
+    left: 30px !important;
+  }
+  .statement-cakes-right::-webkit-scrollbar {
+    display: none !important; /* Hide scrollbar for WebKit browsers */
+  }
+  .statement-cake-card {
+    min-height: 300px !important;
+    min-width: 336px !important;
+    width: 336px !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    scroll-snap-align: center !important;
+    margin-right: 24px !important; /* Adjusted for spacing */
+  }
+  .statement-cake-card:last-child {
+    margin-right: 0 !important; /* No margin for the last card */
+  }
+  .statement-card-heart {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 10 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .statement-card-bag {
+    position: static !important;
+    background: #F6DBE0 !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(241, 168, 182, 0.3) !important;
+    margin-left: auto !important;
+    margin-right: 60px !important; /* Adjusted for spacing */
+    margin-top: -5px !important; /* Adjusted for alignment */
+    z-index: 10 !important;
+  }
+  .statement-cake-img {
+    height: 240px !important;
+    width: 100% !important;
+  }
+  .statement-cake-content {
+    padding: 16px !important;
+  }
+  .statement-cake-title {
+    font-size: 13px !important;
+  }
+
+  .statement-cake-price {
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 820px) and (max-width:852px)
+{
+  .statement-cakes-section {
+    top: 2850px !important;
+    left: 40px !important;
+    right: 40px !important;
+    width: calc(100vw - 80px) !important;
+    flex-direction: column !important;
+  }
+
+  .statement-cakes-left {
+    min-height: 400px !important;
+    width: 100% !important;
+    margin-right: 40px !important;
+    margin-top: 150px !important;
+  }
+
+  .statement-cakes-img {
+    height: 300px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .statement-cakes-title {
+    font-size: 24px !important;
+    margin-top: -250px !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-desc {
+    font-size: 14px !important;
+    width: calc(50% - 20px) !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    margin-top: -60px !important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-btn {
+    margin-left: 20px !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    margin-top: 6px !important;
+    z-index: 2 !important;
+  }
+  
+  .statement-cakes-right {
+    display: grid;
+    grid-template-columns: 336px 336px;
+    grid-auto-rows: 407px;
+    gap: 36px 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute !important;
+    top: 580px !important ;
+    left: 10px !important;
+  }
+  .statement-cakes-right::-webkit-scrollbar {
+    display: none !important; /* Hide scrollbar for WebKit browsers */
+  }
+  .statement-cake-card {
+    min-height: 300px !important;
+    min-width: 336px !important;
+    width: 336px !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    scroll-snap-align: center !important;
+    margin-right: 24px !important; /* Adjusted for spacing */
+  }
+  .statement-cake-card:last-child {
+    margin-right: 0 !important; /* No margin for the last card */
+  }
+  .statement-card-heart {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 10 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .statement-card-bag {
+    position: static !important;
+    background: #F6DBE0 !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(241, 168, 182, 0.3) !important;
+    margin-left: auto !important;
+    margin-right: 60px !important; /* Adjusted for spacing */
+    margin-top: -5px !important; /* Adjusted for alignment */
+    z-index: 10 !important;
+  }
+  .statement-cake-img {
+    height: 240px !important;
+    width: 100% !important;
+  }
+  .statement-cake-content {
+    padding: 16px !important;
+  }
+  .statement-cake-title {
+    font-size: 13px !important;
+  }
+
+  .statement-cake-price {
+    font-size: 15px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 819px) 
+{
+  .statement-cakes-section {
+    top: 2850px !important;
+    left: 40px !important;
+    right: 40px !important;
+    width: calc(100vw - 80px) !important;
+    flex-direction: column !important;
+  }
+
+  .statement-cakes-left {
+    min-height: 400px !important;
+    width: 100% !important;
+    margin-left: -40px !important;
+    margin-right: -40px !important;
+  }
+
+  .statement-cakes-img {
+    height: 300px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .statement-cakes-title {
+    font-size: 24px !important;
+    margin-top: -250px !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-desc {
+    font-size: 14px !important;
+    width: calc(50% - 20px) !important;
+    margin-left: 20px !important;
+    margin-right: auto!important;
+    margin-top: -60px !important;
+    z-index: 2 !important;
+  }
+
+  .statement-cakes-btn {
+    margin-left: 20px !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    margin-top: 6px !important;
+    z-index: 2 !important;
+  }
+  
+  .statement-cakes-right {
+    display: grid;
+    grid-template-columns: 336px 336px;
+    grid-auto-rows: 407px;
+    gap: 36px 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute !important;
+    top: 380px !important ;
+    left: -10px !important;
+  }
+  .statement-cakes-right::-webkit-scrollbar {
+    display: none !important; /* Hide scrollbar for WebKit browsers */
+  }
+  .statement-cake-card {
+    min-height: 300px !important;
+    min-width: 336px !important;
+    width: 336px !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    scroll-snap-align: center !important;
+    margin-right: 24px !important; /* Adjusted for spacing */
+  }
+  .statement-cake-card:last-child {
+    margin-right: 0 !important; /* No margin for the last card */
+  }
+  .statement-card-heart {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 10 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .statement-card-bag {
+    position: static !important;
+    background: #F6DBE0 !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(241, 168, 182, 0.3) !important;
+    margin-left: auto !important;
+    margin-right: 60px !important; /* Adjusted for spacing */
+    margin-top: -5px !important; /* Adjusted for alignment */
+    z-index: 10 !important;
+  }
+  .statement-cake-img {
+    height: 240px !important;
+    width: 100% !important;
+  }
+  .statement-cake-content {
+    padding: 16px !important;
+  }
+  .statement-cake-title {
+    font-size: 13px !important;
+  }
+
+  .statement-cake-price {
+    font-size: 15px !important;
+  }
+}
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
   .statement-cakes-section {
@@ -368,7 +1037,7 @@
     padding: 10px !important;
     gap: 5px !important;
     position: absolute !important;
-    top: 2070px !important;
+    top: 2130px !important;
     left: -10px !important;
     right: 20px !important;
     width: calc(100vw - 20px) !important;

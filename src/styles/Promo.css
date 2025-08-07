@@ -106,7 +106,267 @@
   margin: 0 auto;
 }
 
+@media (min-width:2560px)
+{
+  .promo-wrapper {
+    position: relative !important;
+    top: 5300px !important;
+    left: 70px !important;
+    right: 100px !important;
+    width: calc(100vw - 150px) !important;
+    height: 500px !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    max-width: none !important;
+  }
 
+  .promo-ribbon {
+    position: absolute !important;
+    top: 0 !important;
+    left: -120px !important;
+    width: calc(100% + 240px) !important;
+    height: 60px !important;
+    font-size: 20px !important;
+    padding: 0 32px !important;
+    transform: rotate(-7deg) !important;
+    letter-spacing: 1.2px !important;
+    overflow: hidden !important;
+  }
+
+  .promo-ribbon span {
+    margin: 0 32px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .promo-content {
+    top: 150px !important;
+    width: 100% !important;
+  }
+
+  .promo-title {
+    width: calc(100% - 60px) !important;
+    height: auto !important;
+    font-size: 36px !important;
+    margin-bottom: 40px !important;
+    padding: 0 30px !important;
+  }
+
+  .promo-btn {
+    width: 250px !important;
+    height: 70px !important;
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px)
+{
+  .promo-wrapper {
+    position: relative !important;
+    top: 5600px !important;
+    left: 50px !important;
+    right: 50px !important;
+    width: calc(100vw - 100px) !important;
+    height: 450px !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    max-width: none !important;
+  }
+
+  .promo-ribbon {
+    position: absolute !important;
+    top: 0 !important;
+    left: -80px !important;
+    width: calc(100% + 160px) !important;
+    height: 50px !important;
+    font-size: 16px !important;
+    padding: 0 24px !important;
+    transform: rotate(-5deg) !important;
+    letter-spacing: 0.5px !important;
+    overflow: hidden !important;
+  }
+
+  .promo-ribbon span {
+    margin: 0 24px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .promo-content {
+    top: 120px !important;
+    width: 100% !important;
+  }
+
+  .promo-title {
+    width: calc(100% - 40px) !important;
+    height: auto !important;
+    font-size: 28px !important;
+    margin-bottom: 24px !important;
+    padding: 0 20px !important;
+  }
+
+  .promo-btn {
+    width: 200px !important;
+    height: 55px !important;
+    font-size: 15px !important;
+  }
+}
+@media (min-width: 853px) and (max-width: 1023px)
+{
+  .promo-wrapper {
+    position: relative !important;
+    top: 5550px !important;
+    left: 50px !important;
+    right: 50px !important;
+    width: calc(100vw - 100px) !important;
+    height: 400px !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    max-width: none !important;
+  }
+
+  .promo-ribbon {
+    position: absolute !important;
+    top: 0 !important;
+    left: -80px !important;
+    width: calc(100% + 160px) !important;
+    height: 50px !important;
+    font-size: 16px !important;
+    padding: 0 24px !important;
+    transform: rotate(-5deg) !important;
+    letter-spacing: 0.5px !important;
+    overflow: hidden !important;
+  }
+
+  .promo-ribbon span {
+    margin: 0 24px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .promo-content {
+    top: 100px !important;
+    width: 100% !important;
+  }
+
+  .promo-title {
+    width: calc(100% - 40px) !important;
+    height: auto !important;
+    font-size: 28px !important;
+    margin-bottom: 24px !important;
+    padding: 0 20px !important;
+  }
+
+  .promo-btn {
+    width: 200px !important;
+    height: 55px !important;
+    font-size: 15px !important;
+  }
+}
+@media (min-width: 820px) and (max-width:852px)
+{
+  .promo-wrapper {
+    position: relative !important;
+    top: 5300px !important;
+    left: 50px !important;
+    right: 50px !important;
+    width: calc(100vw - 100px) !important;
+    height: 360px !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    max-width: none !important;
+  }
+
+  .promo-ribbon {
+    position: absolute !important;
+    top: 0 !important;
+    left: -80px !important;
+    width: calc(100% + 160px) !important;
+    height: 50px !important;
+    font-size: 16px !important;
+    padding: 0 24px !important;
+    transform: rotate(-5deg) !important;
+    letter-spacing: 0.5px !important;
+    overflow: hidden !important;
+  }
+
+  .promo-ribbon span {
+    margin: 0 24px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .promo-content {
+    top: 100px !important;
+    width: 100% !important;
+  }
+
+  .promo-title {
+    width: calc(100% - 40px) !important;
+    height: auto !important;
+    font-size: 28px !important;
+    margin-bottom: 24px !important;
+    padding: 0 20px !important;
+  }
+
+  .promo-btn {
+    width: 200px !important;
+    height: 55px !important;
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 819px) 
+{
+  .promo-wrapper {
+    position: relative !important;
+    top: 5050px !important;
+    left: 50px !important;
+    right: 50px !important;
+    width: calc(100vw - 100px) !important;
+    height: 320px !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    max-width: none !important;
+  }
+
+  .promo-ribbon {
+    position: absolute !important;
+    top: 0 !important;
+    left: -80px !important;
+    width: calc(100% + 160px) !important;
+    height: 50px !important;
+    font-size: 16px !important;
+    padding: 0 24px !important;
+    transform: rotate(-5deg) !important;
+    letter-spacing: 0.5px !important;
+    overflow: hidden !important;
+  }
+
+  .promo-ribbon span {
+    margin: 0 24px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .promo-content {
+    top: 100px !important;
+    width: 100% !important;
+  }
+
+  .promo-title {
+    width: calc(100% - 40px) !important;
+    height: auto !important;
+    font-size: 28px !important;
+    margin-bottom: 24px !important;
+    padding: 0 20px !important;
+  }
+
+  .promo-btn {
+    width: 200px !important;
+    height: 55px !important;
+    font-size: 15px !important;
+  }
+}
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {

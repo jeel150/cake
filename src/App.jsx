@@ -8,6 +8,9 @@ import './styles/Base.css';
 
 function App() {
   const navigate = useNavigate();
+  
+
+  
   // Heart and bag animation state for each card
   const [liked, setLiked] = useState([false, false, false]);
   const [heartAnimate, setHeartAnimate] = useState([false, false, false]);
@@ -417,7 +420,7 @@ function App() {
       </div>
       {/* Imagination Section */}
       <div className="imagination-section">
-        <div className="imagination-title">YOUR IMAGINATION OUR CREATION</div>
+        <div className="imagination-title">YOUR IMAGINATION <br /> OUR CREATION</div>
         <div className="imagination-desc">
           Our cakes are not just desserts—they're edible masterpieces. We specialize in creating highly detailed
         </div>
@@ -749,37 +752,34 @@ function App() {
               </svg>
               Follow US
             </button>
-            <button
-              className="rb-footer-google"
-              onClick={handleGoogleClick}
-              style={{
-                width: '188px',
-                height: '42px',
-                borderRadius: '50px',
-                background: '#F6DBE0',
-                opacity: 1,
-                border: 'none',
-                zIndex: 1000,
-                fontFamily: 'Bricolage Grotesque',
-                fontWeight: 400,
-                fontStyle: 'normal',
-                fontSize: '16px',
-                lineHeight: '31px',
-                letterSpacing: 0,
-                color: '#441E14',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                verticalAlign: 'middle',
-                marginTop: '2px',
-                cursor: 'pointer',
-                transition: 'box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1)',
-              }}
-              aria-label="Review on Google"
-            >
-              <i className="fab fa-google" style={{ marginRight: '8px', fontSize: '18px', color: '#441E14', verticalAlign: 'middle' }}></i>
-              Review on Google
-            </button>
+          <button
+  className="rb-footer-google"
+  onClick={handleGoogleClick}
+  style={{
+    width: '188px',
+    height: '42px',
+    borderRadius: '50px',
+    background: '#F6DBE0',
+    border: 'none',
+    fontFamily: "'Bricolage Grotesque', sans-serif",
+    fontSize: '15px',
+    fontWeight: 500,
+    color: '#441E14',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '8px',
+    cursor: 'pointer',
+    transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)',
+    padding: '0 16px',
+    margin: '4px 0',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+  }}
+  aria-label="Review on Google"
+>
+  <i className="fab fa-google" style={{ fontSize: '16px' }} />
+  Review on Google
+</button>
           </div>
           <div className="rb-footer-links d-flex">
             <div className="rb-footer-col d-flex flex-column">
