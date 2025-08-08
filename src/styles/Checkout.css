@@ -1924,4 +1924,278 @@
     height: 90px;
   }
 }
+/* 2560px (2K/QHD) Resolution Styles */
+@media screen and (min-width: 2560px) {
+ 
+  .checkout-content {
+    transform: scale(1.33); /* Scale up by 33% (2560/1920 ≈ 1.33) */
+    transform-origin: top left;
+    width: 1920px; /* Maintain original design width */
+    height: 100vh;
+    overflow: hidden;
+  }
 
+  /* Alternative approach without transform - scaling individual elements */
+  
+  .checkout-divider,
+  .checkout-divider-secondary {
+    width: 1780px; /* 1339 * 1.33 */
+    margin-left: 68px; /* 51 * 1.33 */
+  }
+
+  .checkout-breadcrumb {
+    margin-left: 68px; /* 51 * 1.33 */
+    font-size: 21.28px; /* 16 * 1.33 */
+  }
+
+  .checkout-title {
+    margin-left: 67px; /* 50 * 1.33 */
+    font-size: 48px; /* 36 * 1.33 */
+    width: 550px; /* 413 * 1.33 */
+    height: 77px; /* 58 * 1.33 */
+  }
+
+  .checkout-banner {
+    width: 1023px; /* 769 * 1.33 */
+    height: 61px; /* 46 * 1.33 */
+    margin-left: 68px; /* 51 * 1.33 */
+    font-size: 21.28px; /* 16 * 1.33 */
+  }
+
+  .checkout-banner-link {
+    font-size: 21.28px; /* 16 * 1.33 */
+  }
+
+  .checkout-order-title,
+  .checkout-section-title,
+  .checkout-shipping-title,
+  .checkout-datetime-title,
+  .checkout-payment-title {
+    font-size: 26.6px; /* 20 * 1.33 */
+  }
+
+  .checkout-order-title {
+    top: 226px; /* 170 * 1.33 */
+    left: 1170px; /* 880 * 1.33 */
+    width: 247px; /* 186 * 1.33 */
+    height: 31px; /* 23 * 1.33 */
+  }
+
+  .checkout-section-title {
+    top: 340px; /* 256 * 1.33 */
+    left: 73px; /* 55 * 1.33 */
+    width: 110px; /* 83 * 1.33 */
+    height: 31px; /* 23 * 1.33 */
+  }
+
+  .checkout-shipping-title {
+    top: 984px; /* 740 * 1.33 */
+    left: 68px; /* 51 * 1.33 */
+    width: 110px; /* 83 * 1.33 */
+    height: 31px; /* 23 * 1.33 */
+  }
+
+  .checkout-datetime-title {
+    top: 1982px; /* 1490 * 1.33 */
+    left: 69px; /* 52 * 1.33 */
+    width: 400px; /* 301 * 1.33 */
+    height: 31px; /* 23 * 1.33 */
+  }
+
+  .checkout-payment-title {
+    top: 2288px; /* 1720 * 1.33 */
+    left: 70px; /* 53 * 1.33 */
+    width: 226px; /* 170 * 1.33 */
+    height: 31px; /* 23 * 1.33 */
+  }
+
+  .checkout-addon-label,
+  .checkout-addon-label2 {
+    font-size: 21.28px; /* 16 * 1.33 */
+    height: 25px; /* 19 * 1.33 */
+  }
+
+  .checkout-addon-label {
+    top: 13px; /* 10 * 1.33 */
+    left: 40px; /* 30 * 1.33 */
+    width: 201px; /* 151 * 1.33 */
+  }
+
+  .checkout-addon-label2 {
+    top: 226px; /* 170 * 1.33 */
+    left: 40px; /* 30 * 1.33 */
+    width: 201px; /* 151 * 1.33 */
+  }
+
+  .checkout-addon-box {
+    width: 1023px; /* 769 * 1.33 */
+    height: 511px; /* 384 * 1.33 */
+    top: 399px; /* 300 * 1.33 */
+    left: 68px; /* 51 * 1.33 */
+  }
+
+  .checkout-addon-item-box {
+    width: 314px; /* 236 * 1.33 */
+    height: 145px; /* 109 * 1.33 */
+  }
+
+  .addon-box-small-flowers { top: 53px; left: 29px; }
+  .addon-box-medium-flowers { top: 53px; left: 363px; }
+  .addon-box-large-flowers { top: 53px; left: 694px; }
+  .addon-box-happy-birthday { top: 279px; left: 29px; }
+  .addon-box-anniversary { top: 279px; left: 363px; }
+
+  .addon-img-inside {
+    width: 113px; /* 85 * 1.33 */
+    height: 132px; /* 99 * 1.33 */
+  }
+
+  .addon-title-inside {
+    font-size: 21.28px; /* 16 * 1.33 */
+  }
+
+  .addon-price-inside {
+    font-size: 18.62px; /* 14 * 1.33 */
+  }
+
+  .addon-qty-box-inside {
+    width: 128px; /* 96 * 1.33 */
+    height: 47px; /* 35 * 1.33 */
+  }
+
+  .addon-qty-btn {
+    font-size: 21.28px; /* 16 * 1.33 */
+    width: 32px; /* 24 * 1.33 */
+    height: 32px; /* 24 * 1.33 */
+    line-height: 32px; /* 24 * 1.33 */
+  }
+
+  .addon-qty-count {
+    font-size: 21.28px; /* 16 * 1.33 */
+    width: 27px; /* 20 * 1.33 */
+  }
+
+  .addon-add-btn {
+    padding: 8px 24px; /* 6 * 1.33, 18 * 1.33 */
+    font-size: 18.62px; /* 14 * 1.33 */
+  }
+
+  .checkout-summary-box {
+    width: 710px; /* 534 * 1.33 */
+    height: 903px; /* 679 * 1.33 */
+    top: 399px; /* 300 * 1.33 */
+    left: 1176px; /* 884 * 1.33 */
+  }
+
+  .checkout-shipping-box {
+    width: 1023px; /* 769 * 1.33 */
+    top: 1024px; /* 770 * 1.33 */
+    left: 68px; /* 51 * 1.33 */
+  }
+
+  .checkout-datetime-box {
+    width: 1023px; /* 769 * 1.33 */
+    height: 164px; /* 123 * 1.33 */
+    top: 2022px; /* 1520 * 1.33 */
+    left: 68px; /* 51 * 1.33 */
+  }
+
+  .checkout-payment-box {
+    width: 1023px; /* 769 * 1.33 */
+    height: 114px; /* 86 * 1.33 */
+    top: 2035px; /* 1530 * 1.33 */
+    left: 113px; /* 85 * 1.33 */
+  }
+
+  .checkout-pay-box {
+    width: 1023px; /* 769 * 1.33 */
+    height: 82px; /* 62 * 1.33 */
+    top: 2461px; /* 1850 * 1.33 */
+    left: 68px; /* 51 * 1.33 */
+  }
+
+  .checkout-pay-btn {
+    width: 156px; /* 117 * 1.33 */
+    height: 33px; /* 25 * 1.33 */
+    font-size: 18.62px; /* 14 * 1.33 */
+  }
+
+  .checkout-radio-label {
+    font-size: 21.28px; /* 16 * 1.33 */
+  }
+
+  .checkout-radio-input {
+    width: 24px; /* 18 * 1.33 */
+    height: 24px; /* 18 * 1.33 */
+  }
+
+  .checkout-radio-absolute {
+    top: 1678px; /* 1262 * 1.33 */
+    left: 113px; /* 85 * 1.33 */
+  }
+
+  .checkout-radio-cc {
+    top: 1197px; /* 900 * 1.33 */
+    left: 489px; /* 368 * 1.33 */
+  }
+
+  .checkout-radio-label-cc {
+    top: 1673px; /* 1258 * 1.33 */
+    left: 524px; /* 394 * 1.33 */
+    height: 33px; /* 25 * 1.33 */
+  }
+
+  .coupon-section {
+    top: 678px; /* 510 * 1.33 */
+    left: 1197px; /* 900 * 1.33 */
+  }
+
+  .coupon-input {
+    width: 439px; /* 330 * 1.33 */
+    height: 82px; /* 62 * 1.33 */
+  }
+
+  .coupon-apply-btn {
+    width: 177px; /* 133 * 1.33 */
+    height: 82px; /* 62 * 1.33 */
+  }
+
+  .checkout-order-box {
+    width: 649px; /* 488 * 1.33 */
+    top: 279px; /* 210 * 1.33 */
+    left: 1184px; /* 890 * 1.33 */
+  }
+
+  .order-item-img {
+    width: 169px; /* 127 * 1.33 */
+    height: 137px; /* 103 * 1.33 */
+  }
+
+  .order-item-price {
+    font-size: 24px; /* 18 * 1.33 */
+    left: 193px; /* 145 * 1.33 */
+    width: 133px; /* 100 * 1.33 */
+  }
+
+  .order-item-qty-box {
+    width: 194px; /* 146 * 1.33 */
+    height: 68px; /* 51 * 1.33 */
+  }
+
+  .order-summary {
+    top: 811px; /* 610 * 1.33 */
+    left: 1181px; /* 888 * 1.33 */
+    width: 652px; /* 490 * 1.33 */
+  }
+
+  .summary-label,
+  .summary-value {
+    font-size: 21.28px; /* 16 * 1.33 */
+  }
+
+  .proceed-pay-btn {
+    height: 69px; /* 52 * 1.33 */
+    font-size: 21.28px; /* 16 * 1.33 */
+  }
+
+}

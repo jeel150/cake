@@ -720,3 +720,151 @@
     display: none; /* Chrome, Safari, Opera */
   }
 }
+/* 2560px (2K/QHD) Resolution Styles */
+@media screen and (min-width: 2560px) {
+  :root {
+    --scale-factor: 1.333;
+  }
+
+  /* General scaling */
+  .course-page {
+    font-size: calc(1rem * var(--scale-factor));
+  }
+
+  /* Breadcrumb */
+  .rb-breadcrumb {
+    padding: calc(24px * var(--scale-factor)) 0 0 calc(80px * var(--scale-factor));
+    font-size: calc(16px * var(--scale-factor));
+    gap: calc(8px * var(--scale-factor));
+  }
+  .rb-breadcrumb-separator {
+    font-size: calc(17px * var(--scale-factor));
+    margin: 0 calc(8px * var(--scale-factor));
+  }
+
+  /* Header */
+  .rb-header-section {
+    padding: calc(20px * var(--scale-factor)) calc(40px * var(--scale-factor));
+  }
+  .rb-heading {
+    font-size: calc(45px * var(--scale-factor));
+    margin-bottom: calc(20px * var(--scale-factor));
+  }
+  .rb-desc {
+    font-size: calc(16px * var(--scale-factor));
+    max-width: calc(1160px * var(--scale-factor));
+  }
+
+  /* Main layout */
+  .rb-courses-section {
+    padding-top: calc(20px * var(--scale-factor));
+    padding-right: calc(40px * var(--scale-factor));
+    padding-bottom: calc(40px * var(--scale-factor));
+    padding-left: calc(40px * var(--scale-factor));
+    gap: calc(30px * var(--scale-factor));
+  }
+
+  /* Sidebar */
+  .rb-sidebar {
+    width: calc(280px * var(--scale-factor));
+    padding: calc(20px * var(--scale-factor));
+  }
+  .rb-sidebar h2 {
+    width: calc(254px * var(--scale-factor));
+    height: calc(23px * var(--scale-factor));
+    font-size: calc(20px * var(--scale-factor));
+    padding: calc(8px * var(--scale-factor)) calc(12px * var(--scale-factor));
+    margin-bottom: calc(20px * var(--scale-factor));
+  }
+  .rb-sidebar li {
+    font-size: calc(35px * var(--scale-factor));
+    padding: calc(10px * var(--scale-factor)) calc(15px * var(--scale-factor));
+    margin: calc(8px * var(--scale-factor)) 0;
+  }
+  .rb-sidebar li span {
+    padding-top: calc(10px * var(--scale-factor));
+    font-size: calc(35px * var(--scale-factor));
+  }
+  .rb-sidebar-hr {
+    width: calc(333px * var(--scale-factor));
+    margin: calc(16px * var(--scale-factor)) 0;
+  }
+
+  /* Course grid */
+  .rb-courses-grid {
+    gap: calc(30px * var(--scale-factor));
+  }
+
+  /* Course card */
+  .rb-course-card {
+    border-radius: calc(10px * var(--scale-factor));
+    padding: calc(20px * var(--scale-factor));
+  }
+
+  /* Badge */
+  .rb-course-badge {
+    gap: calc(8px * var(--scale-factor));
+    top: calc(30px * var(--scale-factor)) !important;
+    right: calc(40px * var(--scale-factor));
+  }
+  .rb-course-badge span {
+    border-radius: calc(50px * var(--scale-factor));
+    font-size: calc(12px * var(--scale-factor));
+    padding: calc(4px * var(--scale-factor)) calc(14px * var(--scale-factor));
+  }
+
+  /* Image */
+  .rb-course-img {
+    width: calc(450px * var(--scale-factor)) !important;
+    height: calc(200px * var(--scale-factor)) !important;
+    border-radius: calc(5px * var(--scale-factor));
+  }
+
+  /* Text */
+  .rb-course-card h3 {
+    font-size: calc(16px * var(--scale-factor));
+    margin-top: 10px !important;
+    margin-bottom: calc(8px * var(--scale-factor));
+  }
+  .rb-course-card p {
+    font-size: calc(16px * var(--scale-factor));
+    padding: calc(10px * var(--scale-factor)) 0;
+  }
+
+  /* Button */
+  .rb-btn-view {
+    width: calc(283px * var(--scale-factor));
+    height: calc(58px * var(--scale-factor));
+    border-radius: calc(4px * var(--scale-factor));
+    font-size: calc(16px * var(--scale-factor));
+  }
+
+  /* Horizontal rules */
+  .custom-hr-1,
+  .custom-hr-2 {
+    width: calc(1345px * var(--scale-factor));
+    margin: calc(24px * var(--scale-factor)) auto;
+  }
+
+  /* Course count */
+  .rb-course-count {
+    font-size: calc(14px * var(--scale-factor));
+    margin: calc(20px * var(--scale-factor)) 5px 5px calc(400px * var(--scale-factor));
+  }
+
+  /* Tablet and mobile overrides - ensure desktop layout is preserved */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .rb-courses-section {
+      flex-direction: row !important;
+    }
+    .rb-courses-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      display: grid !important;
+    }
+    .rb-course-card {
+      min-width: auto !important;
+      margin-right: 0 !important;
+    }
+  }
+
+}

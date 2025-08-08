@@ -99,35 +99,35 @@
 /* ===== RESPONSIVE DESIGN ===== */
 @media (min-width: 2560px) {
   .hero-rb {
-    top: 300px;
+    top: 400px !important;
     left: -50px !important;
-    width: 600px;
+    width: 700px !important;
     height: 350px;
   }
   
   .hero-title {
-    width: 1200px !important;
+    width: 1500px !important;
     height: auto;
-    font-size: 80px !important;
+    font-size: 100px !important;
     margin-bottom: 30px !important;
   }
   
   .hero-desc {
     width: 900px !important;
     height: auto;
-    font-size: 30px !important;
+    font-size: 35px !important;
     margin-bottom: 40px !important;
   }
   
   .hero-btn {
     min-width: 500px !important;
     height: 80px !important;
-    font-size: 35px !important;
+    font-size: 40px !important;
     padding: 0 30px;
   }
   
   .hero-btn-arrow {
-    font-size: 35px !important;
+    font-size: 40px !important;
   }
   
 }
