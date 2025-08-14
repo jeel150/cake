@@ -12,11 +12,11 @@ import Checkout from './pages/Checkout.jsx';
 import CartSidebar from './components/CartSidebar.jsx';
 import { CartSidebarContext } from './data/CartSidebarContext.js';
 import images from '../src/data/images.js';
-import Course from './pages/Course.jsx';
-import ViewCourse from './pages/ViewCourse.jsx';
-import Celebrate from './pages/Celebrate.jsx';
-import About from './pages/About.jsx';
-import Contact from './pages/Contact.jsx';
+import Course from './pages/course.jsx';
+import ViewCourse from './pages/viewCourse.jsx';
+import Celebrate from './pages/celebrate.jsx';
+import About from './pages/about.jsx';
+import Contact from './pages/contact.jsx';
 import Signup from './pages/Signup.jsx';
 import Login from './pages/Login.jsx';
 
@@ -79,3 +79,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <MainProvider />
   </React.StrictMode>
 );
+
