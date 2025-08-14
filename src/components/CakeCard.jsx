@@ -1,7 +1,6 @@
+import '../styles/central.css';
 import React, { useState } from 'react';
-import './styles/central.css';
-
-const CakeCard = ({ image, title, price, onBagClick }) => {
+  const CakeCard = ({ image, title, price, onBagClick }) => {
   const [liked, setLiked] = useState(false);
   const [animate, setAnimate] = useState(false);
   const [bagAnimate, setBagAnimate] = useState(false);

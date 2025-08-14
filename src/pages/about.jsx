@@ -1,12 +1,11 @@
-import React from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import images from './images.js';
-import './styles/central.css';
-import './styles/about.css';
 import { useNavigate } from 'react-router-dom';
-
 const { sliderImg, orange, quote, company, brand } = images;
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import images from '../data/images.js';
+import '../styles/central.css';
+import '../styles/about.css';
+
 
 const About = () => {
   const navigate = useNavigate();

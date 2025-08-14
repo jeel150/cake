@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import{ useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './styles/central.css';
-import images from './images.js';
+import '../styles/central.css';
+import images from '../data/images';
 const { logo } = images;
 
 const Navbar = () => {

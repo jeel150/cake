@@ -1,35 +1,12 @@
-import React, { useState, useContext } from 'react';
-import Navbar from './Navbar.jsx';
-import Footer from './Footer.jsx';
-import './styles/central.css';
-import images from './images.js';
-const { biscoffImg, cakeImg, cupcakeImg, cookieImg, roundCakeImg, darkChocoImg, hazulnutImg, cupCakeImg, ladyImg, statementSetImg, jarsImg, setImg, sliderImg } = images;
-const honeycombImg = jarsImg;
-import { CartSidebarContext } from './CartSidebarContext';
 import { useNavigate } from 'react-router-dom';
+import { useState, useContext } from 'react';
+const { biscoffImg, cakeImg, hazulnutImg, cupCakeImg,} = images;
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+import '../styles/central.css';
+import images from '../data/images.js';
+import { CartSidebarContext } from '../data/CartSidebarContext.js';
 
-const relatedCakes = [
-  {
-    image: biscoffImg,
-    title: 'Decadent Belgian Chocolate Cake Cake',
-    price: '300 - 500',
-  },
-  {
-    image: cakeImg,
-    title: 'Decadent Belgian Chocolate Cake Cake',
-    price: '300 - 500',
-  },
-  {
-    image: honeycombImg,
-    title: 'Honeycomb',
-    price: '300 - 500',
-  },
-  {
-    image: setImg,
-    title: 'Decadent Belgian Chocolate Cake Cake',
-    price: '300 - 500',
-  },
-];
 
 const cakeImages = [cakeImg, cakeImg, cakeImg, cakeImg];
 

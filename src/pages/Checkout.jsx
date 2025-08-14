@@ -1,10 +1,12 @@
-import Navbar from './Navbar.jsx';
-import Footer from './Footer.jsx';
-import './styles/central.css';
-import images from './images.js';
+import { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import React, { useState, useRef } from 'react';
-const { biscoffImg, cakeImg, cupcakeImg, cookieImg, roundCakeImg, darkChocoImg, hazulnutImg, cupCakeImg, ladyImg, statementSetImg, jarsImg, setImg, sliderImg } = images;
+const { biscoffImg, cakeImg,} = images;
+import '../styles/central.css';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+import images from '../data/images.js';
+
+
 export default function Checkout() {
   const navigate = useNavigate();
   // State for main order items (assuming 2 for demo)

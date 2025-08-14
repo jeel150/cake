@@ -1,6 +1,6 @@
 
-import '../src/styles/SignUp.css';
-import images from './images.js';
+import '../styles/SignUp.css';
+import images from '../data/images';
 const { jarsImg } = images;
 
 
