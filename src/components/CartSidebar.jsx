@@ -1,5 +1,4 @@
-import React from 'react';
-import './styles/central.css';
+import '../styles/central.css';
 import { useNavigate } from 'react-router-dom';
 
 const CartSidebar = ({ isOpen, onClose, cartItems, total, discount, subTotal }) => {

@@ -1,9 +1,10 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
-import './styles/course.css';
-import images from './images.js';
 import { useNavigate } from 'react-router-dom';
 const { colorcake,dora, goldencake, pinkcake, pink, redvelvet, tricolorcake, truffle, wippedcake, biscoffImg } = images;
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import '../styles/course.css';
+import images from '../data/images';
+
 
 const Course = () => {
   const navigate = useNavigate();

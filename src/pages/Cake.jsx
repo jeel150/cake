@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import Navbar from './Navbar.jsx';
-import './styles/central.css';
-import CakeCard from './CakeCard.jsx';
-import images from './images.js';
-const { cakeImg, honeycombImg, biscoffImg, hazulnutImg, cookieImg, darkChocoImg, cupCakeImg, setImg, sliderImg } = images;
-import Footer from './Footer.jsx';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+const { cakeImg,biscoffImg, hazulnutImg, cookieImg, darkChocoImg, cupCakeImg, setImg, sliderImg } = images;
+import '../styles/central.css';
+import images from '../data/images.js';
+import Navbar from '../components/Navbar.jsx';
+import CakeCard from '../components/CakeCard.jsx';
+import Footer from '../components/Footer.jsx';
+
 
 function Cake() {
   const cakeData = [

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Navbar from './Navbar.jsx';
-import images from './images.js';
+import Navbar from '../components/Navbar.jsx';
+import images from '../data/images.js';
 const { biscoffImg, cakeBg, cakeImg, cupcakeImg, cookieImg, roundCakeImg, darkChocoImg, hazulnutImg, cupCakeImg, ladyImg, statementSetImg, jarsImg } = images;
 // Bootstrap classes will be used instead of custom CSS
 import { useNavigate } from 'react-router-dom';
-import './styles/Base.css';
+import '../styles/Base.css';
 
 function App() {
   const navigate = useNavigate();

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import images from './images.js';
-import './styles/central.css';
-import './styles/viewcourse.css';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+import images from '../data/images.js';
+import '../styles/central.css';
+import '../styles/viewcourse.css';
+
 
 export default function ViewCourse() {
   const navigate = useNavigate();

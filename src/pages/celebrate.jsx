@@ -1,11 +1,12 @@
-import React from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import './styles/Footer.css';
-import './styles/celebrate.css';
-import images from './images.js';
 import { useNavigate } from 'react-router-dom';
 const { gift1, gift2, gift3 } = images;
+import images from '../data/images.js';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+import '../styles/Footer.css';
+import '../styles/celebrate.css';
+
+
 
 const Celebrate = () => {
   const navigate = useNavigate();

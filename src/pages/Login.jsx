@@ -1,7 +1,7 @@
-import React from 'react';
-import '../src/styles/Login.css'; 
-import images from './images.js';
 const { jarsImg } = images;
+import '../styles/Login.css'; 
+import images from '../data/images';
+
 
 function Login() {
   return (

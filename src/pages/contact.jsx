@@ -1,11 +1,10 @@
-import React from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import images from './images.js';
-import './styles/contact.css';
 import { useNavigate } from 'react-router-dom';
-
 const { last } = images;
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import images from '../data/images';
+import '../styles/contact.css';
+
 
 const Contact = () => {
   const navigate = useNavigate();
