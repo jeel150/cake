@@ -1,5 +1,5 @@
-import React from 'react';
-import './styles/signup.css';
+
+import '../src/styles/SignUp.css';
 import images from './images.js';
 const { jarsImg } = images;
 
