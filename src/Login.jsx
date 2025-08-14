@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/login.css';
+import '../src/styles/Login.css'; // Ensure the correct path to your CSS file
 import images from './images.js';
 const { jarsImg } = images;
 
