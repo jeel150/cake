@@ -24,7 +24,7 @@ export default function ViewCourse() {
       </div>
 
       <div className="viewcourse-title-saxo">
-        Create designs with butter cream icing
+        Create designs with butter <br/> cream icing
       </div>
 
       <div className="viewcourse-image-box">

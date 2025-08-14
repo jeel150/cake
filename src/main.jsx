@@ -16,6 +16,9 @@ import Celebrate from './celebrate.jsx';
 import About from './about.jsx';
 import Contact from './contact.jsx';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Signup from './SignUp.jsx';
+import Login from './Login.jsx';
 
 function MainProvider() {
   const [isCartOpen, setCartOpen] = useState(false);
@@ -55,6 +58,8 @@ function MainProvider() {
            <Route path="/celebrate" element={<Celebrate />} />
            <Route path="/about" element={<About />} />
            <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <CartSidebar
           isOpen={isCartOpen}
