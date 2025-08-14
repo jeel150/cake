@@ -13,11 +13,11 @@ import CartSidebar from './components/CartSidebar.jsx';
 import { CartSidebarContext } from './data/CartSidebarContext.js';
 import images from '../src/data/images.js';
 import Course from './pages/course.jsx';
-import ViewCourse from './pages/viewCourse.jsx';
+import ViewCourse from './pages/viewcourse.jsx';
 import Celebrate from './pages/celebrate.jsx';
 import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
-import Signup from './pages/Signup.jsx';
+import Signup from './pages/SignUp.jsx';
 import Login from './pages/Login.jsx';
 
 function MainProvider() {
