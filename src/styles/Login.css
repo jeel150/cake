@@ -152,6 +152,18 @@
   text-decoration: underline;
 }
 
+.error-message {
+  color: #e74c3c;
+  background-color: #fde8e8;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
 /* Tablet styles (768px and up) */
 @media (min-width: 768px) {
   .login-container {

@@ -1,0 +1,268 @@
+.order-container1 {
+background:#f5f4f4f2;
+border-radius: 35px 35px 0 0;
+position:absolute;
+margin-top: 140px;
+width: 100%;
+height: 80%;
+overflow: hidden;
+}
+.order-close1 {
+  position:relative;
+  top: 10px;
+  left:95%;
+  font-size: 40px;
+  color: #441e14;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.order-subcontainer1 {
+width: 770px;
+max-height: 390px;
+min-height: 390px;
+height:auto;
+top:17%;
+left:51%;
+transform: translate(-50%, -20%);
+opacity: 1;
+border-width: 1px;
+border-radius: 4px;
+background: #FFFFFF;
+border: 1px solid #ECECEC;
+position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* space between orders */
+  max-height: 400px; /* adjust so that only ~2 orders fit */
+  overflow-y: auto;
+  padding-right: 8px; /* avoid scrollbar overlap */
+}
+
+.order-subcontainer1::-webkit-scrollbar {
+  width: 6px;
+}
+
+.order-subcontainer1::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.order-subcontainer1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.order-title1{
+width: 384px;
+height: 39px;
+left:50%;
+transform: translate(-50%, -20%);
+opacity: 1;
+font-family: Saxo Grammaticus;
+font-weight: 100;
+font-size: 45px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+color: #9B7C38;
+position:relative;
+}
+
+.order-detail1{
+width: 150px;
+height: 54px;
+top: 70px;
+left: 200px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 156%;
+letter-spacing: 0%;
+color: #2A110A;
+position:relative;
+}
+.order-product-name {
+  font-family: Bricolage Grotesque;
+  font-weight: 600;
+  bottom: 50px;
+  font-size: 18px;
+  line-height: 140%;
+  color: #2A110A;
+  position: relative;
+
+}
+.order-images1{
+width: 39px;
+height: 32px;
+bottom: 20px;
+left: 25px;
+opacity: 1;
+border-radius: 8px;
+position: relative;
+
+
+}
+.order-detail2{
+width: 150px;
+height: 54px;
+top: 40px;
+left: 100px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 156%;
+letter-spacing: 0%;
+color: #2A110A;
+position:relative;
+
+}
+.order-images2{
+width: 39px;
+height: 32px;
+bottom: 10px;
+left: 25px;
+opacity: 1;
+border-radius: 8px;
+position: relative;
+
+}
+.order-status{
+width: 136px;
+height: 19px;
+bottom: 40px;
+left: 565px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #009200;
+position: relative;
+
+
+}
+.order-price1{
+width: 51px;
+height: 21px;
+bottom: 35px;
+left:565px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 600;
+font-style: Bold;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: right;
+color: #000000;
+position: relative;
+}
+.order-price2{
+width: 51px;
+height: 21px;
+bottom: 30px;
+left:515px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: right;
+color: #000000;
+position: relative;
+
+}
+.order-divider {
+  height: 1px;
+  background: #ECECEC;
+  margin: 20px 0;
+  width: 100%;
+  top: 5px;
+}
+/* Add to orderhistory.css or central.css */
+.order-history-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  color: #441e14;
+}
+
+/* Make sure the slider overlay is clickable to close */
+.order-history-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: fadeIn 0.3s ease;
+}
+
+.order-history-content {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  animation: slideUp 0.4s ease;
+  overflow: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.order-delete-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left:720px;
+  top:-90px;
+  position:relative;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.order-delete-btn:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}
+
+
+
+
+
+

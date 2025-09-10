@@ -1,0 +1,96 @@
+.return-policy-page {
+  background: #fff;
+  font-family: "Saxo Grammaticus", serif; /* same font style */
+  color: #2A110A;
+}
+
+.return-divider {
+ width: 1339;
+height: 0px;
+top: 10px;
+left: 5px;
+opacity: 1;
+border-width: 0.5px;
+border: 0.9px solid #D4D4D4;
+position:relative;
+}
+
+/* Breadcrumb */
+.rp-breadcrumb {
+ width: 45;
+height: 19;
+top: 138px;
+left: 57px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #969696;
+position: absolute;
+}
+
+
+
+.rp-breadcrumb .rp-sep {
+ width: 45;
+height: 19;
+top: 124px;
+left: 51px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #969696;
+}
+
+/* Container */
+.rp-container {
+ overflow: hidden;
+  margin: 0 auto;
+  padding: 70px 20px;
+  line-height: 1.0;
+}
+
+/* Heading */
+.rp-heading {
+ width: 384;
+height: 39;
+top: 25%;
+left: 55px;
+range: 0 deg;
+opacity: 1;
+font-family: Saxo Grammaticus;
+font-weight: 100;
+font-style: Light;
+font-size: 45px;
+padding-bottom: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+color: #9B7C38;
+position: absolute;
+
+}
+
+/* Paragraphs */
+.rp-container p {
+ width: 95%;
+height: 45%;
+top: 65px;
+left: 38px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0%;
+color: #6F6F6F;
+position: relative;
+}

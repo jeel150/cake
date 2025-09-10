@@ -1,29 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-const { cakeImg,biscoffImg, hazulnutImg, cookieImg, darkChocoImg, cupCakeImg, setImg, sliderImg } = images;
 import '../styles/central.css';
-import images from '../data/images.js';
 import Navbar from '../components/Navbar.jsx';
 import CakeCard from '../components/CakeCard.jsx';
 import Footer from '../components/Footer.jsx';
-
+import { useCart } from "../components/CartContext";  
+import { useTheme } from "../components/ThemeContext.jsx";  
 
 function Cake() {
-  const cakeData = [
-    { id: 1, image: cakeImg, title: 'Decadent Belgian Chocolate Cake Cake', price: 300 },
-    { id: 2, image: setImg, title: 'Set', price: 350 },
-    { id: 3, image: biscoffImg, title: 'Biscoff', price: 400 },
-    { id: 4, image: hazulnutImg, title: 'Hazulnut', price: 320 },
-    { id: 5, image: cookieImg, title: 'Cookie', price: 250 },
-    { id: 6, image: darkChocoImg, title: 'Dark Choco', price: 450 },
-    { id: 7, image: cupCakeImg, title: 'Cup Cake', price: 200 },
-    { id: 8, image: setImg, title: 'Set', price: 370 },
-    { id: 9, image: sliderImg, title: 'Slider', price: 280 },
-    { id: 10, image: cupCakeImg, title: 'Cup Cake', price: 210 },
-    { id: 11, image: cakeImg, title: 'Decadent Belgian Chocolate Cake Cake', price: 330 },
-    { id: 12, image: biscoffImg, title: 'Biscoff', price: 410 },
-  ];
-  const [price, setPrice] = useState(80);
+  const [products, setProducts] = useState([]);
+  const [minPrice, setMinPrice] = useState(80);
+  const [maxPrice, setMaxPrice] = useState(1000);
   const [categories, setCategories] = useState({
     Chocolate: false,
     Vegan: false,
@@ -35,14 +22,30 @@ function Cake() {
   const [sort, setSort] = useState('Latest');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
-  const handleBagClick = (id = 1) => {
-    navigate(`/product/${id}`);
+
+  // ✅ cart
+  const { cartItems, addToCart } = useCart();
+  
+  // ✅ Theme context
+  const { theme, loading: themeLoading } = useTheme();
+
+  // ✅ Fetch products from backend
+  useEffect(() => {
+    fetch("http://localhost:5000/api/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("Error fetching products:", err));
+  }, []);
+
+  // ✅ Add to cart handler
+  const handleAddToCart = (product, e) => {
+    e.stopPropagation();
+    addToCart(product);
   };
-  const handleCategoryChange = (cat) => {
-    setCategories((prev) => ({ ...prev, [cat]: !prev[cat] }));
-  };
+
   const handleClear = () => {
-    setPrice(80);
+    setMinPrice(80);
+    setMaxPrice(1000);
     setCategories({
       Chocolate: false,
       Vegan: false,
@@ -52,22 +55,95 @@ function Cake() {
       'Not So Chocolate': false,
     });
   };
+
   const handleSort = (type) => {
     setSort(type);
     setDropdownOpen(false);
   };
+
   const handleHomeBreadcrumbClick = () => {
     navigate('/');
   };
-  let sortedCakes = [...cakeData];
-  if (sort === 'Price: Low to High') {
-    sortedCakes.sort((a, b) => a.price - b.price);
-  } else if (sort === 'Price: High to Low') {
-    sortedCakes.sort((a, b) => b.price - a.price);
+
+  // ✅ Filtering logic
+  let filteredCakes = [...products];
+
+  // Apply Price Range Filter
+  filteredCakes = filteredCakes.filter(
+    (cake) => cake.price >= minPrice && cake.price <= maxPrice
+  );
+
+  // Apply Category Filter (AND logic)
+  const activeCategories = Object.keys(categories).filter((cat) => categories[cat]);
+  if (activeCategories.length > 0) {
+    filteredCakes = filteredCakes.filter((cake) =>
+      activeCategories.every((cat) =>
+        Array.isArray(cake.category)
+          ? cake.category.map((c) => c.toLowerCase()).includes(cat.toLowerCase())
+          : cake.category?.toLowerCase().includes(cat.toLowerCase())
+      )
+    );
   }
+
+  // ✅ Sorting logic
+  if (sort === 'Price: Low to High') {
+    filteredCakes.sort((a, b) => a.price - b.price);
+  } else if (sort === 'Price: High to Low') {
+    filteredCakes.sort((a, b) => b.price - a.price);
+  }
+
   return (
     <div className="cake-page-wrapper">
       <Navbar />
+
+      {/* ✅ Floating Cart Button */}
+      <div
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          zIndex: 999,
+          cursor: "pointer",
+        }}
+        onClick={() => navigate('/checkout')}
+      >
+        <div
+          style={{
+            position: "relative",
+            width: "50px",
+            height: "50px",
+            borderRadius: "50%",
+            backgroundColor: "#f1d2e2ff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <svg width="28" height="28" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="8" width="13" height="10" rx="2" stroke="#2A110A" strokeWidth="1.5" fill="none"/>
+            <path d="M8 8V6a3 3 0 0 1 6 0v2" stroke="#2A110A" strokeWidth="1.5" fill="none"/>
+          </svg>
+
+          {cartItems.length > 0 && (
+            <span
+              style={{
+                position: "absolute",
+                top: "5px",
+                right: "5px",
+                backgroundColor: "red",
+                color: "white",
+                borderRadius: "50%",
+                padding: "4px 8px",
+                fontSize: "12px",
+                fontWeight: "bold",
+              }}
+            >
+              {cartItems.length}
+            </span>
+          )}
+        </div>
+      </div>
+
       <div className="cake-divider-top"></div>
       <div className="home-breadcrumb" onClick={handleHomeBreadcrumbClick} style={{cursor: 'pointer'}}>Home</div>
       <div className="breadcrumb-arrow">
@@ -77,7 +153,22 @@ function Cake() {
       </div>
       <div className="breadcrumb-current">Cakes</div>
       <h1 className="cakes-title">CAKES</h1>
-      <div className="showing-results">Showing 60 Results</div>
+      <div className="showing-results">Showing {filteredCakes.length} Results</div>
+
+       {/* ✅ Show active theme info */}
+      {!themeLoading && (
+        <div className="theme-banner">
+          {theme ? (
+            <p style={{ color: "var(--primary-color)" }}>
+            </p>
+          ) : 
+          null
+          }
+        </div>
+      )}
+
+
+      {/* Sort Dropdown */}
       <div className="sort-by-label">Sort by :</div>
       <div className="sort-dropdown">
         <button className="sort-dropdown-btn" onClick={() => setDropdownOpen((o) => !o)}>
@@ -93,8 +184,10 @@ function Cake() {
           </ul>
         )}
       </div>
+
       <div className="cake-divider"></div>
       <div className="cake-main-content">
+        {/* Sidebar */}
         <aside className="cake-sidebar">
           <div className="cake-sidebar-header filter-header-with-line">
             <span className="cake-sidebar-title">Filter</span>
@@ -103,38 +196,64 @@ function Cake() {
           <div className="cake-sidebar-section">
             <div className="cake-sidebar-label">Price</div>
             <div className="cake-sidebar-slider-row">
-              <span className="cake-sidebar-slider-min">AED {price}</span>
-              <input type="range" min="80" max="1000" className="cake-sidebar-slider" value={price} onChange={e => setPrice(Number(e.target.value))} />
-              <span className="cake-sidebar-slider-max">AED 1000</span>
+              <span className="cake-sidebar-slider-min">₹ {minPrice}</span>
+              <input
+                type="range"
+                min="80"
+                max="1000"
+                className="cake-sidebar-slider"
+                value={minPrice}
+                onChange={e => setMinPrice(Number(e.target.value))}
+              />
+              <span className="cake-sidebar-slider-max">₹ {maxPrice}</span>
+            </div>
+            <div className="cake-sidebar-slider-row">
+              <span className="cake-sidebar-slider-min">Min</span>
+              <span className="cake-sidebar-slider-max">Max</span>
+              <input
+                type="range"
+                min="80"
+                max="1000"
+                className="cake-sidebar-slider"
+                value={maxPrice}
+                onChange={e => setMaxPrice(Number(e.target.value))}
+              />
             </div>
           </div>
           <div className="cake-sidebar-section">
             <div className="cake-sidebar-label categories-label">Categories</div>
             <div className="cake-sidebar-subsection">Cakes</div>
             <div className="cake-sidebar-checkboxes">
-              <label><input type="checkbox" checked={categories['Chocolate']} onChange={() => handleCategoryChange('Chocolate')} /> Chocolate</label>
-              <label><input type="checkbox" checked={categories['Vegan']} onChange={() => handleCategoryChange('Vegan')} /> Vegan</label>
-              <label><input type="checkbox" checked={categories['Cheesecakes']} onChange={() => handleCategoryChange('Cheesecakes')} /> Cheesecakes</label>
-              <label><input type="checkbox" checked={categories['Gluten Free']} onChange={() => handleCategoryChange('Gluten Free')} /> Gluten Free</label>
-              <label><input type="checkbox" checked={categories['Fruit Cakes']} onChange={() => handleCategoryChange('Fruit Cakes')} /> Fruit Cakes</label>
-              <label><input type="checkbox" checked={categories['Not So Chocolate']} onChange={() => handleCategoryChange('Not So Chocolate')} /> Not So Chocolate</label>
+              {Object.keys(categories).map((cat) => (
+                <label key={cat}>
+                  <input type="checkbox" checked={categories[cat]} onChange={() => setCategories(prev => ({ ...prev, [cat]: !prev[cat] }))} /> {cat}
+                </label>
+              ))}
             </div>
-            <div className="cake-sidebar-option"><span>Jars</span><span className="cake-sidebar-plus">+</span></div>
-            <div className="cake-sidebar-option"><span>Chef’s Special</span><span className="cake-sidebar-plus">+</span></div>
-            <div className="cake-sidebar-option"><span>Mini Bites</span><span className="cake-sidebar-plus">+</span></div>
-            <div className="cake-sidebar-option"><span>Customized Cake</span><span className="cake-sidebar-plus">+</span></div>
-            <div className="cake-sidebar-option"><span>Gifts</span><span className="cake-sidebar-plus">+</span></div>
-            <div className="cake-sidebar-option"><span>Eid Treats</span><span className="cake-sidebar-plus">+</span></div>
           </div>
         </aside>
-        <div className="cake-card-grid">
-          {sortedCakes.map((cake) => (
+
+        {/* ✅ Cakes Grid with Scroll (max 12 visible) */}
+        <div
+          className="cake-card-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "20px",
+            maxHeight: "calc(2 * 370px)", // 4 rows of ~350px cards
+            overflowY: "auto",
+            paddingTop: "20px",
+          }}
+        >
+          {filteredCakes.map((cake) => (
             <CakeCard
-              key={cake.id}
+              key={cake._id}
+              _id={cake._id}            // ✅ pass product id
               image={cake.image}
-              title={cake.title}
+              title={cake.name}
               price={cake.price}
-              onBagClick={() => handleBagClick(cake.id)}
+              weight={cake.customWeight ? cake.customWeight : cake.weight ? cake.weight : "N/A"} 
+              onBagClick={(e) => handleAddToCart(cake, e)}
             />
           ))}
         </div>
@@ -144,4 +263,4 @@ function Cake() {
   );
 }
 
-export default Cake; 
+export default Cake;

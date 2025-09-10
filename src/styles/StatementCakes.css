@@ -78,6 +78,17 @@
   transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
   z-index: 1;
 }
+ .statement-cake-weight{
+   font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 16px;
+  color: #2A110A;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  bottom:8px;
+  position: relative  ;
+}
 
 /* Pink overlay that will animate */
 .statement-cakes-btn::before {
@@ -120,7 +131,7 @@
 
 .statement-cake-card {
   width: 336px;
-  height: 407px;
+  height: 390px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
@@ -170,12 +181,14 @@
   font-size: 18px;
   color: #2A110A;
   font-weight: 700;
-  margin-bottom: 0;
+  margin-bottom:0;
   margin-top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  bottom: 15px;
+  position: relative;
 }
 
 .statement-cake-price .currency {
@@ -184,6 +197,18 @@
 }
 
 .statement-card-heart {
+  position: absolute;
+   width: 35px !important;
+    height: 35px !important;
+    top: 20px !important;
+    left: 20px !important;
+  opacity: 1;
+  transform: rotate(0deg);
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
 }
 .statement-card-heart:hover {
@@ -203,20 +228,31 @@
   60% { transform: scale(0.95); }
   100% { transform: scale(1); }
 }
+.statement-card-heart svg {
+ width: 25px !important;
+    height: 25px !important;
+   justify-content: center !important;
+    align-items: center !important;
+  position: absolute;
+  opacity: 1;
+  transform: rotate(0deg);
+  stroke: #F1A8B6;
+  fill: none;
+}
 .statement-card-bag {
   transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
-  position: static !important;
   background: #F6DBE0 !important;
   border-radius: 50% !important;
-  width: 48px !important;
-  height: 48px !important;
+  width: 50px !important;
+  height: 50px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   box-shadow: 0 2px 8px rgba(241, 168, 182, 0.3) !important;
   margin-left: auto !important;
-  margin-right: 12px !important;
-  margin-top: -15px !important;
+  right:10px;
+  bottom: 20px;
+  position: relative;
 }
 .statement-card-bag:hover {
   box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);

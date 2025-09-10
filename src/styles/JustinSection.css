@@ -141,7 +141,7 @@
 /* Large Desktop (2560px and above) */
 @media (min-width:2560px) {
   .justin-section {
-    top: 1300px !important;
+    top: 750px !important;
     left: -180px !important;
     width: 100vw;
     height: 320px;

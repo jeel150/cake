@@ -99,7 +99,7 @@
 /* ===== RESPONSIVE DESIGN ===== */
 @media (min-width: 2560px) {
   .hero-rb {
-    top: 400px !important;
+    top: 240px !important;
     left: -50px !important;
     width: 700px !important;
     height: 350px;
@@ -108,21 +108,21 @@
   .hero-title {
     width: 1500px !important;
     height: auto;
-    font-size: 100px !important;
+    font-size: 80px !important;
     margin-bottom: 30px !important;
   }
   
   .hero-desc {
     width: 900px !important;
     height: auto;
-    font-size: 35px !important;
+    font-size: 30px !important;
     margin-bottom: 40px !important;
   }
   
   .hero-btn {
     min-width: 500px !important;
     height: 80px !important;
-    font-size: 40px !important;
+    font-size: 30px !important;
     padding: 0 30px;
   }
   
