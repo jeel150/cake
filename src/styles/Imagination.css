@@ -218,7 +218,7 @@
 /* Large Desktop (1400px and above) */
 @media (min-width:2560px) {
   .imagination-section {
-    top: 2520px !important;
+    top: 1850px !important;
     left: 90px;
     width: 720px;
   }
@@ -246,7 +246,7 @@
   }
   
   .imagination-image-wrapper {
-    top: 2520px !important;
+    top: 1850px !important;
     left: 950px !important; /* Shift 20px left from original 540px */
     width: 550px;
     height: 670px;
@@ -264,7 +264,7 @@
   }
   
   .imagination-features-wrapper {
-    top: 2520px !important;
+    top: 1850px !important;
     left: 1600px !important; /* Shift 20px left from original 1080px */
     width: 750px;
     gap: 32px;

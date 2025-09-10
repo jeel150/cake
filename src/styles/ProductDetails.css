@@ -24,6 +24,35 @@
   align-items: center;
   gap: 8px;
 }
+/* Product breadcrumbs and divider styles */
+.product-breadcrumbs-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 70px;
+  margin-top: 30px;
+}
+
+.product-details-page .rb-breadcrumbs {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-divider {
+  width: 591px;
+  height: 0px;
+  border-width: 1px;
+  border: 1px solid #C7CACD6B;
+  opacity: 1;
+  position: absolute;
+  top: 303px;
+  left: 788px;
+  transform: rotate(0deg);
+  background: none;
+  margin: 0;
+  padding: 0;
+}
 .rb-breadcrumb-link {
   color: #969696;
   text-decoration: none;
@@ -656,12 +685,218 @@
   transform: scale(1.03);
   /* No color or border change on hover */
 }
-.explore-cake-heart:hover, .explore-cake-bag:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.06);
-  transform: scale(1.15);
-  transition: box-shadow 0.2s, transform 0.2s;
-  cursor: pointer;
+
+/* --- explore.css --- */
+.explore-section {
+  width: 100vw;
+  margin-top:450px;
+  margin-bottom: 32px;
+  padding-left: 51px;
+  padding-right: 51px;
+  max-width: none;
 }
+
+.explore-title {
+  font-family: 'Josefin Sans', 'Saxo Grammaticus', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 270;
+  color: #9B7C38;
+  margin-bottom: 20px;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-transform: uppercase;  
+}
+
+.explore-viewall {
+  margin-left: auto;
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+  position: relative;
+  margin-top: -77px;
+}
+
+/* ✅ Cards wrapper */
+.explore-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.explore-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ Card style */
+.explore-card {
+  width: 250px;
+  height: 407px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.explore-card-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  display: block;
+}
+
+.explore-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 16px 0 16px;
+  margin: 0;
+}
+
+.explore-card-title {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 16px;
+  color: #2A110A;
+  font-weight: 400;
+  margin-bottom: 8px;
+  margin-top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.explore-card-weight {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 16px;
+  color: #2A110A;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.explore-card-price {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 18px;
+  color: #2A110A;
+  font-weight: 700;
+}
+
+/* ❤️ Heart */
+.explore-card-heart {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 20px;
+  left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+
+.explore-card-heart:hover {
+  box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
+  transform: scale(1.13);
+}
+
+.explore-card-heart.liked svg path {
+  fill: #F1A8B6;
+  stroke: #F1A8B6;
+}
+.explore-card-heart svg {
+ width: 25px !important;
+    height: 25px !important;
+   justify-content: center !important;
+    align-items: center !important;
+  position: absolute;
+  opacity: 1;
+  transform: rotate(0deg);
+  stroke: #F1A8B6;
+  fill: none;
+}
+
+/* 🛒 Bag */
+.explore-card-bag {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 290px;
+  left: 260px;
+  background:#f5d5db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+}
+
+.explore-card-bag:hover {
+  box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
+  transform: scale(1.08);
+}
+
+.explore-card-bag svg {
+  width: 28px;
+  height: 28px;
+  stroke: #2A110A;
+  fill: none;
+}
+.floating-bag {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #F1A8B6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+.floating-bag:hover {
+  transform: scale(1.08);
+}
+
+.floating-bag-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #B22222;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 
 /* --- 2560px Responsive Adjustments --- */

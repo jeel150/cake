@@ -1,28 +1,47 @@
-import{ useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Footer = ({ className = '', onSubscribe }) => {
+const Footer = ({ className = '', onSubscribe}) => {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
-  // Note: handleFollowClick is now handled in App.jsx with toast notification
+  
   const validateEmail = (email) => {
-    // Basic email validation: non-empty, contains @, and a valid domain
     if (!email) return false;
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
+  
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (!validateEmail(email)) {
       return;
     }
     setEmail('');
-    // Call parent callback to show toast
     if (onSubscribe) {
       onSubscribe();
     }
   };
-  // Note: handleMapClick is now handled in App.jsx with toast notification
+  
+  // Handle navigation for Quick Links
+  const handleQuickLinkClick = (link) => {
+    switch(link) {
+      case 'Home':
+        navigate('/');
+        break;
+      case 'Shop':
+        navigate('/cakes');
+        break;
+      case 'Baking Classes':
+        navigate('/courses');
+        break;
+      case 'Contact Us':
+        navigate('/contact');
+        break;
+      default:
+        navigate('/');
+    }
+  };
+
   return (
     <footer className={`rb-footer ${className}`}>
       <div className="rb-footer-top">
@@ -41,12 +60,10 @@ const Footer = ({ className = '', onSubscribe }) => {
           <div className="rb-footer-col">
             <div className="rb-footer-col-title">Quick Links</div>
             <ul>
-              <li>Shop</li>
-              <li>Customise</li>
-              <li>Gift Hampers</li>
-              <li>Celebrate</li>
-              <li>Baking Classes</li>
-              <li>Contact Us</li>
+              <li onClick={() => handleQuickLinkClick('Home')} style={{cursor: 'pointer'}}>Home</li>
+              <li onClick={() => handleQuickLinkClick('Shop')} style={{cursor: 'pointer'}}>Shop</li>
+              <li onClick={() => handleQuickLinkClick('Baking Classes')} style={{cursor: 'pointer'}}>Baking Classes</li>
+              <li onClick={() => handleQuickLinkClick('Contact Us')} style={{cursor: 'pointer'}}>Contact Us</li>
             </ul>
           </div>
           <div className="rb-footer-col">
@@ -54,7 +71,7 @@ const Footer = ({ className = '', onSubscribe }) => {
             <ul>
               <li>Ramadan</li>
               <li>Whole Cake</li>
-              <li>Customized Cakes</li>
+              <li>Customized Cakes</li> 
               <li>Mason Jar Cakes</li>
               <li>Milk Cakes</li>
               <li>Cake Slice</li>
@@ -87,7 +104,6 @@ const Footer = ({ className = '', onSubscribe }) => {
                 placeholder="Your email id"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                style={{}}
                 required
               />
               <button
@@ -174,4 +190,4 @@ const Footer = ({ className = '', onSubscribe }) => {
   );
 };
 
-export default Footer; 
+export default Footer;

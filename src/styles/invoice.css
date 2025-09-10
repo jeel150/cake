@@ -1,0 +1,248 @@
+.invoice-container {
+  max-width: 1000px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fff;
+  padding: 30px;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.invoice-title {
+width: 384px;
+height: 77px;
+opacity: 1;
+font-family: Saxo Grammaticus;
+font-weight: 200;
+font-style: Light;
+font-size: 60px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+color: #9B7C38;
+position: relative;
+
+}
+
+.invoice-company h2 {
+  font-size: 24px;
+  font-weight: 100;
+  color: #b08d57;
+  margin-bottom: 5px;
+  text-align: right;
+  width: 308px;
+  height: 26px;
+  font-family: Bricolage Grotesque,sans-serif;
+  opacity: 1;
+  position: relative;
+
+}
+
+.invoice-company p {
+ width: 185;
+height: 75;
+margin-top: 20px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-size: 16px;
+line-height: 55%;
+letter-spacing: 0%;
+text-align: right;
+color: #2A110A;
+position: relative;
+}
+
+.address-payment-section {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.grid-header{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-size: 18px;
+line-height: 156%;
+position: relative;
+}
+.grid-body{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 200px;
+width: 780px;
+height: 150px;
+margin-bottom: 30px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 156%;
+letter-spacing: 0%;
+color: #2A110A;
+position: relative;
+
+}
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.grid-header div,
+.grid-footer div {
+  font-weight: bold;
+}
+
+.grid-body div p {
+  margin: 2px 0;
+}
+
+.divider {
+width: 1046.0000000000039;
+opacity: 1;
+border-width: 1px;
+border: 1px solid #E6E6E6;
+position: relative;
+}
+.divider1 {
+width:507px;
+opacity: 1;
+border-width: 1px;
+border: 1px solid #E6E6E6;
+position: relative;
+
+}
+.payment-type{
+  font-family: Bricolage Grotesque;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 156%;
+  position: relative;
+}
+.shipping-method{
+  font-family: Bricolage Grotesque;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 156%;
+  position: relative;
+}
+.rate{
+width: 303px;
+height: 25px;
+left: 20px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 156%;
+letter-spacing: 0%;
+color:#2A110A;
+position: relative;
+}
+.Cash{
+width: 303px;
+height: 25px;
+left: 20px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 156%;
+letter-spacing: 0%;
+color: #2A110A;
+position: relative;
+
+}
+.charges{
+width: 303px;
+height: 25px;
+bottom:60px;
+left: 667px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 156%;
+letter-spacing: 0%;
+color: #2A110A;
+position: relative;
+}
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.invoice-table th {
+width: 1046px;
+height: 46px;
+opacity: 1;
+background: #441E14;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 156%;
+letter-spacing: 0%;
+color: #F1A8B6;
+position: relative;
+text-align: left;
+padding: 10px;
+
+}
+
+.invoice-table td {
+font-family: Bricolage Grotesque;
+font-weight: 100;
+font-size: 16px;
+line-height: 156%;
+color: #2A110A;
+padding: 10px;
+border: 1px solid #E6E6E6;
+position: relative;
+}
+
+.invoice-table td span {
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-size: 16px;
+line-height: 156%;
+color: #2A110A;
+display: inline-block;
+text-align: left;
+position: relative;
+
+}
+
+.invoice-totals {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.invoice-totals p,
+.invoice-totals h3 {
+  margin: 5px 0;
+  
+}
+
+.invoice-totals span {
+  display: inline-block;
+  min-width: 80px;
+  text-align: right;
+}

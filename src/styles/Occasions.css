@@ -21,33 +21,26 @@
 }
 
 .occasions-tabs {
-  display: flex;
+ display: flex;
   align-items: center;
-  gap: 32px;
-  margin-bottom: 32px;
-  margin-top: 8px;
-  flex-wrap: nowrap;
+  gap: 40px;
+  margin: 13px 0 33px 10px;
   white-space: nowrap;
   overflow-x: auto;
-  overflow-y: hidden;
   scrollbar-width: none;
 }
 
 .occasions-tab {
-  border-radius: 50px;
+  border-radius: 80px;
   background: none;
   border: none;
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: #969696;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
-  padding: 8px 24px;
-  min-width: unset;
-  height: 36px;
-  position: relative;
-  z-index: 1;
+  padding: 5px 18px;
+  height: 40px;
 }
 
 .occasions-tab.active {
@@ -57,13 +50,9 @@
 }
 
 .occasions-viewall {
-  margin-left: 24rem;
-  color: #000;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  margin-left: auto;
   font-size: 16px;
-  font-weight: 400;
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -134,6 +123,19 @@
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 0;
+  bottom:9px;
+  position: relative;
+}
+.occasions-card-weight{
+font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 16px;
+  color: #2A110A;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  bottom:8px;
+  position: relative  ;
 }
 
 .occasions-card-price .currency {
@@ -174,11 +176,10 @@
   100% { transform: scale(1); }
 }
 .occasion-card-bag {
-  position: absolute;
   width: 49px;
   height: 49px;
-  top: 275px;
-  left: 260px;
+  top: 290px;
+  left: 250px;
   opacity: 1;
   transform: rotate(0deg);
   background:#f5d5db;
@@ -187,6 +188,7 @@
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
 }
 .occasion-card-bag:hover {
   box-shadow: 0 8px 24px rgba(241, 168, 182, 0.18);
@@ -221,13 +223,6 @@
 ;
     
   }
-
-  .occasion-card-bag {
-    width: 48px !important;
-    height: 48px !important;
-    top: 280px !important;
-    left: 250px !important;
-}
 
 
   .occasion-card-bag svg {
