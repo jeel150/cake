@@ -24,6 +24,7 @@ import OrderHistory from './pages/orderhistory.jsx';
 import OrderDetails from './pages/orderdetails.jsx';
 import { ThemeProvider } from "./components/ThemeContext.jsx";
 
+
 function MainProvider() {
   const [isCartOpen, setCartOpen] = useState(false);
   const openCart = () => setCartOpen(true);
@@ -52,6 +53,7 @@ function MainProvider() {
               <Route path="/invoice" element={<Invoice />} />
               <Route path="/orderhistory" element={<OrderHistory />} />
               <Route path="/orderdetails" element={<OrderDetails/>}/>
+           
             </Routes>
             <CartSidebar isOpen={isCartOpen} onClose={closeCart}/>
           </BrowserRouter>

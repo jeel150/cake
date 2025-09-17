@@ -48,3 +48,20 @@ export const toggleUser = async (req, res) => {
     res.status(500).json({ message: "Error toggling user" });
   }
 };
+
+// Controller/userController.js - Add this function
+export const toggleCoAdmin = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) return res.status(404).json({ message: "User not found" });
+ user.isCoAdmin = !user.isCoAdmin;
+    await user.save();
+
+    res.json({
+      message: `Co-admin access ${user.isCoAdmin ? 'granted' : 'revoked'} successfully`,
+      user
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Error updating co-admin status" });
+  }
+};

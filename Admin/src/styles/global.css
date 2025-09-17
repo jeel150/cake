@@ -32,6 +32,9 @@ body{
   flex:1;
   display:flex;
   flex-direction:column;
+  margin-left:300px;
+  width:1220px;
+  position: relative;
   min-width:0;
 }
 .content{
@@ -155,6 +158,53 @@ tr:hover td{ background:#fcfcff; }
 
 .status-cancelled, .status-refunded {
   background-color: #f44336;
+}
+
+
+/* Add these to your main CSS file */
+.status-user {
+  background-color: #2196f3;
+}
+
+.status-admin {
+  background-color: #4caf50;
+}
+
+.btn-success {
+  background-color: var(--success);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+}
+
+.btn:disabled {
+  background-color: var(--muted);
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c53030;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #feb2b2;
+}
+/* Add to your main CSS */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
 }
 
 /* Responsive layout */
