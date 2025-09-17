@@ -17,7 +17,7 @@ export default function Sidebar({ open, setOpen }){
         <span>Admin Panel</span>
       </div>
       <nav className="nav">
-        <NavItem to="/" icon="fa-chart-line" label="Dashboard" onClick={()=>setOpen(false)} />
+        <NavItem to="/dashboard" icon="fa-chart-line" label="Dashboard" onClick={()=>setOpen(false)} />
         <NavItem to="/users" icon="fa-users" label="User Management" onClick={()=>setOpen(false)} />
         <NavItem to="/products" icon="fa-boxes-stacked" label="Product Management" onClick={()=>setOpen(false)} />
         <NavItem to="/inventory" icon="fa-warehouse" label="Inventory Management" onClick={()=>setOpen(false)} />
@@ -31,6 +31,7 @@ export default function Sidebar({ open, setOpen }){
         <NavItem to="/courses" icon="fa-book" label="Courses Management" onClick={()=>setOpen(false)} />
         <NavItem to="/categories" icon="fa-list" label="Category Management" onClick={() => setOpen(false)} />
         <NavItem to="/theme-center" icon="fa-list" label="theme center" onClick={() => setOpen(false)} />
+        <NavItem to="/co-admins" icon="fa-user-shield" label="Co-Admin Management" onClick={()=>setOpen(false)} />
         
 
       </nav>

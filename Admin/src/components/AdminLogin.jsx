@@ -1,60 +1,62 @@
-import '../styles/Login.css'; 
-import images from '../data/images';
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from "react";
+import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import images from '../../../src/data/images';
+import '../../../src/styles/Login.css'
 
 const { jarsImg } = images;
 
-function Login() {
+const AdminLogin = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: ""
   });
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState('');
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
   const { email, password } = formData;
 
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(''); // Clear error when user starts typing
+    setError('');
   };
 
-  const onSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    setError("");
+    setSuccess("");
+    setLoading(true);
+
     try {
-      setLoading(true);
-      setError('');
       const config = {
         headers: { 'Content-Type': 'application/json' }
       };
 
       const body = JSON.stringify({ email, password });
-      const res = await axios.post('http://localhost:5000/api/auth/login', body, config);
-
-      // Save token and user data
-      localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', JSON.stringify(res.data.user));
-
-      setSuccess('Login successful! welcome ! ');
+      const res = await axios.post("http://localhost:5000/api/auth/admin/login", body, config);
       
-      // Redirect based on role
-    setTimeout(() => {
-      if (res.data.user.role === "admin") {
-        navigate('/products');
+      // Check if user has admin role OR co-admin access
+      if (res.data.user.role === "admin" || res.data.user.isCoAdmin) {
+        setSuccess("Login successful!");
+        
+        // Save token and user data
+        localStorage.setItem("adminToken", res.data.token);
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+
+        // Redirect to admin dashboard
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 1500);
       } else {
-        navigate('/');
+        setError("You don't have admin access. Please contact administrator.");
       }
-    }, 1500);
-  } catch (err) {
-    setError(err.response?.data?.message || 'Login failed. Please try again.');
-    setLoading(false);
-  }
-};
+    } catch (err) {
+      setError(err.response?.data?.message || "Admin login failed");
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="login-background">
@@ -68,10 +70,10 @@ function Login() {
 
           {/* Right form content */}
           <div className="login-right-content">
-            <h2 className="login-title">LOGIN</h2>
+            <h2 className="login-title">ADMIN LOGIN</h2>
             {error && <div className="error-message">{error}</div>}
             {success && <div className="success-message">{success}</div>}
-            <form className="login-form" onSubmit={onSubmit}>
+            <form className="login-form" onSubmit={handleSubmit}>
               <input 
                 type="email" 
                 placeholder="Email" 
@@ -98,11 +100,11 @@ function Login() {
                 className="login-button"
                 disabled={loading}
               >
-                {loading ? 'Logging In...' : 'Login'}
+                {loading ? 'Logging In...' : 'Login as Admin'}
               </button>
             </form>
             <p className="login-login-link">
-              Don't have an account? <a href="/signup">Signup</a>
+              Don't have an admin account? <a href="/signup">Signup</a>
             </p>
           </div>
 
@@ -110,6 +112,6 @@ function Login() {
       </div>
     </div>
   );
-}
+};
 
-export default Login;
+export default AdminLogin;

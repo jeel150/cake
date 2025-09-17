@@ -1,35 +1,38 @@
-// SignUp.jsx
-import '../styles/SignUp.css';
-import images from '../data/images';
-import { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import images from '../../../src/data/images';
+import '../../../src/styles/SignUp.css'
 const { jarsImg } = images;
 
-function Signup() {
+const AdminSignup = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    password: '',
-    passwordConfirm: '',
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    passwordConfirm: "",
   });
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
   const { name, email, phone, password, passwordConfirm } = formData;
 
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError('');
   };
 
-  const onSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+    setSuccess("");
     
     if (password !== passwordConfirm) {
-      setError('Passwords do not match');
+      setError("Passwords do not match");
       return;
     }
 
@@ -40,23 +43,23 @@ function Signup() {
       };
 
       const body = JSON.stringify({ name, email, phone, password });
-      const res = await axios.post('http://localhost:5000/api/auth/register', body, config);
+      const res = await axios.post("http://localhost:5000/api/auth/admin/register",body, config);
+      
+      setSuccess(res.data.message || "Admin registration successful!");
 
-      // Save token
-      localStorage.setItem('token', res.data.token);
-       localStorage.setItem('user', JSON.stringify(res.data.user));
+      // Save token and user data
+      localStorage.setItem("adminToken", res.data.token);
+      localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      // Redirect to main app
-      if (res.data.user.role === "admin") {
-      navigate('/products');
-    } else {
-      navigate('/');
+     // Redirect after successful signup
+setTimeout(() => {
+  navigate('/users');
+}, 1500);
+    } catch (err) {
+      setError(err.response?.data?.message || "Admin registration failed");
+      setLoading(false);
     }
-  } catch (err) {
-    setError(err.response?.data?.message || 'Registration failed');
-    setLoading(false);
-  }
-};
+  };
 
   return (
     <div className="signup-background">
@@ -70,9 +73,10 @@ function Signup() {
 
           {/* Right form content */}
           <div className="signup-right-content">
-            <h2 className="signup-title">SIGNUP</h2>
+            <h2 className="signup-title">ADMIN SIGNUP</h2>
             {error && <div className="error-message">{error}</div>}
-            <form className="signup-form" onSubmit={onSubmit}>
+            {success && <div className="success-message">{success}</div>}
+            <form className="signup-form" onSubmit={handleSubmit}>
               <input 
                 type="text" 
                 placeholder="Name" 
@@ -81,6 +85,7 @@ function Signup() {
                 value={name}
                 onChange={onChange}
                 required
+                disabled={loading}
               />
               <input 
                 type="email" 
@@ -90,6 +95,7 @@ function Signup() {
                 value={email}
                 onChange={onChange}
                 required
+                disabled={loading}
               />
               <input 
                 type="tel" 
@@ -99,6 +105,7 @@ function Signup() {
                 value={phone}
                 onChange={onChange}
                 required
+                disabled={loading}
               />
               
               <input 
@@ -109,6 +116,7 @@ function Signup() {
                 value={password}
                 onChange={onChange}
                 required
+                disabled={loading}
               />
               <input 
                 type="password" 
@@ -118,24 +126,25 @@ function Signup() {
                 value={passwordConfirm}
                 onChange={onChange}
                 required
+                disabled={loading}
               />
               <button 
                 type="submit" 
                 className="signup-button"
                 disabled={loading}
               >
-                {loading ? 'Signing Up...' : 'Signup'}
+                {loading ? 'Signing Up...' : 'Signup as Admin'}
               </button>
             </form>
-            <p className="signup-login-link">
-              Already have an account? <a href="/login">Log in</a>
-            </p>
+          <p className="signup-login-link">
+  Already have an admin account? <a href="/login">Log in</a>
+</p>
           </div>
 
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Signup;
+export default AdminSignup;

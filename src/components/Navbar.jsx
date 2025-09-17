@@ -69,22 +69,22 @@ const Navbar = () => {
     
     switch(menuItem) {
       case 'cakes':
-        navigate('/cakes');
+    
         break;
       case 'jars':
-        navigate('/jars');
+     
         break;
       case 'chefs':
-        navigate('/chefs-special');
+       
         break;
       case 'mini-bites':
-        navigate('/mini-bites');
+      
         break;
       case 'customized':
-        navigate('/customized-cake');
+      
         break;
       case 'corporate':
-        navigate('/corporate-events');
+       
         break;
       default:
         break;
