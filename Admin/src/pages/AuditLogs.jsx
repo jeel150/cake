@@ -12,7 +12,7 @@ export default function AuditLogs(){
         setLoading(true);
         
         // Fetch users data
-        const response = await fetch('http://localhost:5000/api/users');
+        const response = await fetch('https://cake-1h0p.onrender.com/api/users');
         const users = await response.json();
 
         if (!response.ok) {

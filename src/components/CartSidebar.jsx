@@ -17,7 +17,7 @@ const CartSidebar = ({ isOpen, onClose }) => {
   const fetchCart = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5000/api/cart");
+      const res = await fetch("https://cake-1h0p.onrender.com/api/cart");
       const data = await res.json();
       setCart(data || { items: [] });
     } catch (err) {
@@ -30,7 +30,7 @@ const CartSidebar = ({ isOpen, onClose }) => {
   // Update quantity (+/-)
   const updateQty = async (productId, delta) => {
     try {
-      const res = await fetch("http://localhost:5000/api/cart/add", {
+      const res = await fetch("https://cake-1h0p.onrender.com/api/cart/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ productId, quantity: delta }),

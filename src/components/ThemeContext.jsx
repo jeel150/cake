@@ -16,7 +16,7 @@ export const ThemeProvider = ({ children }) => {
   // Fetch active theme from backend
   const fetchActiveTheme = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/themes/active");
+      const response = await fetch("https://cake-1h0p.onrender.com/api/themes/active");
       if (!response.ok) {
         setLoading(false);
         return;

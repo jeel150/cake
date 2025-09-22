@@ -47,7 +47,7 @@ export default function Orders() {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      let url = 'http://localhost:5000/api/orders';
+      let url = 'https://cake-1h0p.onrender.com/api/orders';
       const params = new URLSearchParams();
       
       if (statusFilter) params.append('status', statusFilter);
@@ -73,7 +73,7 @@ export default function Orders() {
   const updateStatus = async (orderId, newStatus, trackingNumber = null) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}/status`, {
+      const response = await fetch(`https://cake-1h0p.onrender.com/api/orders/${orderId}/status`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus, trackingNumber }),
@@ -97,7 +97,7 @@ export default function Orders() {
     
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}/refund`, {
+      const response = await fetch(`https://cake-1h0p.onrender.com/api/orders/${orderId}/refund`, {
         method: "POST",
       });
       

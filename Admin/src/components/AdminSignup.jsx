@@ -43,7 +43,7 @@ const AdminSignup = () => {
       };
 
       const body = JSON.stringify({ name, email, phone, password });
-      const res = await axios.post("http://localhost:5000/api/auth/admin/register",body, config);
+      const res = await axios.post("https://cake-1h0p.onrender.com/api/auth/admin/register",body, config);
       
       setSuccess(res.data.message || "Admin registration successful!");
 

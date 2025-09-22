@@ -46,7 +46,7 @@ export default function CMS() {
     if (!window.confirm("⚠️ This will permanently delete the file from your project. Continue?")) return
 
     try {
-      const res = await fetch(`http://localhost:5000/api/pages/${filename}`, { method: "DELETE" })
+      const res = await fetch(`https://cake-1h0p.onrender.com/api/pages/${filename}`, { method: "DELETE" })
       const data = await res.json()
 
       if (data.success) {

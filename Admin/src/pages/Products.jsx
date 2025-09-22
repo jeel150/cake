@@ -72,8 +72,8 @@ export default function Products() {
     eggType: 'egg',
   });
 
-  const API_BASE = "http://localhost:5000/api/products";
-  const CATEGORY_API = "http://localhost:5000/api/categories";
+  const API_BASE = "https://cake-1h0p.onrender.com/api/products";
+  const CATEGORY_API = "https://cake-1h0p.onrender.com/api/categories";
 
   const weightOptions = ['500g', '1kg', '2kg', '5kg', 'custom'];
 
@@ -215,7 +215,7 @@ const handleImageUpload = async (e) => {
     const formData = new FormData();
     formData.append("image", file);
 
-    const res = await fetch("http://localhost:5000/api/upload", {
+    const res = await fetch("https://cake-1h0p.onrender.com/api/upload", {
       method: "POST",
       body: formData,
     });

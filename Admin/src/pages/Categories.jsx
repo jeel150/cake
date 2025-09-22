@@ -13,7 +13,7 @@ export default function Categories() {
   const [form, setForm] = useState({ name: "" });
   const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
 
-  const API_BASE = "http://localhost:5000/api/categories";
+  const API_BASE = "https://cake-1h0p.onrender.com/api/categories";
 
   // ✅ Fetch Categories
   const fetchCategories = async () => {

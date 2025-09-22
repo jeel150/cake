@@ -15,7 +15,7 @@ const AccessChecker = () => {
 
       try {
         // Verify token and check if user still has access
-        const response = await axios.get('http://localhost:5000/api/auth/verify', {
+        const response = await axios.get('https://cake-1h0p.onrender.com/api/auth/verify', {
           headers: { Authorization: `Bearer ${token}` }
         });
         

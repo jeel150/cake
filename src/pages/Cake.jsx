@@ -31,7 +31,7 @@ function Cake() {
 
   // ✅ Fetch products from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://cake-1h0p.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error fetching products:", err));

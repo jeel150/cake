@@ -31,7 +31,7 @@ const [sweetStoryCategories, setSweetStoryCategories] = useState([]);
 useEffect(() => {
   const fetchCategories = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/categories");
+      const { data } = await axios.get("https://cake-1h0p.onrender.com/api/categories");
       setCategories(data);
 
 // filter by section
@@ -65,7 +65,7 @@ const [products, setProducts] = useState([]);
 useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/products"); 
+      const { data } = await axios.get("https://cake-1h0p.onrender.com/api/products"); 
       setProducts(data);
     } catch (error) {
       console.error("Error fetching products:", error);

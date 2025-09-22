@@ -40,7 +40,7 @@ function Signup() {
       };
 
       const body = JSON.stringify({ name, email, phone, password });
-      const res = await axios.post('http://localhost:5000/api/auth/register', body, config);
+      const res = await axios.post('https://cake-1h0p.onrender.com/api/auth/register', body, config);
 
       // Save token
       localStorage.setItem('token', res.data.token);
