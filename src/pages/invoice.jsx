@@ -12,7 +12,7 @@ const Invoice = () => {
     const fetchOrderDetails = async () => {
       try {
         // Try to fetch order data from your API
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}`);
+      const response = await fetch(`https://cake-1h0p.onrender.com/api/orders/${orderId}`);
 
         
         if (!response.ok) {

@@ -35,7 +35,7 @@ const AdminLogin = () => {
       };
 
       const body = JSON.stringify({ email, password });
-      const res = await axios.post("http://localhost:5000/api/auth/admin/login", body, config);
+      const res = await axios.post("https://cake-1h0p.onrender.com/api/auth/admin/login", body, config);
       
       // Check if user has admin role OR co-admin access
       if (res.data.user.role === "admin" || res.data.user.isCoAdmin) {

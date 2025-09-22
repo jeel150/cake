@@ -15,7 +15,7 @@ const CoAdminManagement = () => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('http://localhost:5000/api/users', {
+      const response = await axios.get('https://cake-1h0p.onrender.com/api/users', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -33,7 +33,7 @@ const CoAdminManagement = () => {
     try {
       const token = localStorage.getItem('adminToken');
       const response = await axios.patch(
-        `http://localhost:5000/api/users/${userId}/toggle-coadmin`,
+        `https://cake-1h0p.onrender.com/api/users/${userId}/toggle-coadmin`,
         { isCoAdmin: !currentStatus },
         {
           headers: {

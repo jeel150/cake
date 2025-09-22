@@ -9,7 +9,7 @@ function Users() {
   // ✅ Fetch all users
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users");
+      const res = await axios.get("https://cake-1h0p.onrender.com/api/users");
       setUsers(res.data);
     } catch (err) {
       console.error("Error fetching users", err);
@@ -25,7 +25,7 @@ function Users() {
   // ✅ Add user
   const addUser = async () => {
     try {
-      await axios.post("http://localhost:5000/api/users", {
+      await axios.post("https://cake-1h0p.onrender.com/api/users", {
         ...newUser,
         status: "active", // default
       });
@@ -39,7 +39,7 @@ function Users() {
   // ✅ Toggle block/unblock
   const toggleUser = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/api/users/${id}/toggle`);
+      await axios.patch(`https://cake-1h0p.onrender.com/api/users/${id}/toggle`);
       fetchUsers();
     } catch (err) {
       console.error("Error toggling user", err);

@@ -12,7 +12,7 @@ export default function Inventory() {
   // ✅ Fetch products
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/products")
+      const res = await fetch("https://cake-1h0p.onrender.com/api/products")
       const data = await res.json()
       setRows(data)
     } catch (err) {
@@ -25,7 +25,7 @@ export default function Inventory() {
   // ✅ Fetch delivered orders and add logs
   const fetchOrderLogs = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/orders")
+      const res = await fetch("https://cake-1h0p.onrender.com/api/orders")
       if (!res.ok) return
       const orders = await res.json()
 
@@ -65,7 +65,7 @@ export default function Inventory() {
     if (!id || !form.change) return alert('Select product and enter quantity change')
 
     try {
-      const res = await fetch(`http://localhost:5000/api/products/${id}/adjust`, {
+      const res = await fetch(`https://cake-1h0p.onrender.com/api/products/${id}/adjust`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ change: Number(form.change), reason: form.reason })

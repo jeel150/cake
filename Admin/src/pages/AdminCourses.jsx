@@ -69,7 +69,7 @@ export default function AdminCourses() {
   // Fetch all courses
   const fetchCourses = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/courses`);
+      const res = await fetch(`https://cake-1h0p.onrender.com/api/courses`);
       const data = await res.json();
       setCourses(data);
     } catch (err) {
@@ -125,14 +125,14 @@ export default function AdminCourses() {
 
       if (editing) {
         // Update existing course
-        res = await fetch(`http://localhost:5000/api/courses/${editing._id}`, {
+        res = await fetch(`https://cake-1h0p.onrender.com/api/courses/${editing._id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
       } else {
         // Add new course
-        res = await fetch(`http://localhost:5000/api/courses`, {
+        res = await fetch(`https://cake-1h0p.onrender.com/api/courses`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
@@ -153,7 +153,7 @@ export default function AdminCourses() {
   const onDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this course?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/courses/${id}`, {
+      const res = await fetch(`https://cake-1h0p.onrender.com/api/courses/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Delete failed");

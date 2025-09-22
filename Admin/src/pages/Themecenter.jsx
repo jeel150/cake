@@ -48,7 +48,7 @@ const ThemeCenter = () => {
   // Fetch current active theme from backend
   const fetchActiveTheme = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/themes/active');
+      const response = await fetch('https://cake-1h0p.onrender.com/api/themes/active');
       if (!response.ok) {
         setLoading(false);
         return;
@@ -92,7 +92,7 @@ const ThemeCenter = () => {
     try {
       if (theme.id === 0) {
         // Reset to none → clear backend active theme
-        await fetch('http://localhost:5000/api/themes/reset', {
+        await fetch('https://cake-1h0p.onrender.com/api/themes/reset', {
           method: 'PATCH'
         });
 
@@ -102,7 +102,7 @@ const ThemeCenter = () => {
         return;
       }
 
-      const response = await fetch('http://localhost:5000/api/themes', {
+      const response = await fetch('https://cake-1h0p.onrender.com/api/themes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(theme),

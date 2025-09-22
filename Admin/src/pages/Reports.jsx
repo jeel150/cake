@@ -15,8 +15,8 @@ export default function Reports() {
         
         // Fetch orders and products data
         const [ordersResponse, productsResponse] = await Promise.all([
-          fetch('http://localhost:5000/api/orders'),
-          fetch('http://localhost:5000/api/products')
+          fetch('https://cake-1h0p.onrender.com/api/orders'),
+          fetch('https://cake-1h0p.onrender.com/api/products')
         ]);
         
         const orders = await ordersResponse.json();

@@ -28,7 +28,7 @@ import { Add, Edit, Delete } from "@mui/icons-material";
 import axios from "axios";
 
 export default function CategoryManagement() {
-  const API_BASE = "http://localhost:5000/api/categories";
+  const API_BASE = "https://cake-1h0p.onrender.com/api/categories";
 
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);

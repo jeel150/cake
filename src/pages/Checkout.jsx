@@ -128,7 +128,7 @@ export default function Checkout() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productsRes = await fetch('http://localhost:5000/api/products');
+        const productsRes = await fetch('https://cake-1h0p.onrender.com/api/products');
         const productsData = await productsRes.json();
         setAllProducts(productsData);
       } catch (err) {
@@ -272,7 +272,7 @@ export default function Checkout() {
 
   /** ---------------- Create order on server ---------------- */
   const createOrderOnServer = async (payload) => {
-    const res = await fetch('http://localhost:5000/api/orders', {
+    const res = await fetch('https://cake-1h0p.onrender.com/api/orders', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

@@ -14,8 +14,8 @@ export default function Dashboard() {
 
         // ✅ Fetch products & orders directly from backend (MongoDB)
         const [productsRes, ordersRes] = await Promise.all([
-          fetch('http://localhost:5000/api/products'),
-          fetch('http://localhost:5000/api/orders')
+          fetch('https://cake-1h0p.onrender.com/api/products'),
+          fetch('https://cake-1h0p.onrender.com/api/orders')
         ]);
 
         const products = await productsRes.json();
