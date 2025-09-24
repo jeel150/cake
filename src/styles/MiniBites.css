@@ -1,142 +1,147 @@
-/* --- Occasions.css --- */
-
+/* --- minibites.css --- */
 .minibites-section {
-    width: 100vw;
-    margin-top: 90px;
-    margin-bottom: 32px;
-    padding-left: 51px;
-    padding-right: 51px;
-  }
-  
-  .minibites-title {
-    font-family: 'Josefin Sans', 'Saxo Grammaticus', Arial, sans-serif;
-    font-size: 32px;
-    font-weight: 270;
-    color: #9B7C38;
-    margin-bottom: 20px;
-    line-height: 120%;
-    letter-spacing: 0;
-    text-transform: uppercase;  
-  }
-  
-  .minibites-tabs {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    margin-bottom: 32px;
-    margin-top: 8px;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-  }
-  
-  .minibites-tab {
-    border-radius: 50px;
-    background: none;
-    border: none;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #969696;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    padding: 8px 24px;
-    min-width: unset;
-    height: 36px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .minibites-tab.active {
-    background: #F6DBE0;
-    color: #2A110A;
-    font-weight: 500;
-  }
-  
-  .minibites-viewall {
-    /* margin-left: auto; */
-    color: #000;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    cursor: pointer;
-    margin-left: 26rem;
-  }
-  
-  .minibites-cards {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    margin-top: 10px;
-    overflow-x: auto;
-    overflow-y: visible;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
-  }
+  width: 100vw;
+  margin-top: 130px;
+  margin-bottom: 32px;
+  padding-left: 51px;
+  padding-right: 51px;
+  max-width: none;
+}
 
-  .minibites-cards::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .minibites-card {
-    width: 336px;
-    height: 407px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  
-  .minibites-card-img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-    margin: 0;
-    display: block;
-  }
-  
-  .minibites-card-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 16px 0 16px;
-    margin: 0;
-  }
-  
-  .minibites-card-title {
-    font-family: 'Bricolage Grotesque', Arial, sans-serif;
-    font-size: 16px;
-    color: #2A110A;
-    font-weight: 400;
-    margin-bottom: 8px;
-    margin-top: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .minibites-card-price {
-    font-family: 'Bricolage Grotesque', Arial, sans-serif;
-    font-size: 18px;
-    color: #2A110A;
-    font-weight: 700;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  
-  .minibites-card-price .currency {
+.minibites-title {
+  font-family: 'Josefin Sans', 'Saxo Grammaticus', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 270;
+  color: #9B7C38;
+  margin-bottom: 20px;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-transform: uppercase;  
+}
+
+.minibites-tabs {
+   display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 13px 0 33px 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.minibites-tab {
+ border-radius: 80px;
+  background: none;
+  border: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  color: #969696;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  padding: 5px 18px;
+  height: 40px;
+}
+
+.minibites-tab.active {
+  background: #F6DBE0;
+  color: #2A110A;
+  font-weight: 500;
+}
+
+.minibites-viewall {
+  margin-left: auto;
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ✅ Cards wrapper */
+.minibites-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;                /* consistent spacing */
+  margin-top: 10px;
+  overflow-x: auto;         /* scroll when more than 4 */
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.minibites-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ Fixed card size (matches Sweet Story style) */
+.minibites-card {
+  width: 250px;             /* same fixed size */
+  height: 407px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;           /* prevents shrinking in scroll */
+}
+
+.minibites-card-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  display: block;
+}
+
+.minibites-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 16px 0 16px;
+  margin: 0;
+}
+
+.minibites-card-title {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 16px;
+  color: #2A110A;
+  font-weight: 400;
+  margin-bottom: 8px;
+  margin-top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.minibites-card-price {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 18px;
+  color: #2A110A;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+  bottom: 9px;
+  position: relative;
+}
+.minibites-card-weight{
+font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 16px;
+  color: #2A110A;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  bottom:8px;
+  position: relative  ;
+}
+
+
+.minibites-card-price .currency {
   font-weight: 700;
   color: #2A110A;
 }
@@ -144,10 +149,10 @@
 /* Mini Bites Heart Styles */
 .minibites-card-heart {
   position: absolute;
-  width: 36px;
-  height: 36px;
-  top: 19px;
-  left: 20px;
+   width: 35px !important;
+    height: 35px !important;
+    top: 20px !important;
+    left: 20px !important;
   opacity: 1;
   transform: rotate(0deg);
   background: #fff;
@@ -173,10 +178,11 @@
 }
 
 .minibites-card-heart svg {
-  width: 25px;
-  height: 23px;
+ width: 25px !important;
+    height: 25px !important;
+   justify-content: center !important;
+    align-items: center !important;
   position: absolute;
-  top: 5px;
   opacity: 1;
   transform: rotate(0deg);
   stroke: #F1A8B6;
@@ -186,10 +192,10 @@
 /* Mini Bites Bag Styles */
 .minibites-card-bag {
   position: absolute;
-  width: 49px;
-  height: 49px;
-  top: 275px;
-  left: 260px;
+ width: 48px !important;
+    height: 48px !important;
+    top: 290px !important;
+    left: 260px !important;
   opacity: 1;
   transform: rotate(0deg);
   background:#f5d5db;
@@ -211,35 +217,34 @@
 }
 
 .minibites-card-bag svg {
-  width: 23px;
-  height: 23px;
+   width: 28px !important;
+    height: 28px !important;
+    justify-content: center !important;
+    align-items: center !important;
   position: absolute;
-  top: 12px;
   opacity: 1;
   transform: rotate(0deg);
   stroke: #2A110A;
   fill: none;
 }
-
-/* ===== RESPONSIVE DESIGN FOR MOBILE AND TABLET ===== */
-
-/* Tablet Devices (768px - 1023px) */
-@media (max-width: 1023px) {
+@media (min-width: 1024px) and (max-width: 1279px)
+{
   .minibites-section {
-    margin-top: 120px !important;
-    padding-left: 60px !important;
-    padding-right: 60px !important;
-    width: calc(100% - 40px) !important;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
+    margin-top: 50px !important;
   }
 
   .minibites-title {
     font-size: 28px !important;
-    margin-bottom: 18px !important;
+    margin-bottom: 16px !important;
   }
 
   .minibites-tabs {
-    gap: 25px !important;
-    margin-bottom: 25px !important;
+    gap: 24px !important;
+    margin-bottom: 24px !important;
     overflow-x: auto !important;
     padding-bottom: 5px !important;
   }
@@ -256,98 +261,303 @@
     font-size: 14px !important;
   }
 
-  .minibites-section .minibites-cards {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 20px !important;
+  .minibites-cards {
+   display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 10px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+}
+@media (min-width:2560px)
+{
+  .minibites-section {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
+    margin-top: 280px !important;
+  }
+
+  .minibites-title {
+    font-size: 78px !important;
+    margin-bottom: 26px !important;
+    width: 1200px !important;
+  }
+
+  .minibites-tabs {
+    gap: 74px !important;
+    margin-bottom: 34px !important;
     overflow-x: auto !important;
-    overflow-y: visible !important;
-    scrollbar-width: thin !important;
-    -ms-overflow-style: auto !important;
-    padding-bottom: 20px !important;
-    margin-right: 60px !important;
-    scroll-behavior: smooth !important;
-    flex-wrap: nowrap !important;
   }
 
-  .minibites-section .minibites-cards::-webkit-scrollbar {
-    display: block !important;
-    height: 8px !important;
+  .minibites-tab {
+    font-size: 34px !important;
+    padding: 6px 30px !important;
+    height: 52px !important;
+    white-space: nowrap !important;
   }
 
-  .minibites-section .minibites-cards::-webkit-scrollbar-track {
-    background: #f1f1f1 !important;
-    border-radius: 4px !important;
+  .minibites-viewall {
+    font-size: 30px !important;
   }
 
-  .minibites-section .minibites-cards::-webkit-scrollbar-thumb {
-    background: #F6DBE0 !important;
-    border-radius: 4px !important;
+  .minibites-cards {
+   display: flex;
+    flex-direction: row;
+    gap: 52px;
+    margin-top: 40px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
   }
 
-  .minibites-section .minibites-cards::-webkit-scrollbar-thumb:hover {
-    background: #F1A8B6 !important;
+  
+  .minibites-card {
+    width: 536px;
+    height: 500px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .minibites-card-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  
+  .minibites-card-content {
+    padding: 16px 16px 0 16px;
+  }
+  
+  .minibites-card-title {
+    font-size: 24px;
+  
+  }
+  
+  .minibites-card-price {
+    font-size: 26px;
+  
+  }
+  
+.minibites-card-heart {
+   width: 45px !important;
+    height: 45px !important;
+    top: 20px !important;
+    left: 20px !important;
+}
+.minibites-card-heart svg {
+   width: 35px !important;
+    height: 35px !important;
+   justify-content: center !important;
+    align-items: center !important;
+}
+.minibites-card-bag {
+   width: 62px !important;
+    height: 62px !important;
+    top: 380px !important;
+    left: 430px !important;
+}
+
+.minibites-card-bag svg {
+   width: 34px !important;
+    height: 34px !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+}
+@media (min-width: 853px) and (max-width: 1023px)
+{
+  .minibites-section {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
+    margin-top: 50px !important;
   }
 
-  .minibites-section .minibites-card {
-    min-width: 280px !important;
-    width: 280px !important;
-    height: 350px !important;
-    flex-shrink: 0 !important;
-    flex: 0 0 280px !important;
+  .minibites-title {
+    font-size: 28px !important;
+    margin-bottom: 16px !important;
   }
 
-  .minibites-section .minibites-card-img {
-    height: 220px !important;
+  .minibites-tabs {
+    gap: 24px !important;
+    margin-bottom: 24px !important;
+    overflow-x: auto !important;
+    padding-bottom: 5px !important;
   }
 
-  .minibites-section .minibites-card-content {
-    padding: 12px !important;
+  .minibites-tab {
+    font-size: 14px !important;
+    padding: 6px 20px !important;
+    height: 32px !important;
+    white-space: nowrap !important;
   }
 
-  .minibites-section .minibites-card-title {
+  .minibites-viewall {
+    margin-left: auto !important;
     font-size: 14px !important;
   }
 
-  .minibites-section .minibites-card-price {
-    font-size: 16px !important;
+  .minibites-cards {
+   display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 10px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+}
+@media (min-width: 820px) and (max-width:852px)
+{
+  .minibites-section {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
+    margin-top: 50px !important;
   }
 
-  /* Responsive styles for heart and bag symbols */
-  .minibites-section .minibites-card-heart {
-    width: 32px !important;
+  .minibites-title {
+    font-size: 28px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .minibites-tabs {
+    gap: 24px !important;
+    margin-bottom: 24px !important;
+    overflow-x: auto !important;
+    padding-bottom: 5px !important;
+  }
+
+  .minibites-tab {
+    font-size: 14px !important;
+    padding: 6px 20px !important;
     height: 32px !important;
-    top: 16px !important;
-    left: 16px !important;
+    white-space: nowrap !important;
   }
 
-  .minibites-section .minibites-card-heart svg {
-    width: 22px !important;
-    height: 20px !important;
-    top: 4px !important;
+  .minibites-viewall {
+    margin-left: auto !important;
+    font-size: 14px !important;
   }
 
-  .minibites-section .minibites-card-bag {
-    width: 44px !important;
-    height: 44px !important;
-    top: 235px !important;
-    left: 220px !important;
+  .minibites-cards {
+   display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 10px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 819px) 
+{
+  .minibites-section {
+    margin-bottom: 130px !important;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
   }
 
-  .minibites-section .minibites-card-bag svg {
-    width: 20px !important;
-    height: 20px !important;
-    top: 10px !important;
+  .minibites-title {
+    font-size: 28px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .minibites-tabs {
+    gap: 24px !important;
+    margin-bottom: 24px !important;
+    overflow-x: auto !important;
+    padding-bottom: 5px !important;
+  }
+
+  .minibites-tab {
+    font-size: 14px !important;
+    padding: 6px 20px !important;
+    height: 32px !important;
+    white-space: nowrap !important;
+  }
+
+  .minibites-viewall {
+    margin-left: auto !important;
+    font-size: 14px !important;
+  }
+
+  .minibites-cards {
+   display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 10px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+
+  .minibites-card {
+    width: 336px;
+    height: 407px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .minibites-card-img {
+    height: 200px !important;
+  }
+
+  .minibites-card-content {
+    padding: 12px !important;
+  }
+
+  .minibites-card-title {
+    font-size: 14px !important;
+  }
+
+  .minibites-card-price {
+    font-size: 16px !important;
   }
 }
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
   .minibites-section {
-    margin-top: 100px !important;
+    margin-top: 60px !important;
     padding-left: 35px !important;
     padding-right: 35px !important;
-    width: calc(100% - 30px) !important;
+    width: calc(100vw - 70px) !important;
+    max-width: none !important;
   }
 
   .minibites-title {
@@ -462,10 +672,11 @@
 /* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .minibites-section {
-    margin-top: 80px !important;
+    margin-top: 40px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
-    width: calc(100% - 20px) !important;
+    width: calc(100vw - 40px) !important;
+    max-width: none !important;
   }
 
   .minibites-title {
@@ -580,7 +791,7 @@
 /* Landscape orientation for mobile */
 @media (max-width: 767px) and (orientation: landscape) {
   .minibites-section {
-    margin-top: 60px !important;
+    margin-top: 20px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
     width: calc(100% - 20px) !important;
@@ -694,3 +905,5 @@
     top: 7px !important;
   }
 } 
+
+ 

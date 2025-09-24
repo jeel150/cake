@@ -1,16 +1,20 @@
 /* --- JustinSection.css --- */
 
+
+
 .justin-section {
   position: absolute;
-  top: 610px;
+  top: 540px;
   left: 50px;
-  width: calc(100vw - 106px);
+  right: 50px;
+  width: calc(100vw - 100px);
   z-index: 5;
   height: 300px;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
+  max-width: none;
 }
 
 .justin-section::-webkit-scrollbar {
@@ -134,18 +138,19 @@
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-
-/* Large Desktop (1400px and above) */
-@media (min-width: 1400px) {
+/* Large Desktop (2560px and above) */
+@media (min-width:2560px) {
   .justin-section {
-    top: 535px;
-    left: 80px;
-    width: calc(100vw - 160px);
+    top: 750px !important;
+    left: -180px !important;
+    width: 100vw;
     height: 320px;
+    max-width: none;
+    overflow: hidden;
   }
   
   .justin-title {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 16px;
   }
   
@@ -154,19 +159,19 @@
   }
   
   .justin-card {
-    min-width: 380px;
-    height: 130px;
-    padding: 14px 20px;
-    gap: 18px;
+    width: 500px;
+    height: 180px;
+    padding: 12px 18px;
+    gap: 16px;
   }
   
   .justin-img {
-    width: 115px;
-    height: 108px;
+    width: 120px;
+    height: 150px;
   }
   
   .justin-flavor {
-    font-size: 13px;
+    font-size: 18px;
   }
   
   .justin-name {
@@ -179,12 +184,81 @@
   
   .justin-cart {
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 8px 18px;
   }
 }
 
+/* For 2560px width screens only */
+/* @media (min-width: 2560px) {
+  .justin-section {
+    top: 900px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vh !important;
+    height: 320px;
+    padding: 0 5%;
+    margin: 0;
+    max-width: none;
+    overflow-x: auto;
+  }
+  
+  .justin-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-left: 5%;
+    width: 100%;
+  }
+  
+  .justin-scroll {
+    gap: 2.5vw;
+    padding: 0 5%;
+    justify-content: flex-start;
+    display: flex;
+    gap : 108px;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .justin-card {
+    min-width: 420px;
+    height: 150px;
+    padding: 20px;
+    gap: 20px;
+    transform: scale(1.05);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  
+  .justin-img {
+    width: 130px;
+    height: 120px;
+    border-radius: 12px;
+  }
+  
+  .justin-flavor {
+    font-size: 14px;
+  }
+  
+  .justin-name {
+    font-size: 18px;
+  }
+  
+  .justin-price {
+    font-size: 18px;
+  }
+  
+  .justin-cart {
+    font-size: 18px;
+    padding: 10px 22px;
+  }
+  .justin-card-content {
+    gap: 8px;
+  }
+}
+} */
+
 /* Desktop (1200px - 1399px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
+@media (min-width: 1280px) and (max-width: 1399px) {
   .justin-section {
     top: 620px;
     left: 60px;
@@ -202,35 +276,35 @@
   }
   
   .justin-card {
-    min-width: 360px;
-    height: 125px;
-    padding: 13px 19px;
-    gap: 17px;
+    min-width: 320px;
+    height: 110px;
+    padding: 11px 17px;
+    gap: 15px;
   }
   
   .justin-img {
-    width: 110px;
-    height: 103px;
+    width: 95px;
+    height: 90px;
   }
   
   .justin-name {
-    font-size: 17px;
+    font-size: 15px;
   }
   
   .justin-price {
-    font-size: 17px;
+    font-size: 15px;
   }
   
   .justin-cart {
-    font-size: 17px;
-    padding: 9px 19px;
+    font-size: 15px;
+    padding: 7px 17px;
   }
 }
 
 /* Small Desktop (1024px - 1199px) */
-@media (min-width: 1024px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .justin-section {
-    top: 620px;
+    top: 1140px !important;
     left: 50px;
     width: calc(100vw - 100px);
     height: 300px;
@@ -246,72 +320,21 @@
   }
   
   .justin-card {
-    min-width: 338px;
-    height: 118px;
-    padding: 12px 18px;
-    gap: 16px;
+    min-width: 300px;
+    height: 105px;
+    padding: 10px 16px;
+    gap: 14px;
   }
   
   .justin-img {
-    width: 104px;
-    height: 98px;
+    width: 90px;
+    height: 85px;
   }
 }
 
-/* ===== TABLET DEVICES ===== */
-
-/* iPad Pro 12.9" (1024px - 1366px) */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+@media (min-width: 853px) and (max-width: 1023px){
   .justin-section {
-    top: 620px;
-    left: 60px;
-    width: calc(100vw - 120px);
-    height: 310px;
-  }
-  
-  .justin-title {
-    font-size: 17px;
-    margin-bottom: 14px;
-  }
-  
-  .justin-scroll {
-    gap: 26px;
-  }
-  
-  .justin-card {
-    min-width: 360px;
-    height: 125px;
-    padding: 13px 19px;
-    gap: 17px;
-  }
-  
-  .justin-img {
-    width: 110px;
-    height: 103px;
-  }
-  
-  .justin-flavor {
-    font-size: 12px;
-  }
-  
-  .justin-name {
-    font-size: 17px;
-  }
-  
-  .justin-price {
-    font-size: 17px;
-  }
-  
-  .justin-cart {
-    font-size: 17px;
-    padding: 9px 19px;
-  }
-}
-
-/* iPad Pro 11" (834px - 1194px) */
-@media (min-width: 834px) and (max-width: 1194px) and (orientation: landscape) {
-  .justin-section {
-    top: 590px;
+    top: 1080px !important;
     left: 50px;
     width: calc(100vw - 100px);
     height: 300px;
@@ -357,9 +380,9 @@
 }
 
 /* iPad Air 10.9" (820px - 1180px) */
-@media (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+@media (min-width: 820px) and (max-width:852px) {
   .justin-section {
-    top: 560px;
+    top: 950px !important;
     left: 45px;
     width: calc(100vw - 90px);
     height: 280px;
@@ -401,54 +424,6 @@
   .justin-cart {
     font-size: 15px;
     padding: 7px 16px;
-  }
-}
-
-/* iPad Portrait (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .justin-section {
-    top: 600px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    height: 240px;
-  }
-  
-  .justin-title {
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
-  
-  .justin-scroll {
-    gap: 15px;
-  }
-  
-  .justin-card {
-    min-width: 240px;
-    height: 95px;
-    padding: 7px 13px;
-    gap: 11px;
-  }
-  
-  .justin-img {
-    width: 75px;
-    height: 70px;
-  }
-  
-  .justin-flavor {
-    font-size: 9px;
-  }
-  
-  .justin-name {
-    font-size: 12px;
-  }
-  
-  .justin-price {
-    font-size: 12px;
-  }
-  
-  .justin-cart {
-    font-size: 12px;
-    padding: 5px 13px;
   }
 }
 
@@ -507,8 +482,10 @@
   .justin-section {
     top: 550px;
     left: 20px;
+    right: 20px;
     width: calc(100vw - 40px);
     height: 220px;
+    max-width: none;
   }
   
   .justin-title {
@@ -557,14 +534,183 @@
     font-size: 10px;
   }
 }
+@media (min-width:430px) and (max-width: 480px) {
+  .justin-section {
+    top: 780px;
+    left: 20px;
+    right: 20px;
+    width: calc(100vw - 40px);
+    height: 240px;
+    max-width: none;
+  }
+  
+  .justin-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .justin-scroll {
+    gap: 14px;
+  }
+  
+  .justin-card {
+    min-width: 220px;
+    height: 90px;
+    padding: 7px 12px;
+    gap: 10px;
+    border-radius: 18px;
+  }
+  
+  .justin-img {
+    width: 70px;
+    height: 65px;
+    border-radius: 6px;
+  }
+  
+  .justin-flavor {
+    font-size: 9px;
+  }
+  
+  .justin-name {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  
+  .justin-price {
+    font-size: 11px;
+  }
+  
+  .justin-cart {
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 18px;
+  }
+   .justin-arrow {
+    font-size: 9px;
+  }
+  
+}
+@media (min-width: 400px) and (max-width: 429px) {
+  .justin-section {
+    top: 750px !important;
+    left: 20px;
+    right: 20px;
+    width: calc(100vw - 40px);
+    height: 230px;
+    max-width: none;
+  }
+  
+  .justin-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .justin-scroll {
+    gap: 12px;
+  }
+  
+  .justin-card {
+    min-width: 210px;
+    height: 90px;
+    padding: 6px 10px;
+    gap: 8px;
+    border-radius: 16px;
+  }
+  
+  .justin-img {
+    width: 65px;
+    height: 60px;
+    border-radius: 6px;
+  }
+  
+  .justin-flavor {
+    font-size: 8px;
+  }
+  
+  .justin-name {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  
+  .justin-price {
+    font-size: 10px;
+  }
+  
+  .justin-cart {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 16px;
+  }
+  
+}
+
+@media (min-width: 390px) and (max-width: 399px) {
+  .justin-section {
+    top: 700px;
+    left: 20px;
+    right: 20px;
+    width: calc(100vw - 40px);
+    height: 220px;
+    max-width: none;
+  }
+  
+  .justin-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .justin-scroll {
+    gap: 12px;
+  }
+  
+  .justin-card {
+    min-width: 200px;
+    height: 85px;
+    padding: 6px 10px;
+    gap: 8px;
+    border-radius: 16px;
+  }
+  
+  .justin-img {
+    width: 65px;
+    height: 60px;
+    border-radius: 6px;
+  }
+  
+  .justin-flavor {
+    font-size: 8px;
+  }
+  
+  .justin-name {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  
+  .justin-price {
+    font-size: 10px;
+  }
+  
+  .justin-cart {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 16px;
+  }
+  
+  .justin-arrow {
+    font-size: 9px;
+  }
+  
+}
 
 /* Medium Mobile (375px - 480px) */
-@media (min-width: 375px) and (max-width: 410px) {
+@media (min-width: 375px) and (max-width: 389px) {
   .justin-section {
     top: 540px;
     left: 15px;
+    right: 15px;
     width: calc(100vw - 30px);
     height: 200px;
+    max-width: none;
   }
   
   .justin-title {
@@ -614,22 +760,15 @@
   }
 }
 
-@media (min-width: 411px) and (max-width: 480px) {
-  .justin-section {
-    top: 700px;
-    left: 15px;
-    width: calc(100vw - 30px);
-    height: 200px;
-  }
-}
-
 /* Small Mobile (320px - 374px) */
-@media (min-width: 320px) and (max-width: 374px) {
+@media (min-width: 344px) and (max-width: 374px) {
   .justin-section {
-    top: 480px;
+    top: 600px !important;
     left: 10px;
+    right: 10px;
     width: calc(100vw - 20px);
     height: 180px;
+    max-width: none;
   }
   
   .justin-title {
@@ -678,14 +817,69 @@
     font-size: 8px;
   }
 }
+@media (min-width: 320px) and (max-width: 344px) 
+{
+  .justin-section {
+    top: 700px !important;
+    left: 10px;
+    right: 10px;
+    width: calc(100vw - 20px);
+    height: 180px;
+    max-width: none;
+  }
+  
+  .justin-title {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .justin-scroll {
+    gap: 8px;
+  }
+  
+  .justin-card {
+    min-width: 160px;
+    height: 75px;
+    padding: 4px 7px;
+    gap: 6px;
+    border-radius: 12px;
+  }
+  
+  .justin-img {
+    width: 55px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  
+  .justin-flavor {
+    font-size: 6px;
+  }
+  
+  .justin-name {
+    font-size: 8px;
+    margin-bottom: 2px;
+  }
+  
+  .justin-price {
+    font-size: 8px;
+  }
+  
+  .justin-cart {
+    font-size: 8px;
+    padding: 2px 7px;
+    border-radius: 12px;
+  }
+}
 
 /* Extra Small Mobile (below 320px) */
 @media (max-width: 319px) {
   .justin-section {
     top: 450px;
     left: 8px;
+    right: 8px;
     width: calc(100vw - 16px);
     height: 160px;
+    max-width: none;
   }
   
   .justin-title {
@@ -732,6 +926,64 @@
   
   .justin-arrow {
     font-size: 7px;
+  }
+}
+
+/* 360px Specific Responsive Design */
+@media (max-width: 360px) {
+  .justin-section {
+    top: 615px;
+    left: 12px;
+    right: 12px;
+    width: calc(100vw - 24px);
+    height: 190px;
+    max-width: none;
+  }
+  
+  .justin-title {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .justin-scroll {
+    gap: 7px;
+  }
+  
+  .justin-card {
+    min-width: 150px;
+    height: 75px;
+    padding: 4px 7px;
+    gap: 6px;
+    border-radius: 12px;
+  }
+  
+  .justin-img {
+    width: 55px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  
+  .justin-flavor {
+    font-size: 6px;
+  }
+  
+  .justin-name {
+    font-size: 8px;
+    margin-bottom: 2px;
+  }
+  
+  .justin-price {
+    font-size: 8px;
+  }
+  
+  .justin-cart {
+    font-size: 8px;
+    padding: 3px 7px;
+    border-radius: 12px;
+  }
+  
+  .justin-arrow {
+    font-size: 8px;
   }
 }
 

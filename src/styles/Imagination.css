@@ -2,10 +2,12 @@
 
 .imagination-section {
   position: absolute;
-  top: 1490px;
+  top: 1530px;
   left: 52px;
-  width: 384px;
+  right: 52px;
+  width: calc(100vw - 104px);
   z-index: 10;
+  max-width: none;
 }
 
 .imagination-title {
@@ -17,8 +19,8 @@
   line-height: 100%;
   letter-spacing: 0;
   margin-bottom: 24px;
+  width: 100%;
 }
-
 .imagination-desc {
   width: 316px;
   height: 86px;
@@ -28,8 +30,8 @@
   color: #6F6F6F;
   line-height: 170%;
   margin-bottom: 32px;
+  max-width: none;
 }
-
 .imagination-btn-container {
   width: 146px;
   height: 62px;
@@ -44,7 +46,8 @@
   font-weight: 550;
   font-size: 14px;
   color: #441E14;
-  background: linear-gradient(90deg, #F6DBE0 0%, #F6DBE0 50%, transparent 50%, transparent 100%);
+  background: 
+    linear-gradient(90deg, #F6DBE0 0%, #F6DBE0 50%, transparent 50%, transparent 100%);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -53,13 +56,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
 }
-.imagination-btn:hover, .imagination-btn:focus {
+
+/* Pink overlay that will animate */
+.imagination-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #F6DBE0;
+  z-index: -1;
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Hover/focus states */
+.imagination-btn:hover::before,
+.imagination-btn:focus::before {
+  width: 100%;
+}
+
+.imagination-btn:hover,
+.imagination-btn:focus {
   box-shadow: 0 8px 32px rgba(241, 168, 182, 0.18);
   transform: scale(1.04);
 }
-
 .imagination-image-wrapper {
   position: absolute;
   top: 1480px;
@@ -104,7 +129,7 @@
 
 .imagination-features-wrapper {
   position: absolute;
-  top: 1500px;
+  top: 1540px;
   left: 980px;
   width: 480px;
   display: flex;
@@ -165,7 +190,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   min-width: 24px;
-  margin-right: 14px;
+  margin-right: 5px;
   font-family: 'Saxo Grammaticus', 'Josefin Sans', Arial, sans-serif;
   font-weight: 400;
   font-size: 38px;
@@ -179,53 +204,69 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 
+/* Web screens only - shift lady image and features 20px left */
+@media (min-width: 1024px) {
+  .imagination-image-wrapper {
+    left: 482px !important; /* Shift 20px left from original 490px */
+  }
+  
+  .imagination-features-wrapper {
+    left: 992px !important; /* Shift 20px left from original 980px */
+  }
+}
+
 /* Large Desktop (1400px and above) */
-@media (min-width: 1400px) {
+@media (min-width:2560px) {
   .imagination-section {
-    top: 1400px;
-    left: 80px;
-    width: 420px;
+    top: 1850px !important;
+    left: 90px;
+    width: 720px;
   }
   
   .imagination-title {
-    font-size: 42px;
-    margin-bottom: 28px;
+    font-size: 72px;
+    margin-bottom: 30px;
+    width: 800px !important; /* Ensure title fits well */
   }
   
   .imagination-desc {
-    width: 350px;
-    font-size: 17px;
+    font-size: 30px;
     margin-bottom: 36px;
+    width: 600px;
   }
   
   .imagination-btn {
-    width: 170px;
-    font-size: 15px;
+    width: 380px;
+    height: 60px;
+    font-size: 25px;
     padding: 20px 0;
+    margin-top: 220px;
+    position: absolute;
+    margin-left: 50px;
   }
   
   .imagination-image-wrapper {
-    top: 1390px;
-    left: 540px;
-    width: 500px;
+    top: 1850px !important;
+    left: 950px !important; /* Shift 20px left from original 540px */
+    width: 550px;
     height: 670px;
   }
   
   .imagination-image {
-    width: 500px;
-    height: 670px;
+    width: 600px;
+    height: 700px;
   }
   
   .imagination-symbol {
-    left: -180px;
+    left: -150px;
     top: 350px;
     font-size: 280px;
   }
   
   .imagination-features-wrapper {
-    top: 1410px;
-    left: 1080px;
-    width: 520px;
+    top: 1850px !important;
+    left: 1600px !important; /* Shift 20px left from original 1080px */
+    width: 750px;
     gap: 32px;
   }
   
@@ -253,7 +294,7 @@
 /* Desktop (1200px - 1399px) */
 @media (min-width: 1200px) and (max-width: 1399px) {
   .imagination-section {
-    top: 1450px;
+    top: 1490px;
     left: 60px;
     width: 400px;
   }
@@ -277,7 +318,7 @@
   
   .imagination-image-wrapper {
     top: 1440px;
-    left: 480px;
+    left: 470px; /* Shift 20px left from original 480px */
     width: 480px;
     height: 640px;
   }
@@ -294,8 +335,8 @@
   }
   
   .imagination-features-wrapper {
-    top: 1460px;
-    left: 1000px;
+    top: 1500px;
+    left: 990px; /* Shift 20px left from original 1000px */
     width: 500px;
     gap: 30px;
   }
@@ -324,7 +365,7 @@
 /* Small Desktop (1024px - 1199px) */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .imagination-section {
-    top: 1420px;
+    top: 2000px !important;
     left: 50px;
     width: 380px;
   }
@@ -347,8 +388,8 @@
   }
   
   .imagination-image-wrapper {
-    top: 1410px;
-    left: 460px;
+    top: 2050px !important;
+    left: 450px; 
     width: 440px;
     height: 590px;
   }
@@ -365,9 +406,9 @@
   }
   
   .imagination-features-wrapper {
-    top: 1430px;
-    left: 920px;
-    width: 460px;
+    top: 2700px !important ;
+    left: 50px !important; 
+    width: 900px;
     gap: 28px;
   }
   
@@ -391,27 +432,24 @@
     font-size: 38px;
   }
 }
-
-/* ===== TABLET DEVICES ===== */
-
-/* iPad Pro 12.9" (1024px - 1366px) */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+@media (min-width: 853px) and (max-width: 1023px)
+{
   .imagination-section {
-    top: 1600px;
-    left: 60px;
-    width: 350px;
+    top: 1900px !important;
+    left: 40px;
+    width: calc(100vw - 80px);
+    max-width: none;
   }
   
   .imagination-title {
-    font-size: 34px;
-    margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 24px;
   }
   
   .imagination-desc {
-    width: 280px;
-    height: auto;
+    width: 300px;
     font-size: 15px;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
   
   .imagination-btn {
@@ -421,202 +459,120 @@
   }
   
   .imagination-image-wrapper {
-    top: 1590px;
-    left: 430px;
-    width: 400px;
-    height: 540px;
+    top: 1980px !important;
+    left: 350px !important; /* Shifted for better alignment */
+    width: 420px;
+    height: 560px;
   }
   
   .imagination-image {
-    width: 400px;
-    height: 540px;
-  }
-  
-  .imagination-symbol {
-    left: -140px;
-    top: 280px;
-    font-size: 220px;
-  }
-  
-  .imagination-features-wrapper {
-    top: 1610px;
-    left: 860px;
-    width: 400px;
-    gap: 24px;
-  }
-  
-  .imagination-features-row {
-    gap: 16px;
-    min-height: 90px;
-  }
-  
-  .imagination-feature-title {
-    font-size: 16px;
-  }
-  
-  .imagination-feature-desc {
-    font-size: 14px;
-  }
-  
-  .imagination-number-1,
-  .imagination-number-2,
-  .imagination-number-3,
-  .imagination-number-4 {
-    font-size: 34px;
-  }
-}
-
-/* iPad Pro 11" (834px - 1194px) */
-@media (min-width: 834px) and (max-width: 1194px) and (orientation: landscape) {
-  .imagination-section {
-    top: 1550px;
-    left: 50px;
-    width: 320px;
-  }
-  
-  .imagination-title {
-    font-size: 30px;
-    margin-bottom: 18px;
-  }
-  
-  .imagination-desc {
-    width: 260px;
-    height: auto;
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-  
-  .imagination-btn {
-    width: 140px;
-    font-size: 12px;
-    padding: 14px 0;
-  }
-  
-  .imagination-image-wrapper {
-    top: 1540px;
-    left: 390px;
-    width: 360px;
-    height: 480px;
-  }
-  
-  .imagination-image {
-    width: 360px;
-    height: 480px;
+    width: 420px;
+    height: 560px;
   }
   
   .imagination-symbol {
     left: -130px;
-    top: 250px;
-    font-size: 200px;
+    top: 300px;
+    font-size: 240px;
   }
   
   .imagination-features-wrapper {
-    top: 1560px;
-    left: 780px;
-    width: 360px;
-    gap: 20px;
+    top: 2650px !important;
+    left: 50px; /* Shifted for better alignment */
+    width: calc(100vw - 120px);
+    gap: 24px;
   }
-  
   .imagination-features-row {
-    gap: 14px;
-    min-height: 80px;
+    gap: 16px;
+    min-height: 90px;
   }
-  
   .imagination-feature-title {
-    font-size: 15px;
+    font-size: 16px;
   }
-  
   .imagination-feature-desc {
-    font-size: 13px;
+    font-size: 14px;
   }
-  
   .imagination-number-1,
   .imagination-number-2,
   .imagination-number-3,
   .imagination-number-4 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
-
-/* iPad Air 10.9" (820px - 1180px) */
-@media (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+@media (min-width: 820px) and (max-width:852px) {
   .imagination-section {
-    top: 1500px;
-    left: 45px;
-    width: 300px;
+    top: 1800px !important;
+    left: 40px;
+    width: calc(100vw - 80px);
   }
   
   .imagination-title {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-  
-  .imagination-desc {
-    width: 240px;
-    height: auto;
-    font-size: 13px;
+    font-size: 34px;
     margin-bottom: 22px;
   }
   
+  .imagination-desc {
+    width: 300px;
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  
   .imagination-btn {
-    width: 130px;
-    font-size: 11px;
-    padding: 12px 0;
+    width: 150px;
+    font-size: 13px;
+    padding: 16px 0;
   }
   
   .imagination-image-wrapper {
-    top: 1490px;
-    left: 360px;
-    width: 320px;
-    height: 430px;
+    top: 1880px !important;
+    left: 380px !important; /* Shifted for better alignment */
+    width: 420px;
+    height: 560px;
   }
   
   .imagination-image {
-    width: 320px;
-    height: 430px;
+    width: 420px;
+    height: 560px;
   }
   
   .imagination-symbol {
-    left: -120px;
-    top: 220px;
-    font-size: 180px;
+    left: -130px;
+    top: 300px;
+    font-size: 240px;
   }
   
   .imagination-features-wrapper {
-    top: 1510px;
-    left: 700px;
-    width: 320px;
-    gap: 18px;
+    top: 2500px !important;
+    left: 40px; /* Shifted for better alignment */
+    width: calc(100vw - 120px);
+    gap: 24px;
   }
-  
   .imagination-features-row {
-    gap: 12px;
-    min-height: 70px;
+    gap: 16px;
+    min-height: 90px;
   }
-  
   .imagination-feature-title {
+    font-size: 16px;
+  }
+  .imagination-feature-desc {
     font-size: 14px;
   }
-  
-  .imagination-feature-desc {
-    font-size: 12px;
-  }
-  
   .imagination-number-1,
   .imagination-number-2,
   .imagination-number-3,
   .imagination-number-4 {
-    font-size: 28px;
+    font-size: 32px;
   }
+
 }
 
-/* iPad Portrait (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 819px) 
+{
   .imagination-section {
-    top: 1800px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    max-width: 400px;
+    top: 1600px !important;
+    left: 40px;
+    width: calc(100vw - 80px);
+    max-width: none;
   }
   
   .imagination-title {
@@ -625,23 +581,20 @@
   }
   
   .imagination-desc {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
+    width: 280px;
     font-size: 15px;
     margin-bottom: 28px;
   }
   
   .imagination-btn {
-    width: 160px;
-    font-size: 14px;
+    width: 140px;
+    font-size: 13px;
     padding: 16px 0;
   }
   
   .imagination-image-wrapper {
-    top: 1790px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 1680px !important;
+    left: 350px !important; /* Shifted for better alignment */
     width: 400px;
     height: 540px;
   }
@@ -658,10 +611,9 @@
   }
   
   .imagination-features-wrapper {
-    top: 2400px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    max-width: 600px;
+    top: 2300px !important;
+    left: 50px; /* Shifted for better alignment */
+    width: 680px;
     gap: 24px;
   }
   
@@ -686,91 +638,17 @@
   }
 }
 
-/* iPad Mini (768px - 810px) */
-@media (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
-  .imagination-section {
-    top: 1900px;
-    left: 20px;
-    width: calc(100vw - 40px);
-    max-width: 350px;
-  }
-  
-  .imagination-title {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-  
-  .imagination-desc {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-  
-  .imagination-btn {
-    width: 140px;
-    font-size: 13px;
-    padding: 14px 0;
-  }
-  
-  .imagination-image-wrapper {
-    top: 1890px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 350px;
-    height: 470px;
-  }
-  
-  .imagination-image {
-    width: 350px;
-    height: 470px;
-  }
-  
-  .imagination-symbol {
-    left: -120px;
-    top: 240px;
-    font-size: 190px;
-  }
-  
-  .imagination-features-wrapper {
-    top: 2500px;
-    left: 20px;
-    width: calc(100vw - 40px);
-    max-width: 500px;
-    gap: 20px;
-  }
-  
-  .imagination-features-row {
-    gap: 14px;
-    min-height: 80px;
-  }
-  
-  .imagination-feature-title {
-    font-size: 15px;
-  }
-  
-  .imagination-feature-desc {
-    font-size: 13px;
-  }
-  
-  .imagination-number-1,
-  .imagination-number-2,
-  .imagination-number-3,
-  .imagination-number-4 {
-    font-size: 28px;
-  }
-}
 
 /* ===== MOBILE DEVICES ===== */
 
 /* Large Mobile (481px - 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
   .imagination-section {
-    top: 1000px;
+    top: 1040px;
     left: 20px;
+    right: 20px;
     width: calc(100vw - 40px);
-    max-width: 300px;
+    max-width: none;
   }
   
   .imagination-title {
@@ -843,7 +721,7 @@
 /* iPhone XR and similar devices (414px) */
 @media (min-width: 412px) and (max-width: 596px) {
   .imagination-section {
-    top: 1400px;
+    top: 1440px;
     left: 20px;
     width: calc(100vw - 40px);
     max-width: 300px;
@@ -917,7 +795,7 @@
 }
 
 /* Force override for iPhone XR Imagination */
-@media (min-width: 412px) and (max-width: 596px) {
+@media (min-width: 412px) and (max-width: 480px) {
   body .imagination-section {
     top: 1300px !important;
   }
@@ -930,11 +808,9 @@
     top: 1960px !important;
   }
 }
-
-/* Medium Mobile (375px - 480px) */
-@media (min-width: 375px) and (max-width: 480px) {
+@media (min-width: 390px) and (max-width: 410px) {
   .imagination-section {
-    top: 1050px;
+    top: 1200px;
     left: 15px;
     width: calc(100vw - 30px);
     max-width: 280px;
@@ -960,7 +836,85 @@
   }
   
   .imagination-image-wrapper {
-    top: 1280px;
+    top: 1430px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 375px;
+  }
+  
+  .imagination-image {
+    width: 280px;
+    height: 375px;
+
+  }
+  
+  .imagination-symbol {
+    left: -90px;
+    top: 180px;
+    font-size: 140px;
+  }
+  
+  .imagination-features-wrapper {
+    top: 1850px;
+    left: 10px;
+    width: calc(100vw - 30px);
+    max-width: 350px;
+    gap: 16px;
+  }
+  
+  .imagination-features-row {
+    gap: 10px;
+    min-height: 60px;
+  }
+  
+  .imagination-feature-title {
+    font-size: 13px;
+  }
+  
+  .imagination-feature-desc {
+    font-size: 11px;
+  }
+  
+  .imagination-number-1,
+  .imagination-number-2,
+  .imagination-number-3,
+  .imagination-number-4 {
+    font-size: 22px;
+  }
+
+}
+
+/* Medium Mobile (375px - 480px) */
+@media (min-width: 375px) and (max-width: 389px) {
+  .imagination-section {
+    top: 1150px;
+    left: 15px;
+    width: calc(100vw - 30px);
+    max-width: 280px;
+  }
+  
+  .imagination-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .imagination-desc {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+  
+  .imagination-btn {
+    width: 110px;
+    font-size: 11px;
+    padding: 10px 0;
+  }
+  
+  .imagination-image-wrapper {
+    top: 1360px;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
@@ -979,7 +933,7 @@
   }
   
   .imagination-features-wrapper {
-    top: 1710px;
+    top: 1790px;
     left: 10px;
     width: calc(100vw - 30px);
     max-width: 350px;
@@ -1008,9 +962,9 @@
 }
 
 /* Small Mobile (320px - 374px) */
-@media (min-width: 320px) and (max-width: 374px) {
+@media (min-width: 340px) and (max-width: 374px) {
   .imagination-section {
-    top: 1000px;
+    top: 1100px !important;
     left: 10px;
     width: calc(100vw - 20px);
     max-width: 250px;
@@ -1036,7 +990,7 @@
   }
   
   .imagination-image-wrapper {
-    top: 1790px;
+    top: 1370px !important;
     left: 50%;
     transform: translateX(-50%);
     width: 250px;
@@ -1055,10 +1009,85 @@
   }
   
   .imagination-features-wrapper {
-    top: 2400px;
+    top: 1800px !important;
     left: 10px;
     width: calc(100vw - 20px);
     max-width: 300px;
+    gap: 14px;
+  }
+  
+  .imagination-features-row {
+    gap: 8px;
+    min-height: 50px;
+  }
+  
+  .imagination-feature-title {
+    font-size: 12px;
+  }
+  
+  .imagination-feature-desc {
+    font-size: 10px;
+  }
+  
+  .imagination-number-1,
+  .imagination-number-2,
+  .imagination-number-3,
+  .imagination-number-4 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 344px) 
+{
+  .imagination-section {
+    top: 1200px !important;
+    left: 8px;
+    width: calc(100vw - 16px);
+    max-width: 230px;
+  }
+  
+  .imagination-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .imagination-desc {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+  
+  .imagination-btn {
+    width: 100px;
+    font-size: 10px;
+    padding: 8px 0;
+  }
+  
+  .imagination-image-wrapper {
+    top: 1400px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 310px;
+  }
+  
+  .imagination-image {
+    width: 230px;
+    height: 310px;
+  }
+  
+  .imagination-symbol {
+    left: -80px;
+    top: 150px;
+    font-size: 120px;
+  }
+  
+  .imagination-features-wrapper {
+    top: 1800px !important;
+    left: 8px;
+    width: calc(100vw - 16px);
+    max-width: 280px;
     gap: 14px;
   }
   
@@ -1086,7 +1115,7 @@
 /* Extra Small Mobile (below 320px) */
 @media (max-width: 319px) {
   .imagination-section {
-    top: 1000px;
+    top: 1040px;
     left: 8px;
     width: calc(100vw - 16px);
     max-width: 220px;
@@ -1159,12 +1188,89 @@
   }
 }
 
+/* 360px Specific Responsive Design */
+@media (max-width: 360px) {
+  .imagination-section {
+    top: 1140px;
+    left: 12px;
+    width: calc(100vw - 24px);
+    max-width: 240px;
+  }
+  
+  .imagination-title {
+    font-size: 19px;
+    margin-bottom: 7px;
+  }
+  
+  .imagination-desc {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+  
+  .imagination-btn {
+    width: 95px;
+    font-size: 10px;
+    padding: 7px 0;
+  }
+  
+  .imagination-image-wrapper {
+    top: 1750px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 320px;
+  }
+  
+  .imagination-image {
+    width: 240px;
+    height: 320px;
+  }
+  
+  .imagination-symbol {
+    left: -75px;
+    top: 160px;
+    font-size: 110px;
+  }
+  
+  .imagination-features-wrapper {
+    top: 1300px;
+    left: 12px;
+    width: calc(100vw - 24px);
+    max-width: 280px;
+    gap: 14px;
+  }
+  
+  .imagination-features-row {
+    gap: 7px;
+    min-height: 45px;
+    margin-top: 10px;
+  }
+  
+  .imagination-feature-title {
+    font-size: 12px;
+  }
+  
+  .imagination-feature-desc {
+    font-size: 10px;
+  }
+  
+  .imagination-number-1,
+  .imagination-number-2,
+  .imagination-number-3,
+  .imagination-number-4 {
+    font-size: 19px;
+  }
+}
+
 /* ===== LANDSCAPE ORIENTATION ADJUSTMENTS ===== */
 
 /* Mobile Landscape (max-height: 500px) */
 @media (max-height: 500px) and (orientation: landscape) {
   .imagination-section {
-    top: 1200px;
+    top: 1240px;
     left: 20px;
     width: 200px;
   }

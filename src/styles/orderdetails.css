@@ -1,0 +1,408 @@
+
+/* Curved Container */
+.order-container {
+  background:#f5f4f4f2;
+  border-radius: 35px 35px 0 0;
+  position: relative;
+  margin-top: 140px;
+  margin-bottom:auto;
+  width: 100%;
+  overflow: hidden;
+
+}
+.order-subcontainer {
+width: 770px;
+height: 581px;
+top: 50px;
+left: 335px;
+opacity: 1;
+border-width: 1px;
+border-radius: 4px;
+background: #FFFFFF;
+border: 1px solid #ECECEC;
+position: relative;
+}
+.order-subcontainer2{
+position: relative;
+width: 770px;
+height: 188px;
+bottom: 340px;
+left: 335px;
+opacity: 1;
+border-width: 1px;
+border-radius: 4px;
+background: #FFFFFF;
+border: 1px solid #ECECEC
+}
+.order-subcontainer3{
+position: relative;
+width: 770px;   
+height: 188px;
+bottom: 325px;
+left: 335px;
+opacity: 1;
+border-width: 1px;
+border-radius: 4px;
+background: #FFFFFF;
+border: 1px solid #ECECEC
+}
+
+
+/* Close Button */
+.order-close {
+  position:relative;
+  top: 10px;
+  left:95%;
+  font-size: 40px;
+  color: #441e14;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.order-title{
+width: 384px;
+height: 39px;
+left: 528px;
+opacity: 1;
+font-family: Saxo Grammaticus;
+font-weight: 400;
+font-style: Light;
+font-size: 45px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+color: #9B7C38;
+position:relative;
+}
+.order-subtitle{
+width: 316px;
+height: 26px;
+top:15px;
+left: 555px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 170%;
+letter-spacing: 0%;
+text-align: center;
+color: #6F6F6F;
+position: relative;
+
+}
+.order-detail {
+ width: 103;
+height: 25;
+top: 7px;
+left: 15px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position:relative;
+}
+.order-divider {
+width: 696px;
+bottom: 15px;
+left: 15px;
+opacity: 1;
+border: 1px solid #E6E6E6;
+position:relative;
+}
+
+/* Grid container */
+.order-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px; 
+  position:relative;
+  width: 700px;
+height: 400px;
+}
+
+/* Label (title) */
+.order-label {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #441E14;
+  margin-bottom: 6px;
+  position: relative;
+  width: 103; height: 25; bottom:470px; left: 350px;
+
+}
+
+/* Divider line */
+.order-divider2 {
+  border-bottom: 1px solid #E6E6E6;
+    position: relative;
+    width: 328px; bottom:470px; left: 350px;
+}
+
+/* Value (content) */
+.order-value {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #441E14;
+    position: relative;
+    width: 100%; height: 25px; bottom:465px; left: 350px;
+}
+.order-item {
+width: 103;
+height: 25;
+top: 7px;
+left: 15px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position: relative;
+
+}
+.order-divider3 {
+width: 696px;
+bottom: 10px;
+left: 15px;
+opacity: 1;
+border: 1px solid #E6E6E6;
+position:relative;
+}
+
+.order-name{
+width: 103;
+height: 25;
+top: 15px;
+left: 15px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position: relative;
+
+}
+.order-weight{
+width: 103;
+height: 25;
+left: 15px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Bold;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position: relative;
+
+}
+.order-quantity{
+width: 18;
+height: 25;
+bottom: 85px;
+left: 540px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position: relative;
+
+}
+.order-price{
+width: 52;
+height: 21;
+bottom: 45px;
+left: 400px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+color: #000;
+position: relative;
+}
+.order-cprice{
+width: 52;
+height: 21;
+bottom:125px;
+left: 650px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+color: #000000;
+position: relative;
+}
+
+.order-product{
+width: 146px;
+height: 50px;
+top: 20px;
+left:10px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position:relative;
+}
+.order-shiping{
+width: 146px;
+height: 50px;
+bottom: 5px;
+left:10px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position:relative;
+}
+.order-divider4 {
+width: 710px;
+bottom: 115px;
+left: 10px;
+opacity: 1;
+border: 1px solid #E6E6E6;
+position:relative;
+}
+.order-charge{
+width: 52;
+height: 21;
+bottom: 110px;
+left:82%;
+opacity: 1;
+position: relative;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+color: #000000;
+
+}
+.order-rate{
+width: 26;
+height: 21;
+bottom: 110px;
+right:6.9%;
+opacity: 1;
+position: relative;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: right;
+color: #000000;
+}
+.order-total{
+width: 90;
+height: 25;
+bottom:95px;
+left: 10px;
+opacity: 1;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #441E14;
+position: relative;
+
+}
+.order-amount{
+width: 52;
+height: 21;
+bottom: 136px;
+left:82%;
+opacity: 1;
+position: relative;
+font-family: Bricolage Grotesque;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+color: #000000;
+
+}
+.order-divider5 {
+width: 710px;
+bottom: 130px;
+left: 10px;
+opacity: 1;
+border: 1px solid #E6E6E6;
+position:relative;
+}
+
+
+ 
+
+/* Button */
+.reorder-btn {
+  width: 110px;
+  height: 45px;
+  bottom: 310px;
+  left: 42%;
+  opacity: 1;
+  background: #441e14;
+  position: relative;
+  font-family: Bricolage Grotesque;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 158%;
+letter-spacing: 0%;
+color: #FFFFFF; 
+}
+.invoice-btn{
+   width: 150px;
+  height: 40px;
+  bottom: 1304px;
+  left: 51.5%;
+  opacity: 1;
+  background: #ecf2fd;
+  position: relative;
+  font-family: Bricolage Grotesque;
+  border:none;
+font-weight: 500;
+font-style: Regular;
+font-size: 16px;
+color: #441E14; 
+}
+

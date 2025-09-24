@@ -1,170 +1,183 @@
-/* --- About Page Styles --- */
+/* --- Enhanced Responsive About Page Styles --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .about-bg {
   background: #F8F6F3;
   min-height: 100vh;
   font-family: 'Bricolage Grotesque', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 } 
+
 .about-divider {
-    position: absolute;
-    top: 145px;
-    left: 51px;
-    width: 1450px;
-    height: 0;
-    border-top: 0.5px solid #D4D4D4;
-    opacity: 1;
-    z-index: 2;
-  }
-  .about-breadcrumb-row {
-    position: absolute;
-    top: 160px;
-    left: 65px;
-    display: flex;
-    align-items: center;
-    opacity: 1;
-    z-index: 2;
-  }
-  
-  .about-breadcrumb-home,
-  .about-breadcrumb-current {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #969696;
-    line-height: 100%;
-    letter-spacing: 0;
-    height: 19px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .about-breadcrumb-home {
-    width: 45px;
-  }
-  
-  .about-breadcrumb-arrow {
-    width: 17px;
-    height: 17px;
-    margin: 0 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .about-breadcrumb-current {
-    width: 46px;
-  }
-  .about-story-title {
-    position: absolute;
-    top: 200px;
-    left: 75px;
-    width: 384px;
-    height: 58px;
-    font-family: 'Saxo Grammaticus', serif; /* fallback to serif if not available */
-    font-weight: 100;
-    font-size: 45px;
-    color: #9B7C38;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    opacity: 1;
-  }
-  .about-story-subtitle {
-    position: absolute;
-    top: 260px;
-    left: 75px;
-    width: 400px;
-    height: 114px;
-    font-family: 'Saxo Grammaticus', serif; /* fallback to serif if not available */
-    font-weight: 100;
-    font-size: 30px;
-    color: #9B7C38;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    opacity: 1;
-  }
-  .about-bg-blur {
-    position: absolute;
-    top: 171px;
-    left: 452px;
-    width: 787px;
-    height: 787px;
-    background: #f6dbe05e;
-    backdrop-filter: blur(700px); /* Increased blur for stronger effect */
-    opacity: 1;
-    border-radius: 50%;
-    z-index: 0;
-    pointer-events: none;
-  }
-.about-slider-img {
   position: absolute;
-  left: 20px;
-  width: 243px;
-  height: 235px;
-  border-radius: 8px;
-  object-fit: cover;
+  top: 145px;
+  left: max(51px, 5vw);
+  width: min(1450px, 90vw);
+  height: 0;
+  border-top: 0.5px solid #D4D4D4;
   opacity: 1;
   z-index: 2;
 }
+
+.about-breadcrumb-row {
+  position: absolute;
+  top: 160px;
+  left: max(65px, 5vw);
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  z-index: 2;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-breadcrumb-home,
+.about-breadcrumb-current {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #969696;
+  line-height: 100%;
+  letter-spacing: 0;
+  height: auto;
+  min-height: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.about-breadcrumb-home {
+  width: auto;
+  min-width: 45px;
+}
+
+.about-breadcrumb-arrow {
+  width: 17px;
+  height: 17px;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-breadcrumb-current {
+  width: auto;
+  min-width: 46px;
+}
+
+.about-story-title {
+  position: absolute;
+  top: 200px;
+  left: max(75px, 5vw);
+  width: min(384px, 45vw);
+  height: auto;
+  min-height: 58px;
+  font-family: 'Saxo Grammaticus', serif;
+  font-weight: 100;
+  font-size: clamp(32px, 5vw, 45px);
+  color: #9B7C38;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  opacity: 1;
+  word-wrap: break-word;
+}
+
+.about-story-subtitle {
+  position: absolute;
+  top: clamp(250px, 35vw, 260px);
+  left: max(75px, 5vw);
+  width: min(400px, 50vw);
+  height: auto;
+  min-height: 114px;
+  font-family: 'Saxo Grammaticus', serif;
+  font-weight: 100;
+  font-size: clamp(22px, 4vw, 30px);
+  color: #9B7C38;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  opacity: 1;
+  word-wrap: break-word;
+}
+
+.about-bg-blur {
+  position: absolute;
+  top: 171px;
+  left: min(452px, 30vw);
+  width: min(787px, 60vw);
+  height: min(787px, 60vw);
+  background: #f6dbe05e;
+  backdrop-filter: blur(clamp(300px, 50vw, 700px));
+  opacity: 1;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .about-image-symbol-container {
-    position: absolute;
-    top: 431px; /* same as your image */
-    left: 52px;
-    width: 243px;
-    height: 235px;
-    z-index: 2;
-  }
-  
-  .about-slider-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .about-symbol-amp {
-    position: absolute;
-    top: 83px; /* Adjust so the symbol overlays the image as in your screenshot */
-    left: 210px;
-    width: 122px;
-    height: 177px;
-    font-size: 170px;
-    font-family: 'Saxo Grammaticus', 'Josefin Sans', Arial, sans-serif;
-    font-weight: 300;
-    line-height: 100%;
-    color: transparent;
-    background: linear-gradient(180deg, #F6DBE0 0%, #F6DBE0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    z-index: 3;
-    opacity: 1;
-    pointer-events: none;
-    user-select: none;
-  }
+  position: absolute;
+  top: clamp(350px, 45vw, 431px);
+  left: max(52px, 5vw);
+  width: min(243px, 25vw);
+  height: min(235px, 25vw);
+  z-index: 2;
+}
+
+.about-slider-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.about-symbol-amp {
+  position: absolute;
+  top: clamp(60px, 8vw, 83px);
+  left: clamp(180px, 20vw, 210px);
+  width: min(122px, 12vw);
+  height: min(177px, 18vw);
+  font-size: clamp(120px, 15vw, 170px);
+  font-family: 'Saxo Grammaticus', 'Josefin Sans', Arial, sans-serif;
+  font-weight: 300;
+  line-height: 100%;
+  color: transparent;
+  background: linear-gradient(180deg, #F6DBE0 0%, #F6DBE0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  z-index: 3;
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
 .about-orange-img {
   position: absolute;
   top: 179px;
-  left: 420px;
-  width: 551px;
-  height: 532px;
+  left: min(420px, 35vw);
+  width: min(551px, 40vw);
+  height: min(532px, 40vw);
   border-radius: 8px;
   object-fit: cover;
   opacity: 1;
   z-index: 2;
 }
+
 .about-description-box {
   position: absolute;
   top: 179px;
-  left: 990px;
-  width: 434px;
-  height: 404px;
+  left: min(990px, 80vw);
+  width: min(434px, 35vw);
+  height: auto;
+  min-height: clamp(300px, 35vw, 404px);
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   color: #6F6F6F;
   line-height: 170%;
   letter-spacing: 0;
@@ -172,27 +185,28 @@
   border-radius: 8px;
   opacity: 1;
   z-index: 2;
-  padding: 0 18px 0 0;
+  padding: 0 clamp(15px, 2vw, 18px) 0 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   box-sizing: border-box;
 }
+
 .about-explore-btn {
   position: absolute;
-  top: 618px;
-  left: 990px;
-  width: 200px;
-  height: 62px;
+  top: clamp(500px, 65vw, 618px);
+  left: min(990px, 80vw);
+  width: clamp(180px, 20vw, 200px);
+  height: clamp(50px, 8vw, 62px);
   background: #F6DBE0;
   border-radius: 4px;
   border: none;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   color: #441E14;
   line-height: 158%;
   letter-spacing: 0;
@@ -200,16 +214,25 @@
   cursor: pointer;
   z-index: 2;
   padding: 0;
+  transition: background 0.2s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
+  touch-action: manipulation;
 }
+
+.about-explore-btn:hover {
+  background: #f0c8d1;
+  transform: translateY(-1px);
+}
+
 .about-testimonials-title {
   position: absolute;
-  top: 779px;
-  left: 593px;
-  width: 255px;
-  height: 58px;
+  top: clamp(650px, 80vw, 779px);
+  left: min(593px, 50vw);
+  width: min(255px, 30vw);
+  height: auto;
+  min-height: 58px;
   font-family: 'Saxo Grammaticus', serif;
   font-weight: 100;
-  font-size: 45px;
+  font-size: clamp(32px, 5vw, 45px);
   color: #9B7C38;
   line-height: 100%;
   letter-spacing: 0;
@@ -220,13 +243,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  word-wrap: break-word;
 }
+
 .about-testimonials-bg {
   position: absolute;
-  top: 910px;
-  left: 350px;
-  width: 840px;
-  height: 419px;
+  top: clamp(750px, 95vw, 910px);
+  left: min(350px, 25vw);
+  width: min(840px, 60vw);
+  height: clamp(350px, 45vw, 419px);
   background: #F6DBE0;
   border-radius: 8px;
   opacity: 1;
@@ -235,10 +260,10 @@
 
 .about-quote-img {
   position: absolute;
-  top: 817px;
-  left: 374px;
-  width: 190px;
-  height: 190px;
+  top: clamp(680px, 85vw, 817px);
+  left: min(374px, 27vw);
+  width: min(190px, 20vw);
+  height: min(190px, 20vw);
   border-radius: 8px;
   object-fit: cover;
   opacity: 1;
@@ -247,13 +272,14 @@
 
 .about-testimonial-heading {
   position: absolute;
-  top: 1030px;
-  left: 620px;
-  width: 250px;
-  height: 31px;
+  top: clamp(850px, 108vw, 1030px);
+  left: min(620px, 45vw);
+  width: min(250px, 30vw);
+  height: auto;
+  min-height: 31px;
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(18px, 2.5vw, 20px);
   color: #2A110A;
   line-height: 31px;
   letter-spacing: 0;
@@ -263,17 +289,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  word-wrap: break-word;
 }
 
 .about-testimonial-text {
   position: absolute;
-  top: 1100px;
-  left: 435px;
-  width: 678px;
-  height: 111px;
+  top: clamp(900px, 115vw, 1100px);
+  left: min(435px, 32vw);
+  width: min(678px, 50vw);
+  height: auto;
+  min-height: clamp(80px, 12vw, 111px);
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   color: #6F6F6F;
   line-height: 170%;
   letter-spacing: 0;
@@ -283,13 +311,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 clamp(10px, 2vw, 20px);
+  box-sizing: border-box;
 }
+
 .about-company-img {
   position: absolute;
-  top: 920px;
-  left: 690px;
-  width: 94px;
-  height: 100px;
+  top: clamp(780px, 96vw, 920px);
+  left: min(690px, 50vw);
+  width: min(94px, 10vw);
+  height: min(100px, 10vw);
   border-radius: 8px;
   object-fit: cover;
   opacity: 1;
@@ -298,8 +329,8 @@
 
 .about-testimonial-arrows {
   position: absolute;
-  top: 1342px;
-  left: 688px;
+  top: clamp(1100px, 140vw, 1342px);
+  left: min(688px, 50vw);
   width: 123px;
   height: 47px;
   display: flex;
@@ -309,14 +340,14 @@
 }
 
 .about-arrow-line {
-  width: 29px; /* 123 - 47*2 = 29 */
+  width: 29px;
   height: 47px;
   border-top: 1px solid #DEDEDE;
   border-bottom: 1px solid #DEDEDE;
   border-left: none;
   border-right: none;
   background: none;
-  margin: 0 0;
+  margin: 0;
 }
 
 .about-arrow-circle {
@@ -329,6 +360,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.about-arrow-circle:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
 }
 
 .about-arrow-left {
@@ -343,13 +381,14 @@
 
 .about-corporate-title {
   position: absolute;
-  top: 1455px;
-  left: 460px;
-  width: 550px;
-  height: 58px;
+  top: clamp(1200px, 152vw, 1455px);
+  left: min(460px, 35vw);
+  width: min(550px, 50vw);
+  height: auto;
+  min-height: 58px;
   font-family: 'Saxo Grammaticus', serif;
   font-weight: 100;
-  font-size: 45px;
+  font-size: clamp(32px, 5vw, 45px);
   color: #9B7C38;
   line-height: 100%;
   letter-spacing: 0;
@@ -360,16 +399,816 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  word-wrap: break-word;
 }
 
 .about-brand-img {
   position: absolute;
-  top: 1535px;
-  left: 270px;
-  width: 1016px;
-  height: 110px;
+  top: clamp(1280px, 160vw, 1535px);
+  left: min(270px, 20vw);
+  width: min(1016px, 70vw);
+  height: clamp(80px, 12vw, 110px);
   border-radius: 8px;
   object-fit: cover;
   opacity: 1;
   z-index: 2;
+}
+
+/* ===== ENHANCED RESPONSIVE STYLES FOR ABOUT PAGE ===== */
+
+/* Large Desktop and 4K Screens (2560px and above) */
+@media (min-width: 2560px) {
+  .about-bg {
+    max-width: 3000px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+  
+  .about-divider {
+    width: min(2450px, 85vw);
+    left: max(calc(15% - 100px), 5vw);
+  }
+  
+  .about-breadcrumb-row {
+    left: max(calc(15% - 85px), 5vw);
+    font-size: clamp(18px, 1.2vw, 24px);
+  }
+  
+  .about-story-title {
+    left: max(calc(15% - 75px), 5vw);
+    font-size: clamp(50px, 3vw, 65px);
+  }
+  
+  .about-story-subtitle {
+    left: max(calc(15% - 75px), 5vw);
+    font-size: clamp(35px, 2.5vw, 45px);
+  }
+  
+  .about-image-symbol-container {
+    left: max(calc(15% - 100px), 5vw);
+    width: min(350px, 25vw);
+    height: min(340px, 25vw);
+  }
+  
+  .about-orange-img {
+    left: min(calc(30% + 100px), 35vw);
+    width: min(700px, 35vw);
+    height: min(680px, 35vw);
+  }
+  
+  .about-description-box {
+    left: min(calc(70% + 200px), 75vw);
+    width: min(500px, 30vw);
+    padding: 0 30px 0 0;
+  }
+  
+  .about-explore-btn {
+    left: min(calc(70% + 200px), 75vw);
+    width: clamp(220px, 20vw, 240px);
+  }
+}
+
+/* Large Tablets and Small Desktops (1200px - 1024px) */
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .about-divider {
+    width: 85vw;
+    left: 7.5vw;
+  }
+  
+  .about-breadcrumb-row {
+    left: 7.5vw;
+  }
+  
+  .about-story-title {
+    left: 7.5vw;
+    width: 45vw;
+    font-size: clamp(36px, 4vw, 40px);
+  }
+  
+  .about-story-subtitle {
+    left: 7.5vw;
+    width: 50vw;
+    font-size: clamp(24px, 3vw, 28px);
+  }
+  
+  .about-image-symbol-container {
+    left: 7.5vw;
+    width: 30vw;
+    height: 30vw;
+    top: clamp(320px, 40vw, 380px);
+  }
+  
+  .about-orange-img {
+    left: 40vw;
+    width: 35vw;
+    height: 35vw;
+    top: 160px;
+  }
+  
+  .about-description-box {
+    left: 77vw;
+    width: 20vw;
+    top: 160px;
+  }
+  
+  .about-explore-btn {
+    left: 77vw;
+    width: 18vw;
+    top: clamp(450px, 55vw, 550px);
+  }
+}
+
+/* iPad Pro (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .about-divider {
+    width: 90vw;
+    left: 5vw;
+    position: relative;
+    top: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .about-breadcrumb-row {
+    position: relative;
+    left: 5vw;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .about-story-title {
+    position: relative;
+    width: 90vw;
+    margin: 20px 5vw 10px 5vw;
+    font-size: clamp(32px, 4vw, 36px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-story-subtitle {
+    position: relative;
+    width: 90vw;
+    margin: 0 5vw 20px 5vw;
+    font-size: clamp(20px, 3vw, 24px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-bg-blur {
+    display: none;
+  }
+  
+  .about-image-symbol-container {
+    position: relative;
+    width: 45vw;
+    height: auto;
+    margin: 0 5vw 20px 5vw;
+    display: inline-block;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-orange-img {
+    position: relative;
+    width: 45vw;
+    height: auto;
+    margin: 0 0 20px 2.5vw;
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-description-box {
+    position: relative;
+    width: 90vw;
+    height: auto;
+    margin: 0 5vw 20px 5vw;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-explore-btn {
+    position: relative;
+    width: clamp(180px, 25vw, 200px);
+    margin: 0 5vw 20px 5vw;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonials-title {
+    position: relative;
+    width: 90vw;
+    margin: 20px 5vw 10px 5vw;
+    font-size: clamp(32px, 4vw, 36px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonials-bg {
+    display: none;
+  }
+  
+  .about-quote-img {
+    position: relative;
+    width: clamp(120px, 20vw, 150px);
+    height: clamp(120px, 20vw, 150px);
+    margin: 0 auto 20px auto;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonial-heading {
+    position: relative;
+    width: 90vw;
+    margin: 0 5vw 10px 5vw;
+    text-align: center;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonial-text {
+    position: relative;
+    width: 90vw;
+    height: auto;
+    margin: 0 5vw 20px 5vw;
+    text-align: center;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-company-img {
+    position: relative;
+    width: clamp(70px, 10vw, 80px);
+    height: clamp(70px, 10vw, 80px);
+    margin: 0 auto 20px auto;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonial-arrows {
+    position: relative;
+    margin: 0 auto 20px auto;
+    display: flex;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-corporate-title {
+    position: relative;
+    width: 90vw;
+    margin: 20px 5vw 10px 5vw;
+    font-size: clamp(32px, 4vw, 36px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-brand-img {
+    position: relative;
+    width: 90vw;
+    height: auto;
+    margin: 0 5vw 20px 5vw;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* iPad & iPad Mini (768px and below) */
+@media screen and (max-width: 768px) {
+  .about-bg {
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .about-divider {
+    width: calc(100vw - 40px);
+    left: 20px;
+    position: relative;
+    top: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .about-breadcrumb-row {
+    position: relative;
+    left: 20px;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .about-breadcrumb-home,
+  .about-breadcrumb-current {
+    font-size: 14px;
+  }
+  
+  .about-story-title {
+    position: relative;
+    width: calc(100vw - 40px);
+    margin: 20px 0 10px 0;
+    font-size: clamp(24px, 5vw, 28px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-story-subtitle {
+    position: relative;
+    width: calc(100vw - 40px);
+    margin: 0 0 20px 0;
+    font-size: clamp(18px, 4vw, 20px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-bg-blur {
+    display: none;
+  }
+  
+  .about-image-symbol-container {
+    position: relative;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 0 20px 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-slider-img {
+    width: clamp(150px, 40vw, 200px);
+    height: clamp(150px, 40vw, 200px);
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .about-symbol-amp {
+    display: none;
+  }
+  
+  .about-orange-img {
+    position: relative;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 0 20px 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-description-box {
+    position: relative;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 0 20px 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-explore-btn {
+    position: relative;
+    width: clamp(160px, 30vw, 200px);
+    margin: 0 0 20px 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonials-title {
+    position: relative;
+    width: calc(100vw - 40px);
+    margin: 20px 0 10px 0;
+    font-size: clamp(24px, 5vw, 28px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonials-bg {
+    display: none;
+  }
+  
+  .about-quote-img {
+    position: relative;
+    width: clamp(100px, 25vw, 120px);
+    height: clamp(100px, 25vw, 120px);
+    margin: 0 auto 15px auto;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonial-heading {
+    position: relative;
+    width: calc(100vw - 40px);
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 18px;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonial-text {
+    position: relative;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 14px;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-company-img {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px auto;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-testimonial-arrows {
+    position: relative;
+    margin: 0 auto 15px auto;
+    display: flex;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-corporate-title {
+    position: relative;
+    width: calc(100vw - 40px);
+    margin: 20px 0 10px 0;
+    font-size: clamp(24px, 5vw, 28px);
+    top: 0;
+    left: 0;
+  }
+  
+  .about-brand-img {
+    position: relative;
+    width: calc(100vw - 40px);
+    height: auto;
+    margin: 0 0 20px 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .about-bg {
+    padding: 0 15px;
+  }
+  
+  .about-divider {
+    width: calc(100vw - 30px);
+    left: 15px;
+    top: 100px;
+  }
+  
+  .about-breadcrumb-row {
+    left: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .about-breadcrumb-home,
+  .about-breadcrumb-current {
+    font-size: 12px;
+  }
+  
+  .about-breadcrumb-arrow {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+  }
+  
+  .about-story-title {
+    width: calc(100vw - 30px);
+    margin: 15px 0 10px 0;
+    font-size: clamp(20px, 6vw, 24px);
+  }
+  
+  .about-story-subtitle {
+    width: calc(100vw - 30px);
+    margin: 0 0 15px 0;
+    font-size: clamp(16px, 5vw, 18px);
+  }
+  
+  .about-image-symbol-container {
+    width: calc(100vw - 30px);
+    margin: 0 0 15px 0;
+  }
+  
+  .about-slider-img {
+    width: clamp(120px, 35vw, 150px);
+    height: clamp(120px, 35vw, 150px);
+    margin: 0 auto;
+  }
+  
+  .about-orange-img {
+    width: calc(100vw - 30px);
+    margin: 0 0 15px 0;
+  }
+  
+  .about-description-box {
+    width: calc(100vw - 30px);
+    margin: 0 0 15px 0;
+    font-size: 14px;
+  }
+  
+  .about-explore-btn {
+    width: clamp(140px, 35vw, 180px);
+    margin: 0 0 15px 0;
+    height: clamp(45px, 8vw, 50px);
+    font-size: 14px;
+  }
+  
+  .about-testimonials-title {
+    width: calc(100vw - 30px);
+    margin: 15px 0 10px 0;
+    font-size: clamp(20px, 6vw, 24px);
+  }
+  
+  .about-quote-img {
+    width: clamp(80px, 20vw, 100px);
+    height: clamp(80px, 20vw, 100px);
+    margin: 0 auto 10px auto;
+  }
+  
+  .about-testimonial-heading {
+    width: calc(100vw - 30px);
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+  
+  .about-testimonial-text {
+    width: calc(100vw - 30px);
+    margin: 0 0 10px 0;
+    font-size: 12px;
+  }
+  
+  .about-company-img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px auto;
+  }
+  
+  .about-testimonial-arrows {
+    margin: 0 auto 10px auto;
+  }
+  
+  .about-arrow-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .about-arrow-line {
+    width: 25px;
+    height: 40px;
+  }
+  
+  .about-corporate-title {
+    width: calc(100vw - 30px);
+    margin: 15px 0 10px 0;
+    font-size: clamp(20px, 6vw, 24px);
+  }
+  
+  .about-brand-img {
+    width: calc(100vw - 30px);
+    margin: 0 0 15px 0;
+  }
+}
+
+/* Small Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+  .about-bg {
+    padding: 0 10px;
+  }
+  
+  .about-divider {
+    width: calc(100vw - 20px);
+    left: 10px;
+  }
+  
+  .about-breadcrumb-row {
+    left: 10px;
+    font-size: 11px;
+  }
+  
+  .about-breadcrumb-home,
+  .about-breadcrumb-current {
+    font-size: 11px;
+  }
+  
+  .about-story-title {
+    width: calc(100vw - 20px);
+    font-size: clamp(18px, 7vw, 20px);
+  }
+  
+  .about-story-subtitle {
+    width: calc(100vw - 20px);
+    font-size: clamp(14px, 6vw, 16px);
+  }
+  
+  .about-image-symbol-container {
+    width: calc(100vw - 20px);
+    padding: 15px;
+  }
+  
+  .about-slider-img {
+    width: clamp(100px, 30vw, 120px);
+    height: clamp(100px, 30vw, 120px);
+  }
+  
+  .about-orange-img {
+    width: calc(100vw - 20px);
+  }
+  
+  .about-description-box {
+    width: calc(100vw - 20px);
+    font-size: 12px;
+  }
+  
+  .about-explore-btn {
+    width: clamp(120px, 40vw, 150px);
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .about-testimonials-title {
+    width: calc(100vw - 20px);
+    font-size: clamp(18px, 7vw, 20px);
+  }
+  
+  .about-quote-img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .about-testimonial-heading {
+    width: calc(100vw - 20px);
+    font-size: 14px;
+  }
+  
+  .about-testimonial-text {
+    width: calc(100vw - 20px);
+    font-size: 11px;
+  }
+  
+  .about-company-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .about-arrow-circle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .about-arrow-line {
+    width: 20px;
+    height: 35px;
+  }
+  
+  .about-corporate-title {
+    width: calc(100vw - 20px);
+    font-size: clamp(18px, 7vw, 20px);
+  }
+  
+  .about-brand-img {
+    width: calc(100vw - 20px);
+  }
+}
+
+/* Very Large Screen Support (3840px and above - 4K) */
+@media (min-width: 3840px) {
+  .about-bg {
+    max-width: 4000px;
+    padding: 0 200px;
+  }
+  
+  .about-story-title,
+  .about-testimonials-title,
+  .about-corporate-title {
+    font-size: clamp(65px, 2.5vw, 80px);
+  }
+  
+  .about-story-subtitle {
+    font-size: clamp(45px, 2vw, 55px);
+  }
+  
+  .about-breadcrumb-home,
+  .about-breadcrumb-current {
+    font-size: clamp(20px, 1vw, 24px);
+  }
+  
+  .about-description-box,
+  .about-testimonial-text {
+    font-size: clamp(18px, 1vw, 22px);
+  }
+  
+  .about-explore-btn {
+    font-size: clamp(18px, 1vw, 22px);
+    width: clamp(240px, 15vw, 280px);
+  }
+  
+  .about-testimonial-heading {
+    font-size: clamp(22px, 1.2vw, 26px);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .about-bg {
+    background: white;
+    min-height: auto;
+  }
+  
+  .about-testimonials-bg {
+    background: #f5f5f5;
+  }
+  
+  .about-explore-btn {
+    display: none;
+  }
+  
+  .about-testimonial-arrows {
+    display: none;
+  }
+  
+  .about-bg-blur {
+    display: none;
+  }
+}
+
+/* High DPI/Retina Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .about-slider-img,
+  .about-orange-img,
+  .about-quote-img,
+  .about-company-img,
+  .about-brand-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Accessibility and Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .about-explore-btn,
+  .about-arrow-circle {
+    transition: none;
+  }
+  
+  .about-explore-btn:hover,
+  .about-arrow-circle:hover {
+    transform: none;
+  }
+  
+  .about-bg-blur {
+    backdrop-filter: none;
+    background: rgba(246, 219, 224, 0.3);
+  }
+}
+
+/* Focus and Hover Enhancements for Better UX */
+.about-explore-btn:focus {
+  outline: 2px solid #9B7C38;
+  outline-offset: 2px;
+}
+
+.about-arrow-circle:focus {
+  outline: 2px solid #9B7C38;
+  outline-offset: 2px;
+}
+
+/* Touch-friendly improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .about-explore-btn {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+  
+  .about-arrow-circle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .about-story-title,
+  .about-story-subtitle,
+  .about-testimonials-title,
+  .about-corporate-title {
+    font-size: clamp(20px, 4vw, 24px);
+  }
+  
+  .about-image-symbol-container,
+  .about-orange-img {
+    height: 40vh;
+  }
+  
+  .about-quote-img {
+    width: 80px;
+    height: 80px;
+  }
 }

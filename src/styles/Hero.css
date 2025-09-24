@@ -44,7 +44,8 @@
   min-width: 150px;
   height: 48px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #F6DBE0 0%, #F6DBE0 50%, transparent 50%, transparent 100%);
+  background: 
+    linear-gradient(90deg, #F6DBE0 0%, #F6DBE0 50%, transparent 50%, transparent 100%);
   border: none;
   cursor: pointer;
   padding: 0 24px;
@@ -56,10 +57,32 @@
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.02);
   margin-top: 12px;
   text-align: left;
-  transition: background 0.2s, box-shadow 0.18s, transform 0.13s cubic-bezier(0.4,0,0.2,1);
   position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
 }
-.hero-btn:hover, .hero-btn:focus {
+
+/* Pink overlay that will animate */
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #F6DBE0;
+  z-index: -1;
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Hover/focus states */
+.hero-btn:hover::before,
+.hero-btn:focus::before {
+  width: 100%;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
   box-shadow: 0 8px 32px rgba(241, 168, 182, 0.18);
   transform: scale(1.04);
 }
@@ -74,6 +97,40 @@
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 2560px) {
+  .hero-rb {
+    top: 240px !important;
+    left: -50px !important;
+    width: 700px !important;
+    height: 350px;
+  }
+  
+  .hero-title {
+    width: 1500px !important;
+    height: auto;
+    font-size: 80px !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .hero-desc {
+    width: 900px !important;
+    height: auto;
+    font-size: 30px !important;
+    margin-bottom: 40px !important;
+  }
+  
+  .hero-btn {
+    min-width: 500px !important;
+    height: 80px !important;
+    font-size: 30px !important;
+    padding: 0 30px;
+  }
+  
+  .hero-btn-arrow {
+    font-size: 40px !important;
+  }
+  
+}
 
 /* Large Desktop (1400px and above) */
 @media (min-width: 1400px) {
@@ -140,253 +197,6 @@
     padding: 0 26px;
   }
 }
-
-/* Small Desktop (1024px - 1199px) */
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .hero-rb {
-    top: 220px;
-    left: 50px;
-    width: 400px;
-    height: 240px;
-  }
-  
-  .hero-title {
-    width: 400px;
-    height: auto;
-    font-size: 38px;
-    margin-bottom: 10px;
-  }
-  
-  .hero-desc {
-    width: 320px;
-    height: auto;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-btn {
-    min-width: 150px;
-    height: 48px;
-    font-size: 16px;
-    padding: 0 24px;
-  }
-}
-
-/* ===== TABLET DEVICES ===== */
-
-/* iPad Pro 12.9" (1024px - 1366px) */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-  .hero-rb {
-    top: 240px;
-    left: 60px;
-    width: 450px;
-    height: 260px;
-  }
-  
-  .hero-title {
-    width: 450px;
-    height: auto;
-    font-size: 44px;
-    margin-bottom: 12px;
-  }
-  
-  .hero-desc {
-    width: 380px;
-    height: auto;
-    font-size: 17px;
-    margin-bottom: 22px;
-  }
-  
-  .hero-btn {
-    min-width: 165px;
-    height: 50px;
-    font-size: 17px;
-    padding: 0 26px;
-  }
-  
-  .hero-btn-arrow {
-    font-size: 19px;
-  }
-}
-
-/* iPad Pro 11" (834px - 1194px) */
-@media (min-width: 834px) and (max-width: 1194px) and (orientation: landscape) {
-  .hero-rb {
-    top: 220px;
-    left: 50px;
-    width: 400px;
-    height: 240px;
-  }
-  
-  .hero-title {
-    width: 400px;
-    height: auto;
-    font-size: 38px;
-    margin-bottom: 10px;
-  }
-  
-  .hero-desc {
-    width: 320px;
-    height: auto;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-btn {
-    min-width: 150px;
-    height: 48px;
-    font-size: 16px;
-    padding: 0 24px;
-  }
-  
-  .hero-btn-arrow {
-    font-size: 18px;
-  }
-}
-
-/* iPad Air 10.9" (820px - 1180px) */
-@media (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
-  .hero-rb {
-    top: 210px;
-    left: 45px;
-    width: 380px;
-    height: 220px;
-  }
-  
-  .hero-title {
-    width: 380px;
-    height: auto;
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .hero-desc {
-    width: 300px;
-    height: auto;
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-  
-  .hero-btn {
-    min-width: 140px;
-    height: 46px;
-    font-size: 15px;
-    padding: 0 22px;
-  }
-  
-  .hero-btn-arrow {
-    font-size: 17px;
-  }
-}
-
-/* iPad Portrait (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .hero-rb {
-    top: 160px;
-    left: 25px;
-    width: 300px;
-    height: 180px;
-  }
-  
-  .hero-title {
-    width: 300px;
-    height: auto;
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
-  
-  .hero-desc {
-    width: 240px;
-    height: auto;
-    font-size: 13px;
-    margin-bottom: 15px;
-  }
-  
-  .hero-btn {
-    min-width: 120px;
-    height: 40px;
-    font-size: 13px;
-    padding: 0 16px;
-  }
-  
-  .hero-btn-arrow {
-    font-size: 15px;
-  }
-}
-
-/* iPad Mini (768px - 810px) */
-@media (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
-  .hero-rb {
-    top: 150px;
-    left: 20px;
-    width: 280px;
-    height: 170px;
-  }
-  
-  .hero-title {
-    width: 280px;
-    height: auto;
-    font-size: 26px;
-    margin-bottom: 8px;
-  }
-  
-  .hero-desc {
-    width: 220px;
-    height: auto;
-    font-size: 12px;
-    margin-bottom: 14px;
-  }
-  
-  .hero-btn {
-    min-width: 110px;
-    height: 38px;
-    font-size: 12px;
-    padding: 0 14px;
-  }
-  
-  .hero-btn-arrow {
-    font-size: 14px;
-  }
-}
-
-/* ===== MOBILE DEVICES ===== */
-
-/* Large Mobile (481px - 767px) */
-@media (min-width: 481px) and (max-width: 767px) {
-  .hero-rb {
-    top: 140px;
-    left: 20px;
-    width: calc(100vw - 40px);
-    height: auto;
-    max-width: 400px;
-  }
-  
-  .hero-title {
-    width: 100%;
-    height: auto;
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-  
-  .hero-desc {
-    width: 100%;
-    height: auto;
-    font-size: 14px;
-    margin-bottom: 16px;
-  }
-  
-  .hero-btn {
-    min-width: 140px;
-    height: 44px;
-    font-size: 14px;
-    padding: 0 20px;
-  }
-  
-  .hero-btn-arrow {
-    font-size: 16px;
-  }
-}
-
 /* Medium Mobile (375px - 480px) */
 @media (min-width: 375px) and (max-width: 480px) {
   .hero-rb {
